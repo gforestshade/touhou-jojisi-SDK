@@ -1,0 +1,10 @@
+/*
+!/Assets/
+/Assets/*
+
+
+# こいつらだけ管理する
+!/.gitignore
+!/SDK/
+!/Assets/Python/
+!/Assets/XML/
