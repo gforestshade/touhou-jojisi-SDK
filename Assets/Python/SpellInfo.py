@@ -3586,14 +3586,17 @@ def spellcard_SHINMYOUMARU1(caster,cost):
 			gc.getGame().setPlotExtraYield(iX,iY,0,CAL/16)
 			gc.getGame().setPlotExtraYield(iX,iY,1,CAL/12)
 			gc.getGame().setPlotExtraYield(iX,iY,2,CAL/8)
-			if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_COAST') and pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_OCEAN'):
-				if caster.plot().isCity() == False:
-					if CAL <= 7:
-						pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KARIGURASHI_CAL1to7'))
-					elif CAL <= 15:
-						pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KARIGURASHI_CAL8to15'))
-					else:
-						pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KARIGURASHI_CAL16over'))
+			if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_COAST') and \
+			pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_OCEAN') and \
+			caster.plot().isCity() == False:
+				if CAL <= 7:
+					pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KARIGURASHI_CAL1to7'))
+				elif CAL <= 15:
+					pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KARIGURASHI_CAL8to15'))
+				else:
+					pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KARIGURASHI_CAL16over'))
+			else:
+				return FALSE
 	else:
 		gc.getGame().setPlotExtraYield(iX,iY,0,CAL/10)
 		gc.getGame().setPlotExtraYield(iX,iY,1,CAL/8)
