@@ -2479,6 +2479,24 @@
 		<Japanese>[ICON_BULLET]都市に儲け話を建設&#13;[ICON_BULLET]てゐが都市から離れると消滅&#13;[ICON_BULLET]儲け話：全ての専門家枠+3&#13;[ICON_BULLET]昇進EXTRAが必要</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SPELL_TEWI_EXTRA2</Tag>
+		<English />
+		<French>竹林発生</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>竹林発生</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_TEWI_EXTRA2_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]自国文化圏内で発動したタイルの上に竹林を発生させる&#13;[ICON_BULLET]見えている資源、氾濫源、オアシス、都市タイルでは使用不可&#13;[ICON_BULLET]昇進EXTRAが必要</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]自国文化圏内で発動したタイルの上に竹林を発生させる&#13;[ICON_BULLET]見えている資源、氾濫源、オアシス、都市タイルでは使用不可&#13;[ICON_BULLET]昇進EXTRAが必要</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SPELL_TEWI_PHANTASM1</Tag>
 		<English />
 		<French>エンシェントデューパー</French>
@@ -3354,11 +3372,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_PATCHOULI_PHANTASM1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]きれいな水のある砂漠、ツンドラを平原に変える&#13;[ICON_BULLET]氾濫原、オアシスのあるスクウェアでは使用不可&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
+		<French>[ICON_BULLET]砂漠、ツンドラを平原に変える&#13;[ICON_BULLET]氷原をツンドラに変える&#13;[ICON_BULLET]平原・オアシスタイルの上で発動するとPower0.5と引き換えに花壇強制設置&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]きれいな水のある砂漠、ツンドラを平原に変える&#13;[ICON_BULLET]氾濫原、オアシスのあるスクウェアでは使用不可&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
+		<Japanese>[ICON_BULLET]砂漠、ツンドラを平原に変える&#13;[ICON_BULLET]氷原をツンドラに変える&#13;[ICON_BULLET]平原・オアシスタイルの上で発動するとPower0.5と引き換えに花壇強制設置&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_PATCHOULI_PHANTASM2</Tag>
@@ -4639,11 +4657,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YATUHASHI_PHANTASM1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]同スタックの大芸術家一人を「文化爆弾」ユニットに変換する&#13;[ICON_BULLET]文化爆弾：1マスのみに核攻撃が可能な核兵器ユニット&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.50が必要</French>
+		<French>[ICON_BULLET]同スタックの大芸術家一人を「文化爆弾」ユニットに変換する&#13;[ICON_BULLET]文化爆弾：1マスのみに核攻撃が可能な核兵器ユニット&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]同スタックの大芸術家一人を「文化爆弾」ユニットに変換する&#13;[ICON_BULLET]文化爆弾：1マスのみに核攻撃が可能な核兵器ユニット&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.50が必要</Japanese>
+		<Japanese>[ICON_BULLET]同スタックの大芸術家一人を「文化爆弾」ユニットに変換する&#13;[ICON_BULLET]文化爆弾：1マスのみに核攻撃が可能な核兵器ユニット&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_BENBEN_EXTRA1</Tag>
@@ -4666,20 +4684,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_BENBEN_PHANTASM1</Tag>
 		<English />
-		<French>怨霊「耳無し芳一」</French>
+		<French>音符「大熱唱琵琶」</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>怨霊「耳無し芳一」</Japanese>
+		<Japanese>音符「大熱唱琵琶」</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_BENBEN_PHANTASM1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]都市に建造物「平家物語弾き語り」を建設&#13;[ICON_BULLET]平家物語弾き語り：[ICON_GREATPEOPLE]+50%&#13;[ICON_BULLET]新しい陸上ユニットが経験値+2ポイントを獲得&#13;[ICON_BULLET]軍事ユニット生産+50%&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
+		<French>[ICON_BULLET]同スタックの偉人一人を「大芸術家」ユニットに変換する&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]都市に建造物「平家物語弾き語り」を建設&#13;[ICON_BULLET]平家物語弾き語り：[ICON_GREATPEOPLE]+50%&#13;[ICON_BULLET]新しい陸上ユニットが経験値+2ポイントを獲得&#13;[ICON_BULLET]軍事ユニット生産+50%&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
+		<Japanese>[ICON_BULLET]同スタックの偉人一人を「大芸術家」ユニットに変換する&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SEIJA_EXTRA1</Tag>
@@ -4711,11 +4729,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SEIJA_PHANTASM1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]同スタックの味方ユニットに昇進「打ち出の小槌」を与える&#13;[ICON_BULLET]同スタックの味方ユニットに攻城兵器ユニットがいる場合、攻城兵器ユニットのみに昇進「付喪神」を与える&#13;[ICON_BULLET]昇進：打ち出の小槌…3ターンの間ユニットの戦闘力+100%&#13;　3ターン後に昇進「小槌の反動」を自動的に与える&#13;[ICON_BULLET]昇進：小槌の反動…3ターンの間ユニットの戦闘力-75%&#13;　3ターン後に自動除去&#13;[ICON_BULLET]昇進：付喪神…戦闘力+2　移動力+1　永続&#13;[ICON_BULLET]発動にはユニット少名針妙丸が同じタイルに存在していること、及びユニット少名針妙丸のPowerが1.00以上でスペル発動済みではないことが必要となる&#13;[ICON_BULLET]発動後はユニット少名針妙丸のPowerが1.00消費された状態となるが、針妙丸側のCALは増加しない&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
+		<French>[ICON_BULLET]同スタックの味方ユニットに昇進「打ち出の小槌」を与える&#13;[ICON_BULLET]同スタックの味方ユニットに攻城兵器ユニットがいる場合、攻城兵器ユニットのみに昇進「付喪神」を与える&#13;[ICON_BULLET]昇進：打ち出の小槌…5ターンの間ユニットの戦闘力+100%&#13;　5ターン後に昇進「小槌の反動」を自動的に与える&#13;[ICON_BULLET]昇進：小槌の反動…3ターンの間ユニットの戦闘力-75%&#13;　3ターン後に自動除去&#13;[ICON_BULLET]昇進：付喪神…戦闘力+2　移動力+1　永続&#13;[ICON_BULLET]発動にはユニット少名針妙丸が同じタイルに存在していること、ユニット少名針妙丸のPowerが1.00以上でスペル発動済みではないこと、世界魔法が未発動な事が必要となる&#13;[ICON_BULLET]発動後はユニット少名針妙丸のPowerが1.00消費された状態となるが、針妙丸側のCALは増加しない。また、世界魔法も使用不可能になる&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]同スタックの味方ユニットに昇進「打ち出の小槌」を与える&#13;[ICON_BULLET]同スタックの味方ユニットに攻城兵器ユニットがいる場合、攻城兵器ユニットのみに昇進「付喪神」を与える&#13;[ICON_BULLET]昇進：打ち出の小槌…3ターンの間ユニットの戦闘力+100%&#13;　3ターン後に昇進「小槌の反動」を自動的に与える&#13;[ICON_BULLET]昇進：小槌の反動…3ターンの間ユニットの戦闘力-75%&#13;　3ターン後に自動除去&#13;[ICON_BULLET]昇進：付喪神…戦闘力+2　移動力+1　永続&#13;[ICON_BULLET]発動にはユニット少名針妙丸が同じタイルに存在していること、及びユニット少名針妙丸のPowerが1.00以上でスペル発動済みではないことが必要となる&#13;[ICON_BULLET]発動後はユニット少名針妙丸のPowerが1.00消費された状態となるが、針妙丸側のCALは増加しない&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
+		<Japanese>[ICON_BULLET]同スタックの味方ユニットに昇進「打ち出の小槌」を与える&#13;[ICON_BULLET]同スタックの味方ユニットに攻城兵器ユニットがいる場合、攻城兵器ユニットのみに昇進「付喪神」を与える&#13;[ICON_BULLET]昇進：打ち出の小槌…5ターンの間ユニットの戦闘力+100%&#13;　5ターン後に昇進「小槌の反動」を自動的に与える&#13;[ICON_BULLET]昇進：小槌の反動…3ターンの間ユニットの戦闘力-75%&#13;　3ターン後に自動除去&#13;[ICON_BULLET]昇進：付喪神…戦闘力+2　移動力+1　永続&#13;[ICON_BULLET]発動にはユニット少名針妙丸が同じタイルに存在していること、ユニット少名針妙丸のPowerが1.00以上でスペル発動済みではないこと、世界魔法が未発動な事が必要となる&#13;[ICON_BULLET]発動後はユニット少名針妙丸のPowerが1.00消費された状態となるが、針妙丸側のCALは増加しない。また、世界魔法も使用不可能になる&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SHINMYOUMARU_EXTRA1</Tag>

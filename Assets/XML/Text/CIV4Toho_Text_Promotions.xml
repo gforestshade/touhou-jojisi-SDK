@@ -2130,31 +2130,49 @@
 		<Japanese>打ち出の小槌</Japanese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UCHIDENO_KODUCHI_3TURN_HELP</Tag>
+		<Tag>TXT_KEY_PROMOTION_UCHIDENO_KODUCHI_5TURN_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]3ターン後に「小槌の反動」に変化する</French>
+		<French>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]5ターン後に「小槌の反動」に変化する</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]3ターン後に「小槌の反動」に変化する</Japanese>
+		<Japanese>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]5ターン後に「小槌の反動」に変化する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_UCHIDENO_KODUCHI_4TURN_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]4ターン後に「小槌の反動」に変化する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]4ターン後に「小槌の反動」に変化する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_UCHIDENO_KODUCHI_3TURN_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]3ターン後に「小槌の反動」に変化する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]3ターン後に「小槌の反動」に変化する</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UCHIDENO_KODUCHI_2TURN_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]2ターン後に「小槌の反動」に変化する</French>
+		<French>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]2ターン後に「小槌の反動」に変化する</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]2ターン後に「小槌の反動」に変化する</Japanese>
+		<Japanese>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]2ターン後に「小槌の反動」に変化する</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UCHIDENO_KODUCHI_1TURN_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]1ターン後に「小槌の反動」に変化する</French>
+		<French>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]1ターン後に「小槌の反動」に変化する</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]1ターン後に「小槌の反動」に変化する</Japanese>
+		<Japanese>[ICON_BULLET]1回のみの連続戦闘が可能&#13;[ICON_BULLET]1ターン後に「小槌の反動」に変化する</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KODUCHI_HANDOU</Tag>

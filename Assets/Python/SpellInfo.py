@@ -265,6 +265,7 @@ def init():
 			SpellInfo("SPELL_WRIGGLE_EXTRA1",req_WRIGGLE_EXTRA1,spell_WRIGGLE_EXTRA1),
 			SpellInfo("SPELL_WRIGGLE_PHANTASM1",req_WRIGGLE_PHANTASM1,spell_WRIGGLE_PHANTASM1,tempIsAISpellCast,0.10,1,255),
 			SpellInfo("SPELL_TEWI_EXTRA1",req_TEWI_EXTRA1,spell_TEWI_EXTRA1),
+			SpellInfo("SPELL_TEWI_EXTRA2",req_TEWI_EXTRA2,spell_TEWI_EXTRA2),
 			SpellInfo("SPELL_TEWI_PHANTASM1",req_TEWI_PHANTASM1,spell_TEWI_PHANTASM1),
 			SpellInfo("SPELL_NITORI_EXTRA1",req_NITORI_EXTRA1,spell_NITORI_EXTRA1),
 			SpellInfo("SPELL_NITORI_PHANTASM1",req_NITORI_PHANTASM1,spell_NITORI_PHANTASM1),
@@ -384,7 +385,7 @@ def init():
 			SpellInfo("SPELL_MIMIMIKO_EXTRA1",req_MIMIMIKO_EXTRA1,spell_MIMIMIKO_EXTRA1),
 			SpellInfo("SPELL_MIMIMIKO_PHANTASM1",req_MIMIMIKO_PHANTASM1,spell_MIMIMIKO_PHANTASM1),
 			SpellInfo("SPELL_YATUHASHI_EXTRA1",req_YATUHASHI_EXTRA1,spell_YATUHASHI_EXTRA1),
-			SpellInfo("SPELL_YATUHASHI_PHANTASM1",req_YATUHASHI_PHANTASM1,spell_YATUHASHI_PHANTASM1,tempIsAISpellCast,0.5,1,255),
+			SpellInfo("SPELL_YATUHASHI_PHANTASM1",req_YATUHASHI_PHANTASM1,spell_YATUHASHI_PHANTASM1),
 			SpellInfo("SPELL_BENBEN_EXTRA1",req_BENBEN_EXTRA1,spell_BENBEN_EXTRA1),
 			SpellInfo("SPELL_BENBEN_PHANTASM1",req_BENBEN_PHANTASM1,spell_BENBEN_PHANTASM1),
 			SpellInfo("SPELL_SEIJA_EXTRA1",req_SEIJA_EXTRA1,spell_SEIJA_EXTRA1,tempIsAISpellCast,0.10,1,255),
@@ -3410,16 +3411,16 @@ def spellcard_YATUHASHI1(caster,cost):
 		
 		else:
 			#弁々は居るが、向こうが撃てる状況ではない場合の処理
-			Functions.changeDamage(RangeList1,caster,CALA,CALA*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
-			Functions.changeDamage(RangeList1,caster,CALA/2,(CALA*3)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+			Functions.changeDamage(RangeList1,caster,CALA,CALA*2,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+			Functions.changeDamage(RangeList1,caster,CALA/2,(CALA*2)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 		
 			caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 			caster.setPower(caster.getPower()-cost)
 		
 	else:
 		#弁々が居ない場合の処理
-		Functions.changeDamage(RangeList1,caster,CALA,CALA*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
-		Functions.changeDamage(RangeList1,caster,CALA/2,(CALA*3)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+		Functions.changeDamage(RangeList1,caster,CALA,CALA*2,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList1,caster,CALA/2,(CALA*2)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 		
 		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 		caster.setPower(caster.getPower()-cost)
@@ -3484,16 +3485,16 @@ def spellcard_BENBEN1(caster,cost):
 		
 		else:
 			#八橋は居るが、向こうが撃てる状況ではない場合の処理
-			Functions.changeDamage(RangeList1,caster,CALB,CALB*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
-			Functions.changeDamage(RangeList1,caster,CALB/2,(CALB*3)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+			Functions.changeDamage(RangeList1,caster,CALB,CALB*2,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+			Functions.changeDamage(RangeList1,caster,CALB/2,(CALB*2)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 		
 			caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 			caster.setPower(caster.getPower()-cost)
 		
 	else:
 		#八橋が居ない場合の処理
-		Functions.changeDamage(RangeList1,caster,CALB,CALB*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
-		Functions.changeDamage(RangeList1,caster,CALB/2,(CALB*3)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+		Functions.changeDamage(RangeList1,caster,CALB,CALB*2,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList1,caster,CALB/2,(CALB*2)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 		
 		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 		caster.setPower(caster.getPower()-cost)
@@ -4513,6 +4514,29 @@ def spell_TEWI_EXTRA1(caster,cost):
 	point = caster.plot().getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
 	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+	
+def req_TEWI_EXTRA2(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_TEWI1','UNIT_TEWI6',cost)
+
+def spell_TEWI_EXTRA2(caster,cost):
+	
+	pPlot = caster.plot()
+	if pPlot.isCity() == False:
+		if pPlot.getTeam() == caster.getTeam():
+			if pPlot.getBonusType(caster.getTeam()) == -1:
+				if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_COAST') and pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_OCEAN'):
+					if pPlot.getFeatureType() != gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS') and pPlot.getFeatureType() != gc.getInfoTypeForString('FEATURE_OASIS'):
+						pPlot.setFeatureType(gc.getInfoTypeForString('FEATURE_JUNGLE'),1)
+						pPlot.setImprovementType(-1)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
 	
 	return True
 	
@@ -6027,13 +6051,30 @@ def spell_PATCHOULI_PHANTASM1(caster,cost):
 	CAL = caster.countCardAttackLevel()
 	pPlot = caster.plot()
 	
-	if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT') and pPlot.getFeatureType() != gc.getInfoTypeForString('FEATURE_OASIS') and pPlot.getFeatureType() != gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
-		if pPlot.isFreshWater():
-			pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
+	#if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT') and pPlot.getFeatureType() != gc.getInfoTypeForString('FEATURE_OASIS') and pPlot.getFeatureType() != gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
+	#統合MOD追記
+	#オアシス及び氾濫源でも発動を許可
+	#氷原はツンドラに変化
+	#及び、きれいな水判定を除去
+	#そして、power0.5と引き換えにオアシスに花壇強制設置
+	if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT'):
+		#if pPlot.isFreshWater():
+		pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
 			
 	if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA'):
-		if pPlot.isFreshWater():
-			pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
+		#if pPlot.isFreshWater():
+		pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
+	
+	if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW'):
+		pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_TUNDRA'),True,True)
+	
+	if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_PLAINS') and pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_OASIS'):
+		cost = 0.5
+		if caster.getPower()>=cost:
+			pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KOUMAKAN_FARM'))
+			caster.setPower(caster.getPower() - cost)
+	
+	#統合MOD追記ここまで
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -8133,7 +8174,6 @@ def spell_YATUHASHI_PHANTASM1(caster,cost):
 		pUnit = pPlot.getUnit( UnitList[ gc.getGame().getSorenRandNum(len(UnitList), "BUNKA BOMB") ] )
 		pUnit.changeDamage(100,caster.getOwner())
 		newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CULTURE_BOMB'), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-		caster.setPower(caster.getPower()-cost)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -8176,12 +8216,26 @@ def req_BENBEN_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
 
 def spell_BENBEN_PHANTASM1(caster,cost):
 	
-	CAL = caster.countCardAttackLevel()
-	
 	pPlot = caster.plot()
-	if pPlot.isCity():
-		pCity = pPlot.getPlotCity()
-		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_HEIKE_MONOGATARI'),1)
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iNumUnit = pPlot.getNumUnits()
+	UnitList = []
+
+	#スタック内に偉人がいるかどうかの捜索
+	
+	for i in range(iNumUnit):
+		pUnit = pPlot.getUnit(i)
+		if gc.getInfoTypeForString('UNIT_PROPHET') <= pUnit.getUnitType() and pUnit.getUnitType() <= gc.getInfoTypeForString('UNIT_GREAT_SPY'):
+			if pUnit.getTeam() == caster.getTeam():
+				UnitList.append(i)
+	
+	#その中から一人を抜き出して大芸術家に変換
+	#核芸術家と殆ど同じ処理なのは気にしない
+	
+	if len(UnitList)>0:
+		pUnit = pPlot.getUnit( UnitList[ gc.getGame().getSorenRandNum(len(UnitList), "BUNKA BOMB") ] )
+		pUnit.changeDamage(100,caster.getOwner())
+		newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_ARTIST'), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -8248,35 +8302,41 @@ def spell_SEIJA_PHANTASM1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	pPlot = caster.plot()
+	iPlayer = caster.getOwner()
+	pPlayer = gc.getPlayer(iPlayer)
 	
 	#ユニット針妙丸の捜索
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		if gc.getInfoTypeForString('UNIT_SHINMYOUMARU1') <= pUnit.getUnitType() and pUnit.getUnitType() <= gc.getInfoTypeForString('UNIT_SHINMYOUMARU6'):
-			if caster.getTeam() == pPlot.getUnit(i).getTeam():
-				break
 	
-	if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHINMYOUMARU')):
-		shinmyoumarucost = 1.00
-		#以下、針妙丸が居る場合の処理
-		if (pUnit.getPower()>=shinmyoumarucost) and (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED')) == False):
-			Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_3TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
-			Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_2TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
-			Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_1TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
-			Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_3TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
-			Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_2TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
-			Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_1TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
-			
-			Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_3TURN',True,100,True,False,False,-1,False,True,True,True,-1,True)
-			
-			for i in range(pPlot.getNumUnits()):
-				pSiege = pPlot.getUnit(i)
+	if pPlayer.getNumWorldSpell()>0:
+	
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if gc.getInfoTypeForString('UNIT_SHINMYOUMARU1') <= pUnit.getUnitType() and pUnit.getUnitType() <= gc.getInfoTypeForString('UNIT_SHINMYOUMARU6'):
 				if caster.getTeam() == pPlot.getUnit(i).getTeam():
-					if pPlot.getUnit(i).getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
-						pSiege.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TSUKUMOGAMI'),True)
+					break
+	
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHINMYOUMARU')):
+			shinmyoumarucost = 1.00
+			#以下、針妙丸が居る場合の処理
+			if (pUnit.getPower()>=shinmyoumarucost) and (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED')) == False):
+				#Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_3TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
+				#Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_2TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
+				#Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_1TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
+				#Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_3TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
+				#Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_2TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
+				#Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_1TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
+			
+				Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_5TURN',True,100,True,False,False,-1,False,True,True,True,-1,True)
+			
+				for i in range(pPlot.getNumUnits()):
+					pSiege = pPlot.getUnit(i)
+					if caster.getTeam() == pPlot.getUnit(i).getTeam():
+						if pPlot.getUnit(i).getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
+							pSiege.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TSUKUMOGAMI'),True)
 			
 			pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 			pUnit.setPower(pUnit.getPower()-shinmyoumarucost)
+			pPlayer.setNumWorldSpell(0)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	

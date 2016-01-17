@@ -1766,7 +1766,7 @@
           <TechYields>
             <iYield>0</iYield>
             <iYield>1</iYield>
-            <iYield>0</iYield>
+            <iYield>1</iYield>
           </TechYields>
         </TechYieldChange>
         <TechYieldChange>
@@ -1774,15 +1774,7 @@
           <TechYields>
             <iYield>0</iYield>
             <iYield>0</iYield>
-            <iYield>1</iYield>
-          </TechYields>
-        </TechYieldChange>
-        <TechYieldChange>
-          <PrereqTech>TECH_TUKIKARANOSISHA</PrereqTech>
-          <TechYields>
-            <iYield>0</iYield>
-            <iYield>0</iYield>
-            <iYield>1</iYield>
+            <iYield>2</iYield>
           </TechYields>
         </TechYieldChange>
       </TechYieldChanges>

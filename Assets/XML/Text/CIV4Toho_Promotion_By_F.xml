@@ -732,11 +732,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KOMACHI_SKILL1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]戦闘勝利時に追加の経験値+2　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</French>
+		<French>[ICON_BULLET]戦闘勝利時に追加の経験値+1　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]戦闘勝利時に追加の経験値+2　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</Japanese>
+		<Japanese>[ICON_BULLET]戦闘勝利時に追加の経験値+1　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MEIRIN_SKILL1</Tag>
@@ -822,11 +822,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RIN_SKILL1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]周囲１マスでユニットが死亡すると経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</French>
+		<French>[ICON_BULLET]周囲１マスでユニットが死亡すると25％の確率で経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]周囲１マスでユニットが死亡すると経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</Japanese>
+		<Japanese>[ICON_BULLET]周囲１マスでユニットが死亡すると25％の確率で経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LETTY_SKILL1</Tag>

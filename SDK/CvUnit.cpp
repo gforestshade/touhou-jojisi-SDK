@@ -5870,9 +5870,18 @@ bool CvUnit::join(SpecialistTypes eSpecialist)
 	{
 		return false;
 	}
-
+	
 	pCity = plot()->getPlotCity();
 
+	//東方叙事詩・統合MOD用
+	//法隆寺の定住偉人変換処理
+	if (GC.getInfoTypeForString("SPECIALIST_GREAT_PRIEST") <= eSpecialist && eSpecialist <= GC.getInfoTypeForString("SPECIALIST_GREAT_SPY")){
+		if (pCity->getNumActiveBuilding((BuildingTypes)GC.getInfoTypeForString("BUILDING_HOURYUUJI")) > 0){
+			eSpecialist = (SpecialistTypes)(GC.getInfoTypeForString("SPECIALIST_GREAT_PRIEST_HOURYUUJI") + eSpecialist - GC.getInfoTypeForString("SPECIALIST_GREAT_PRIEST"));
+		}
+	}
+	//東方叙事詩・統合MOD用ここまで
+	
 	if (pCity != NULL)
 	{
 		pCity->changeFreeSpecialistCount(eSpecialist, 1);

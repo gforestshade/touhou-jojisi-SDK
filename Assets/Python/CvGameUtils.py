@@ -56,6 +56,14 @@ class CvGameUtils:
 
 	def getExtraCost(self, argsList):
 		ePlayer = argsList[0]
+		#統合MOD追記
+		#紅魔館のユニットコスト減少処理
+		pPlayer = gc.getPlayer(ePlayer)
+		if pPlayer.countNumBuildings(gc.getInfoTypeForString("BUILDING_KOUMAKAN")) == 1:
+			return  -pPlayer.calculateUnitCost() /2
+		#統合MOD追記ここまで
+		
+		#統合MOD追記ここまで
 		return 0
 
 	def createBarbarianCities(self):
@@ -521,7 +529,7 @@ class CvGameUtils:
 					if eUnitClass == gc.getInfoTypeForString('UNITCLASS_KISHINJOU_KOREAN_HWACHA'):
 						return True
 			if pTeam.isHasTech(gc.getInfoTypeForString('TECH_GUILDS')) and pTeam.isHasTech(gc.getInfoTypeForString('TECH_HORSEBACK_RIDING')):
-				if not pTeam.isHasTech(gc.getInfoTypeForString('TECH_RIFLING')):
+				if not (pTeam.isHasTech(gc.getInfoTypeForString('TECH_MILITARY_TRADITION')) and pTeam.isHasTech(gc.getInfoTypeForString('TECH_GUNPOWDER'))):
 					if pCity.hasBonus(gc.getInfoTypeForString('BONUS_HORSE')) and pCity.hasBonus(gc.getInfoTypeForString('BONUS_IRON')):
 						if eUnitClass == gc.getInfoTypeForString('UNITCLASS_KISHINJOU_BYZANTINE_CATAPHRACT'):
 							return True

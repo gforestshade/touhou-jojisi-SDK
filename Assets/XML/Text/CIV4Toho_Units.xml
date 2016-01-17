@@ -834,6 +834,78 @@
 		<Spanish />
 		<Japanese>神霊は神霊廟専門の特殊な定住専門家です。[NEWLINE]神霊を獲得するには神霊廟の東方ユニットで敵を倒す必要があります。[NEWLINE]また神霊そのものは定住しても、それ単体では殆ど効果的に活用する事は出来ません[NEWLINE][NEWLINE]太子堂を建設する、代議制を制定する、神子のスペルを使う等の事をして出力を上げる必要があります。</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_PRIEST_HOURYUUJI</Tag>
+		<English />
+		<French>大醸造人（強化）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>大醸造人（強化）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_ARTIST_HOURYUUJI</Tag>
+		<English />
+		<French>大芸術家（強化）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>大芸術家（強化）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_SCIENTIST_HOURYUUJI</Tag>
+		<English />
+		<French>大科学者（強化）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>大科学者（強化）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_MERCHANT_HOURYUUJI</Tag>
+		<English />
+		<French>大商人（強化）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>大商人（強化）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_ENGINEER_HOURYUUJI</Tag>
+		<English />
+		<French>大技術者（強化）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>大技術者（強化）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_GENERAL_HOURYUUJI</Tag>
+		<English />
+		<French>大軍事教官（強化）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>大軍事教官（強化）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_SPY_HOURYUUJI</Tag>
+		<English />
+		<French>大スパイ（強化）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>大スパイ（強化）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_HOURYUUJI</Tag>
+		<English />
+		<French>[H1]強化定住偉人[\H1][PARAGRAPH:2]神霊廟文明の固有建造物「[LINK=BUILDING_HOURYUUJI]法隆寺[\LINK]」を建設すると、建設都市に定住している偉人がこの強化定住偉人に差し替えられます。[PARAGRAPH:2]また、法隆寺が建設されている都市に新規で偉人を定住させる場合も、自動的にこの強化定住偉人に差し替えられます</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[H1]強化定住偉人[\H1][PARAGRAPH:2]神霊廟文明の固有建造物「[LINK=BUILDING_HOURYUUJI]法隆寺[\LINK]」を建設すると、建設都市に定住している偉人がこの強化定住偉人に差し替えられます。[PARAGRAPH:2]また、法隆寺が建設されている都市に新規で偉人を定住させる場合も、自動的にこの強化定住偉人に差し替えられます</Japanese>
+	</TEXT>
 <!-- Shinreibyou Units End-->
 <!-- KIshinjou Units Start-->
 	<TEXT>

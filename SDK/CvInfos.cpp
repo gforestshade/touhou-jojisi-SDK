@@ -2662,6 +2662,7 @@ bool CvAutomateInfo::read(CvXMLLoadUtility* pXML)
                             "AUTOMATE_SPELL_WRIGGLE_EXTRA1",
                             "AUTOMATE_SPELL_WRIGGLE_PHANTASM1",
                             "AUTOMATE_SPELL_TEWI_EXTRA1",
+                            "AUTOMATE_SPELL_TEWI_EXTRA2",
                             "AUTOMATE_SPELL_TEWI_PHANTASM1",
                             "AUTOMATE_SPELL_NITORI_EXTRA1",
                             "AUTOMATE_SPELL_NITORI_PHANTASM1",

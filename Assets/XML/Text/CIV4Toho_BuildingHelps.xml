@@ -133,6 +133,24 @@
 		<Japanese>[ICON_BULLET]この建造物が設置された都市のみ、迎撃回避率が高い特殊核兵器を作成可能</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HOURYUUJI_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]建設都市に定住している偉人の出力を増加させる&#13;[ICON_BULLET]大醸造人の出力：+1[ICON_FOOD],+4[ICON_PRODUCTION],+1[ICON_COMMERCE],+10[ICON_GOLD]&#13;[ICON_BULLET]大芸術家の出力：+2[ICON_COMMERCE],+3[ICON_GOLD],+3[ICON_RESEARCH],+24[ICON_CULTURE]&#13;[ICON_BULLET]大科学者の出力：+1[ICON_PRODUCTION],+12[ICON_RESEARCH]&#13;[ICON_BULLET]大技術者の出力：+5[ICON_PRODUCTION],+6[ICON_RESEARCH]&#13;[ICON_BULLET]大軍事教官の出力：新規ユニットの経験値+6&#13;[ICON_BULLET]大スパイの出力：+3[ICON_GOLD],+3[ICON_RESEARCH],+3[ICON_CULTURE],+12[ICON_ESPIONAGE]</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]建設都市に定住している偉人の出力を増加させる&#13;[ICON_BULLET]大醸造人の出力：+1[ICON_FOOD],+4[ICON_PRODUCTION],+1[ICON_COMMERCE],+10[ICON_GOLD]&#13;[ICON_BULLET]大芸術家の出力：+2[ICON_COMMERCE],+3[ICON_GOLD],+3[ICON_RESEARCH],+24[ICON_CULTURE]&#13;[ICON_BULLET]大科学者の出力：+1[ICON_PRODUCTION],+12[ICON_RESEARCH]&#13;[ICON_BULLET]大技術者の出力：+5[ICON_PRODUCTION],+6[ICON_RESEARCH]&#13;[ICON_BULLET]大軍事教官の出力：新規ユニットの経験値+6&#13;[ICON_BULLET]大スパイの出力：+3[ICON_GOLD],+3[ICON_RESEARCH],+3[ICON_CULTURE],+12[ICON_ESPIONAGE]</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KOUMAKAN_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]ユニット維持管理費-50%</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]ユニット維持管理費-50%</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROJECT_CHIREIDEN_HELP</Tag>
 		<English />
 		<French>[ICON_BULLET]その場で即、大科学者3人分に相当する[ICON_RESEARCH]を得る&#13;[ICON_BULLET]ユニット「第三の眼」を作成可能になる&#13;[ICON_BULLET]「永久同盟」オプション導入時は作成不可能</French>
