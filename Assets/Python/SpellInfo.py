@@ -3597,7 +3597,7 @@ def spellcard_SHINMYOUMARU1(caster,cost):
 				else:
 					pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_KARIGURASHI_CAL16over'))
 			else:
-				return FALSE
+				return False
 	else:
 		gc.getGame().setPlotExtraYield(iX,iY,0,CAL/10)
 		gc.getGame().setPlotExtraYield(iX,iY,1,CAL/8)
