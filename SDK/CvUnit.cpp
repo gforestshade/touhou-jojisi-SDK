@@ -153,7 +153,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	iUnitName = GC.getGameINLINE().getUnitCreatedCount(getUnitType());
 	int iNumNames = m_pUnitInfo->getNumUnitNames();
 	if (iUnitName < iNumNames)
-	{
+    	{
 		int iOffset = GC.getGameINLINE().getSorenRandNum(iNumNames, "Unit name selection");
 
 		for (iI = 0; iI < iNumNames; iI++)
@@ -3070,15 +3070,21 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 	return true;
 }
 
+// void myprint(int i)
+// {
+//   FILE *fp = fopen("c:\\users\\li\\Documents\\log.txt" , "a");
+//   fprintf(fp, "eAutomate=%d\n", i);
+//   fclose(fp);
+// }
 
 void CvUnit::automate(AutomateTypes eAutomate)
 {
 	//“Œ•û–Ž–Ž—p
     CyArgsList argsList;
     CyUnit* pyUnit = new CyUnit(this);
+    //    myprint(eAutomate);
     if (eAutomate > 4)
 	{
-
             argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
             argsList.add((int)eAutomate);
             gDLL->getPythonIFace()->callFunction(PYSpellModule, "SpellCast", argsList.makeFunctionArgs());

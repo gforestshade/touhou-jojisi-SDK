@@ -18,9 +18,10 @@ gc = CyGlobalContext()
 def SpellCast(argsList):
 
 	pUnit,iNum = argsList
-	
-	Spell = SpellInfo.spells[iNum-5]
-        CvGameUtils.doprint(Spell.getName())
+
+        name = gc.getAutomateInfo(iNum).getType()
+        CvGameUtils.doprint(name)
+	Spell = filter(lambda s: s.getName()==name, SpellInfo.spells)[0] #å©Ç¬Ç©ÇÈëOíÒ
 	if Spell.isVisible(pUnit) and Spell.isAbled(pUnit):
 		if Spell.cast(pUnit): #castÇ…ê¨å˜Ç∑ÇÍÇŒ
 		
