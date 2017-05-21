@@ -8789,8 +8789,7 @@ def spell_KISHINJOU1(caster,cost):
 	point = pPlot.getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
 	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
-	#ãPêjèÈÇÃäeìsésÇ≈ïtërê_Ç™ëÂó î≠ê∂ÇµÇ‹ÇµÇΩÅI
-	CyInterface().addImmediateMessage("&#36637;&#37341;&#22478;&#12398;&#21508;&#37117;&#24066;&#12391;&#20184;&#21930;&#31070;&#12364;&#22823;&#37327;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+	CyInterface().addImmediateMessage(Functions.getMsg("MSG_KISHINJOU1"),"")
 
 	return True
 

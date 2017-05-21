@@ -8,6 +8,7 @@ import PyHelpers
 import CvScreenEnums
 import math
 import SpellInfo
+import TohoUnitList
 
 # globals
 gc = CyGlobalContext()
@@ -468,7 +469,9 @@ def isWar(iPlayer):
 	return False
 
 
-
+def getMsg(t):
+        s = TohoUnitList.SpellMessage[t]
+        return ''.join(("&#" + str(ord(c)) + ";"  for c in s))
 
 
 

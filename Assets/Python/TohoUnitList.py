@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
+
 ##### <written by F> #####
-#Œ‹\‚È”‚ª‹‚é“Œ•ûƒ†ƒjƒbƒg‚ðƒŠƒXƒg‚É‚µ‚Ä‚Ü‚Æ‚ß‚½‚à‚Ì
+#çµæ§‹ãªæ•°ãŒå±…ã‚‹æ±æ–¹ãƒ¦ãƒ‹ãƒƒãƒˆã‚’ãƒªã‚¹ãƒˆã«ã—ã¦ã¾ã¨ã‚ãŸã‚‚ã®
 
 TohoUnitList = [
 				'UNIT_SANAE0','UNIT_SANAE1','UNIT_SANAE2','UNIT_SANAE3','UNIT_SANAE4','UNIT_SANAE5','UNIT_SANAE6',
@@ -78,7 +80,7 @@ TohoUnitList = [
 				'UNIT_SAGUME0','UNIT_SAGUME1','UNIT_SAGUME2','UNIT_SAGUME3','UNIT_SAGUME4','UNIT_SAGUME5','UNIT_SAGUME6',
 				]
 
-#‚Oƒ†ƒjƒbƒg‚ðœ‚¢‚½ƒŠƒXƒg ‚±‚±‚É‚¢‚éƒ†ƒjƒbƒg‚Í“sŽs‚Å¶ŽY•s‰Â
+#ï¼ãƒ¦ãƒ‹ãƒƒãƒˆã‚’é™¤ã„ãŸãƒªã‚¹ãƒˆ ã“ã“ã«ã„ã‚‹ãƒ¦ãƒ‹ãƒƒãƒˆã¯éƒ½å¸‚ã§ç”Ÿç”£ä¸å¯
 TohoUnitListNot0 = [
 #				'UNIT_IKU',
 				'UNIT_SANAE1','UNIT_SANAE2','UNIT_SANAE3','UNIT_SANAE4','UNIT_SANAE5','UNIT_SANAE6',
@@ -157,7 +159,7 @@ TohoUnitListNot0 = [
 				'UNIT_SAGUME1','UNIT_SAGUME2','UNIT_SAGUME3','UNIT_SAGUME4','UNIT_SAGUME5','UNIT_SAGUME6',
 				]
 
-#‚Oƒ†ƒjƒbƒg‚Ì‚Ý‚ÌƒŠƒXƒg
+#ï¼ãƒ¦ãƒ‹ãƒƒãƒˆã®ã¿ã®ãƒªã‚¹ãƒˆ
 TohoUnitList0 = [
 #				'UNIT_IKU',
 				'UNIT_SANAE0',
@@ -236,9 +238,9 @@ TohoUnitList0 = [
 				'UNIT_SAGUME0',
 				]
 
-#AI‚É—Dæ“I‚ÉŽæ“¾‚³‚¹‚é¸iƒŠƒXƒg ¸iƒ‹[ƒg‚²‚Æ‚É“à—e‚ªˆÙ‚È‚é
+#AIã«å„ªå…ˆçš„ã«å–å¾—ã•ã›ã‚‹æ˜‡é€²ãƒªã‚¹ãƒˆ æ˜‡é€²ãƒ«ãƒ¼ãƒˆã”ã¨ã«å†…å®¹ãŒç•°ãªã‚‹
 getAIPromotionList = [
-				#ƒRƒ“ƒoƒbƒgƒ‹[ƒg
+				#ã‚³ãƒ³ãƒãƒƒãƒˆãƒ«ãƒ¼ãƒˆ
 				[
 					'PROMOTION_KESSIKEKKAI',
 					'PROMOTION_SPELLCARD',
@@ -314,9 +316,9 @@ getAIPromotionList = [
 					
 					
 				],
-				#–CŒ‚ƒ‹[ƒg
-				#ƒVƒ…[ƒeƒBƒ“ƒOƒIƒvƒVƒ‡ƒ“‚Í‘é‚Ì–Ú‚©ƒ}ƒ‹ƒ`ƒvƒ‹ƒVƒ‡ƒbƒg‚Ì“ñ‘ð‚É
-				#AI‚É‚Í—­‚ßŒ‚‚¿EƒnƒCƒXƒs[ƒhƒ€[ƒu‚Í‰×‚ªd‚¢
+				#ç ²æ’ƒãƒ«ãƒ¼ãƒˆ
+				#ã‚·ãƒ¥ãƒ¼ãƒ†ã‚£ãƒ³ã‚°ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¯é·¹ã®ç›®ã‹ãƒžãƒ«ãƒãƒ—ãƒ«ã‚·ãƒ§ãƒƒãƒˆã®äºŒæŠžã«
+				#AIã«ã¯æºœã‚æ’ƒã¡ãƒ»ãƒã‚¤ã‚¹ãƒ”ãƒ¼ãƒ‰ãƒ ãƒ¼ãƒ–ã¯è·ãŒé‡ã„
 				[
 					'PROMOTION_SHOOTING_OPTION_MULTIPLESHOT',
 					'PROMOTION_TEMP_STG_SKILL',
@@ -333,7 +335,7 @@ getAIPromotionList = [
 					'PROMOTION_HUKUZITEKI_SONGAI',
 				#	'PROMOTION_KESSIKEKKAI',
 				],
-				#ƒXƒyƒ‹ƒ‹[ƒg
+				#ã‚¹ãƒšãƒ«ãƒ«ãƒ¼ãƒˆ
 				[
 					'PROMOTION_MODE_EASY',
 					'PROMOTION_MODE_NORMAL',
@@ -346,7 +348,7 @@ getAIPromotionList = [
 				],
 					]
 
-#“Á’è‚Ìƒ†ƒjƒbƒg‚ª‹‚È‚¢‚ÆÁ–Å‚µ‚Ä‚µ‚Ü‚¤Œš‘¢•¨ƒŠƒXƒg
+#ç‰¹å®šã®ãƒ¦ãƒ‹ãƒƒãƒˆãŒå±…ãªã„ã¨æ¶ˆæ»…ã—ã¦ã—ã¾ã†å»ºé€ ç‰©ãƒªã‚¹ãƒˆ
 TohoUnitBuildingList = [
 					['BUILDING_NEKOKESSHA','UNIT_CHEN1','UNIT_CHEN6',],
 					['BUILDING_MOUKEBANASHI','UNIT_TEWI1','UNIT_TEWI6',],
@@ -397,8 +399,8 @@ TohoUnitBuildingList = [
 				]
 
 
-#ƒAƒbƒvƒOƒŒ[ƒh’²®—p‚ÌƒŠƒXƒg@‚»‚Ìƒ†ƒjƒbƒg‚ð‚t‚f‚³‚¹‚é‚Ì‚É•K—v‚ÈƒeƒN‚ÆA‚t‚fæ—p‚Ì•â³
-#•Ö‹XãAŠeƒ†ƒjƒbƒg‚ÌÅI’iŠK‚àƒŠƒXƒg‚É“o˜^
+#ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰èª¿æ•´ç”¨ã®ãƒªã‚¹ãƒˆã€€ãã®ãƒ¦ãƒ‹ãƒƒãƒˆã‚’ï¼µï¼§ã•ã›ã‚‹ã®ã«å¿…è¦ãªãƒ†ã‚¯ã¨ã€ï¼µï¼§å…ˆç”¨ã®è£œæ­£
+#ä¾¿å®œä¸Šã€å„ãƒ¦ãƒ‹ãƒƒãƒˆã®æœ€çµ‚æ®µéšŽã‚‚ãƒªã‚¹ãƒˆã«ç™»éŒ²
 UpgradeList = [
 				['UNIT_SANAE0','TECH_KAPPANOHATUMEI',1,],
 				['UNIT_SANAE1','TECH_TENGUNOJOUHOUMOU',1,],
@@ -920,155 +922,155 @@ UpgradeList = [
 				['UNIT_SAGUME6','TECH_DUMMY',0,],
 			]
 
-#–‚–@ŽuŒü‚É‚æ‚éAIƒ{[ƒiƒX
+#é­”æ³•å¿—å‘ã«ã‚ˆã‚‹AIãƒœãƒ¼ãƒŠã‚¹
 SpellistAIBonusList = [
-				1,  #ŒÃ‘ã
-				2,  #ŒÃ“T
-				3,  #’†¢
-				5,  #ƒ‹ƒlƒTƒ“ƒX
-				8,  #H‹Æ
-				12,  #Œ»‘ã
-				20,  #–¢—ˆ
+				1,  #å¤ä»£
+				2,  #å¤å…¸
+				3,  #ä¸­ä¸–
+				5,  #ãƒ«ãƒã‚µãƒ³ã‚¹
+				8,  #å·¥æ¥­
+				12,  #ç¾ä»£
+				20,  #æœªæ¥
 			]
 
 
 
-#AI‹­‰»ƒ‚[ƒh—pƒŠƒXƒg ‡”Ô‚ÍŠJ‘ñŽÒ`Žñ—Ì
+#AIå¼·åŒ–ãƒ¢ãƒ¼ãƒ‰ç”¨ãƒªã‚¹ãƒˆ é †ç•ªã¯é–‹æ‹“è€…ã€œé¦–é ˜
 
-#ƒvƒŒƒCƒ„[‚É“|‚³‚ê‚½‚Æ‚«‚ÌŒoŒ±’lƒyƒiƒ‹ƒeƒB•â³
+#ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«å€’ã•ã‚ŒãŸã¨ãã®çµŒé¨“å€¤ãƒšãƒŠãƒ«ãƒ†ã‚£è£œæ­£
 ExpPenaList = [
-				80,  #ŠJ‘ñŽÒ
-				80,  #U’·
-				80,  #«ŒR
-				80,  #‹M‘°
-				70,  #cŽq
-				60,  #‘‰¤
-				50,  #c’é
-				30,  #–H—‰
-				10,  #“V’é
-				0,  #Žñ—Ì
+				80,  #é–‹æ‹“è€…
+				80,  #é…‹é•·
+				80,  #å°†è»
+				80,  #è²´æ—
+				70,  #çš‡å­
+				60,  #å›½çŽ‹
+				50,  #çš‡å¸
+				30,  #è“¬èŽ±
+				10,  #å¤©å¸
+				0,  #é¦–é ˜
 			]
 				
 
 
 
-#AI‚É“|‚³‚ê‚½‚Æ‚«‚ÌŒoŒ±’lƒyƒiƒ‹ƒeƒB•â³
+#AIã«å€’ã•ã‚ŒãŸã¨ãã®çµŒé¨“å€¤ãƒšãƒŠãƒ«ãƒ†ã‚£è£œæ­£
 AIExpPenaList = [
-				70,  #ŠJ‘ñŽÒ
-				70,  #U’·
-				70,  #«ŒR
-				70,  #‹M‘°
-				65,  #cŽq
-				50,  #‘‰¤
-				30,  #c’é
-				10,  #–H—‰
-				0,  #“V’é
-				0,  #Žñ—Ì
+				70,  #é–‹æ‹“è€…
+				70,  #é…‹é•·
+				70,  #å°†è»
+				70,  #è²´æ—
+				65,  #çš‡å­
+				50,  #å›½çŽ‹
+				30,  #çš‡å¸
+				10,  #è“¬èŽ±
+				0,  #å¤©å¸
+				0,  #é¦–é ˜
 			]
 
 
-#•œŠˆŽž‚É—^‚¦‚ç‚ê‚é‹xŒe¸i
+#å¾©æ´»æ™‚ã«ä¸Žãˆã‚‰ã‚Œã‚‹ä¼‘æ†©æ˜‡é€²
 RevivalPromoList = [
-				'PROMOTION_RETURN_DELAY1_4',  #ŠJ‘ñŽÒ
-				'PROMOTION_RETURN_DELAY1_4',  #U’·
-				'PROMOTION_RETURN_DELAY1_4',  #«ŒR
-				'PROMOTION_RETURN_DELAY1_4',  #‹M‘°
-				'PROMOTION_RETURN_DELAY1_3',  #cŽq
-				'PROMOTION_RETURN_DELAY1_3',  #‘‰¤
-				'PROMOTION_RETURN_DELAY1_3',  #c’é
-				'PROMOTION_RETURN_DELAY1_3',  #–H—‰
-				'PROMOTION_RETURN_DELAY1_2',  #“V’é
-				'PROMOTION_RETURN_DELAY1_1',  #Žñ—Ì
+				'PROMOTION_RETURN_DELAY1_4',  #é–‹æ‹“è€…
+				'PROMOTION_RETURN_DELAY1_4',  #é…‹é•·
+				'PROMOTION_RETURN_DELAY1_4',  #å°†è»
+				'PROMOTION_RETURN_DELAY1_4',  #è²´æ—
+				'PROMOTION_RETURN_DELAY1_3',  #çš‡å­
+				'PROMOTION_RETURN_DELAY1_3',  #å›½çŽ‹
+				'PROMOTION_RETURN_DELAY1_3',  #çš‡å¸
+				'PROMOTION_RETURN_DELAY1_3',  #è“¬èŽ±
+				'PROMOTION_RETURN_DELAY1_2',  #å¤©å¸
+				'PROMOTION_RETURN_DELAY1_1',  #é¦–é ˜
 			]
 
 
-#¶ŽYŽž‚ÌŒoŒ±’l•â³
+#ç”Ÿç”£æ™‚ã®çµŒé¨“å€¤è£œæ­£
 CreateExpBonusList = [
-				120,  #ŠJ‘ñŽÒ
-				120,  #U’·
-				120,  #«ŒR
-				120,  #‹M‘°
-				130,  #cŽq
-				150,  #‘‰¤
-				170,  #c’é
-				200,  #–H—‰
-				300,  #“V’é
-				400,  #Žñ—Ì
+				120,  #é–‹æ‹“è€…
+				120,  #é…‹é•·
+				120,  #å°†è»
+				120,  #è²´æ—
+				130,  #çš‡å­
+				150,  #å›½çŽ‹
+				170,  #çš‡å¸
+				200,  #è“¬èŽ±
+				300,  #å¤©å¸
+				400,  #é¦–é ˜
 			]
 
 
-#ƒ^[ƒ“–ˆ‚Ì‚ÌŒoŒ±’l•â³
+#ã‚¿ãƒ¼ãƒ³æ¯Žã®ã®çµŒé¨“å€¤è£œæ­£
 TurnExpBonusList = [
-				120,  #ŠJ‘ñŽÒ
-				120,  #U’·
-				120,  #«ŒR
-				120,  #‹M‘°
-				130,  #cŽq
-				140,  #‘‰¤
-				150,  #c’é
-				170,  #–H—‰
-				200,  #“V’é
-				300,  #Žñ—Ì
+				120,  #é–‹æ‹“è€…
+				120,  #é…‹é•·
+				120,  #å°†è»
+				120,  #è²´æ—
+				130,  #çš‡å­
+				140,  #å›½çŽ‹
+				150,  #çš‡å¸
+				170,  #è“¬èŽ±
+				200,  #å¤©å¸
+				300,  #é¦–é ˜
 			]
 
-#UGƒRƒXƒg•â³
+#UGã‚³ã‚¹ãƒˆè£œæ­£
 UGCostList = [
-				80,  #ŠJ‘ñŽÒ
-				80,  #U’·
-				80,  #«ŒR
-				80,  #‹M‘°
-				65,  #cŽq
-				50,  #‘‰¤
-				35,  #c’é
-				20,  #–H—‰
-				10,  #“V’é
-				0,  #Žñ—Ì
+				80,  #é–‹æ‹“è€…
+				80,  #é…‹é•·
+				80,  #å°†è»
+				80,  #è²´æ—
+				65,  #çš‡å­
+				50,  #å›½çŽ‹
+				35,  #çš‡å¸
+				20,  #è“¬èŽ±
+				10,  #å¤©å¸
+				0,  #é¦–é ˜
 			]
 
-#“Œ•ûƒ†ƒjƒbƒg‚É—^‚¦‚ç‚ê‚é’Ç‰Á¸i
+#æ±æ–¹ãƒ¦ãƒ‹ãƒƒãƒˆã«ä¸Žãˆã‚‰ã‚Œã‚‹è¿½åŠ æ˜‡é€²
 CreateTohoAddPromoList = [
-				[],  #ŠJ‘ñŽÒ
-				[],  #U’·
-				[],  #«ŒR
-				[],  #‹M‘°
-				[],  #cŽq
-				[],  #‘‰¤
-				['PROMOTION_KESSIKEKKAI'],  #c’é
-				['PROMOTION_KESSIKEKKAI'],  #–H—‰
-				['PROMOTION_KESSIKEKKAI'],  #“V’é
-				['PROMOTION_KESSIKEKKAI'],  #Žñ—Ì
+				[],  #é–‹æ‹“è€…
+				[],  #é…‹é•·
+				[],  #å°†è»
+				[],  #è²´æ—
+				[],  #çš‡å­
+				[],  #å›½çŽ‹
+				['PROMOTION_KESSIKEKKAI'],  #çš‡å¸
+				['PROMOTION_KESSIKEKKAI'],  #è“¬èŽ±
+				['PROMOTION_KESSIKEKKAI'],  #å¤©å¸
+				['PROMOTION_KESSIKEKKAI'],  #é¦–é ˜
 			]
 
-#ˆê”Êƒ†ƒjƒbƒg‚É—^‚¦‚ç‚ê‚é’Ç‰Á¸i
+#ä¸€èˆ¬ãƒ¦ãƒ‹ãƒƒãƒˆã«ä¸Žãˆã‚‰ã‚Œã‚‹è¿½åŠ æ˜‡é€²
 CreateGeneAddPromoList = [
-				[],  #ŠJ‘ñŽÒ
-				[],  #U’·
-				[],  #«ŒR
-				[],  #‹M‘°
-				['PROMOTION_SHOOTING_TECHNIQUE1'],  #cŽq
-				['PROMOTION_SHOOTING_TECHNIQUE1'],  #‘‰¤
-				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2'],  #c’é
-				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2'],  #–H—‰
-				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2','PROMOTION_SHOOTING_TECHNIQUE3'],  #“V’é
-				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2','PROMOTION_SHOOTING_TECHNIQUE3','PROMOTION_ANTI_BOSS1'],  #Žñ—Ì
+				[],  #é–‹æ‹“è€…
+				[],  #é…‹é•·
+				[],  #å°†è»
+				[],  #è²´æ—
+				['PROMOTION_SHOOTING_TECHNIQUE1'],  #çš‡å­
+				['PROMOTION_SHOOTING_TECHNIQUE1'],  #å›½çŽ‹
+				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2'],  #çš‡å¸
+				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2'],  #è“¬èŽ±
+				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2','PROMOTION_SHOOTING_TECHNIQUE3'],  #å¤©å¸
+				['PROMOTION_SHOOTING_TECHNIQUE1','PROMOTION_SHOOTING_TECHNIQUE2','PROMOTION_SHOOTING_TECHNIQUE3','PROMOTION_ANTI_BOSS1'],  #é¦–é ˜
 			]
 
-#’Ç‰Á‚Ì“Œ•ûƒ†ƒjƒbƒg˜g
+#è¿½åŠ ã®æ±æ–¹ãƒ¦ãƒ‹ãƒƒãƒˆæž 
 TohoNumList = [
-				0,  #ŠJ‘ñŽÒ
-				0,  #U’·
-				0,  #«ŒR
-				0,  #‹M‘°
-				0,  #cŽq
-				0,  #‘‰¤
-				0,  #c’é
-				0,  #–H—‰
-				1,  #“V’é
-				1,  #Žñ—Ì
+				0,  #é–‹æ‹“è€…
+				0,  #é…‹é•·
+				0,  #å°†è»
+				0,  #è²´æ—
+				0,  #çš‡å­
+				0,  #å›½çŽ‹
+				0,  #çš‡å¸
+				0,  #è“¬èŽ±
+				1,  #å¤©å¸
+				1,  #é¦–é ˜
 			]
 
 
-#ƒXƒe[ƒ^ƒX‰æ–Ê•\Ž¦‚·‚é¸i‚Ì§ŒÀ@‰E‚Ì‚ðŽ‚Á‚Ä‚¢‚½‚ç¶‚Ì‚Í•\Ž¦‚µ‚È‚¢@@@‚¢‚¢‰ÁŒ¸ƒtƒ@ƒCƒ‹–¼‚ª‚¨‚©‚µ‚­‚È‚Á‚Ä‚«‚½‹C‚Í‚·‚é
+#ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç”»é¢è¡¨ç¤ºã™ã‚‹æ˜‡é€²ã®åˆ¶é™ã€€å³ã®ã‚’æŒã£ã¦ã„ãŸã‚‰å·¦ã®ã¯è¡¨ç¤ºã—ãªã„ã€€ã€€ã€€ã„ã„åŠ æ¸›ãƒ•ã‚¡ã‚¤ãƒ«åãŒãŠã‹ã—ããªã£ã¦ããŸæ°—ã¯ã™ã‚‹
 ShowPromotionList = [
 					['PROMOTION_COMBAT1','PROMOTION_COMBAT2'],
 					['PROMOTION_COMBAT2','PROMOTION_COMBAT3'],
@@ -1089,7 +1091,7 @@ ShowPromotionList = [
 					]
 
 
-#Power‰ñ•œ—Ê‚É‰e‹¿‚ð—^‚¦‚é¸i‚ÆA‘‰Á‚·‚é‰ñ•œ—Ê
+#Powerå›žå¾©é‡ã«å½±éŸ¿ã‚’ä¸Žãˆã‚‹æ˜‡é€²ã¨ã€å¢—åŠ ã™ã‚‹å›žå¾©é‡
 PowerGainPromotionList = [
 					['PROMOTION_TOHO_COMBAT1',0.001],
 					['PROMOTION_TOHO_COMBAT2',0.001],
@@ -1118,7 +1120,7 @@ PowerGainPromotionList = [
 					['PROMOTION_MODE_PHANTASM',0.001],
 					]
 
-#Power‰ñ•œ—Ê‚ðŠ„‡‚Å‘‰Á‚³‚¹‚é•â³
+#Powerå›žå¾©é‡ã‚’å‰²åˆã§å¢—åŠ ã•ã›ã‚‹è£œæ­£
 PowerGainPerPromotionList = [
 					['PROMOTION_MODE_EASY',10],
 					['PROMOTION_MODE_NORMAL',15],
@@ -1128,7 +1130,7 @@ PowerGainPerPromotionList = [
 					['PROMOTION_MODE_PHANTASM',20],
 					]
 					
-#Power‰ñ•œ—Ê‚ÌŽž‘ã•â³
+#Powerå›žå¾©é‡ã®æ™‚ä»£è£œæ­£
 PowerGainPerEraList = [
 					['ERA_ANCIENT',0],
 					['ERA_CLASSICAL',10],
@@ -1139,7 +1141,7 @@ PowerGainPerEraList = [
 					['ERA_FUTURE',130],
 					]
 
-#Power‰ñ•œ—Ê‚Ì‘¬“x•â³
+#Powerå›žå¾©é‡ã®é€Ÿåº¦è£œæ­£
 PowerGainPerGameSpeedList = [
 					['GAMESPEED_MARATHON',40],
 					['GAMESPEED_EPIC',60],
@@ -1148,6 +1150,11 @@ PowerGainPerGameSpeedList = [
 					['GAMESPEED_TENGU',120],
 					]
 
+
+#ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ç½®ãå ´
+SpellMessage = {
+    'MSG_KISHINJOU1': u"è¼é‡åŸŽã®å„éƒ½å¸‚ã§ä»˜å–ªç¥žãŒå¤§é‡ç™ºç”Ÿã—ã¾ã—ãŸï¼"
+    }
 
 ##### </written by F> #####
 
