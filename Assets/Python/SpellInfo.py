@@ -9158,34 +9158,41 @@ def spell_YORIHIME_EXTRA2(caster,cost):
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
 		if caster.getTeam() == pUnit.getTeam():
-			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
-				if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
-					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False )
-					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
-					pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
-			elif pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
-				if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
-					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False )
-					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
-					pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
-			else:
-				if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
-					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
-					pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
-	
+			# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
+			# 	if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
+			# 		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False )
+			# 		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+			# 		pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+			# elif pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
+			# 	if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
+			# 		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False )
+			# 		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+			# 		pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+			# else:
+			# 	if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
+			# 		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+			# 		pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+			#
+			### するっと書ける
+			if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
+				Functions.setTurnPromotion(pUnit, 'PROMOTION_YATANOKAGAMI_TURN3')
+			
 	#八咫鏡の味方付与率はCAL比確率で上下　ただし本人には確定付与
 	#ちなみにこれを追記している時点では消失処理がまだ。後々忘れないように
-	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
-		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False )
-		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
-		caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
-	elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
-		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False )
-		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
-		caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
-	else:
-		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
-		caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	# if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
+	# 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False )
+	# 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+	# 	caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	# elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
+	# 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False )
+	# 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+	# 	caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	# else:
+	# 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+	# 	caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	#
+	### 重複のおそれがあっても向こうでリストを見てよしなにしてくれる
+	Functions.setTurnPromotion(pUnit, 'PROMOTION_YATANOKAGAMI_TURN3')
 	
 	caster.setPower(caster.getPower()-cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )

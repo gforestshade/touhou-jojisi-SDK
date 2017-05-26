@@ -474,8 +474,124 @@ def isWar(iPlayer):
 	return False
 
 
+### 全時限昇進のリスト
+### NumTurnPromoはやっぱり「のべターン数」と思った方がするっと書ける気がするんだ
+### ex. のこり1ターンが3個、残り5ターンが1個なら合計で8
+### そう思う前提だと無いところから残り5ターンにするのは+5すればいいので簡単ですが、
+### 残り1ターンを残り5ターンに戻したりするのとか面倒なので、いっそつけたい昇進だけ指定すれば
+### 全部いいかんじにやってくれるのを目指してみる
+### 確率式だったり外すときに追加の処理があったとしても気にせず入れてよい
+### ほんとはこの手のリストはTohoUnitList.pyにあるべきですが、実験中なのでうんぬん
+TurnPromotions = [
+	['', 'PROMOTION_YATANOKAGAMI_TURN1', 'PROMOTION_YATANOKAGAMI_TURN2', 'PROMOTION_YATANOKAGAMI_TURN3'],
+]
+
+# 時限式の昇進をセットする
+# sPromo: の昇進をつける
+# その際、時限昇進リストから残りターン数を読み取って、NumTurnPromoに足す
+# 指定の昇進と同じ段の昇進をすでに持っている場合、持っているのを消して指定昇進にセットしなおす
+# その際のターンの差分とかはよしなにやる
+def setTurnPromotion(pUnit, sPromo):
+	### リストから探して
+	for tpl in TurnPromotions:
+		for i in range(1, len(tpl)):
+			if tpl[i] == sPromo:
+				### おそうじして
+				for j in range(1, len(tpl)):
+					if pUnit.isHasPromotion(gc.getInfoTypeForString(tpl[j])):
+						pUnit.setHasPromotion(gc.getInfoTypeForString(tpl[j]),False)
+						pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() - j)
+						### NumTurnPromoの解釈が「昇進の数」でないと不安なら代わりに
+						### pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() - 1)
+				### 足す
+				pUnit.setHasPromotion(gc.getInfoTypeForString(tpl[i]),True)
+				pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() + i)
+				### NumTurnPromoの解釈が「昇進の数」でないと不安なら代わりに
+				### pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() + 1)
+				return True
+
+### NumTurnPromoの解釈をどちらにするにせよ、ずらずらと同じ段の判定をしなくてよくなるので
+### わざわざ関数を経由する意義はそれなりにありそうな気がする
 
 
+# 昇進のターンを減らす
+# spPromo: 移動元の昇進名　を持っているなら
+# iPer: の確率で(sRand: によって発生した乱数で)
+# かつ beforeCallback: の条件を満たすなら
+# snPromo: 移動先の昇進名(ここが空文字列なら単に消す)にかえて
+# afterCallback: で指定されている後処理をして
+# pUnit.NumTurnPromoを-1する(残りターン数の総和だと思っているので、ここは一律-1)
+# 入れ替えが発生したらTrue、持ってなかったり確率に失敗したらFalseを返す
+def changeTurnPromotion(pUnit, spPromo, snPromo, iPer=100, sRand="", beforeCallback=None, afterCallback=None):
+	### もろもろの条件を満たすなら
+	if pUnit.isHasPromotion(gc.getInfoTypeForString(spPromo)) and \
+	   (iPer >= 100 or gc.getGame().getSorenRandNum(100, sRand) < iPer) and \
+	   (beforeCallback is None or beforeCallback(pUnit)):
+		### 昇進をかえて
+		pUnit.setHasPromotion(gc.getInfoTypeForString(spPromo),False)
+		if snPromo != "": pUnit.setHasPromotion(gc.getInfoTypeForString(snPromo),True)
 
+		### 後処理が指定されていればやる
+		if afterCallback is not None: afterCallback(pUnit)
+
+		### decrement
+		pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() - 1)
+		### 昇進の数でないと不安なら代わりに
+		### if snPromo == "": pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() - 1)
+		###
+		### NumTurnPromoの解釈としてこっちを採用する場合でも移動先として空文字列が指定されたかどうかを自動判定するので
+		### 自分で-1する手間くらいは省けるかもしれない...ですが、やっぱりつける方はともかく減らす方の便利関数の存在意義は
+		### 微妙かもしれない
+		return True
+	
+	return False
+
+
+# 確定時限昇進のリスト
+### ターンごとに確定で一個左にずれる類の昇進のためのリスト
+### ほんとはこの手のリストはTohoUnitList.pyにあるべきですが(ry
+### 減らす方もこのリスト化までやればそれなりにらくちんになるので、やるならここまでやるべきかも
+DeterminateTurnPromotions = [
+	['', 'PROMOTION_YATANOKAGAMI_TURN1', 'PROMOTION_YATANOKAGAMI_TURN2', 'PROMOTION_YATANOKAGAMI_TURN3'],
+]
+
+
+# 各確定時限昇進をいっこ左にずらす
+# TURN1の次には消えてほしいので、リストの一番左には空文字列を入れている
+# (see changeTurnPromotion.snPromoが空文字列のとき)
+def changeDeterminateTurnPromotions(pUnit):
+	bFound = False
+	### リストから探して
+	for p in DeterminateTurnPromotions:
+		for i in range(1, len(p)):
+			if pUnit.isHasPromotion(gc.getInfoTypeForString(p[i])):
+				### ずらす
+				changeTurnPromotion(pUnit, p[i], p[i-1])
+				bFound = True
+				break
+	return bFound
+
+##### 確率時限昇進もリスト化するならこんな感じかなあ(未テスト)
+#
+# # 確率時限昇進のリスト
+# ### ターンごとに確率で消える類の昇進のためのリスト
+# ### ほんとはこの手のリストはTohoUnitList.pyに(ry
+# ProbableTurnPromotions = [
+# 	['PROMOTION_KURAYAMI', 20],
+# ]
+#
+#
+# # 各確率時限昇進を消す
+# def changeProbableTurnPromotions(pUnit):
+# 	bFound = False
+# 	### リストの中で当てはまるのがあったら
+# 	for p in ProbableTurnPromotions:
+# 		if pUnit.isHasPromotion(gc.getInfoTypeForString(p[0])):
+# 			### 消そうと試みる(確率判定は関数の中で)
+# 			changeTurnPromotion(pUnit, p[0], '', p[1], "remove kakuritsu")
+# 			bFound = True
+# 			break
+# 	return bFound
+##########################################################
 
 ##### </written by F> #####

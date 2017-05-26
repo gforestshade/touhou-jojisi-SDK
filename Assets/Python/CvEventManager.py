@@ -1155,18 +1155,21 @@ class CvEventManager:
 			pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() -1)
 		
 		#「八咫鏡」を持っている場合、それを除去
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
-			TurnPromoFlag = True
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False)
-			pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() -1)
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
-			TurnPromoFlag = True
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False)
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),True)
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3')):
-			TurnPromoFlag = True
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),False)
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),True)
+		# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
+		# 	TurnPromoFlag = True
+		# 	pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False)
+		# 	pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() -1)
+		# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
+		# 	TurnPromoFlag = True
+		# 	pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False)
+		# 	pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),True)
+		# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3')):
+		# 	TurnPromoFlag = True
+		# 	pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),False)
+		# 	pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),True)
+		#
+		### 確定系はこれ一行でぜんぶ向こうのリストに従って自動で一個左にずれてくれる
+		TurnPromoFlag = Functions.changeDeterminateTurnPromotions(pUnit) or TurnPromoFlag
 		
 		#「スピードストライク」を持っている場合、それを除去
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPEED_STRIKE')):
@@ -1231,6 +1234,16 @@ class CvEventManager:
 				pUnit.setDamage(80,iPlayer)
 			elif (100-pUnit.getDamage()) >= 40:
 				pUnit.changeDamage(30,iPlayer)
+		
+		### ちょっと細かい指定をして直接呼び出すこともできる
+		### 昇進を取り除いた後なにかするなら このようにafterCallbackを指定する
+		### ...あんまり簡単にならなかった callback系は微妙かも
+		# if Functions.changeTurnPromotion(pUnit, 'PROMOTION_THEWORLD_EASY', '', 100, "", None, lambda pU:
+		# 	if 19 < (100-pUnit.getDamage()) and (100-pUnit.getDamage()) < 50:
+		# 		pUnit.setDamage(80,iPlayer)
+		# 	elif (100-pUnit.getDamage()) >= 40:
+		# 		pUnit.changeDamage(30,iPlayer) 
+		# ):  TurnPromoFlag = True
 			
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_THEWORLD_NORMAL')):
 			TurnPromoFlag = True
@@ -1260,12 +1273,17 @@ class CvEventManager:
 				pUnit.changeDamage(60,iPlayer)
 			
 		#PROMOTION_KURAYAMIを持ってる子が居たら、20％の確率でそれを除去
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KURAYAMI')):
-			TurnPromoFlag = True
-			if gc.getGame().getSorenRandNum(100,"Remove PROMOTION_KURAYAMI") < 20:
-				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_KURAYAMI'),False)
-				pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() -1)
-				
+		# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KURAYAMI')):
+		# 	TurnPromoFlag = True
+		# 	if gc.getGame().getSorenRandNum(100,"Remove PROMOTION_KURAYAMI") < 20:
+		# 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_KURAYAMI'),False)
+		# 		pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() -1)
+		#
+		### 確率オプションで呼び出す例
+		### 20%の確率でしか除去されないなら このように指定する
+		### 単純確率系も全部同じ書き方なのでリスト化してしまうのもいいかもしれない
+		TurnPromoFlag =  Functions.changeTurnPromotion(pUnit, 'PROMOTION_KURAYAMI', '', 20, "remove kurayami") or TurnPromoFlag
+		
 		#PROMOTION_POISON系を持ってる子が居たら、ものによってダメージを与えてから30％の確率でそれを除去
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISON1')):
 			TurnPromoFlag = True
@@ -1377,7 +1395,16 @@ class CvEventManager:
 			if Functions.checkUnit(pUnit.getX(),pUnit.getY(),RangeList,gc.getInfoTypeForString('UNIT_MYSTIA1'),gc.getInfoTypeForString('UNIT_MYSTIA6')) == False:
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TORIME'),False)
 				pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() -1)
-				
+		
+		### 細かい制御をする場合その３
+		### 昇進を取り除くために追加の条件があるなら このようにbeforeCallbackを指定する
+		### ...うーん微妙
+		# if Functions.changeTurnPromotion(pUnit, 'PROMOTION_TORIME', '', 100, "", 
+		# 	lambda pU: Functions.checkUnit(pU.getX(),pU.getY(),RangeList1,
+		# 		gc.getInfoTypeForString('UNIT_MYSTIA1'),gc.getInfoTypeForString('UNIT_MYSTIA6')),
+		# 	None):
+		# 	TurnPromoFlag = True
+		
 		#弾幕結界をもっていたらすこしずつダメージを受ける
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DANMAKUKEKKAI')):
 			TurnPromoFlag = True
@@ -1930,8 +1957,8 @@ class CvEventManager:
 		if pPlayer.isHuman() == False and gc.getGame().isOption(gc.getInfoTypeForString('GAMEOPTION_STRONG_AI')):
 			pPlayer.setNumTohoUnitLimit( Limit + TohoUnitList.TohoNumList[Functions.getHandicap()] )
 		#CyInterface().addImmediateMessage(gc.getHandicapInfo(pPlayer.getHandicapType()).getDescription(),"")
-			
-		#そのプレイヤーのユニット全捜査
+		
+		#そのプレイヤーのユニット全走査
 		for pUnit in py.getUnitList():
 			#東方ユニットの処理かいし
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS') or pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_STANDBY'):
