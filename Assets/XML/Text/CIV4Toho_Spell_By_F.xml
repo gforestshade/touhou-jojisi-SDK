@@ -961,11 +961,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YUKARI_PHANTASM2_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]同じスタックの[001]体のユニットが式の居るスクウェアへ移動する&#13;[ICON_BULLET]その際に移動先にいた式は消滅する&#13;[ICON_BULLET]式が居ないか、式が敵対ユニットと重なっているときは使用不可&#13;[ICON_BULLET]移動後は行動終了状態となり、スペル使用済みの昇進が与えられる&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.30が必要</French>
+		<French>[ICON_BULLET]同じスタックの[001]体のユニットが式の居るスクウェアへ移動する&#13;[ICON_BULLET]その際に移動先にいた式は消滅する&#13;[ICON_BULLET]式が居ないか、式が敵対ユニットと重なっているときは使用不可&#13;[ICON_BULLET]移動後はスペル使用済みの昇進が与えられる&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.30が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]同じスタックの[001]体のユニットが式の居るスクウェアへ移動する&#13;[ICON_BULLET]その際に移動先にいた式は消滅する&#13;[ICON_BULLET]式が居ないか、式が敵対ユニットと重なっているときは使用不可&#13;[ICON_BULLET]移動後は行動終了状態となり、スペル使用済みの昇進が与えられる&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.30が必要</Japanese>
+		<Japanese>[ICON_BULLET]同じスタックの[001]体のユニットが式の居るスクウェアへ移動する&#13;[ICON_BULLET]その際に移動先にいた式は消滅する&#13;[ICON_BULLET]式が居ないか、式が敵対ユニットと重なっているときは使用不可&#13;[ICON_BULLET]移動後はスペル使用済みの昇進が与えられる&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.30が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YUKARI_PHANTASM3</Tag>
@@ -4888,164 +4888,164 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME1_1</Tag>
 		<English />
-		<French>降神「天照大神」</French>
+		<French>降神『天照大神』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「天照大神」</Japanese>
+		<Japanese>降神『天照大神』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME1_1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]敵対中の全ユニットにCAL*2～CAL*5のダメージ（東方ユニットには効果半減）&#13;[ICON_BULLET]敵対中の文明にある全ての都市の文化防御を吹き飛ばす&#13;[ICON_BULLET]自文明のユニット全員を完全に回復させる&#13;[ICON_BULLET]この際特定のユニットはCALに関係無く無条件で即死する&#13;[ICON_BULLET]発動には事前に降神『天宇受賣命』を使用しておく必要がある&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power3.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]敵対中の全ユニットにCAL*2～CAL*5のダメージ（東方ユニットには効果半減）&#13;[ICON_BULLET]敵対中の文明にある全ての都市の文化防御を吹き飛ばす&#13;[ICON_BULLET]自文明のユニット全員を完全に回復させる&#13;[ICON_BULLET]この際特定のユニットはCALに関係無く無条件で即死する&#13;[ICON_BULLET]発動には事前に降神『天宇受賣命』を使用しておく必要がある&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power3.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME2_1</Tag>
 		<English />
-		<French>降神「須佐之男命」</French>
+		<French>降神『須佐之男命』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「須佐之男命」</Japanese>
+		<Japanese>降神『須佐之男命』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME2_1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]周囲3マスに居る敵対ユニットにダメージを与える&#13;[ICON_BULLET]東方ユニットには効果半減&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]周囲3マスに居る敵対ユニットにダメージを与える&#13;[ICON_BULLET]東方ユニットには効果半減&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME3_1</Tag>
 		<English />
-		<French>降神「月読命」</French>
+		<French>降神『月読命』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「月読命」</Japanese>
+		<Japanese>降神『月読命』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME3_1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]何の資源も無い陸上タイルで発動すると牛、馬、絹資源のいずれかが発生する&#13;[ICON_BULLET]牛、馬、絹資源のいずれかがあるタイルで発動すると米資源に変化する&#13;[ICON_BULLET]海洋タイルあるいは上記3資源以外の資源があるタイルで発動しても効果無し&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]何の資源も無い陸上タイルで発動すると牛、馬、絹資源のいずれかが発生する&#13;[ICON_BULLET]牛、馬、絹資源のいずれかがあるタイルで発動すると米資源に変化する&#13;[ICON_BULLET]海洋タイルあるいは上記3資源以外の資源があるタイルで発動しても効果無し&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_EXTRA1</Tag>
 		<English />
-		<French>降神「金山彦命」</French>
+		<French>降神『金山彦命』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「金山彦命」</Japanese>
+		<Japanese>降神『金山彦命』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_EXTRA1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]鉱山タイルの上で使用すると当該鉱山タイルを「金山彦の鉱山」に変化させる&#13;[ICON_BULLET]金山彦の鉱山：通常の鉱山より[ICON_PRODUCTION]+1&#13;[ICON_BULLET]CAL16以上の場合更に[ICON_PRODUCTION]+1のボーナス&#13;[ICON_BULLET]確率によって銅or鉄資源が発生する事もある。CAL比によって確率上昇&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]鉱山タイルの上で使用すると当該鉱山タイルを「金山彦の鉱山」に変化させる&#13;[ICON_BULLET]金山彦の鉱山：通常の鉱山より[ICON_PRODUCTION]+1&#13;[ICON_BULLET]CAL16以上の場合更に[ICON_PRODUCTION]+1のボーナス&#13;[ICON_BULLET]確率によって銅or鉄資源が発生する事もある。CAL比によって確率上昇&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_EXTRA2</Tag>
 		<English />
-		<French>降神「石凝姥命」</French>
+		<French>降神『石凝姥命』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「石凝姥命」</Japanese>
+		<Japanese>降神『石凝姥命』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_EXTRA2_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]同スタック内の東方ユニットを含む味方ユニットに昇進「八咫鏡」を付与する&#13;[ICON_BULLET]「八咫鏡」…スペル耐性+30％　3ターン経過で消滅&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]同スタック内の東方ユニットを含む味方ユニットに昇進「八咫鏡」を付与する&#13;[ICON_BULLET]「八咫鏡」…スペル耐性+30％　3ターン経過で消滅&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_EXTRA3</Tag>
 		<English />
-		<French>降神「火之迦具土神」</French>
+		<French>降神『火之迦具土神』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「火之迦具土神」</Japanese>
+		<Japanese>降神『火之迦具土神』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_EXTRA3_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]「溶鉱炉」が建設されている都市上で使用すると「愛宕様の火」を設置する&#13;[ICON_BULLET]溶鉱炉が建設されていない都市では効果無し&#13;[ICON_BULLET]愛宕様の火：[ICON_PRODUCTION]+2,[ICON_PRODUCTION]+10%　鉄・石炭所持で幸福ボーナス&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]「溶鉱炉」が建設されている都市上で使用すると「愛宕様の火」を設置する&#13;[ICON_BULLET]溶鉱炉が建設されていない都市では効果無し&#13;[ICON_BULLET]愛宕様の火：[ICON_PRODUCTION]+2,[ICON_PRODUCTION]+10%　鉄・石炭所持で幸福ボーナス&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_PHANTASM1</Tag>
 		<English />
-		<French>降神「天宇受賣命」</French>
+		<French>降神『天宇受賣命』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「天宇受賣命」</Japanese>
+		<Japanese>降神『天宇受賣命』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_PHANTASM1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]周囲1マスにいる敵対ユニットにCAL*2の確率で「魅了」を与える&#13;[ICON_BULLET]東方ユニットには無効&#13;[ICON_BULLET]降神『天照大神』を使用可能になる&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.50が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]周囲1マスにいる敵対ユニットにCAL*2の確率で「魅了」を与える&#13;[ICON_BULLET]東方ユニットには無効&#13;[ICON_BULLET]降神『天照大神』を使用可能になる&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.50が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_PHANTASM2</Tag>
 		<English />
-		<French>降神「思金神」</French>
+		<French>降神『思金神』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「思金神」</Japanese>
+		<Japanese>降神『思金神』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_PHANTASM2_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]都市に「高天原の知恵」を建設する&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]高天原の知恵：[ICON_RESEARCH]+50％&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]都市に「高天原の知恵」を建設する&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]高天原の知恵：[ICON_RESEARCH]+50％&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_PHANTASM3</Tag>
 		<English />
-		<French>降神「冬の化身オーリック」</French>
+		<French>降神『冬の化身オーリック』</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>降神「冬の化身オーリック」</Japanese>
+		<Japanese>降神『冬の化身オーリック』</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_YORIHIME_PHANTASM3_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]「冬の化身オーリック」を1体召喚する&#13;[ICON_BULLET]冬の化身オーリック：同時に1体のみ召喚可能な特殊ユニット　特殊スペル「吹雪」を使用可能&#13;[ICON_BULLET]戦闘力は依姫の「CAL*3/2」と同値になる（最大戦闘力45）&#13;[ICON_BULLET]既に冬の化身オーリックを召喚している場合は戦闘力の再計算が行われる&#13;[ICON_BULLET]撃破された場合は再召喚可能&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.50が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]「冬の化身オーリック」を1体召喚する&#13;[ICON_BULLET]冬の化身オーリック：同時に1体のみ召喚可能な特殊ユニット　特殊スペル「吹雪」を使用可能&#13;[ICON_BULLET]戦闘力は依姫の「CAL*3/2」と同値になる（最大戦闘力45）&#13;[ICON_BULLET]既に冬の化身オーリックを召喚している場合は戦闘力の再計算が行われる&#13;[ICON_BULLET]撃破された場合は再召喚可能&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.50が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_TOYOHIME1_1</Tag>
@@ -5059,11 +5059,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_TOYOHIME1_1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]CAL1～7：周囲1マスの敵対ユニットにCAL*3のダメージを与える　東方ユニットには半減&#13;[ICON_BULLET]CAL8～15：上記効力に加えダメージ範囲が周囲2マス化・使用したマス直下のタイルにある森・氾濫源を取り除き改善を破壊し草原タイルの場合は平原タイルにする&#13;[ICON_BULLET]CAL16～19：上記効力に加えダメージ範囲が周囲3マス化・使用したマス直下のタイルを砂漠タイルにする&#13;[ICON_BULLET]CAL20～　：上記効力に加え使用したマス直下のタイルを放射能汚染状態にする&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]CAL1～7：周囲1マスの敵対ユニットにCAL*3のダメージを与える　東方ユニットには半減&#13;[ICON_BULLET]CAL8～15：上記効力に加えダメージ範囲が周囲2マス化・使用したマス直下のタイルにある森・氾濫源を取り除き改善を破壊し草原タイルの場合は平原タイルにする&#13;[ICON_BULLET]CAL16～19：上記効力に加えダメージ範囲が周囲3マス化・使用したマス直下のタイルを砂漠タイルにする&#13;[ICON_BULLET]CAL20～　：上記効力に加え使用したマス直下のタイルを放射能汚染状態にする&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TOYOHIME_EXTRA1</Tag>
@@ -5077,11 +5077,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TOYOHIME_EXTRA1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]「月の密偵」を召喚する&#13;[ICON_BULLET]月の密偵：移動力3　不可視ユニット&#13;[ICON_BULLET]同時に1体のみ召喚可能&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]「月の密偵」を召喚する&#13;[ICON_BULLET]月の密偵：移動力3　不可視ユニット&#13;[ICON_BULLET]同時に1体のみ召喚可能&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.30が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TOYOHIME_EXTRA2</Tag>
@@ -5095,11 +5095,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TOYOHIME_EXTRA2_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]同じスタックの[001]体のユニットが月の密偵の居るタイルへ移動する&#13;[ICON_BULLET]その際に移動先にいた月の密偵は消滅する&#13;[ICON_BULLET]月の密偵が居ないか、月の密偵が敵対ユニットと重なっているときは使用不可&#13;[ICON_BULLET]移動後はスペル使用済みの昇進が与えられる&#13;[ICON_BULLET]昇進EXTRAが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]同じスタックの[001]体のユニットが月の密偵の居るタイルへ移動する&#13;[ICON_BULLET]その際に移動先にいた月の密偵は消滅する&#13;[ICON_BULLET]月の密偵が居ないか、月の密偵が敵対ユニットと重なっているときは使用不可&#13;[ICON_BULLET]移動後はスペル使用済みの昇進が与えられる&#13;[ICON_BULLET]昇進EXTRAが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TOYOHIME_PHANTASM1</Tag>
@@ -5113,11 +5113,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TOYOHIME_PHANTASM1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]効果範囲内の敵対東方ユニットに「スペル発動済み」「スタン」の昇進を与える&#13;[ICON_BULLET]効果範囲は『素粒子の扇』と同じであり、CALによって範囲が拡大する&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]効果範囲内の敵対東方ユニットに「スペル発動済み」「スタン」の昇進を与える&#13;[ICON_BULLET]効果範囲は『素粒子の扇』と同じであり、CALによって範囲が拡大する&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_SEIRAN1_1</Tag>
@@ -5131,11 +5131,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_SEIRAN1_1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]同スタック内の東方ユニット（自身も含む）に「ルナティックガン」の昇進を与える&#13;[ICON_BULLET]CAL1～7：STG命中率10%向上　射程+1　1ターン経過で消滅&#13;[ICON_BULLET]CAL8～15：STG命中率20%向上　威力30%向上　射程+2　2ターン経過で消滅&#13;[ICON_BULLET]CAL16～：STG命中率30%向上　威力50%向上　弾数+1　射程+3　3ターン経過で消滅&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]同スタック内の東方ユニット（自身も含む）に「ルナティックガン」の昇進を与える&#13;[ICON_BULLET]CAL1～7：STG命中率10%向上　射程+1　1ターン経過で消滅&#13;[ICON_BULLET]CAL8～15：STG命中率20%向上　威力30%向上　射程+2　2ターン経過で消滅&#13;[ICON_BULLET]CAL16～：STG命中率30%向上　威力50%向上　弾数+1　射程+3　3ターン経過で消滅&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SEIRAN_EXTRA1</Tag>
@@ -5149,11 +5149,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SEIRAN_EXTRA1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]「鷲」をCAL/6体召喚する&#13;[ICON_BULLET]鷲：空軍ユニット　射程5　空爆可能&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.15が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]「鷲」をCAL/6体召喚する&#13;[ICON_BULLET]鷲：空軍ユニット　射程5　空爆可能&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.15が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SEIRAN_PHANTASM1</Tag>
@@ -5167,11 +5167,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SEIRAN_PHANTASM1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]同スタック内の東方ユニット（自身も含む）に「スピードストライク」の昇進を与える&#13;[ICON_BULLET]スピードストライク：「連射」と同一の性能　1ターン経過で消滅&#13;[ICON_BULLET]例外的に使用しても「スペル発動済み」の昇進がつかない&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.30が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]同スタック内の東方ユニット（自身も含む）に「スピードストライク」の昇進を与える&#13;[ICON_BULLET]スピードストライク：「連射」と同一の性能　1ターン経過で消滅&#13;[ICON_BULLET]例外的に使用しても「スペル発動済み」の昇進がつかない&#13;[ICON_BULLET]昇進PHANTASMが必要&#13;[ICON_BULLET]Power0.30が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_RINGO1_1</Tag>
@@ -5257,11 +5257,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_DOREMY1_1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]「シュブ＝ニグラス」「イスの偉大なる種族」「螺旋の王」を召喚する。召喚数や戦闘力はCAL値に比例&#13;[ICON_BULLET]発動時にこれら3体のユニットが既に存在している場合、既存ユニットの戦闘力再計算を行いつつ新規召喚も行う&#13;[ICON_BULLET]シュブ＝ニグラス：戦闘力は低いが、代わりに敵対ユニット撃破時に「深きものども」を自軍に加える事がある。CAL値が低い場合は召喚されない場合あり&#13;[ICON_BULLET]イスの偉大なる種族：この3体の中では最も戦闘力が高めになるが、他の特色は無い&#13;[ICON_BULLET]螺旋の王：攻城兵器と同様の特性を持つ。CAL値が低い場合は召喚されない場合あり&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]「シュブ＝ニグラス」「イスの偉大なる種族」「螺旋の王」を召喚する。召喚数や戦闘力はCAL値に比例&#13;[ICON_BULLET]発動時にこれら3体のユニットが既に存在している場合、既存ユニットの戦闘力再計算を行いつつ新規召喚も行う&#13;[ICON_BULLET]シュブ＝ニグラス：戦闘力は低いが、代わりに敵対ユニット撃破時に「深きものども」を自軍に加える事がある。CAL値が低い場合は召喚されない場合あり&#13;[ICON_BULLET]イスの偉大なる種族：この3体の中では最も戦闘力が高めになるが、他の特色は無い&#13;[ICON_BULLET]螺旋の王：攻城兵器と同様の特性を持つ。CAL値が低い場合は召喚されない場合あり&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_DOREMY_EXTRA1</Tag>
@@ -5275,29 +5275,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_DOREMY_EXTRA1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]発動したタイルに「ドリームエクスプレス」を設置する&#13;[ICON_BULLET]ドリームエクスプレス：鉄道と同じコストで移動出来るようになる道路系タイル&#13;[ICON_BULLET]昇進EXTRAが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]発動したタイルに「ドリームエクスプレス」を設置する&#13;[ICON_BULLET]ドリームエクスプレス：鉄道と同じコストで移動出来るようになる道路系タイル&#13;[ICON_BULLET]昇進EXTRAが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_DOREMY_PHANTASM1</Tag>
 		<English />
-		<French>夢符「ドリームキャッチャー」</French>
+		<French>「夢見るままに待ちいたり」</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>夢符「ドリームキャッチャー」</Japanese>
+		<Japanese>「夢見るままに待ちいたり」</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_DOREMY_PHANTASM1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]都市に「ダゴン秘密教団月面支部」を建設する&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]ダゴン秘密教団月面支部：[ICON_UNHEALTH]+5　その都市での[ICON_UNHAPPY]なし&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]都市に「ダゴン秘密教団月面支部」を建設する&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]ダゴン秘密教団月面支部：[ICON_UNHEALTH]+5　その都市での[ICON_UNHAPPY]なし&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_SAGUME1_1</Tag>
@@ -5320,20 +5320,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_SAGUME1_1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]「穢身探知型機雷」をCALに比例した数で召喚する&#13;[ICON_BULLET]穢身探知型機雷：不可視の副次損害系ユニット　大スパイのように都市潜入ミッションを行う事が出来る&#13;[ICON_BULLET]穢身探知型機雷の戦闘力は低く、戦闘を行った場合勝率に関係無く確実に全滅する&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]「穢身探知型機雷」をCALに比例した数で召喚する&#13;[ICON_BULLET]穢身探知型機雷：不可視の副次損害系ユニット　大スパイのように都市潜入ミッションを行う事が出来る&#13;[ICON_BULLET]穢身探知型機雷の戦闘力は低く、戦闘を行った場合勝率に関係無く確実に全滅する&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_SAGUME1_2_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]「穢身探知型機雷 改」をCALに比例した数で召喚する&#13;[ICON_BULLET]穢身探知型機雷 改：不可視の副次損害系ユニット　大スパイのように都市潜入ミッションを行う事が出来る&#13;[ICON_BULLET]穢身探知型機雷の戦闘力は低く、戦闘を行った場合勝率に関係無く確実に全滅する&#13;[ICON_BULLET]CAL15～20：「改善破壊工作」「回復支援工作」の特殊スペルを使用可能&#13;[ICON_BULLET]CAL21～：改善破壊工作の代わりに「改善破壊工作 改」を使用可能になり、更に「神経毒散布工作」の特殊スペルも使用可能になる&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]「穢身探知型機雷 改」をCALに比例した数で召喚する&#13;[ICON_BULLET]穢身探知型機雷 改：不可視の副次損害系ユニット　大スパイのように都市潜入ミッションを行う事が出来る&#13;[ICON_BULLET]穢身探知型機雷の戦闘力は低く、戦闘を行った場合勝率に関係無く確実に全滅する&#13;[ICON_BULLET]CAL15～20：「改善破壊工作」「回復支援工作」の特殊スペルを使用可能&#13;[ICON_BULLET]CAL21～：改善破壊工作の代わりに「改善破壊工作 改」を使用可能になり、更に「神経毒散布工作」の特殊スペルも使用可能になる&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power1.00が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SAGUME_EXTRA1</Tag>
@@ -5347,11 +5347,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SAGUME_EXTRA1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]同スタック内にいる自文明のスパイユニットに「自爆」の昇進を与える&#13;[ICON_BULLET]CAL1～8：同タイルのスパイユニット最大1人に自爆を付与&#13;[ICON_BULLET]CAL9～15：更に最大2人のスパイユニットに自爆を付与&#13;[ICON_BULLET]CAL16～：更に最大3人のスパイユニットに自爆を付与&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.15が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]同スタック内にいる自文明のスパイユニットに「自爆」の昇進を与える&#13;[ICON_BULLET]CAL1～8：同タイルのスパイユニット最大1人に自爆を付与&#13;[ICON_BULLET]CAL9～15：更に最大2人のスパイユニットに自爆を付与&#13;[ICON_BULLET]CAL16～：更に最大3人のスパイユニットに自爆を付与&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.15が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SAGUME_PHANTASM1</Tag>
@@ -5365,11 +5365,119 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_SAGUME_PHANTASM1_HELP</Tag>
 		<English />
-		<French>（仮）</French>
+		<French>[ICON_BULLET]都市に「片翼の白鷺」を建設する&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]片翼の白鷺：[ICON_ESPIONAGE]+100%　その都市で諜報ポイントの生産が可能になる（比率は[ICON_ESPIONAGE]：[ICON_PRODUCTION]+200%）&#13;[ICON_BULLET]昇進PHANTASMが必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>（仮）</Japanese>
+		<Japanese>[ICON_BULLET]都市に「片翼の白鷺」を建設する&#13;[ICON_BULLET]都市から移動すると消滅&#13;[ICON_BULLET]片翼の白鷺：[ICON_ESPIONAGE]+100%　その都市で諜報ポイントの生産が可能になる（比率は[ICON_ESPIONAGE]：[ICON_PRODUCTION]+200%）&#13;[ICON_BULLET]昇進PHANTASMが必要</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_AURIC</Tag>
+		<English />
+		<French>「吹雪」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>「吹雪」</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_AURIC_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]敵対ユニットに10％の固定ダメージ&#13;[ICON_BULLET]東方ユニットには半減</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]敵対ユニットに10％の固定ダメージ&#13;[ICON_BULLET]東方ユニットには半減</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_1</Tag>
+		<English />
+		<French>改善破壊工作</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>改善破壊工作</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_1_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]地形改善を破壊する&#13;[ICON_BULLET]戦争中の文明内でのみ使用可能&#13;[ICON_BULLET]使用したユニットは消滅する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]地形改善を破壊する&#13;[ICON_BULLET]戦争中の文明内でのみ使用可能&#13;[ICON_BULLET]使用したユニットは消滅する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_2</Tag>
+		<English />
+		<French>改善破壊工作 改</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>改善破壊工作 改</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_2_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]地形改善を破壊する&#13;[ICON_BULLET]戦争中あるいは中立の文明内で使用可能&#13;[ICON_BULLET]使用したユニットは50％の確率で消滅する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]地形改善を破壊する&#13;[ICON_BULLET]戦争中あるいは中立の文明内で使用可能&#13;[ICON_BULLET]使用したユニットは50％の確率で消滅する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_2</Tag>
+		<English />
+		<French>回復支援工作</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>回復支援工作</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_2_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]同スタック内の味方あるいは中立のユニットでダメージを受けている者を20%回復させる&#13;[ICON_BULLET]東方ユニットにも効果あり&#13;[ICON_BULLET]使用したユニットは消滅する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]同スタック内の味方あるいは中立のユニットでダメージを受けている者を20%回復させる&#13;[ICON_BULLET]東方ユニットにも効果あり&#13;[ICON_BULLET]使用したユニットは消滅する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_3</Tag>
+		<English />
+		<French>神経毒散布工作</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>神経毒散布工作</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_3_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]同スタック内の敵対あるいは中立のユニットに25%の確率で「トリカブトの毒」を付与する&#13;[ICON_BULLET]東方ユニットには無効&#13;[ICON_BULLET]使用したユニットは消滅する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]同スタック内の敵対あるいは中立のユニットに25%の確率で「トリカブトの毒」を付与する&#13;[ICON_BULLET]東方ユニットには無効&#13;[ICON_BULLET]使用したユニットは消滅する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_JIBAKU</Tag>
+		<English />
+		<French>自爆</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>自爆</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPELL_SPECIAL_JIBAKU_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]同スタック内の敵対あるいは中立のユニットに10%～20%の変動ダメージを与える&#13;[ICON_BULLET]東方ユニットには半減&#13;[ICON_BULLET]都市の直上にいる場合は文化防御を削った上でランダムで防壁類・バンカー類・城を破壊する&#13;[ICON_BULLET]使用したユニットは消滅する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]同スタック内の敵対あるいは中立のユニットに10%～20%の変動ダメージを与える&#13;[ICON_BULLET]東方ユニットには半減&#13;[ICON_BULLET]都市の直上にいる場合は文化防御を削った上でランダムで防壁類・バンカー類・城を破壊する&#13;[ICON_BULLET]使用したユニットは消滅する</Japanese>
 	</TEXT>
 	<!-- Tukinomiyako Spells End-->
 </Civ4GameText>

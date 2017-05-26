@@ -1880,6 +1880,54 @@
       <DefaultBuilding>BUILDING_KISHINJOU_AMERICAN_MALL</DefaultBuilding>
       <VictoryThresholds />
     </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_KAMINOHI</Type>
+      <Description>TXT_KEY_BUILDING_KAMINOHI</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_KAMINOHI</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_KOUTENGEN</Type>
+      <Description>TXT_KEY_BUILDING_KOUTENGEN</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_KOUTENGEN</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_DAGON</Type>
+      <Description>TXT_KEY_BUILDING_DAGON</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_DAGON</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_KATAYOKU</Type>
+      <Description>TXT_KEY_BUILDING_KATAYOKU</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_KATAYOKU</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
     <!--Trait Building-->
     <BuildingClassInfo>
       <Type>BUILDINGCLASS_CENTRALIZATION</Type>

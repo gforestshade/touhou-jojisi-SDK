@@ -65,5 +65,19 @@
       <TechMovementChanges />
       <Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
     </RouteInfo>
+    <RouteInfo>
+      <Type>ROUTE_DREAM_EXPRESS</Type>
+      <Description>TXT_KEY_DREAM_EXPRESS</Description>
+      <iValue>3</iValue>
+      <iAdvancedStartCost>18</iAdvancedStartCost>
+      <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
+      <iMovement>20</iMovement>
+      <iFlatMovement>6</iFlatMovement>
+      <BonusType>NONE</BonusType>
+      <PrereqOrBonuses />
+      <Yields />
+      <TechMovementChanges />
+      <Button>Art/Interface/Buttons/Units/doremy_button.dds</Button>
+    </RouteInfo>
   </RouteInfos>
 </Civ4RouteInfos>

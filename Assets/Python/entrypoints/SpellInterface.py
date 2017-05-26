@@ -18,9 +18,9 @@ gc = CyGlobalContext()
 def SpellCast(argsList):
 
 	pUnit,iNum = argsList
-
-        name = gc.getAutomateInfo(iNum).getType()
-        CvGameUtils.doprint(name)
+	
+	name = gc.getAutomateInfo(iNum).getType()
+	CvGameUtils.doprint(name)
 	Spell = filter(lambda s: s.getName()==name, SpellInfo.spells)[0] #見つかる前提
 	if Spell.isVisible(pUnit) and Spell.isAbled(pUnit):
 		if Spell.cast(pUnit): #castに成功すれば
@@ -42,7 +42,7 @@ def SpellCast(argsList):
 			#screen.setTextBackgroundPane( szName, gc.getInfoTypeForString("COLOR_BLACK") )
 			#screen.setTextColor( szName, gc.getInfoTypeForString("COLOR_BLACK"))
 		
-			if iNum <= gc.getInfoTypeForString("SPELLCARD_RAIKO1_1"): #スペカであれば
+			if iNum <= gc.getInfoTypeForString("SPELLCARD_SAGUME1_2"): #スペカであれば
 				pUnit.setNumCastSpellCard( pUnit.getNumCastSpellCard() + 1 )
 				if gc.getGame().isOption(gc.getInfoTypeForString('GAMEOPTION_MULTI')):
 					pUnit.setNumSpellCardBreakTime( 2 )

@@ -866,6 +866,12 @@ class CvGameUtils:
 		pCity = argsList[0]
 		eProcess = argsList[1]
 		bContinue = argsList[2]
+		
+		#「片翼の白鷲」がある都市は諜報ポイント生産が可能
+		if pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_KATAYOKU')):
+			if eProcess == gc.getInfoTypeForString('PROCESS_KATAYOKU_SPY'):
+				return True
+		
 		return False
 
 	def cannotMaintain(self,argsList):

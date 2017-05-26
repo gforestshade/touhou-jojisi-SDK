@@ -1390,6 +1390,42 @@
 		<Spanish />
 		<Japanese>フォーチュン・ピッケル</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KAMINOHI</Tag>
+		<English />
+		<French>愛宕様の火</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>愛宕様の火</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KOUTENGEN</Tag>
+		<English />
+		<French>高天原の知恵</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>高天原の知恵</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DAGON</Tag>
+		<English />
+		<French>ダゴン秘密教団月面支部</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ダゴン秘密教団月面支部</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KATAYOKU</Tag>
+		<English />
+		<French>片翼の白鷺</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>片翼の白鷺</Japanese>
+	</TEXT>
 <!-- Spell Buildings End-->
 <!-- System Buildings Start-->
 	<TEXT>

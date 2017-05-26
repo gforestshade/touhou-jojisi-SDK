@@ -58,6 +58,8 @@ class CvPediaProcess:
 					szText = CyTranslator().getText("TXT_KEY_CONCEPT_RESEARCH_PEDIA", ())
 				elif iCommerce == CommerceTypes.COMMERCE_CULTURE:
 					szText = CyTranslator().getText("TXT_KEY_CONCEPT_CULTURE_PEDIA", ())
+				elif iCommerce == CommerceTypes.COMMERCE_ESPIONAGE:
+					szText = CyTranslator().getText("TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR", ())
 		
 		screen.addMultilineText(self.top.getNextWidgetName(), szSpecialText, self.top.X_ITEMS_PANE+5, self.Y_EFFECTS+30, self.W_MAIN_PANE-10, self.H_EFFECTS-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 

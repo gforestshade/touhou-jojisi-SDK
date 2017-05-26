@@ -6024,7 +6024,7 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_YORIHIME_PHANTASM1</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_YORIHIME_PHANTASM2</Type>
@@ -6043,7 +6043,7 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_YORIHIME_PHANTASM2</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_YORIHIME_PHANTASM3</Type>
@@ -6062,7 +6062,7 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_YORIHIME_PHANTASM3</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_TOYOHIME_EXTRA1</Type>
@@ -6119,7 +6119,7 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_TOYOHIME_PHANTASM1</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_SEIRAN_EXTRA1</Type>
@@ -6157,7 +6157,7 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_SEIRAN_PHANTASM1</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_RINGO_EXTRA1</Type>
@@ -6195,7 +6195,7 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_RINGO_PHANTASM1</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_DOREMY_EXTRA1</Type>
@@ -6233,7 +6233,7 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_DOREMY_PHANTASM1</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_SAGUME_EXTRA1</Type>
@@ -6271,7 +6271,121 @@
       <Command>COMMAND_AUTOMATE</Command>
       <Automate>AUTOMATE_SPELL_SAGUME_PHANTASM1</Automate>
       <bVisible>1</bVisible>
-      <Button>Art/Interface/Buttons/Spells/USE_EXTRA_SPELL.dds</Button>
+      <Button>Art/Interface/Buttons/Spells/USE_PHANTASM_SPELL.dds</Button>
+    </AutomateInfo>
+    <AutomateInfo>
+      <Type>SPELL_SPECIAL_AURIC</Type>
+      <Description>TXT_KEY_SPELL_SPECIAL_AURIC</Description>
+      <Help>TXT_KEY_SPELL_SPECIAL_AURIC_HELP</Help>
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <HotKeyAlt />
+      <bAltDownAlt>0</bAltDownAlt>
+      <bShiftDownAlt>0</bShiftDownAlt>
+      <bCtrlDownAlt>0</bCtrlDownAlt>
+      <iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+      <Command>COMMAND_AUTOMATE</Command>
+      <Automate>AUTOMATE_SPELL_SPECIAL_AURIC</Automate>
+      <bVisible>1</bVisible>
+      <Button>Art/Interface/Buttons/Units/auric_button.dds</Button>
+    </AutomateInfo>
+    <AutomateInfo>
+      <Type>SPELL_SPECIAL_TANTIGATA_KIRAI_1_1</Type>
+      <Description>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_1</Description>
+      <Help>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_1_HELP</Help>
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <HotKeyAlt />
+      <bAltDownAlt>0</bAltDownAlt>
+      <bShiftDownAlt>0</bShiftDownAlt>
+      <bCtrlDownAlt>0</bCtrlDownAlt>
+      <iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+      <Command>COMMAND_AUTOMATE</Command>
+      <Automate>AUTOMATE_SPELL_SPECIAL_TANTIGATA_KIRAI_1_1</Automate>
+      <bVisible>1</bVisible>
+      <Button>Art/Interface/Buttons/actions/destroy.dds</Button>
+    </AutomateInfo>
+    <AutomateInfo>
+      <Type>SPELL_SPECIAL_TANTIGATA_KIRAI_1_2</Type>
+      <Description>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_2</Description>
+      <Help>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_1_2_HELP</Help>
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <HotKeyAlt />
+      <bAltDownAlt>0</bAltDownAlt>
+      <bShiftDownAlt>0</bShiftDownAlt>
+      <bCtrlDownAlt>0</bCtrlDownAlt>
+      <iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+      <Command>COMMAND_AUTOMATE</Command>
+      <Automate>AUTOMATE_SPELL_SPECIAL_TANTIGATA_KIRAI_1_2</Automate>
+      <bVisible>1</bVisible>
+      <Button>Art/Interface/Buttons/actions/destroy.dds</Button>
+    </AutomateInfo>
+    <AutomateInfo>
+      <Type>SPELL_SPECIAL_TANTIGATA_KIRAI_2</Type>
+      <Description>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_2</Description>
+      <Help>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_2_HELP</Help>
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <HotKeyAlt />
+      <bAltDownAlt>0</bAltDownAlt>
+      <bShiftDownAlt>0</bShiftDownAlt>
+      <bCtrlDownAlt>0</bCtrlDownAlt>
+      <iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+      <Command>COMMAND_AUTOMATE</Command>
+      <Automate>AUTOMATE_SPELL_SPECIAL_TANTIGATA_KIRAI_2</Automate>
+      <bVisible>1</bVisible>
+      <Button>Art/Interface/Buttons/actions/heal.dds</Button>
+    </AutomateInfo>
+    <AutomateInfo>
+      <Type>SPELL_SPECIAL_TANTIGATA_KIRAI_3</Type>
+      <Description>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_3</Description>
+      <Help>TXT_KEY_SPELL_SPECIAL_TANTIGATA_KIRAI_3_HELP</Help>
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <HotKeyAlt />
+      <bAltDownAlt>0</bAltDownAlt>
+      <bShiftDownAlt>0</bShiftDownAlt>
+      <bCtrlDownAlt>0</bCtrlDownAlt>
+      <iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+      <Command>COMMAND_AUTOMATE</Command>
+      <Automate>AUTOMATE_SPELL_SPECIAL_TANTIGATA_KIRAI_3</Automate>
+      <bVisible>1</bVisible>
+      <Button>Art/Interface/Buttons/Promotions/POISON2.dds</Button>
+    </AutomateInfo>
+    <AutomateInfo>
+      <Type>SPELL_SPECIAL_JIBAKU</Type>
+      <Description>TXT_KEY_SPELL_SPECIAL_JIBAKU</Description>
+      <Help>TXT_KEY_SPELL_SPECIAL_JIBAKU_HELP</Help>
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <HotKeyAlt />
+      <bAltDownAlt>0</bAltDownAlt>
+      <bShiftDownAlt>0</bShiftDownAlt>
+      <bCtrlDownAlt>0</bCtrlDownAlt>
+      <iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+      <Command>COMMAND_AUTOMATE</Command>
+      <Automate>AUTOMATE_SPELL_SPECIAL_JIBAKU</Automate>
+      <bVisible>1</bVisible>
+      <Button>Art/Interface/Buttons/Promotions/jibaku.dds</Button>
     </AutomateInfo>
     <AutomateInfo>
       <Type>SPELL_GET_HOURAINOKUSURI_EASY</Type>

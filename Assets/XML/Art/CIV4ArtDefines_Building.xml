@@ -2418,6 +2418,46 @@
       <KFM />
       <Button>Art/Interface/Buttons/spell_buildings/raiko_ph_stdethanol.dds</Button>
     </BuildingArtInfo>
+    <BuildingArtInfo>
+      <Type>ART_DEF_BUILDING_PALACE_BUTTON_YORIHIME_EXTRA</Type>
+      <LSystem>LSYSTEM_3x2</LSystem>
+      <bAnimated>0</bAnimated>
+      <fScale>1.15</fScale>
+      <fInterfaceScale>0.43</fInterfaceScale>
+      <NIF>Art/Structures/Buildings/Palace/Palace.nif</NIF>
+      <KFM />
+      <Button>Art/Interface/Buttons/spell_buildings/yorihime_ex.dds</Button>
+    </BuildingArtInfo>
+    <BuildingArtInfo>
+      <Type>ART_DEF_BUILDING_PALACE_BUTTON_YORIHIME_PHANTASM</Type>
+      <LSystem>LSYSTEM_3x2</LSystem>
+      <bAnimated>0</bAnimated>
+      <fScale>1.15</fScale>
+      <fInterfaceScale>0.43</fInterfaceScale>
+      <NIF>Art/Structures/Buildings/Palace/Palace.nif</NIF>
+      <KFM />
+      <Button>Art/Interface/Buttons/spell_buildings/yorihime_ph.dds</Button>
+    </BuildingArtInfo>
+    <BuildingArtInfo>
+      <Type>ART_DEF_BUILDING_PALACE_BUTTON_DOREMY_PHANTASM</Type>
+      <LSystem>LSYSTEM_3x2</LSystem>
+      <bAnimated>0</bAnimated>
+      <fScale>1.15</fScale>
+      <fInterfaceScale>0.43</fInterfaceScale>
+      <NIF>Art/Structures/Buildings/Palace/Palace.nif</NIF>
+      <KFM />
+      <Button>Art/Interface/Buttons/spell_buildings/doremy_ph.dds</Button>
+    </BuildingArtInfo>
+    <BuildingArtInfo>
+      <Type>ART_DEF_BUILDING_PALACE_BUTTON_SAGUME_PHANTASM</Type>
+      <LSystem>LSYSTEM_3x2</LSystem>
+      <bAnimated>0</bAnimated>
+      <fScale>1.15</fScale>
+      <fInterfaceScale>0.43</fInterfaceScale>
+      <NIF>Art/Structures/Buildings/Palace/Palace.nif</NIF>
+      <KFM />
+      <Button>Art/Interface/Buttons/spell_buildings/sagume_ph.dds</Button>
+    </BuildingArtInfo>
     <!--Trait Buildings-->
     <BuildingArtInfo>
       <Type>ART_DEF_BUILDING_PALACE_BUTTON_CENTRALIZATION_TRAIT</Type>

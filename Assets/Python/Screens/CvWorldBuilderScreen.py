@@ -504,6 +504,11 @@ class CvWorldBuilderScreen:
 		self.m_pActivePlot.getUnit(self.m_iCurrentUnit).setNumAcquisSpellPromotion(int(argsList[0]) -1)
 		return 1
 
+#debug NumTurnPromoをWB上で確認調整
+	def handleUnitEditNTPCB (self, argsList) :
+		self.m_pActivePlot.getUnit(self.m_iCurrentUnit).getNumTurnPromo(int(argsList[0]) -1)
+		return 1
+
 #東方叙事詩・統合MOD追記ここまで
 
 	def handleUnitEditNameCB (self, argsList) :
@@ -2435,6 +2440,10 @@ class CvWorldBuilderScreen:
 #CAレベルをWB上で調整
 		self.m_tabCtrlEdit.addSectionLabel(localText.getText("TXT_KEY_WB_CAL",()),  0)
 		self.m_tabCtrlEdit.addSectionSpinner("UnitEditCALCB", "CvScreensInterface", "WorldBuilderHandleUnitEditCALCB", "UnitEditCAL", 0, 0, 254, 1, pUnit.countCardAttackLevel(), 0, 0)
+
+#debug NumTurnPromoをWB上で確認調整
+		self.m_tabCtrlEdit.addSectionLabel(localText.getText("TXT_KEY_WB_NTP",()),  0)
+		self.m_tabCtrlEdit.addSectionSpinner("UnitEditNTPCB", "CvScreensInterface", "WorldBuilderHandleUnitEditNTPCB", "UnitEditNTP", 0, 0, 254, 1, pUnit.getNumTurnPromo(), 0, 0)
 
 #東方叙事詩・統合MOD追記ここまで
 ## Owner ##

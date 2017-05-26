@@ -411,6 +411,24 @@
 		<Japanese>小人たちの借り暮らし</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPECIAL_GREATMINE</Tag>
+		<English />
+		<French>金山彦の鉱山</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>金山彦の鉱山</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DREAM_EXPRESS</Tag>
+		<English />
+		<French>ドリームエクスプレス</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ドリームエクスプレス</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_EIENTEI_PLANTATION</Tag>
 		<English />
 		<French>[LINK=IMPROVEMENT_EIENTEI_PLANTATION]製薬所[\LINK]の建設</French>

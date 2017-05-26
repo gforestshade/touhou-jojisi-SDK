@@ -123,4 +123,13 @@
 		<Spanish />
 		<Japanese>紫「この技術が欲しいのかしら？残念だけど、この状況下では許可出来ない仕様なのよこのゲームでは。……リロードは程々にね？」</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_ESPIONAGE</Tag>
+		<English />
+		<French>諜報ポイント</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>諜報ポイント</Japanese>
+	</TEXT>
 </Civ4GameText>

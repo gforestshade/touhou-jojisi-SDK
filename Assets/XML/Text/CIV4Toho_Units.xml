@@ -1099,5 +1099,86 @@
 		<Spanish />
 		<Japanese>稀神サグメ</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_AURIC</Tag>
+		<English />
+		<French>冬の化身オーリック</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>冬の化身オーリック</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TUKINOMITTEI</Tag>
+		<English />
+		<French>月の密偵</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>月の密偵</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EAGLE</Tag>
+		<English />
+		<French>鷲</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>鷲</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHUB-NIGGURATH</Tag>
+		<English />
+		<French>シュブ＝ニグラス</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>シュブ＝ニグラス</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_RACE_OF_YITH</Tag>
+		<English />
+		<French>イスの偉大なる種族</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>イスの偉大なる種族</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPIRAL_KING</Tag>
+		<English />
+		<French>螺旋の王</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>螺旋の王</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DEEPONE</Tag>
+		<English />
+		<French>深きものども</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>深きものども</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TANTIGATA_KIRAI_1</Tag>
+		<English />
+		<French>穢身探知型機雷</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>穢身探知型機雷</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TANTIGATA_KIRAI_3</Tag>
+		<English />
+		<French>穢身探知型機雷 改</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>穢身探知型機雷 改</Japanese>
+	</TEXT>
 <!-- Tukinomiyako Units End-->
 </Civ4GameText>

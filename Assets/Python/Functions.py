@@ -19,7 +19,6 @@ RangeList1 = [	[-1,-1],[ 0,-1],[ 1,-1],
 				[-1, 0],        [ 1, 0],
 				[-1, 1],[ 0, 1],[ 1, 1], ]
 
-
 #指定された場所が有効なplotであるかどうかを判別
 #デフォのだとループ部分が上手くいかないので自前で実装
 def isPlot(iX,iY):
@@ -266,7 +265,7 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 	
 	
 #昇進付与関数
-def setPromotion(squeaList,caster,sPromotion,bSet,iPercent,bFriend,bNeutral,bEnemy,iBorder1,bToho,bGeneral,bPlayer,bAI,iBorder2,bAntiSpellBarrier,onEffect=0,iSpecial=0,bGain=False,bSpell=False):
+def setPromotion(squeaList,caster,sPromotion,bSet,iPercent,bFriend,bNeutral,bEnemy,iBorder1,bToho,bGeneral,bPlayer,bAI,iBorder2,bAntiSpellBarrier,onEffect=0,iSpecial=0,bGain=False,bSpell=False,iBorder3=0,iTurnPromo=0):
 	iPromotion = gc.getInfoTypeForString(sPromotion)
 	iUnitNum = 0
 	for squea in squeaList:
@@ -332,11 +331,18 @@ def setPromotion(squeaList,caster,sPromotion,bSet,iPercent,bFriend,bNeutral,bEne
 										pUnit.changeDamage(-caster.countCardAttackLevel()/2,caster.getOwner())
 								if iSpecial == 2: #ゆかりんスペカ用
 									pUnit.setDanmakuKekkai(0,caster.countCardAttackLevel()/4 + 1)
-									pUnit.setImmobileTimer(2)
+									pUnit.setImmobileTimer(1)
 								if iSpecial == 5: #えいきスペカ用
 									pUnit.finishMoves()
+								if iSpecial == 6: #とよひめPhanスペル用
+									pUnit.setImmobileTimer(1)
+								#東方叙事詩・統合MOD追記
+								#ちなみに足したり引いたりで管理する方式を採用
+								if iTurnPromo >= 0:
+									pUnit.setNumTurnPromo( pUnit.getNumTurnPromo() + iTurnPromo )
 	
 	#casterへのPowerゲイン
+	#この際だしいっそbGainは全てFalseにする？
 	if bGain: 
 		#基準値の計算
 		iBase = iPercent * 30.0 / 100.0

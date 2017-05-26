@@ -964,7 +964,7 @@
       <bActAsLand>0</bActAsLand>
       <bActAsAir>0</bActAsAir>
       <NIF>Art/Units/kimokeine/kimokeine.nif</NIF>
-      <KFM>Art/Units/kimokeine/kimokeine.kfm</KFM>
+      <KFM>Art/Units/keine/keine.kfm</KFM>
       <SHADERNIF>
       </SHADERNIF>
       <ShadowDef>
@@ -989,7 +989,7 @@
       <bActAsLand>0</bActAsLand>
       <bActAsAir>0</bActAsAir>
       <NIF>Art/Units/kimokeine/kimokeine.nif</NIF>
-      <KFM>Art/Units/kimokeine/kimokeine.kfm</KFM>
+      <KFM>Art/Units/keine/keine.kfm</KFM>
       <SHADERNIF>
       </SHADERNIF>
       <ShadowDef>
@@ -3007,9 +3007,9 @@
       <fInterfaceScale>1.0</fInterfaceScale>
       <bActAsLand>0</bActAsLand>
       <bActAsAir>0</bActAsAir>
-      <NIF>Art/Units/futo/futo0.nif</NIF>
-      <KFM>Art/Units/futo/futo.kfm</KFM>
-      <SHADERNIF>Art/Units/futo/futo0.nif</SHADERNIF>
+      <NIF>Art/Units/Celtic_Warrior/Celtic_Warrior.nif</NIF>
+      <KFM>Art/Units/Celtic_Warrior/Celtic_Warrior.kfm</KFM>
+      <SHADERNIF>Art/Units/Celtic_Warrior/Celtic_Warrior_FX.nif</SHADERNIF>
       <ShadowDef>
         <ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
         <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -3031,9 +3031,9 @@
       <fInterfaceScale>1.0</fInterfaceScale>
       <bActAsLand>0</bActAsLand>
       <bActAsAir>0</bActAsAir>
-      <NIF>Art/Units/futo/futo.nif</NIF>
-      <KFM>Art/Units/futo/futo.kfm</KFM>
-      <SHADERNIF>Art/Units/futo/futo.nif</SHADERNIF>
+      <NIF>Art/Units/Celtic_Warrior/Celtic_Warrior.nif</NIF>
+      <KFM>Art/Units/Celtic_Warrior/Celtic_Warrior.kfm</KFM>
+      <SHADERNIF>Art/Units/Celtic_Warrior/Celtic_Warrior_FX.nif</SHADERNIF>
       <ShadowDef>
         <ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
         <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -4227,6 +4227,174 @@
       </AudioRunSounds>
       <SelectionSound>AS3D_UN_MECH_SERVO</SelectionSound>
       <ActionSound>AS3D_UN_MECH_SERVO</ActionSound>
+    </UnitArtInfo>
+    <UnitArtInfo>
+      <Type>ART_DEF_UNIT_AURIC</Type>
+      <Button>Art/Interface/Buttons/Units/auric_button.dds</Button>
+      <fScale>5</fScale>
+      <fInterfaceScale>0.5</fInterfaceScale>
+      <bActAsLand>0</bActAsLand>
+      <bActAsAir>0</bActAsAir>
+      <NIF>Art/Units/auric ascended/mulcarn.nif</NIF>
+      <KFM>Art/Units/auric ascended/mulcarn.kfm</KFM>
+      <SHADERNIF />
+      <ShadowDef>
+        <ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+        <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+        <fShadowScale>1</fShadowScale>
+      </ShadowDef>
+      <fBattleDistance>0.35</fBattleDistance>
+      <fRangedDeathTime>0.31</fRangedDeathTime>
+      <bActAsRanged>0</bActAsRanged>
+      <TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+      <AudioRunSounds>
+        <AudioRunTypeLoop />
+        <AudioRunTypeEnd />
+      </AudioRunSounds>
+    </UnitArtInfo>
+    <UnitArtInfo>
+      <Type>ART_DEF_UNIT_EAGLE</Type>
+      <Button>Art/Interface/Buttons/Units/Hawk.dds</Button>
+      <fScale>0.3</fScale>
+      <fInterfaceScale>1</fInterfaceScale>
+      <bActAsLand>0</bActAsLand>
+      <bActAsAir>0</bActAsAir>
+      <NIF>Art/Units/Hawk/bird.nif</NIF>
+      <KFM>Art/Units/Hawk/bird.kfm</KFM>
+      <SHADERNIF />
+      <ShadowDef>
+        <ShadowNIF>Art/Units/01_UnitShadows/FighterShadow.nif</ShadowNIF>
+        <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+        <fShadowScale>0.75</fShadowScale>
+      </ShadowDef>
+      <fBattleDistance>0.35</fBattleDistance>
+      <fRangedDeathTime>0.31</fRangedDeathTime>
+      <bActAsRanged>0</bActAsRanged>
+      <TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+      <AudioRunSounds>
+        <AudioRunTypeLoop />
+        <AudioRunTypeEnd />
+      </AudioRunSounds>
+    </UnitArtInfo>
+    <UnitArtInfo>
+      <Type>ART_DEF_UNIT_SHUB-NIGGURATH</Type>
+      <Button>Art/Interface/Buttons/Units/shub-niggurath.dds</Button>
+      <fScale>0.5</fScale>
+      <fInterfaceScale>.55</fInterfaceScale>
+      <bActAsLand>0</bActAsLand>
+      <bActAsAir>0</bActAsAir>
+      <NIF>Art/Units/Afterworld_Boss/Afterworld_Boss.nif</NIF>
+      <KFM>Art/Units/Afterworld_Boss/Afterworld_Boss.kfm</KFM>
+      <SHADERNIF>Art/Units/Afterworld_Boss/Afterworld_Boss.nif</SHADERNIF>
+      <ShadowDef>
+        <ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+        <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+        <fShadowScale>1.0</fShadowScale>
+      </ShadowDef>
+      <fBattleDistance>0.35</fBattleDistance>
+      <fRangedDeathTime>0.05</fRangedDeathTime>
+      <bActAsRanged>1</bActAsRanged>
+      <TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+      <AudioRunSounds>
+        <AudioRunTypeLoop />
+        <AudioRunTypeEnd />
+      </AudioRunSounds>
+    </UnitArtInfo>
+    <UnitArtInfo>
+      <Type>ART_DEF_UNIT_GREAT_RACE_OF_YITH</Type>
+      <Button>Art/Interface/Buttons/Units/great_race_of_yith.dds</Button>
+      <fScale>0.75</fScale>
+      <fInterfaceScale>1</fInterfaceScale>
+      <bActAsLand>0</bActAsLand>
+      <bActAsAir>0</bActAsAir>
+      <NIF>Art/Units/kraken/krake.nif</NIF>
+      <KFM>Art/Units/kraken/krake.kfm</KFM>
+      <SHADERNIF />
+      <ShadowDef>
+        <ShadowNIF>Art/Units/01_UnitShadows/FrigateShadow.nif</ShadowNIF>
+        <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+        <fShadowScale>0.25</fShadowScale>
+      </ShadowDef>
+      <fBattleDistance>0.35</fBattleDistance>
+      <fRangedDeathTime>0.31</fRangedDeathTime>
+      <bActAsRanged>0</bActAsRanged>
+      <TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+      <AudioRunSounds>
+        <AudioRunTypeLoop />
+        <AudioRunTypeEnd />
+      </AudioRunSounds>
+    </UnitArtInfo>
+    <UnitArtInfo>
+      <Type>ART_DEF_UNIT_SPIRAL_KING</Type>
+      <Button>Art/Interface/Buttons/Units/spiral_king.dds</Button>
+      <fScale>0.75</fScale>
+      <fInterfaceScale>0.5</fInterfaceScale>
+      <bActAsLand>0</bActAsLand>
+      <bActAsAir>0</bActAsAir>
+      <NIF>Art/Units/Floating_Eye/flyeye.nif</NIF>
+      <KFM>Art/Units/Floating_Eye/flyeye.kfm</KFM>
+      <SHADERNIF />
+      <ShadowDef>
+        <ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+        <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+        <fShadowScale>0.9</fShadowScale>
+      </ShadowDef>
+      <fBattleDistance>0.35</fBattleDistance>
+      <fRangedDeathTime>0.31</fRangedDeathTime>
+      <bActAsRanged>0</bActAsRanged>
+      <TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+      <AudioRunSounds>
+        <AudioRunTypeLoop />
+        <AudioRunTypeEnd />
+      </AudioRunSounds>
+    </UnitArtInfo>
+    <UnitArtInfo>
+      <Type>ART_DEF_UNIT_DEEPONE</Type>
+      <Button>Art/Interface/Buttons/Units/deepone.dds</Button>
+      <fScale>0.70</fScale>
+      <fInterfaceScale>0.5</fInterfaceScale>
+      <bActAsLand>0</bActAsLand>
+      <bActAsAir>0</bActAsAir>
+      <NIF>Art/Units/Afterworld_Bleeder_Aberrant/Rabid/Bleeder_Aberrant.nif</NIF>
+      <KFM>Art/Units/Afterworld_Bleeder_Aberrant/Bleeder_Aberrant.kfm</KFM>
+      <SHADERNIF>Art/Units/Afterworld_Bleeder_Aberrant/Rabid/Bleeder_Aberrant_FX.nif</SHADERNIF>
+      <ShadowDef>
+        <ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+        <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+        <fShadowScale>1.0</fShadowScale>
+      </ShadowDef>
+      <fBattleDistance>0.35</fBattleDistance>
+      <fRangedDeathTime>0.05</fRangedDeathTime>
+      <bActAsRanged>0</bActAsRanged>
+      <TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+      <AudioRunSounds>
+        <AudioRunTypeLoop />
+        <AudioRunTypeEnd />
+      </AudioRunSounds>
+    </UnitArtInfo>
+    <UnitArtInfo>
+      <Type>ART_DEF_UNIT_TANTIGATA_KIRAI</Type>
+      <Button>Art/Interface/Buttons/Units/OrbofSucellus.dds</Button>
+      <fScale>0.75</fScale>
+      <fInterfaceScale>1.4</fInterfaceScale>
+      <bActAsLand>0</bActAsLand>
+      <bActAsAir>0</bActAsAir>
+      <NIF>Art/Units/Orb_of_Sucellus/wolf.nif</NIF>
+      <KFM>Art/Units/Orb_of_Sucellus/wolf.kfm</KFM>
+      <SHADERNIF />
+      <ShadowDef>
+        <ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+        <ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+        <fShadowScale>1.0</fShadowScale>
+      </ShadowDef>
+      <fBattleDistance>0.35</fBattleDistance>
+      <fRangedDeathTime>0.31</fRangedDeathTime>
+      <bActAsRanged>0</bActAsRanged>
+      <TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+      <AudioRunSounds>
+        <AudioRunTypeLoop />
+        <AudioRunTypeEnd />
+      </AudioRunSounds>
     </UnitArtInfo>
     <UnitArtInfo>
       <Type>ART_DEF_UNIT_LION</Type>

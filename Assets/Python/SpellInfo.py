@@ -34,6 +34,14 @@ RangeList2 = [	[-2,-2],[-1,-2],[ 0,-2],[ 1,-2],[ 2,-2],
 				[-2, 1],[-1, 1],[ 0, 1],[ 1, 1],[ 2, 1],
 				[-2, 2],[-1, 2],[ 0, 2],[ 1, 2],[ 2, 2], ]
 
+RangeList3 = [	[-3,-3],[-2,-3],[ -1,-3],[ 0,-3],[ 1,-3],[2,-3],[3,-3],
+				[-3,-2],[-2,-2],[ -1,-2],[ 0,-2],[ 1,-2],[2,-2],[3,-2],
+				[-3,-1],[-2,-1],[ -1,-1],[ 0,-1],[ 1,-1],[2,-1],[3,-1],
+				[-3, 0],[-2, 0],[ -1, 0],        [ 1, 0],[2, 0],[3, 0],
+				[-3, 1],[-2, 1],[ -1, 1],[ 0, 1],[ 1, 1],[2, 1],[3, 1],
+				[-3, 2],[-2, 2],[ -1, 2],[ 0, 2],[ 1, 2],[2, 2],[3, 2],
+				[-3, 3],[-2, 3],[ -1, 3],[ 0, 3],[ 1, 3],[2, 3],[3, 3], ]
+
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 
@@ -254,21 +262,21 @@ def init():
 			SpellInfo("SPELLCARD_SHINMYOUMARU1_1",req_SHINMYOUMARU1,spellcard_SHINMYOUMARU1,spellcard_SHINMYOUMARU1_Estimate,1.0,1,15),
 			SpellInfo("SPELLCARD_SHINMYOUMARU1_2",req_SHINMYOUMARU1,spellcard_SHINMYOUMARU1,spellcard_SHINMYOUMARU1_Estimate,1.0,16,255),
 			SpellInfo("SPELLCARD_RAIKO1_1",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D1",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D2",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D3",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D4",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D5",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D6",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D7",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D8",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D9",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
-			SpellInfo("SPELLCARD_D10",req_RAIKO1,spellcard_RAIKO1,spellcard_RAIKO1_Estimate,1.0,1,255),
+			SpellInfo("SPELLCARD_YORIHIME1_1",req_YORIHIME1,spellcard_YORIHIME1,spellcard_YORIHIME1_Estimate,3.0,1,255),
+			SpellInfo("SPELLCARD_YORIHIME2_1",req_YORIHIME2,spellcard_YORIHIME2,spellcard_YORIHIME2_Estimate,1.0,1,255),
+			SpellInfo("SPELLCARD_YORIHIME3_1",req_YORIHIME3,spellcard_YORIHIME3,spellcard_YORIHIME3_Estimate,1.0,1,255),
+			SpellInfo("SPELLCARD_TOYOHIME1_1",req_TOYOHIME1,spellcard_TOYOHIME1,spellcard_TOYOHIME1_Estimate,1.0,1,255),
+			SpellInfo("SPELLCARD_SEIRAN1_1",req_SEIRAN1,spellcard_SEIRAN1,spellcard_SEIRAN1_Estimate,1.0,1,255),
+			SpellInfo("SPELLCARD_RINGO1_1",req_RINGO1,spellcard_RINGO1,spellcard_RINGO1_Estimate,1.0,1,15),
+			SpellInfo("SPELLCARD_RINGO1_2",req_RINGO1,spellcard_RINGO1,spellcard_RINGO1_Estimate,1.0,16,255),
+			SpellInfo("SPELLCARD_DOREMY1_1",req_DOREMY1,spellcard_DOREMY1,spellcard_DOREMY1_Estimate,1.0,1,255),
+			SpellInfo("SPELLCARD_SAGUME1_1",req_SAGUME1,spellcard_SAGUME1,spellcard_SAGUME1_Estimate,1.0,1,14),
+			SpellInfo("SPELLCARD_SAGUME1_2",req_SAGUME1,spellcard_SAGUME1,spellcard_SAGUME1_Estimate,1.0,15,255),
 			
 			
 			SpellInfo("SPELL_SANAE_EXTRA1",req_SANAE_EXTRA1,spell_SANAE_EXTRA1),#                          ここからスペル
 			SpellInfo("SPELL_SANAE_PHANTASM1",req_SANAE_PHANTASM1,spell_SANAE_PHANTASM1),
-			SpellInfo("SPELL_REMILIA_EXTRA1",req_REMILIA_EXTRA1,spell_REMILIA_EXTRA1,tempIsAISpellCast,0.10,1,255),
+			SpellInfo("SPELL_REMILIA_EXTRA1",req_REMILIA_EXTRA1,spell_REMILIA_EXTRA1),
 			SpellInfo("SPELL_REMILIA_PHANTASM1",req_REMILIA_PHANTASM1,spell_REMILIA_PHANTASM1,tempIsAISpellCast,0.15,1,255),
 			SpellInfo("SPELL_CHEN_EXTRA1",req_CHEN_EXTRA1,spell_CHEN_EXTRA1),
 			SpellInfo("SPELL_CHEN_PHANTASM1",req_CHEN_PHANTASM1,spell_CHEN_PHANTASM1),
@@ -405,7 +413,23 @@ def init():
 			SpellInfo("SPELL_RAIKO_EXTRA1",req_RAIKO_EXTRA1,spell_RAIKO_EXTRA1,tempIsAISpellCast,0.15,1,255),
 			SpellInfo("SPELL_RAIKO_PHANTASM1",req_RAIKO_PHANTASM1,spell_RAIKO_PHANTASM1),
 			SpellInfo("SPELL_RAIKO_PHANTASM2",req_RAIKO_PHANTASM2,spell_RAIKO_PHANTASM2),
-			
+			SpellInfo("SPELL_YORIHIME_EXTRA1",req_YORIHIME_EXTRA1,spell_YORIHIME_EXTRA1,tempIsAISpellCast,0.30,1,255),
+			SpellInfo("SPELL_YORIHIME_EXTRA2",req_YORIHIME_EXTRA2,spell_YORIHIME_EXTRA2,tempIsAISpellCast,0.30,1,255),
+			SpellInfo("SPELL_YORIHIME_EXTRA3",req_YORIHIME_EXTRA3,spell_YORIHIME_EXTRA3,tempIsAISpellCast,0.30,1,255),
+			SpellInfo("SPELL_YORIHIME_PHANTASM1",req_YORIHIME_PHANTASM1,spell_YORIHIME_PHANTASM1,tempIsAISpellCast,0.50,1,255),
+			SpellInfo("SPELL_YORIHIME_PHANTASM2",req_YORIHIME_PHANTASM2,spell_YORIHIME_PHANTASM2),
+			SpellInfo("SPELL_YORIHIME_PHANTASM3",req_YORIHIME_PHANTASM3,spell_YORIHIME_PHANTASM3,tempIsAISpellCast,0.50,1,255),
+			SpellInfo("SPELL_TOYOHIME_EXTRA1",req_TOYOHIME_EXTRA1,spell_TOYOHIME_EXTRA1,tempIsAISpellCast,0.30,1,255),
+			SpellInfo("SPELL_TOYOHIME_EXTRA2",req_TOYOHIME_EXTRA2,spell_TOYOHIME_EXTRA2),
+			SpellInfo("SPELL_TOYOHIME_PHANTASM1",req_TOYOHIME_PHANTASM1,spell_TOYOHIME_PHANTASM1),
+			SpellInfo("SPELL_SEIRAN_EXTRA1",req_SEIRAN_EXTRA1,spell_SEIRAN_EXTRA1,tempIsAISpellCast,0.10,1,255),
+			SpellInfo("SPELL_SEIRAN_PHANTASM1",req_SEIRAN_PHANTASM1,spell_SEIRAN_PHANTASM1,tempIsAISpellCast,0.30,1,255),
+			SpellInfo("SPELL_RINGO_EXTRA1",req_RINGO_EXTRA1,spell_RINGO_EXTRA1),
+			SpellInfo("SPELL_RINGO_PHANTASM1",req_RINGO_PHANTASM1,spell_RINGO_PHANTASM1),
+			SpellInfo("SPELL_DOREMY_EXTRA1",req_DOREMY_EXTRA1,spell_DOREMY_EXTRA1),
+			SpellInfo("SPELL_DOREMY_PHANTASM1",req_DOREMY_PHANTASM1,spell_DOREMY_PHANTASM1),
+			SpellInfo("SPELL_SAGUME_EXTRA1",req_SAGUME_EXTRA1,spell_SAGUME_EXTRA1,tempIsAISpellCast,0.15,1,255),
+			SpellInfo("SPELL_SAGUME_PHANTASM1",req_SAGUME_PHANTASM1,spell_SAGUME_PHANTASM1),
 			
 			SpellInfo("SPELL_GET_HOURAINOKUSURI_EASY",req_GET_HOURAINOKUSURI_EASY,spell_GET_HOURAINOKUSURI_EASY,spell_GET_HOURAINOKUSURI_Estimate),#              以下アイテム
 			SpellInfo("SPELL_GET_HOURAINOKUSURI_NORMAL",req_GET_HOURAINOKUSURI_NORMAL,spell_GET_HOURAINOKUSURI_NORMAL,spell_GET_HOURAINOKUSURI_Estimate),
@@ -419,6 +443,12 @@ def init():
 			SpellInfo("SPELL_POWERUP_CAL",req_POWERUP_CAL,spell_POWERUP_CAL),
 			SpellInfo("SPELL_SPECIAL_TAMEUTI",req_SPECIAL_TAMEUTI,spell_SPECIAL_TAMEUTI),
 			SpellInfo("SPELL_SPECIAL_HIGHSPEEDMOVE",req_SPECIAL_HIGHSPEEDMOVE,spell_SPECIAL_HIGHSPEEDMOVE),
+			SpellInfo("SPELL_SPECIAL_AURIC",req_SPECIAL_AURIC,spell_SPECIAL_AURIC),
+			SpellInfo("SPELL_SPECIAL_TANTIGATA_KIRAI_1_1",req_SPECIAL_TANTIGATA_KIRAI_1_1,spell_SPECIAL_TANTIGATA_KIRAI_1_1),
+			SpellInfo("SPELL_SPECIAL_TANTIGATA_KIRAI_1_2",req_SPECIAL_TANTIGATA_KIRAI_1_2,spell_SPECIAL_TANTIGATA_KIRAI_1_2),
+			SpellInfo("SPELL_SPECIAL_TANTIGATA_KIRAI_2",req_SPECIAL_TANTIGATA_KIRAI_2,spell_SPECIAL_TANTIGATA_KIRAI_2),
+			SpellInfo("SPELL_SPECIAL_TANTIGATA_KIRAI_3",req_SPECIAL_TANTIGATA_KIRAI_3,spell_SPECIAL_TANTIGATA_KIRAI_3),
+			SpellInfo("SPELL_SPECIAL_JIBAKU",req_SPECIAL_JIBAKU,spell_SPECIAL_JIBAKU),
 			SpellInfo("SPELL_NINGENNOSATO1",req_NINGENNOSATO1,spell_NINGENNOSATO1), #以下・世界魔法
 			SpellInfo("SPELL_HYOUSEIRENGOU1",req_HYOUSEIRENGOU1,spell_HYOUSEIRENGOU1), 
 			SpellInfo("SPELL_KISHINJOU1",req_KISHINJOU1,spell_KISHINJOU1), 
@@ -951,7 +981,7 @@ def spellcard_CIRNO1(caster,cost):
 		Functions.changeDamage(RangeList1,caster,5+CAL*2,5+CAL*2,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
 		Functions.changeDamage(RangeList1,caster,(5+CAL*2)/2,(5+CAL*2)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 		
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_FREEZE',True,100+CAL*5,False,False,True,-1,False,True,True,True,-1,False)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_FREEZE',True,100+CAL*5,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -1388,18 +1418,17 @@ def spellcard_SAKUYA1(caster,cost):
 	CAL = caster.countCardAttackLevel()
 	
 	if CAL <= 3:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	elif CAL <= 7:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	elif CAL <= 11:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	else:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
-	
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -1495,8 +1524,8 @@ def spellcard_RUMIA1(caster,cost):
 	Functions.changeDamage(RangeList1,caster,0,CAL*5,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
 	Functions.changeDamage(RangeList1,caster,0,(CAL*5)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_KURAYAMI',True,100,False,False,True,-1,False,True,True,True,-1,False)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_KURAYAMI',True,50,False,False,True,-1,True,False,True,True,-1,False)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_KURAYAMI',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_KURAYAMI',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -1534,17 +1563,17 @@ def spellcard_MEDICIN1(caster,cost):
 	CAL = caster.countCardAttackLevel()
 
 	if CAL >= 1:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,True)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	if CAL >= 4:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	if CAL >= 8:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	if CAL >= 12:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,100+CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,50+CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -1642,7 +1671,7 @@ def spellcard_REIMU1(caster,cost):
 	Functions.changeDamage(RangeList1,caster,10+CAL*2,10+CAL*2,0,True,False,False,True,-1,False,True,True,True,-1,False,0)
 	
 	Functions.setPromotion(RangeList,caster,'PROMOTION_SPELL_CASTED',True,100,False,True,True,-1,True,False,True,True,-1,True,1)
-	Functions.setPromotion(RangeList,caster,'PROMOTION_CHARM',True,100,False,True,True,-1,True,False,False,True,-1,True)
+	Functions.setPromotion(RangeList,caster,'PROMOTION_CHARM',True,100,False,True,True,-1,True,False,False,True,-1,True,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -1732,8 +1761,8 @@ def spellcard_KOISHI1(caster,cost):
 	Functions.changeDamage(RangeList,caster,10+CAL*3/2,10+CAL*3/2,0,True,False,False,True,-1,False,True,True,True,-1,False,0)
 	Functions.changeDamage(RangeList,caster,(10+CAL*3/2)/2,(10+CAL*3/2)/2,0,True,False,False,True,-1,True,False,True,True,-1,False,0)
 	
-	Functions.setPromotion(RangeList,caster,'PROMOTION_CHARM',True,15+CAL*3,False,False,True,-1,False,True,True,True,-1,True)
-	Functions.setPromotion(RangeList,caster,'PROMOTION_CHARM',True,(15+CAL*3)/2,False,False,True,-1,True,False,True,True,-1,True)
+	Functions.setPromotion(RangeList,caster,'PROMOTION_CHARM',True,15+CAL*3,False,False,True,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList,caster,'PROMOTION_CHARM',True,(15+CAL*3)/2,False,False,True,-1,True,False,True,True,-1,True,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -1947,7 +1976,7 @@ def spellcard_REISEN1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_MADNESS',True,25+CAL*15/2,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_MADNESS',True,25+CAL*15/2,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -2083,15 +2112,15 @@ def spellcard_SATORI1(caster,cost):
 	CAL = caster.countCardAttackLevel()
 	
 	if CAL <= 3:
-		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR1',True,100,True,False,False,-1,False,True,True,True,-1,True)
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR1',True,100,True,False,False,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 	elif CAL <= 7:
-		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR2',True,100,True,False,False,-1,False,True,True,True,-1,True)
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR2',True,100,True,False,False,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 	elif CAL <= 11:
-		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR3',True,100,True,False,False,-1,False,True,True,True,-1,True)
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR3',True,100,True,False,False,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 	elif CAL <= 15:
-		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR4',True,100,True,False,False,-1,False,True,True,True,-1,True)
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR4',True,100,True,False,False,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 	else:
-		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR5',True,100,True,False,False,-1,False,True,True,True,-1,True)
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_TERRIBLE_SOUVEBNIR5',True,100,True,False,False,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -2128,8 +2157,8 @@ def spellcard_MYSTIA1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_TORIME',True,100,False,False,True,-1,False,True,True,True,-1,False)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_TORIME',True,50,False,False,True,-1,True,False,True,True,-1,False)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_TORIME',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_TORIME',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	
 	Functions.changeDamage(RangeList1,caster,CAL,CAL*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
 	Functions.changeDamage(RangeList1,caster,CAL/2,CAL*3/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
@@ -2382,8 +2411,8 @@ def spellcard_YUKARI1(caster,cost):
 
 	CAL = caster.countCardAttackLevel()
 
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_DANMAKUKEKKAI',True,100,False,False,True,-1,True,True,True,True,-1,True,0,2,True)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_STAN',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_DANMAKUKEKKAI',True,100,False,False,True,-1,True,True,True,True,-1,True,0,2,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_STAN',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -2610,8 +2639,8 @@ def spellcard_LETTY1(caster,cost):
 	Functions.changeDamage(RangeList1,caster,CAL*2,CAL*2,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
 	Functions.changeDamage(RangeList1,caster,(CAL*2)/2,(CAL*2)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_FROST',True,100,False,False,True,-1,False,True,True,True,-1,False)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_FROST',True,50,False,False,True,-1,True,False,True,True,-1,False)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_FROST',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_FROST',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -2789,7 +2818,7 @@ def spellcard_KOGASA1(caster,cost):
 	Functions.changeDamage(RangeList1,caster,CAL*2,CAL*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
 	Functions.changeDamage(RangeList1,caster,CAL*2/2,CAL*3/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_HEAVY_RAIN',True,100,False,False,True,-1,False,True,True,True,-1,False)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_HEAVY_RAIN',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -3120,7 +3149,7 @@ def spellcard_YOSHIKA1(caster,cost):
 	Functions.changeDamage(RangeList1,caster,CAL,CAL*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
 	Functions.changeDamage(RangeList1,caster,CAL/2,CAL*3/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
 		
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_ZOMBIE_POISON',True,CAL*8,False,False,True,-1,False,True,True,True,-1,False)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_ZOMBIE_POISON',True,CAL*8,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -3541,13 +3570,13 @@ def spellcard_SEIJA1(caster,cost):
 	CAL = caster.countCardAttackLevel()
 	
 	if CAL <= 11:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_A',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_B',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_A',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_B',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	else:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_A',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_JOUGE_HANTEN_A',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_B',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_JOUGE_HANTEN_B',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_A',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_JOUGE_HANTEN_A',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_SOUSA_HANTEN_B',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_JOUGE_HANTEN_B',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 		for iX in range(-1,2):
 			for iY in range(-1,2):
 				if Functions.isPlot(caster.getX()+iX,caster.getY()+iY):
@@ -3785,6 +3814,497 @@ def spellcard_RAIKO1_Estimate(caster):
 			estimatePoint = 0
 
 	return estimatePoint
+
+#よりひめ
+
+def req_YORIHIME1(bTestVisible,caster,sCAL,eCAL,cost):
+	if bTestVisible:
+		if gc.getInfoTypeForString('UNIT_YORIHIME1') <= caster.getUnitType() and caster.getUnitType() <= gc.getInfoTypeForString('UNIT_YORIHIME6'):
+			return True
+	else:
+		if caster.isHasPromotion(gc.getInfoTypeForString("PROMOTION_SPELL_CASTED")) == False:
+			if caster.getPower() >= cost:
+				if gc.getPlayer(caster.getOwner()).getAmenouzumeFlag() == 1:
+					return True
+	return False
+
+def spellcard_YORIHIME1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	iPlayer = caster.getOwner()
+	pPlayer = gc.getPlayer(iPlayer)
+	pPlot = caster.plot()
+	RangeList = []
+	
+	
+	if pPlayer.getAmenouzumeFlag() == 1:
+		iWidth = gc.getMap().getGridWidth()
+		iHeight = gc.getMap().getGridHeight()
+		for iX in range(iWidth):
+			for iY in range(iHeight):
+				RangeList.append([iX - caster.getX(),iY - caster.getY()])
+				pPlot = gc.getMap().plot(iX,iY)
+				for i in range(pPlot.getNumUnits()):
+					pTeam = gc.getTeam(caster.getTeam())
+					pUnit = pPlot.getUnit(i)
+					if caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()) == True:
+						if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
+							if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_REMILIA')) or
+								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLAN')) or
+								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOUMU')) or
+								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YUYUKO')) or
+								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIMA')) or
+								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MINAMITSU')) or
+								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOSHIKA')) ):
+								pUnit.changeDamage(100,pUnit.getOwner())
+						else:
+							if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ZOMBIEFAIRY')) or
+								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KYONSHII')) ):
+								pUnit.changeDamage(100,pUnit.getOwner())
+				if pPlot.isCity():
+					pCity = pPlot.getPlotCity()
+					if caster.getTeam() != pCity.getTeam() and pTeam.isAtWar(pCity.getTeam()) == True:
+						pCity.changeDefenseDamage(500)
+		
+		pPlayer.setAmenouzumeFlag(0)
+		Functions.changeDamage(RangeList,caster,-100,-100,100,False,True,False,False,-1,True,True,True,True,-1,True,1)
+		Functions.changeDamage(RangeList,caster,CAL*2,CAL*5,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList,caster,(CAL*2)/2,(CAL*5)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+
+		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+		caster.setPower(caster.getPower()-cost)
+	
+		point = caster.plot().getPoint()
+	
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def spellcard_YORIHIME1_Estimate(caster):
+
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	iPlayer = caster.getOwner()
+	pPlayer = gc.getPlayer(iPlayer)
+	iWidth = gc.getMap().getGridWidth()
+	iHeight = gc.getMap().getGridHeight()
+	RangeList = []
+	
+	for iX in range(iWidth):
+		for iY in range(iHeight):
+			RangeList.append([iX - caster.getX(),iY - caster.getY()])
+	
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList,caster,int(CAL*(1+CAL*0.05)),int(CAL*(1+CAL*0.15)),0,True,False,True,True,-1,False,True,True,True,-1,False,0,0,True)
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList,caster,int(CAL*(1+CAL*0.05)/2),int(CAL*(1+CAL*0.15)/2),0,True,False,True,True,-1,True,False,True,True,-1,False,0,0,True)
+	
+	estimatePoint = estimatePoint / (50.0 * (int(CAL*(1+CAL*0.05)))) * 100
+	
+	if estimatePoint < 50:
+		estimatePoint = 0
+	if pPlayer.getAmenouzumeFlag() == 0:
+		estimatePoint = 0
+	
+	return estimatePoint
+
+
+def req_YORIHIME2(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spellcard_YORIHIME2(caster,cost):
+
+	CAL = caster.countCardAttackLevel()
+	
+	Functions.changeDamage(RangeList3,caster,3+CAL,10+CAL*5/2,1,False,False,False,True,-1,False,True,True,True,-1,False,0)
+	Functions.changeDamage(RangeList3,caster,(3+CAL)/2,(10+CAL*5/2)/2,1,False,False,False,True,-1,True,False,True,True,-1,False,0)
+
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
+
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def spellcard_YORIHIME2_Estimate(caster):
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList3,caster,3+CAL,10+CAL*5/2,0,False,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList3,caster,(3+CAL)/2,(10+CAL*5/2)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
+	
+	estimatePoint = estimatePoint / (AISpellCastBaseNum * (6+CAL*2)) * 100
+	
+	if estimatePoint < 40:
+		estimatePoint = 0
+	
+	return estimatePoint
+
+
+def req_YORIHIME3(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spellcard_YORIHIME3(caster,cost):
+	
+	SigenList = ['BONUS_HORSE','BONUS_COW','BONUS_SILK']
+	pPlot = caster.plot()
+	iBonus = pPlot.getBonusType(caster.getTeam())
+	
+	if pPlot.getTeam() == caster.getTeam() and pPlot.getPlotType() != PlotTypes.PLOT_OCEAN:
+		for i in range(len(SigenList)):
+			if iBonus == gc.getInfoTypeForString(SigenList[i]):
+				pPlot.setBonusType(gc.getInfoTypeForString('BONUS_RICE'))
+				pPlot.setImprovementType(-1)
+				caster.setPower(caster.getPower() - cost)
+				break
+			elif iBonus == -1:
+				sigen = gc.getGame().getSorenRandNum(len(SigenList),"yorihime spell card")
+				pPlot.setBonusType(gc.getInfoTypeForString(SigenList[sigen]))
+				pPlot.setImprovementType(-1)
+				caster.setPower(caster.getPower() - cost)
+				break
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def spellcard_YORIHIME3_Estimate(caster):
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	SigenList = ['BONUS_HORSE','BONUS_COW','BONUS_SILK']
+	pPlot = caster.plot()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iBonus = pPlot.getBonusType(caster.getTeam())
+	pTeam = gc.getTeam(pPlayer.getTeam())
+	iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
+	
+	for i in range(iNumTeam):
+		ppTeam = gc.getTeam(i)
+		if ppTeam.isBarbarian() == False:
+			if not pTeam.isAtWar(i):
+				estimatePoint = +30
+	
+	if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
+		estimatePoint = +10
+	
+	if iBonus == gc.getInfoTypeForString('BONUS_SILK'):
+		estimatePoint = +10
+	
+	if pPlot.getImprovementType() != -1:
+		estimatePoint = -10
+	
+	if estimatePoint < 35:
+		estimatePoint = 0
+	
+	return estimatePoint
+
+
+
+#姉の方
+
+def req_TOYOHIME1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_TOYOHIME1','UNIT_TOYOHIME6',cost)
+
+def spellcard_TOYOHIME1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	
+	if CAL <= 8:
+		Functions.changeDamage(RangeList1,caster,CAL*3,CAL*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList1,caster,CAL*3/2,CAL*3/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+	elif CAL <= 16:
+		Functions.changeDamage(RangeList2,caster,CAL*3,CAL*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList2,caster,CAL*3/2,CAL*3/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+		if gc.getTeam(caster.getTeam()).isAtWar(pPlot.getTeam()):
+			if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_GRASS'):
+				pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
+			pPlot.setFeatureType(-1, 0)
+			pPlot.resetFeatureModel()
+			pPlot.setImprovementType(-1)
+	elif CAL <= 20:
+		Functions.changeDamage(RangeList3,caster,CAL*3,CAL*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList3,caster,CAL*3/2,CAL*3/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+		if gc.getTeam(caster.getTeam()).isAtWar(pPlot.getTeam()):
+			pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_DESERT'),True,True)
+			pPlot.setFeatureType(-1, 0)
+			pPlot.resetFeatureModel()
+			pPlot.setImprovementType(-1)
+	else:
+		Functions.changeDamage(RangeList3,caster,CAL*3,CAL*3,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList3,caster,CAL*3/2,CAL*3/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+		if gc.getTeam(caster.getTeam()).isAtWar(pPlot.getTeam()):
+			pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_DESERT'),True,True)
+			pPlot.setFeatureType(gc.getInfoTypeForString('FEATURE_FALLOUT'),1)
+			pPlot.resetFeatureModel()
+			pPlot.setImprovementType(-1)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
+
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def spellcard_TOYOHIME1_Estimate(caster):
+
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	
+	if CAL <= 8:
+		estimatePoint = estimatePoint + Functions.changeDamage(RangeList1,caster,CAL*3,CAL*3,0,True,False,True,True,-1,False,True,True,True,-1,False,0,0,True)
+		estimatePoint = estimatePoint + Functions.changeDamage(RangeList1,caster,CAL*3/2,CAL*3/2,0,True,False,True,True,-1,True,False,True,True,-1,False,0,0,True)
+	elif CAL <= 16:
+		estimatePoint = estimatePoint + Functions.changeDamage(RangeList2,caster,CAL*2,CAL*2,0,True,False,True,True,-1,False,True,True,True,-1,False,0,0,True)
+		estimatePoint = estimatePoint + Functions.changeDamage(RangeList2,caster,CAL,CAL,0,True,False,True,True,-1,True,False,True,True,-1,False,0,0,True)
+		if gc.getTeam(caster.getTeam()).isAtWar(pPlot.getTeam()):
+			estimatePoint = +5
+	else:
+		estimatePoint = estimatePoint + Functions.changeDamage(RangeList3,caster,CAL,CAL,0,True,False,True,True,-1,False,True,True,True,-1,False,0,0,True)
+		estimatePoint = estimatePoint + Functions.changeDamage(RangeList3,caster,CAL/2,CAL/2,0,True,False,True,True,-1,True,False,True,True,-1,False,0,0,True)
+		if gc.getTeam(caster.getTeam()).isAtWar(pPlot.getTeam()):
+			estimatePoint = +5
+	estimatePoint = estimatePoint / (AISpellCastBaseNum * (CAL*3)) * 100
+	
+	if estimatePoint < 40:
+		estimatePoint = 0
+	
+	return estimatePoint
+
+#せーらん
+
+def req_SEIRAN1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_SEIRAN1','UNIT_SEIRAN6',cost)
+
+def spellcard_SEIRAN1(caster,cost):
+	CAL = caster.countCardAttackLevel()
+	
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV1',False,100,True,False,False,-1,True,False,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV2_TURN1',False,100,True,False,False,-1,True,False,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV2_TURN2',False,100,True,False,False,-1,True,False,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV3_TURN1',False,100,True,False,False,-1,True,False,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV3_TURN2',False,100,True,False,False,-1,True,False,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV3_TURN3',False,100,True,False,False,-1,True,False,True,True,-1,True)
+	
+	
+	if CAL <= 8:
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV1',True,100,True,False,False,-1,True,False,True,True,-1,True,0,0,False,False,-1,+1)
+	elif CAL <= 16:
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV2_TURN2',True,100,True,False,False,-1,True,False,True,True,-1,True,0,0,False,False,-1,+1)
+	else:
+		Functions.setPromotion(RangeList0,caster,'PROMOTION_LUNATICGUN_LV3_TURN3',True,100,True,False,False,-1,True,False,True,True,-1,True,0,0,False,False,-1,+1)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
+
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def spellcard_SEIRAN1_Estimate(caster):
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	
+	for i in range(iNumTeam):
+		ppTeam = gc.getTeam(i)
+		if ppTeam.isBarbarian() == False:
+			if pTeam.isAtWar(i):
+				estimatePoint = +30
+	
+	for iiX in range(iX-2,iX+4):
+		for iiY in range(iY-2,iY+4):
+			pPlot = gc.getMap().plot(iiX,iiY)
+			pUnit = pPlot.getUnit(i)
+			if caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()) == True:
+				estimatePoint = +pUnit
+	
+	if estimatePoint < 35:
+		estimatePoint = 0
+	
+	return estimatePoint
+
+#おりんご
+
+def req_RINGO1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_RINGO1','UNIT_RINGO6',cost)
+
+def spellcard_RINGO1(caster,cost):
+	#これはひとまず仮組み。本格的には後に
+	CAL = caster.countCardAttackLevel()
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
+
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def spellcard_RINGO1_Estimate(caster):
+
+
+	#これもひとまず仮組み
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList1,caster,CAL*3,CAL*3,0,True,False,True,True,-1,False,True,True,True,-1,False,0,0,True)
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList1,caster,CAL*3/2,CAL*3/2,0,True,False,True,True,-1,True,False,True,True,-1,False,0,0,True)
+	
+	estimatePoint = estimatePoint / (AISpellCastBaseNum * (CAL*3)) * 100
+	
+	if estimatePoint < 35:
+		estimatePoint = 0
+	
+	return estimatePoint
+
+#どれみ
+
+def req_DOREMY1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_DOREMY1','UNIT_DOREMY6',cost)
+
+def spellcard_DOREMY1(caster,cost):
+
+	CAL = caster.countCardAttackLevel()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	pMap = gc.getMap()
+	iWidth = pMap.getGridWidth()
+	iHeight = pMap.getGridHeight()
+	
+	CombatBase = CAL
+	CombatYith = CombatBase
+	CombatShub = CombatBase*2/3
+	CombatSpiral = CombatBase*4/5
+	Summon = CAL/4
+	
+	if Summon > 20:#WBでも入れない限りこの条件満たさないだろうけど、まあ一応
+		Summon = 20
+	if Summon < 1:
+		Summon = 1
+	if CombatBase > 32:
+		CombatBase = 32
+	if CombatYith < 2:
+		CombatYith = 2
+	if CombatShub < 2:
+		CombatShub = 2
+	if CombatSpiral < 2:
+		CombatSpiral = 2
+	
+	for iX in range(iWidth):
+		for iY in range(iHeight):
+			pPlot = gc.getMap().plot(iX,iY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GREAT_RACE_OF_YITH'):
+					pUnit.setSpecialNumber(CombatYith -1)
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_SHUB-NIGGURATH'):
+					pUnit.setSpecialNumber(CombatShub -1)
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_SPIRAL_KING'):
+					pUnit.setSpecialNumber(CombatSpiral -1)
+				#戦闘力更新用
+				pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+				pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
+	
+	#イスの偉大なる種族
+	for i in range(SummonBaseNum[Summon +1]):
+		newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString( 'UNIT_GREAT_RACE_OF_YITH' ), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		newUnit1.setSpecialNumber( CombatYith-1 )
+		#戦闘力更新用
+		newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+		newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
+	
+	#シュブ＝ニグラス
+	for i in range(SummonBaseNum[Summon -1]):
+		newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString( 'UNIT_SHUB-NIGGURATH' ), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		newUnit1.setSpecialNumber( CombatShub-1 )
+		#戦闘力更新用
+		newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+		newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
+	
+	#螺旋の王
+	for i in range(SummonBaseNum[Summon -1]):
+		newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString( 'UNIT_SPIRAL_KING' ), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		newUnit1.setSpecialNumber( CombatSpiral-1 )
+		#戦闘力更新用
+		newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+		newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
+
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+	
+def spellcard_DOREMY1_Estimate(caster):
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	
+	if Functions.isWar(caster.getOwner()):
+		estimatePoint = 100
+	
+	return estimatePoint
+
+
+#さぐめ
+
+def req_SAGUME1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_SAGUME1','UNIT_SAGUME6',cost)
+
+def spellcard_SAGUME1(caster,cost):
+
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iX = caster.getX()
+	iY = caster.getY()
+	CAL = caster.countCardAttackLevel()
+	
+	for i in range(SummonBaseNum[CAL]):
+		if CAL<=7:
+			newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_1'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		elif CAL<=14:
+			newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_2'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		elif CAL<=20:
+			newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_3'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		else:
+			newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_4'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
+
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def spellcard_SAGUME1_Estimate(caster):
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	
+	if Functions.isWar(caster.getOwner()):
+		estimatePoint = 100
+	
+	return estimatePoint
+
 
 
 #ここからスペル
@@ -4311,6 +4831,7 @@ def req_SPECIAL_TAMEUTI(bTestVisible,caster,sCAL,eCAL,cost):
 def spell_SPECIAL_TAMEUTI(caster,cost):
 	
 	caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TAMETYUU'),True)
+	caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
 	caster.finishMoves()
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
@@ -4435,7 +4956,6 @@ def spell_REMILIA_EXTRA1(caster,cost):
 	newUnit1 = gc.getPlayer(caster.getOwner()).initUnit(gc.getInfoTypeForString("UNIT_BAT"), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 	newUnit1.setHasPromotion(gc.getInfoTypeForString("PROMOTION_ILLUSION"),True)
 	
-	caster.setPower(caster.getPower() - cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
 	point = caster.plot().getPoint()
@@ -4452,7 +4972,7 @@ def spell_REMILIA_PHANTASM1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList0,caster,'PROMOTION_NEKKYOU',True,100,True,False,False,-1,False,True,True,True,-1,True,0,1)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_NEKKYOU',True,100,True,False,False,-1,False,True,True,True,-1,True,0,1,False,False,-1,+1)
 	
 	caster.setPower(caster.getPower() - cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
@@ -4529,7 +5049,7 @@ def spell_WRIGGLE_EXTRA1(caster,cost):
 		for iY in range(iHeight):
 			RangeList.append([iX - caster.getX(),iY - caster.getY()])
 	
-	Functions.setPromotion(RangeList,caster,'PROMOTION_HOTARUNOHIKARI',True,100,True,False,False,-1,True,True,True,True,-1,True)
+	Functions.setPromotion(RangeList,caster,'PROMOTION_HOTARUNOHIKARI',True,100,True,False,False,-1,True,True,True,True,-1,True,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -4749,8 +5269,8 @@ def spell_MARISA_PHANTASM1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_CHARM',True,100,True,True,True,-1,True,False,True,True,-1,True,0,0,True,True)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_CHARM',True,CAL,False,False,True,-1,False,True,True,True,-1,True,0,0,True,True)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_CHARM',True,100,True,True,True,-1,True,False,True,True,-1,True,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_CHARM',True,CAL,False,False,True,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -5122,6 +5642,7 @@ def spell_ALICE_PHANTASM1(caster,cost):
 			 ( gc.getInfoTypeForString('UNIT_HOURAI_DOLL1') <= pUnit.getUnitType() and pUnit.getUnitType() <= gc.getInfoTypeForString('UNIT_HOURAI_DOLL6') ) ):
 			pUnit.changeDamage(-CAL*2,caster.getOwner())
 			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DOLLS_WAR'),True)
+			pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
 	
 	caster.setPower(caster.getPower()-cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
@@ -5583,7 +6104,7 @@ def spell_RUMIA_PHANTASM1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_KURAYAMI',True,CAL*10,False,True,True,-1,True,True,True,True,-1,False,0,0,True,True)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_KURAYAMI',True,CAL*10,False,True,True,-1,True,True,True,True,-1,False,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -5626,15 +6147,15 @@ def spell_MEDICIN_PHANTASM1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,True,True)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,CAL*2,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,True,True)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,CAL,False,True,True,-1,True,False,True,True,-1,False)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,CAL,False,True,True,-1,True,False,True,True,-1,False)
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,CAL,False,True,True,-1,True,False,True,True,-1,False)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON1',True,CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON2',True,CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON3',True,CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_POISON4',True,CAL,False,True,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 			
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -6163,7 +6684,7 @@ def spell_PATCHOULI_PHANTASM2(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList0,caster,'PROMOTION_SYLPHAEHORN',True,100,True,True,True,-1,True,True,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_SYLPHAEHORN',True,100,True,True,True,-1,True,True,True,True,-1,True,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -6182,7 +6703,7 @@ def spell_PATCHOULI_PHANTASM3(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList0,caster,'PROMOTION_BARRIER',True,100,True,True,True,-1,False,True,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_BARRIER',True,100,True,True,True,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -6229,6 +6750,7 @@ def spell_RAN_PHANTASM1(caster,cost):
 			pUnit.setXY(caster.getX(),caster.getY(),False,True,True)
 			pUnit.changeDamage(-50,caster.getOwner())
 			pUnit.setHasPromotion(gc.getInfoTypeForString("PROMOTION_SHIKINOSHIKI"),True)
+			pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -6795,7 +7317,7 @@ def spell_YUKARI_PHANTASM2(caster,cost):
 	for pUnit in WarpUnitList:
 		pUnit.setXY(SukimaUnit.getX(),SukimaUnit.getY(),False,True,True)
 		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-		pUnit.finishMoves()
+		#pUnit.finishMoves()
 	
 	SukimaUnit.changeDamage(100,caster.getOwner())
 	
@@ -6926,7 +7448,7 @@ def spell_KAGUYA_EXTRA3(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList0,caster,'PROMOTION_HINEZUMINOKAWAGOROMO',True,100,True,True,True,-1,True,True,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_HINEZUMINOKAWAGOROMO',True,100,True,True,True,-1,True,True,True,True,-1,True,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -7329,8 +7851,8 @@ def spell_LETTY_PHANTASM1(caster,cost):
 		for y in range(-CAL/4-1,CAL/4+2):
 			RangeList.append([x,y])
 			
-	Functions.setPromotion(RangeList,caster,'PROMOTION_FROST',True,CAL,False,False,True,-1,False,True,True,True,-1,False,0,4,True,True)
-	Functions.setPromotion(RangeList,caster,'PROMOTION_FROST',True,CAL/2,False,False,True,-1,True,False,True,True,-1,False,0,4,True,True)
+	Functions.setPromotion(RangeList,caster,'PROMOTION_FROST',True,CAL,False,False,True,-1,False,True,True,True,-1,False,0,4,False,False,-1,+1)
+	Functions.setPromotion(RangeList,caster,'PROMOTION_FROST',True,CAL/2,False,False,True,-1,True,False,True,True,-1,False,0,4,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -7379,7 +7901,7 @@ def spell_MIMA_PHANTASM1(caster,cost):
 		for y in range(-CAL/4-1,CAL/4+2):
 			RangeList.append([x,y])
 			
-	Functions.setPromotion(RangeList,caster,'PROMOTION_KUONNOYUME',True,CAL,False,False,True,-1,False,True,True,True,-1,False,0,4,True,True)
+	Functions.setPromotion(RangeList,caster,'PROMOTION_KUONNOYUME',True,CAL,False,False,True,-1,False,True,True,True,-1,False,0,4,False,False,-1,+1)
 	
 	caster.setPower(caster.getPower()-cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
@@ -7521,7 +8043,7 @@ def spell_KOGASA_PHANTASM1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	Functions.setPromotion(RangeList1,caster,'PROMOTION_OOPS',True,CAL*4,False,False,True,-1,False,True,True,True,-1,False,0,0,True,True)
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_OOPS',True,CAL*4,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -7979,6 +8501,7 @@ def req_YOSHIKA_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
 def spell_YOSHIKA_PHANTASM1(caster,cost):
 	
 	caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCORE_DESIRE'),True)
+	pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
 			
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -8001,7 +8524,7 @@ def req_SEIGA_EXTRA1(bTestVisible,caster,sCAL,eCAL,cost):
 
 def spell_SEIGA_EXTRA1(caster,cost):
 	
-	Functions.setPromotion(RangeList0,caster,'PROMOTION_KABENUKE',True,100,True,False,False,-1,False,True,True,True,-1,True)
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_KABENUKE',True,100,True,False,False,-1,True,True,True,True,-1,True,0,0,False,False,-1,+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -8397,7 +8920,7 @@ def spell_SEIJA_PHANTASM1(caster,cost):
 				#Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_2TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
 				#Functions.setPromotion(RangeList0,caster,'PROMOTION_KODUCHI_HANDOU_1TURN',False,100,True,True,True,-1,True,True,True,True,-1,True)
 			
-				Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_5TURN',True,100,True,False,False,-1,False,True,True,True,-1,True)
+				Functions.setPromotion(RangeList0,caster,'PROMOTION_UCHIDENO_KODUCHI_5TURN',True,100,True,False,False,-1,False,True,True,True,-1,True,0,0,False,False,-1,+1)
 			
 				for i in range(pPlot.getNumUnits()):
 					pSiege = pPlot.getUnit(i)
@@ -8491,8 +9014,9 @@ def spell_RAIKO_EXTRA1(caster,cost):
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TSUKUMOGAMI')):
 			pUnit.changeDamage(-CAL,caster.getOwner())
 			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PRISTINE_BEAT'),True)
+			pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
 	
-	
+	caster.setPower(caster.getPower()-cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
 	point = caster.plot().getPoint()
@@ -8594,8 +9118,720 @@ def spell_RAIKO_PHANTASM2(caster,cost):
 	return True
 
 
+#よりひめEX/PH
+
+def req_YORIHIME_EXTRA1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spell_YORIHIME_EXTRA1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	SigenList = ['BONUS_COPPER','BONUS_IRON']
+
+	if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_MINE'):
+		if CAL <= 16:
+			pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_GREATMINE1'))
+		else:
+			pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_GREATMINE2'))
+		caster.setPower(caster.getPower()-cost)
+		iRandSigen = gc.getGame().getSorenRandNum( (CAL+200),"Yorihime Extra")
+		if pPlot.getBonusType(caster.getTeam()) == -1:
+			if iRandSigen > 200:
+				sigen = gc.getGame().getSorenRandNum(len(SigenList),"Yorihime Extra Sigen")
+				caster.plot().setBonusType(gc.getInfoTypeForString(SigenList[sigen]))
+		
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def req_YORIHIME_EXTRA2(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spell_YORIHIME_EXTRA2(caster,cost):
+	pPlot = caster.plot()
+	iKagamiPercent = (caster.countCardAttackLevel())*4
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if caster.getTeam() == pUnit.getTeam():
+			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
+				if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
+					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False )
+					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+					pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+			elif pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
+				if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
+					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False )
+					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+					pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+			else:
+				if gc.getGame().getSorenRandNum(100, "spellcard cast") < iKagamiPercent:
+					pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+					pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	
+	#八咫鏡の味方付与率はCAL比確率で上下　ただし本人には確定付与
+	#ちなみにこれを追記している時点では消失処理がまだ。後々忘れないように
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1')):
+		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN1'),False )
+		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+		caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2')):
+		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN2'),False )
+		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+		caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	else:
+		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_YATANOKAGAMI_TURN3'),True )
+		caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	
+	caster.setPower(caster.getPower()-cost)
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def req_YORIHIME_EXTRA3(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spell_YORIHIME_EXTRA3(caster,cost):
+	
+	pPlot = caster.plot()
+	if pPlot.isCity():
+		pCity = pPlot.getPlotCity()
+		if pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_FORGE')) and not pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_KAMINOHI')):
+			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_KAMINOHI'),1)
+			caster.setPower(caster.getPower()-cost)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
 
 
+def req_YORIHIME_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_PHANTASM','UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spell_YORIHIME_PHANTASM1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	iPlayer = caster.getOwner()
+	pPlayer = gc.getPlayer(iPlayer)
+	
+	if pPlayer.getAmenouzumeFlag() == 0:
+		pPlayer.setAmenouzumeFlag(1)
+	
+	Functions.setPromotion(RangeList1,caster,'PROMOTION_CHARM',True,CAL*2,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	
+	caster.setPower(caster.getPower()-cost)
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_YORIHIME_PHANTASM2(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_PHANTASM','UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spell_YORIHIME_PHANTASM2(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	
+	pPlot = caster.plot()
+	if pPlot.isCity():
+		pCity = pPlot.getPlotCity()
+		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_KOUTENGEN'),1)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def req_YORIHIME_PHANTASM3(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_PHANTASM','UNIT_YORIHIME1','UNIT_YORIHIME6',cost)
+
+def spell_YORIHIME_PHANTASM3(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	py = PyPlayer(caster.getOwner())
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iX = caster.getX()
+	iY = caster.getY()
+	bFlag = False
+	if CAL > 30:
+		CAL = 30
+	for pUnit in py.getUnitList():
+		if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_AURIC'):
+			pUnit.setSpecialNumber((CAL*3/2)-1)
+			bFlag = True
+			#戦闘力更新用
+			pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+			pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
+			break
+	if bFlag == False:
+		newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_AURIC'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		newUnit1.setSpecialNumber((CAL*3/2)-1)
+		newUnit1.changeExperience(CAL/3,-1,False,False,False)
+		#戦闘力更新用
+		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+		pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
+	
+	caster.setPower(caster.getPower()-cost)
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+#姉の方EX/PH
+
+def req_TOYOHIME_EXTRA1(bTestVisible,caster,sCAL,eCAL,cost):
+
+	if bTestVisible:
+		if gc.getInfoTypeForString('UNIT_TOYOHIME1') <= caster.getUnitType() and caster.getUnitType() <= gc.getInfoTypeForString('UNIT_TOYOHIME6'):
+			return True
+	else:
+		if caster.isHasPromotion(gc.getInfoTypeForString("PROMOTION_SPELL_CASTED")) == False and caster.getPower() >= cost:
+			if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MODE_EXTRA')) and gc.getTeam(caster.getTeam()).isHasTech( gc.getInfoTypeForString('TECH_SHOOTING_TECHNIQUE2') ):
+				Flag = True
+				py = PyPlayer(caster.getOwner())
+				for pUnit in py.getUnitList():
+					if gc.getInfoTypeForString('UNIT_TUKINOMITTEI') == pUnit.getUnitType():
+						Flag = False
+				return Flag
+	return False
+
+def spell_TOYOHIME_EXTRA1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	
+	newUnit1 = gc.getPlayer(caster.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_TUKINOMITTEI'), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+	
+	caster.setPower(caster.getPower()-cost)
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_TOYOHIME_EXTRA2(bTestVisible,caster,sCAL,eCAL,cost):
+	if bTestVisible:
+		if gc.getInfoTypeForString('UNIT_TOYOHIME1') <= caster.getUnitType() and caster.getUnitType() <= gc.getInfoTypeForString('UNIT_TOYOHIME6'):
+			return True
+	else:
+		if caster.isHasPromotion(gc.getInfoTypeForString("PROMOTION_SPELL_CASTED")) == False:
+			if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MODE_EXTRA')) and gc.getTeam(caster.getTeam()).isHasTech( gc.getInfoTypeForString('TECH_SHOOTING_TECHNIQUE2') ):
+				Flag = False
+				py = PyPlayer(caster.getOwner())
+				for pUnit in py.getUnitList():
+					if gc.getInfoTypeForString('UNIT_TUKINOMITTEI') == pUnit.getUnitType():
+						#敵対ユニットが居ないかのチェック
+						pTeam = gc.getTeam(caster.getTeam())
+						for k in range(pUnit.plot().getNumUnits()):
+							if pTeam.isAtWar(pUnit.plot().getUnit(k).getTeam()):
+								return False
+						Flag = True
+				return Flag
+	return False
+
+def spell_TOYOHIME_EXTRA2(caster,cost):
+	CAL = caster.countCardAttackLevel()
+	point1 = caster.plot().getPoint()
+	
+	py = PyPlayer(caster.getOwner())
+	for pUnit in py.getUnitList():
+		if gc.getInfoTypeForString('UNIT_TUKINOMITTEI') == pUnit.getUnitType():
+			MitteiUnit = pUnit
+	
+	pPlot = caster.plot()
+	UnitList = []
+	WarpUnitList = []
+	WarpUnitList.append(caster)
+	for i in range(pPlot.getNumUnits()):
+		if pPlot.getUnit(i).getID() != caster.getID():
+			UnitList.append( pPlot.getUnit(i) )
+	while len(WarpUnitList) < CAL and len(UnitList) > 0:
+		UnitNum = gc.getGame().getSorenRandNum(len(UnitList), "Toyohime warp")
+		WarpUnitList.append(UnitList[UnitNum])
+		del UnitList[UnitNum]
+	for pUnit in WarpUnitList:
+		if pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BOSS') and pUnit.getUnitCombatType() != gc.getInfoTypeForString("UNITCOMBAT_STANDBY"):
+			pUnit.setXY(MitteiUnit.getX(),MitteiUnit.getY(),False,True,True)
+			pUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+			#pUnit.finishMoves()
+	
+	MitteiUnit.changeDamage(100,caster.getOwner())
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point2 = caster.plot().getPoint()
+	
+	#移動前の場所で発生するエフェクト
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point1)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point1.x,point1.y,point1.z)
+	
+	#移動後の場所で発生するエフェクト
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point2)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point2.x,point2.y,point2.z)
+	
+	return True
+
+
+def req_TOYOHIME_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_PHANTASM','UNIT_TOYOHIME1','UNIT_TOYOHIME6',cost)
+
+def spell_TOYOHIME_PHANTASM1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	if CAL <= 8:
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_SPELL_CASTED',True,100,False,False,True,-1,True,False,True,True,-1,True,1)
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_STAN',True,100,False,False,True,-1,True,False,True,True,-1,False,0,6,False,False,-1,+1)
+	elif CAL <= 16:
+		Functions.setPromotion(RangeList2,caster,'PROMOTION_SPELL_CASTED',True,100,False,False,True,-1,True,False,True,True,-1,True,1)
+		Functions.setPromotion(RangeList2,caster,'PROMOTION_STAN',True,100,False,False,True,-1,True,False,True,True,-1,False,0,6,False,False,-1,+1)
+	else:
+		Functions.setPromotion(RangeList3,caster,'PROMOTION_SPELL_CASTED',True,100,False,False,True,-1,True,False,True,True,-1,True,1)
+		Functions.setPromotion(RangeList3,caster,'PROMOTION_STAN',True,100,False,False,True,-1,True,False,True,True,-1,False,0,6,False,False,-1,+1)
+		
+		
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+#せーらんEX/PH
+
+def req_SEIRAN_EXTRA1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_SEIRAN1','UNIT_SEIRAN6',cost)
+
+def spell_SEIRAN_EXTRA1(caster,cost):
+	
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iX = caster.getX()
+	iY = caster.getY()
+	CAL = caster.countCardAttackLevel()
+	
+	for i in range(CAL/6+1):
+		newUnit1 = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_EAGLE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		newUnit1.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ILLUSION'),True)
+	
+	caster.setPower(caster.getPower()-cost)
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_SEIRAN_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
+	flag = Functions.req_Spell(bTestVisible,caster,'PROMOTION_SEIRAN_PHANTASM1','UNIT_SEIRAN1','UNIT_SEIRAN6',cost)
+	if bTestVisible:
+		return flag
+	if caster.getSpecialNumber() > 0:
+		return False
+	return flag
+
+def spell_SEIRAN_PHANTASM1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_SPEED_STRIKE',True,100,True,False,False,-1,True,False,True,True,-1,True,0,0,False,False,-1,+1)
+	
+	#caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setSpecialNumber(1)
+	
+	caster.setPower(caster.getPower()-cost)
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+#りんごEX/PH
+
+def req_RINGO_EXTRA1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_RINGO1','UNIT_RINGO6',cost)
+
+def spell_RINGO_EXTRA1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	#※現在棚上げ仮組み
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def req_RINGO_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_PHANTASM','UNIT_RINGO1','UNIT_RINGO6',cost)
+
+def spell_RINGO_PHANTASM1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	#※現在棚上げ仮組み
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+#どれみEX/PH
+
+def req_DOREMY_EXTRA1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_DOREMY1','UNIT_DOREMY6',cost)
+
+def spell_DOREMY_EXTRA1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	
+	if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_COAST') and \
+	pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_OCEAN') and \
+	caster.plot().isCity() == False:
+		pPlot.setRouteType(gc.getInfoTypeForString('ROUTE_DREAM_EXPRESS'))
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+def req_DOREMY_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_PHANTASM','UNIT_DOREMY1','UNIT_DOREMY6',cost)
+
+def spell_DOREMY_PHANTASM1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+
+	pPlot = caster.plot()
+	if pPlot.isCity():
+		pCity = pPlot.getPlotCity()
+		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_DAGON'),1)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+#さぐめEX/PH
+
+def req_SAGUME_EXTRA1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_SAGUME1','UNIT_SAGUME6',cost)
+
+def spell_SAGUME_EXTRA1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	eTeam = gc.getTeam(pPlayer.getTeam())
+	iX = caster.getX()
+	iY = caster.getY()
+	
+	if CAL<=7:
+		iGetJibaku = 1
+	elif CAL<=15:
+		iGetJibaku = 2
+	else:
+		iGetJibaku = 3
+	
+	UnitList = []
+	iNumUnit = pPlot.getNumUnits()
+	for i in range(iNumUnit):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_SPY'):
+			if pUnit.getTeam() == caster.getTeam():
+				if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_JIBAKU')):
+					UnitList.append(pUnit)
+	
+	if len(UnitList) != 0:
+		iLoopNum = iGetJibaku
+		if iLoopNum > len(UnitList):
+			iLoopNum = len(UnitList)
+		for i in range(iLoopNum):
+			iRandNum = gc.getGame().getSorenRandNum(len(UnitList),"Sagume Extra Spell")
+			pUnit = UnitList.pop(iRandNum)
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_JIBAKU'),True)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_SAGUME_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
+	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_PHANTASM','UNIT_SAGUME1','UNIT_SAGUME6',cost)
+
+def spell_SAGUME_PHANTASM1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	
+	pPlot = caster.plot()
+	if pPlot.isCity():
+		pCity = pPlot.getPlotCity()
+		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_KATAYOKU'),1)
+	
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+#月の都特殊ユニットスペル
+#オーリックさん
+def req_SPECIAL_AURIC(bTestVisible,caster,sCAL,eCAL,cost):
+	if bTestVisible:
+		if caster.getUnitType() == gc.getInfoTypeForString('UNIT_AURIC'):
+			return True
+		else:
+			return False
+
+	else:
+		if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
+			return True
+	
+	return False
+	
+
+def spell_SPECIAL_AURIC(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+
+	Functions.changeDamage(RangeList1,caster,10,10,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+	Functions.changeDamage(RangeList1,caster,5,5,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+		
+	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+#穢身探知型機雷
+
+def req_SPECIAL_TANTIGATA_KIRAI_1_1(bTestVisible,caster,sCAL,eCAL,cost):
+	pPlot = caster.plot()
+	if bTestVisible:
+		if caster.getUnitType() == gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_3'):
+			return True
+		else:
+			return False
+
+	else:
+		if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
+			if gc.getTeam(caster.getTeam()).isAtWar(pPlot.getTeam()):
+				if pPlot.getImprovementType() != -1:
+					return True
+	
+	return False
+	
+
+def spell_SPECIAL_TANTIGATA_KIRAI_1_1(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+
+	pPlot.setImprovementType(-1)
+	caster.changeDamage(100,caster.getOwner())
+	#caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_SPECIAL_TANTIGATA_KIRAI_1_2(bTestVisible,caster,sCAL,eCAL,cost):
+	pPlot = caster.plot()
+	if bTestVisible:
+		if caster.getUnitType() == gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_4'):
+			return True
+		else:
+			return False
+
+	else:
+		if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
+			if caster.getTeam() != pPlot.getTeam():
+				if pPlot.getImprovementType() != -1:
+					return True
+	
+	return False
+	
+
+def spell_SPECIAL_TANTIGATA_KIRAI_1_2(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+
+	pPlot.setImprovementType(-1)
+	iRandNum = gc.getGame().getSorenRandNum(100,"Sagumespell Seizon Hantei")
+	
+	if iRandNum < 50:
+		caster.changeDamage(100,caster.getOwner())
+	else:
+		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_SPECIAL_TANTIGATA_KIRAI_2(bTestVisible,caster,sCAL,eCAL,cost):
+	pPlot = caster.plot()
+	if bTestVisible:
+		if caster.getUnitType() == gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_3') or \
+		caster.getUnitType() == gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_4'):
+			return True
+		else:
+			return False
+
+	else:
+		if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
+			return True
+	
+	return False
+	
+
+def spell_SPECIAL_TANTIGATA_KIRAI_2(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+
+	Functions.changeDamage(RangeList0,caster,-20,-20,100,False,True,True,False,-1,True,True,True,True,-1,True,0)
+	caster.changeDamage(100,caster.getOwner())
+	#caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_SPECIAL_TANTIGATA_KIRAI_3(bTestVisible,caster,sCAL,eCAL,cost):
+	pPlot = caster.plot()
+	if bTestVisible:
+		if caster.getUnitType() == gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_4'):
+			return True
+		else:
+			return False
+
+	else:
+		if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
+			return True
+	
+	return False
+	
+
+def spell_SPECIAL_TANTIGATA_KIRAI_3(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+
+	Functions.setPromotion(RangeList0,caster,'PROMOTION_POISON2',True,25,False,True,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+	caster.changeDamage(100,caster.getOwner())
+	#caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
+
+
+def req_SPECIAL_JIBAKU(bTestVisible,caster,sCAL,eCAL,cost):
+	pPlot = caster.plot()
+	if bTestVisible:
+		if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_JIBAKU') ):
+			return True
+		else:
+			return False
+
+	else:
+		if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
+			return True
+	
+	return False
+	
+
+def spell_SPECIAL_JIBAKU(caster,cost):
+	
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	
+	if pPlot.isCity():
+		pCity = pPlot.getPlotCity()
+		pCity.changeDefenseDamage(25)
+		iRandNum = gc.getGame().getSorenRandNum(100,"Jibaku Hakai Hantei")
+		if iRandNum < 75:
+			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_WALLS'),0)
+			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_WALL_ISSUN'),0)
+		if iRandNum < 50:
+			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BUNKER'),0)
+			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BOMB_SHELTER'),0)
+		if iRandNum < 25:
+			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_CASTLE'),0)
+			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_KISHINJOU_SPANISH_CITADEL'),0)
+		
+	Functions.changeDamage(RangeList0,caster,10,20,40,False,False,True,True,-1,False,True,True,True,-1,False,0)
+	Functions.changeDamage(RangeList0,caster,5,10,40,False,False,True,True,-1,True,False,True,True,-1,False,0)
+	
+	caster.changeDamage(100,caster.getOwner())
+	#caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	
+	point = caster.plot().getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	
+	return True
 
 
 

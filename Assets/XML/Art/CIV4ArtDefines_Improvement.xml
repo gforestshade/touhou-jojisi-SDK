@@ -558,5 +558,14 @@
       <KFM />
       <Button>Art/Interface/Buttons/Units/shinmyoumaru_button.dds</Button>
     </ImprovementArtInfo>
+    <ImprovementArtInfo>
+      <Type>ART_DEF_IMPROVEMENT_GREATMINE</Type>
+      <bExtraAnimations>0</bExtraAnimations>
+      <fScale>1.0</fScale>
+      <fInterfaceScale>1.0</fInterfaceScale>
+      <NIF>Art/Structures/Improvements/greatmine/mine_modern.nif</NIF>
+      <KFM>Art/Structures/Improvements/Mine/Mine.kfm</KFM>
+      <Button>Art/Interface/Buttons/Units/yorihime_button.dds</Button>
+    </ImprovementArtInfo>
   </ImprovementArtInfos>
 </Civ4ArtDefines>

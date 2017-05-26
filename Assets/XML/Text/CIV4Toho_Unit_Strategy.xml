@@ -611,4 +611,114 @@
 		<Japanese>九十九八橋の魔力を借りて変化したみんな大好き偉大な芸術家です。その芸術の力を持って指定したタイルに何故か核爆発を起こすことができます。グラフィックはバニラのものに変化するため気兼ねなく爆発させることが可能でしょう。ヒャッハー！芸術は爆発だー！</Japanese>
 	</TEXT>
 <!-- Kishinjou End-->
+<!-- Tukinomiyako Start-->
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_AURIC_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]特殊スペル「吹雪」使用可能</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]特殊スペル「吹雪」使用可能</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TANTIGATA_KIRAI_1_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]このユニットが戦闘を行った場合、勝率に関わらず確実に全滅する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]このユニットが戦闘を行った場合、勝率に関わらず確実に全滅する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TANTIGATA_KIRAI_3_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]このユニットが戦闘を行った場合、勝率に関わらず確実に全滅する&#13;[ICON_BULLET]特殊スペル「改善破壊工作」「回復支援工作」使用可能</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]このユニットが戦闘を行った場合、勝率に関わらず確実に全滅する&#13;[ICON_BULLET]特殊スペル「改善破壊工作」「回復支援工作」使用可能</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TANTIGATA_KIRAI_4_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]このユニットが戦闘を行った場合、勝率に関わらず確実に全滅する&#13;[ICON_BULLET]特殊スペル「改善破壊工作 改」「回復支援工作」「神経毒散布工作」使用可能</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]このユニットが戦闘を行った場合、勝率に関わらず確実に全滅する&#13;[ICON_BULLET]特殊スペル「改善破壊工作 改」「回復支援工作」「神経毒散布工作」使用可能</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag></Tag>
+		<English />
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+<!-- Tukinomiyako End-->
 </Civ4GameText>

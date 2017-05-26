@@ -1140,4 +1140,13 @@
 		<Spanish />
 		<Japanese>CAレベル</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_NTP</Tag>
+		<English>NumTurnPromo</English>
+		<French>一時昇進フラグ</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>一時昇進フラグ</Japanese>
+	</TEXT>
 </Civ4GameText>
