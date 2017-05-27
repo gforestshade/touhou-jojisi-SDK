@@ -227,7 +227,7 @@
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>都市でのみ使用可能。駐留するユニット（東方ユニットを除く）に都市駐留の昇進を与える。LUNAまでいけば周囲にある攻城兵器も破壊できるため、敵の無謀な突撃を返り討ちにできます。国家存亡の危機には、神風が吹くものです。</Japanese>
+		<Japanese>[NEWLINE][LINK=TOHOUNIT_UNIT_SANAE1]東方ユニット/東風寺早苗[\LINK][NEWLINE][LINK=TOHOUNIT_UNIT_REMILIA1]東方ユニット/レミリア・スカーレット[\LINK][NEWLINE][LINK=TOHOUNIT_UNIT_CHEN1]東方ユニット/橙[\LINK][NEWLINE]都市でのみ使用可能。駐留するユニット（東方ユニットを除く）に都市駐留の昇進を与える。LUNAまでいけば周囲にある攻城兵器も破壊できるため、敵の無謀な突撃を返り討ちにできます。国家存亡の危機には、神風が吹くものです。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NITORI_STRATEGY</Tag>

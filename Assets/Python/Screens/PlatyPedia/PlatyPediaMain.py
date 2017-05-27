@@ -33,6 +33,7 @@ import PlatyPediaCredits
 #東方叙事詩統合MOD追記
 import CvPediaTohoUnitonplatypedia
 import CvGameUtils
+import re
 #東方叙事詩統合MOD追記ここまで
 
 #現状まだまだ仮組み段階、というかまともに動かない
@@ -1187,11 +1188,18 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			if gc.getWorldInfo(i).isMatchForLink(szLink, False):
 				return self.pediaJump(self.PLATYPEDIA_GAME_INFO, 6797 * 10000 + i, True)
 		#東方叙事詩統合MOD追記
-#		if (szLink == "PEDIA_MAIN_TOHOUNIT"):
-#			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_TOHOUNIT), True)	
-		for i in range(gc.getNumUnitInfos()):
-			if (gc.getUnitInfo(i).isMatchForLink(szLink, False)):
-				return self.pediaJump(CvScreenEnums.PEDIA_TOHOUNIT, i, True)
+		
+		### うゎぁきちゃない
+		m = re.compile("^TOHOUNIT_")
+		if ( m.match(szLink) ):
+			link = m.sub("", szLink)
+			for i in xrange(gc.getNumUnitInfos()):
+				if gc.getUnitInfo(i).isMatchForLink(link, False):
+					return self.pediaJump(CvScreenEnums.PEDIA_TOHOUNIT, i, True)
+		# for i in range(gc.getNumUnitInfos()):
+		# 	if (gc.getUnitInfo(i).isMatchForLink(szLink, False)):
+		# 		CvGameUtils.doprint("szLink=" + szLink)
+		# 		return self.pediaJump(CvScreenEnums.PEDIA_TOHOUNIT, i, True)
 
 		#東方叙事詩統合MOD追記ここまで
 		
