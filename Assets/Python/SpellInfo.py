@@ -3915,9 +3915,18 @@ def req_YORIHIME2(bTestVisible,caster,sCAL,eCAL,cost):
 def spellcard_YORIHIME2(caster,cost):
 
 	CAL = caster.countCardAttackLevel()
+
+	iX = caster.getX()
+	iY = caster.getY()
 	
-	Functions.changeDamage(RangeList3,caster,3+CAL,10+CAL*5/2,1,False,False,False,True,-1,False,True,True,True,-1,False,0)
-	Functions.changeDamage(RangeList3,caster,(3+CAL)/2,(10+CAL*5/2)/2,1,False,False,False,True,-1,True,False,True,True,-1,False,0)
+	if Functions.isPlot(iX,iY):
+		pPlot = gc.getMap().plot(iX,iY)
+		if pPlot.getNumUnits() == 1 and pPlot.getBonusType(caster.getTeam()) == -1 :
+			if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_COAST') or pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN'):
+				pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_GRASS'),True,True,True)
+
+	# Functions.changeDamage(RangeList3,caster,3+CAL,10+CAL*5/2,1,False,False,False,True,-1,False,True,True,True,-1,False,0)
+	# Functions.changeDamage(RangeList3,caster,(3+CAL)/2,(10+CAL*5/2)/2,1,False,False,False,True,-1,True,False,True,True,-1,False,0)
 
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)

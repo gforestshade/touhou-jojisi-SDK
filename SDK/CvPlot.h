@@ -286,10 +286,10 @@ public:
 	bool isFlatlands() const;																																											// Exposed to Python
 	DllExport bool isHills() const;																																								// Exposed to Python
 	DllExport bool isPeak() const;																																								// Exposed to Python
-	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);			// Exposed to Python
+	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true, bool bSpellReclaim = false);			// Exposed to Python
 
 	DllExport TerrainTypes getTerrainType() const;																																	// Exposed to Python
-	void setTerrainType(TerrainTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);	// Exposed to Python
+	void setTerrainType(TerrainTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true, bool bSpellReclaim = false);	// Exposed to Python
 
 	DllExport FeatureTypes getFeatureType() const;																																	// Exposed to Python
 	DllExport void setFeatureType(FeatureTypes eNewValue, int iVariety = -1);																				// Exposed to Python
