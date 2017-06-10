@@ -1,3 +1,5 @@
+ # -*- coding: cp932 -*- 
+
 ##### <written by F> #####
 #スペルの挙動についての記述
 #基本的にFfH Age of Iceのをそのまま流用しているので、使ってない関数などがいっぱいある
@@ -3175,8 +3177,8 @@ def spellcard_IKU1(caster,cost):
 			if len(CityBuildingList) > 0: #壊せる建物があれば
 				BuildingNum = gc.getGame().getSorenRandNum(len(CityBuildingList), "Iku Spell Card2")
 				CityList[CityNum].setNumRealBuilding(gc.getInfoTypeForString(CityBuildingList[BuildingNum]),0)
-				#～文明の～都市にある～が雷により破壊されました！
-				#CyInterface().addImmediateMessage(gc.getCivilizationInfo(CityList[CityNum].getOwner()).getDescription() + "&#12398;" + CityList[CityNum].getName() + "&#12395;&#12354;&#12427;" + gc.getBuildingInfo(gc.getInfoTypeForString(CityBuildingList[BuildingNum])).getDescription() + "&#12364;&#38647;&#12395;&#12424;&#12426;&#30772;&#22730;&#12373;&#12428;&#12414;&#12375;&#12383;&#65281;","")	#～都市にある～が雷により破壊されました！
+				# 文明の 都市にある が雷により破壊されました！
+				#CyInterface().addImmediateMessage(gc.getCivilizationInfo(CityList[CityNum].getOwner()).getDescription() + "&#12398;" + CityList[CityNum].getName() + "&#12395;&#12354;&#12427;" + gc.getBuildingInfo(gc.getInfoTypeForString(CityBuildingList[BuildingNum])).getDescription() + "&#12364;&#38647;&#12395;&#12424;&#12426;&#30772;&#22730;&#12373;&#12428;&#12414;&#12375;&#12383;&#65281;","")	# 都市にある が雷により破壊されました！
 				CyInterface().addImmediateMessage(CityList[CityNum].getName() + "&#12395;&#12354;&#12427;" + gc.getBuildingInfo(gc.getInfoTypeForString(CityBuildingList[BuildingNum])).getDescription() + "&#12364;&#38647;&#12395;&#12424;&#12426;&#30772;&#22730;&#12373;&#12428;&#12414;&#12375;&#12383;&#65281;","")
 				
 			else:   #なければ人口減少
@@ -3704,7 +3706,7 @@ def spellcard_RIN1(caster,cost):
 
 	CAL = caster.countCardAttackLevel()
 	pPlot = caster.plot()
-	iNumUnit = 1 #log(0)になると－infになってしまい、それを回避するため
+	iNumUnit = 1 #log(0)になると infになってしまい、それを回避するため
 	
 	for i in range(pPlot.getNumUnits()):
 		if pPlot.getUnit(i).isHasPromotion(gc.getInfoTypeForString('PROMOTION_ZOMBIEFAIRY')):
@@ -3728,7 +3730,7 @@ def spellcard_RIN1_Estimate(caster):
 	estimatePoint = 0
 	CAL = caster.countCardAttackLevel()
 	pPlot = caster.plot()
-	iNumUnit = 1 #log(0)になると－infになってしまい、それを回避するため
+	iNumUnit = 1 #log(0)になると infになってしまい、それを回避するため
 	
 	for i in range(pPlot.getNumUnits()):
 		if pPlot.getUnit(i).isHasPromotion(gc.getInfoTypeForString('PROMOTION_ZOMBIEFAIRY')):
@@ -5054,6 +5056,16 @@ def help_YORIHIME1(szText, caster, CAL):
 		return CAL*3
 	if szText == "002":
 		return CAL*6
+	if szText == "CAUama":
+		if caster:
+			iPlayer = caster.getOwner()
+			pPlayer = gc.getPlayer(iPlayer)
+			if pPlayer.getAmenouzumeFlag() == 1:
+				return u""
+			else:
+				return u"降神『天宇受賣命』の使用が必要"
+		else:
+			return u""
 
 def req_YORIHIME2(bTestVisible,caster,sCAL,eCAL,cost):
 	return Functions.req_SpellCard(bTestVisible,caster,sCAL,eCAL,'UNIT_YORIHIME1','UNIT_YORIHIME6',cost)

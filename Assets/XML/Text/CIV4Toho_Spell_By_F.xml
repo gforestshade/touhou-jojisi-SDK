@@ -4915,11 +4915,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME1_1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]敵対中の全ユニットに[p001]％～[p002]％のダメージ（東方ユニットには効果半減）&#13;[ICON_BULLET]敵対中の文明にある全ての都市の文化防御を吹き飛ばす&#13;[ICON_BULLET]自文明のユニット全員を完全に回復させる&#13;[ICON_BULLET]この際特定のユニットはCALに関係無く無条件で即死する&#13;[ICON_BULLET]発動には事前に降神『天宇受賣命』を使用しておく必要がある&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power3.00が必要</French>
+		<French>[ICON_BULLET]敵対中の全ユニットに[p001]％～[p002]％のダメージ（東方ユニットには効果半減）&#13;[ICON_BULLET]敵対中の文明にある全ての都市の文化防御を吹き飛ばす&#13;[ICON_BULLET]自文明のユニット全員を完全に回復させる&#13;[ICON_BULLET]この際特定のユニットはCALに関係無く無条件で即死する&#13;[ICON_BULLET]発動には事前に降神『天宇受賣命』を使用しておく必要がある&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power3.00が必要&#13;[COLOR_RED]{pCAUama}[COLOR_REVERT]</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]敵対中の全ユニットに[p001]％～[p002]％のダメージ（東方ユニットには効果半減）&#13;[ICON_BULLET]敵対中の文明にある全ての都市の文化防御を吹き飛ばす&#13;[ICON_BULLET]自文明のユニット全員を完全に回復させる&#13;[ICON_BULLET]この際特定のユニットはCALに関係無く無条件で即死する&#13;[ICON_BULLET]発動には事前に降神『天宇受賣命』を使用しておく必要がある&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power3.00が必要</Japanese>
+		<Japanese>[ICON_BULLET]敵対中の全ユニットに[p001]％～[p002]％のダメージ（東方ユニットには効果半減）&#13;[ICON_BULLET]敵対中の文明にある全ての都市の文化防御を吹き飛ばす&#13;[ICON_BULLET]自文明のユニット全員を完全に回復させる&#13;[ICON_BULLET]この際特定のユニットはCALに関係無く無条件で即死する&#13;[ICON_BULLET]発動には事前に降神『天宇受賣命』を使用しておく必要がある&#13;[ICON_BULLET]CAレベル1上昇&#13;[ICON_BULLET]Power3.00が必要&#13;[COLOR_RED]{pCAUama}[COLOR_REVERT]</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELLCARD_YORIHIME2_1</Tag>

@@ -690,6 +690,8 @@ class CvPediaTohoUnit:
 		#–{‘Ì
 		match = re.compile(r"\[[a-zA-Z0-9]{3,10}\]")
 		szText = match.sub(ctoi, szText)
+		match = re.compile(r"\{[a-zA-Z0-9]{3,10}\}")
+		szText = match.sub("", szText)
 		return szText
 	
 	

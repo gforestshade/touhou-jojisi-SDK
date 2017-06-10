@@ -1981,7 +1981,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 }
 
 // for 東方叙事詩・統合17.06
-// スペル説明の[***]を解釈する
+// スペル説明の[***]や{***}を解釈する
 // parseActionHelp()が長すぎてつらたんなので
 // 別個にフリー関数に切り出す
 namespace{
@@ -2024,6 +2024,34 @@ void parseSpellActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer 
 			out.Format(L"%ld", splong);
 			cvbuf.append(out);
 			prev_code_end = p;
+		}
+
+		if(*p == L'{')
+		{
+			const wchar_t *code_begin = ++p;
+			while( iswalnum(*p) ) p++; // 英数字であればよし
+			if( p - code_begin > 10 || *p != L'}') continue; // 中の文字数も1-10文字で自由
+
+			wstring code(code_begin, p);
+			wstring pre(prev_code_end, code_begin-1);
+			cvbuf.append(pre);
+
+			CvString mbs(code);
+			CvUnit *pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+			int cal = pHeadSelectedUnit->countCardAttackLevel();
+
+			//Pythonにぶんなげる
+			CyArgsList argsList;
+			argsList.add(mbs.c_str());
+			CyUnit *pyUnit = new CyUnit(pHeadSelectedUnit);
+			argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));
+			argsList.add(cal);
+			argsList.add(eAutomate);
+			CvWString spwstr;
+			gDLL->getPythonIFace()->callFunction("SpellInterface", "getTextToSpellText", argsList.makeFunctionArgs(), &spwstr);
+
+			cvbuf.append(spwstr);
+			prev_code_end = ++xzp;
 		}
 	}
 	wstring suf(prev_code_end, p);

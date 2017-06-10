@@ -370,3 +370,15 @@ def getTextToSpellInt(argsList):
 #     output = strtol(s,&endstr,10)/10 + strtol(s+2,&endstr,10)*CAL;
 # }
 
+# {***}
+def getTextToSpellText(argsList):
+	
+	szText, pUnit, CAL, iNum = argsList
+
+	name = gc.getAutomateInfo(iNum).getType()
+	CvGameUtils.doprint("getTextToSpellText: " + name)
+	Spells = filter(lambda s: s.getName()==name, SpellInfo.getSpells())
+	if Spells:
+		Spell = Spells[0]
+		return Spell.getHelpText(szText[1:], pUnit, CAL)
+		
