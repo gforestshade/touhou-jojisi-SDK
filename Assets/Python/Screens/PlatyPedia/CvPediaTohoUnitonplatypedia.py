@@ -305,90 +305,13 @@ class CvPediaTohoUnit:
 			self.SkillDic[gc.getInfoTypeForString(self.SkillList[i][0])] = self.SkillList[i][1]
 		
 		
-		
-		self.SpellList = [
-							 [ 'UNIT_SANAE1' , [    [   [1,3,'SANAE1_1','SANAE1_1'],[4,7,'SANAE1_1','SANAE1_2'],[8,11,'SANAE1_2','SANAE1_3',],[12,15,'SANAE1_2','SANAE1_4',], [16,19,'SANAE1_2','SANAE1_5',],[20,23,'SANAE1_2','SANAE1_6',],[24,255,'SANAE1_2','SANAE1_7',],], ['TXT_KEY_SPELL_SANAE_EXTRA1',],  ['TXT_KEY_SPELL_SANAE_PHANTASM1',],   ],   ],
-							 [ 'UNIT_REMILIA1' , [    [   [1,7,'REMILIA1_1','REMILIA1_1'],[8,255,'REMILIA1_2','REMILIA1_1'], ], ['TXT_KEY_SPELL_REMILIA_EXTRA1',],  ['TXT_KEY_SPELL_REMILIA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_CHEN1' , [    [   [1,3,'CHEN1_1','CHEN1_1'],[4,7,'CHEN1_1','CHEN1_2'],[8,11,'CHEN1_1','CHEN1_3'],[12,15,'CHEN1_1','CHEN1_4',],[16,19,'CHEN1_1','CHEN1_5'],[20,255,'CHEN1_1','CHEN1_6'], ], ['TXT_KEY_SPELL_CHEN_EXTRA1',],  ['TXT_KEY_SPELL_CHEN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_WRIGGLE1' , [    [   [1,7,'WRIGGLE1_1','WRIGGLE1_1'],[8,255,'WRIGGLE1_2','WRIGGLE1_1'], ], ['TXT_KEY_SPELL_WRIGGLE_EXTRA1',],  ['TXT_KEY_SPELL_WRIGGLE_PHANTASM1',],   ],   ],
-							 [ 'UNIT_TEWI1' , [    [   [1,3,'TEWI1_1','TEWI1_1'],[4,7,'TEWI1_1','TEWI1_2'],[8,11,'TEWI1_1','TEWI1_3'],[12,255,'TEWI1_2','TEWI1_4',  ], ], ['TXT_KEY_SPELL_TEWI_EXTRA1',],  ['TXT_KEY_SPELL_TEWI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_NITORI1' , [    [   [1,3,'NITORI1_1','NITORI1_1'],[4,7,'NITORI1_1','NITORI1_2'],[8,11,'NITORI1_1','NITORI1_3'],[12,255,'NITORI1_1','NITORI1_4',  ], ], ['TXT_KEY_SPELL_NITORI_EXTRA1',],  ['TXT_KEY_SPELL_NITORI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MARISA1' , [    [   [1,7,'MARISA1_1','MARISA1_1'],[8,255,'MARISA1_1','MARISA1_2'], ], ['TXT_KEY_SPELL_MARISA_EXTRA1',],  ['TXT_KEY_SPELL_MARISA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_FLAN1' , [    [   [1,3,'FLAN1_1','FLAN1_1'],[4,7,'FLAN1_1','FLAN1_2'],[8,11,'FLAN1_1','FLAN1_3'],[12,15,'FLAN1_1','FLAN1_4',],[16,19,'FLAN1_1','FLAN1_5',],[20,23,'FLAN1_1','FLAN1_6',],[24,255,'FLAN1_1','FLAN1_7',], ], ['TXT_KEY_SPELL_FLAN_EXTRA1',],  ['TXT_KEY_SPELL_FLAN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_YOUMU1' , [    [   [1,7,'YOUMU1_1','YOUMU1_1'],[8,11,'YOUMU1_2','YOUMU1_1'],[12,255,'YOUMU1_2','YOUMU1_2'], ], ['TXT_KEY_SPELL_YOUMU_EXTRA1',],  ['TXT_KEY_SPELL_YOUMU_PHANTASM1',],   ],   ],
-							 [ 'UNIT_CIRNO1' , [    [   [1,3,'CIRNO1_1','CIRNO1_1'],[4,255,'CIRNO1_2','CIRNO1_2'], ], ['TXT_KEY_SPELL_CIRNO_EXTRA1',],  ['TXT_KEY_SPELL_CIRNO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_EIRIN1' , [    [   [1,3,'EIRIN1_1','EIRIN1_1'],[4,7,'EIRIN1_1','EIRIN1_2'],[8,11,'EIRIN1_1','EIRIN1_3'],[12,255,'EIRIN1_1','EIRIN1_4',  ], ], ['TXT_KEY_SPELL_EIRIN_EXTRA1',],  ['TXT_KEY_SPELL_EIRIN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SUWAKO1' , [    [   [1,255,'SUWAKO1_1','SUWAKO1_1'], ], ['TXT_KEY_SPELL_SUWAKO_EXTRA1',],  ['TXT_KEY_SPELL_SUWAKO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_ALICE1' , [    [   [1,3,'ALICE1_1','ALICE1_1'],[4,7,'ALICE1_1','ALICE1_2'],[8,11,'ALICE1_1','ALICE1_3'],[12,15,'ALICE1_1','ALICE1_4',],[16,19,'ALICE1_1','ALICE1_5',],[20,255,'ALICE1_1','ALICE1_6',], ], ['TXT_KEY_SPELL_ALICE_EXTRA1',],  ['TXT_KEY_SPELL_ALICE_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MOKOU1' , [    [   [1,255,'MOKOU1_1','MOKOU1_1'], ], ['TXT_KEY_SPELL_MOKOU_EXTRA1',],  ['TXT_KEY_SPELL_MOKOU_PHANTASM1',],   ],   ],
-							 [ 'UNIT_KEINE1' , [    [   [1,3,'KEINE1_1','KEINE1_1'],[4,7,'KEINE1_1','KEINE1_2'],[8,11,'KEINE1_2','KEINE1_3'],[12,15,'KEINE1_2','KEINE1_4',],[16,19,'KEINE1_2','KEINE1_5',],[20,255,'KEINE1_2','KEINE1_6',], ], ['TXT_KEY_SPELL_KEINE_EXTRA1',],  ['TXT_KEY_SPELL_KEINE_PHANTASM1',],   ],   ],
-							 [ 'UNIT_PARSEE1' , [    [   [1,7,'PARSEE1_1','PARSEE1_1'],[8,255,'PARSEE1_2','PARSEE1_1'], ], ['TXT_KEY_SPELL_PARSEE_EXTRA1',],  ['TXT_KEY_SPELL_PARSEE_PHANTASM1',],   ],   ],
-							 [ 'UNIT_YUGI1' , [    [   [1,255,'YUGI1_1','YUGI1_1'], ], ['TXT_KEY_SPELL_YUGI_EXTRA1',],  ['TXT_KEY_SPELL_YUGI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_HAKUTAKUKEINE1' , [    [   [1,255,'HAKUTAKUKEINE1_1','HAKUTAKUKEINE1_1'], ], ['TXT_KEY_SPELL_HAKUTAKUKEINE_EXTRA1',],  ['TXT_KEY_SPELL_HAKUTAKUKEINE_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SAKUYA1' , [    [   [1,3,'SAKUYA1_1','SAKUYA1_1'],[4,7,'SAKUYA1_1','SAKUYA1_2'],[8,11,'SAKUYA1_1','SAKUYA1_3'],[12,255,'SAKUYA1_1','SAKUYA1_4',  ], ], ['TXT_KEY_SPELL_SAKUYA_EXTRA1',],  ['TXT_KEY_SPELL_SAKUYA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_YUYUKO1' , [    [   [1,3,'YUYUKO1_1','YUYUKO1_1'],[4,7,'YUYUKO1_2','YUYUKO1_1'],[8,11,'YUYUKO1_3','YUYUKO1_1'],[12,255,'YUYUKO1_4','YUYUKO1_1'], ], ['TXT_KEY_SPELL_YUYUKO_EXTRA1',],  ['TXT_KEY_SPELL_YUYUKO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_RUMIA1' , [    [   [1,255,'RUMIA1_1','RUMIA1_1'], ], ['TXT_KEY_SPELL_RUMIA_EXTRA1',],  ['TXT_KEY_SPELL_RUMIA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MEDICIN1' , [    [   [1,3,'MEDICIN1_1','MEDICIN1_1'],[4,7,'MEDICIN1_1','MEDICIN1_2'],[8,11,'MEDICIN1_2','MEDICIN1_3'],[12,255,'MEDICIN1_2','MEDICIN1_4',  ], ], ['TXT_KEY_SPELL_MEDICIN_EXTRA1',],  ['TXT_KEY_SPELL_MEDICIN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_KANAKO1' , [    [   [1,7,'KANAKO1_1','KANAKO1_1'],[8,255,'KANAKO1_2','KANAKO1_1'], ], ['TXT_KEY_SPELL_KANAKO_EXTRA1',],  ['TXT_KEY_SPELL_KANAKO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_REIMU1' , [    [   [1,255,'REIMU1_1','REIMU1_1'], ], ['TXT_KEY_SPELL_REIMU_EXTRA1',],  ['TXT_KEY_SPELL_REIMU_PHANTASM1',],   ],   ],
-							 [ 'UNIT_YUKA1' , [    [   [1,255,'YUKA1_1','YUKA1_1'], ], ['TXT_KEY_SPELL_YUKA_EXTRA1',],  ['TXT_KEY_SPELL_YUKA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_KOISHI1' , [    [   [1,255,'KOISHI1_1','KOISHI1_1'], ], ['TXT_KEY_SPELL_KOISHI_EXTRA1','TXT_KEY_SPELL_KOISHI_SKILL1',],  ['TXT_KEY_SPELL_KOISHI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_KOISHI_FADE1' , [    [    ], ['TXT_KEY_SPELL_KOISHI_EXTRA1','TXT_KEY_SPELL_KOISHI_SKILL2',],  ['TXT_KEY_SPELL_KOISHI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_PATCHOULI1' , [    [   [1,255,'PATCHOULI1_1','PATCHOULI1_1'],[1,255,'PATCHOULI2_1','PATCHOULI2_1'], ], ['TXT_KEY_SPELL_PATCHOULI_EXTRA1','TXT_KEY_SPELL_PATCHOULI_EXTRA2',],  ['TXT_KEY_SPELL_PATCHOULI_PHANTASM1','TXT_KEY_SPELL_PATCHOULI_PHANTASM2','TXT_KEY_SPELL_PATCHOULI_PHANTASM3',],   ],   ],
-							 [ 'UNIT_RAN1' , [    [   [1,3,'RAN1_1','RAN1_1'],[4,7,'RAN1_1','RAN1_2'],[8,11,'RAN1_1','RAN1_3'],[12,255,'RAN1_1','RAN1_4',  ], ], ['TXT_KEY_SPELL_RAN_EXTRA1',],  ['TXT_KEY_SPELL_RAN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_REISEN1' , [    [   [1,7,'REISEN1_1','REISEN1_1'],[8,255,'REISEN1_2','REISEN1_1'], ], ['TXT_KEY_SPELL_REISEN_EXTRA1',],  ['TXT_KEY_SPELL_REISEN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_IKU1' , [    [   [1,3,'IKU1_1','IKU1_1'],[4,7,'IKU1_1','IKU1_2'],[8,11,'IKU1_1','IKU1_3'],[12,255,'IKU1_1','IKU1_4',  ], ], ['TXT_KEY_SPELL_IKU_EXTRA1',],  ['TXT_KEY_SPELL_IKU_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SATORI1' , [    [   [1,3,'SATORI1_1','SATORI1_1'],[4,7,'SATORI1_1','SATORI1_2'],[8,11,'SATORI1_2','SATORI1_3'],[12,15,'SATORI1_2','SATORI1_4'],[16,255,'SATORI1_2','SATORI1_5',], ], ['TXT_KEY_SPELL_SATORI_EXTRA1',],  ['TXT_KEY_SPELL_SATORI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MYSTIA1' , [    [   [1,7,'MYSTIA1_1','MYSTIA1_1'],[8,11,'MYSTIA1_2','MYSTIA1_1'],[12,255,'MYSTIA1_2','MYSTIA1_2'], ], ['TXT_KEY_SPELL_MYSTIA_EXTRA1',],  ['TXT_KEY_SPELL_MYSTIA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SUIKA1' , [    [   [1,3,'SUIKA1_1','SUIKA1_1'],[4,7,'SUIKA1_1','SUIKA1_2'],[8,11,'SUIKA1_2','SUIKA1_3'],[12,255,'SUIKA1_2','SUIKA1_4',], ], ['TXT_KEY_SPELL_SUIKA_EXTRA1',],  ['TXT_KEY_SPELL_SUIKA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SUIKA_BIG1' ,  [   [ ], [ ],  [ ],   ],   ],
-							 [ 'UNIT_SUIKA_SMALL1' , [    [  ], [ ],  [ ],   ],   ],
-							 [ 'UNIT_KOMACHI1' , [    [   [1,255,'KOMACHI1_1','KOMACHI1_1'], ], ['TXT_KEY_SPELL_KOMACHI_EXTRA1',],  ['TXT_KEY_SPELL_KOMACHI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MEDICINwithSU1' , [    [   [1,3,'MEDICIN1_1','MEDICIN1_1'],[4,7,'MEDICIN1_1','MEDICIN1_2'],[8,11,'MEDICIN1_2','MEDICIN1_3'],[12,255,'MEDICIN1_2','MEDICIN1_4',  ], ], ['TXT_KEY_SPELL_MEDICIN_EXTRA1',],  ['TXT_KEY_SPELL_MEDICIN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MEIRIN1' , [    [   [1,7,'MEIRIN1_1','MEIRIN1_1'],[8,255,'MEIRIN1_2','MEIRIN1_1'], ], ['TXT_KEY_SPELL_MEIRIN_EXTRA1',],  ['TXT_KEY_SPELL_MEIRIN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_YUKARI1' , [    [   [1,7,'YUKARI1_1','YUKARI1_1'],[8,255,'YUKARI1_2','YUKARI1_1'], ], ['TXT_KEY_SPELL_YUKARI_EXTRA1',],  ['TXT_KEY_SPELL_YUKARI_PHANTASM1','TXT_KEY_SPELL_YUKARI_PHANTASM2','TXT_KEY_SPELL_YUKARI_PHANTASM3',],   ],   ],
-							 [ 'UNIT_KAGUYA1' , [    [   [1,3,'KAGUYA1_1','KAGUYA1_1'],[4,7,'KAGUYA1_2','KAGUYA1_1'],[8,11,'KAGUYA1_3','KAGUYA1_1'],[12,255,'KAGUYA1_4','KAGUYA1_1'], ], ['TXT_KEY_SPELL_KAGUYA_EXTRA1','TXT_KEY_SPELL_KAGUYA_EXTRA2','TXT_KEY_SPELL_KAGUYA_EXTRA3','TXT_KEY_SPELL_KAGUYA_EXTRA4','TXT_KEY_SPELL_KAGUYA_EXTRA5',],  ['TXT_KEY_SPELL_KAGUYA_PHANTASM1','TXT_KEY_SPELL_KAGUYA_PHANTASM2','TXT_KEY_SPELL_KAGUYA_PHANTASM3','TXT_KEY_SPELL_KAGUYA_PHANTASM4',],   ],   ],
-							 [ 'UNIT_TENSHI1' , [    [   [1,7,'TENSHI1_1','TENSHI1_1'],[8,11,'TENSHI1_2','TENSHI1_1'],[12,255,'TENSHI1_3','TENSHI1_1'], ], ['TXT_KEY_SPELL_TENSHI_EXTRA1',],  ['TXT_KEY_SPELL_TENSHI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_RIN1' , [    [   [1,7,'RIN1_1','RIN1_1'],[8,255,'RIN1_2','RIN1_1'], ], ['TXT_KEY_SPELL_RIN_TO_CAT',],  ['TXT_KEY_SPELL_RIN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_RIN_CATMODE1' , [    [    ], ['TXT_KEY_SPELL_RIN_TO_RIN',],  [ ],   ],   ],
-							 [ 'UNIT_LETTY1' , [    [   [1,255,'LETTY1_1','LETTY1_1'], ], ['TXT_KEY_SPELL_LETTY_EXTRA1',],  ['TXT_KEY_SPELL_LETTY_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MIMA1' , [    [   [1,255,'MIMA1_1','MIMA1_1'], ], ['TXT_KEY_SPELL_MIMA_EXTRA1',],  ['TXT_KEY_SPELL_MIMA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_EIKI1' , [    [   [1,255,'EIKI1_1','EIKI1_1'], ], ['TXT_KEY_SPELL_EIKI_EXTRA1',],  ['TXT_KEY_SPELL_EIKI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_NAZRIN1' , [    [   [1,7,'NAZRIN1_1','NAZRIN1_1'], [8,15,'NAZRIN1_2','NAZRIN1_2'], [16,255,'NAZRIN1_3','NAZRIN1_3'],   ], ['TXT_KEY_SPELL_NAZRIN_EXTRA1',],  ['TXT_KEY_SPELL_NAZRIN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_KOGASA1' , [    [   [1,7,'KOGASA1_1','KOGASA1_1'], [8,11,'KOGASA1_2','KOGASA1_1'], [12,255,'KOGASA1_3','KOGASA1_1'],   ], ['TXT_KEY_SPELL_KOGASA_EXTRA1',],  ['TXT_KEY_SPELL_KOGASA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_ICHIRIN1' , [    [   [1,7,'ICHIRIN1_1','ICHIRIN1_1'], [8,11,'ICHIRIN1_2','ICHIRIN1_1'], [12,255,'ICHIRIN1_3','ICHIRIN1_1'],   ], ['TXT_KEY_SPELL_ICHIRIN_EXTRA1',],  ['TXT_KEY_SPELL_ICHIRIN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MINAMITSU1' , [    [   [1,3,'MINAMITSU1_1','MINAMITSU1_1'], [4,7,'MINAMITSU1_2','MINAMITSU1_1'], [8,255,'MINAMITSU1_3','MINAMITSU1_1'],   ], ['TXT_KEY_SPELL_MINAMITSU_EXTRA1',],  ['TXT_KEY_SPELL_MINAMITSU_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SYOU1' , [    [   [1,7,'SYOU1_1','SYOU1_1'],  [8,255,'SYOU1_2','SYOU1_1'],   ], ['TXT_KEY_SPELL_SYOU_EXTRA1',],  ['TXT_KEY_SPELL_SYOU_PHANTASM1',],   ],   ],
-							 [ 'UNIT_BYAKUREN1' , [    [   [1,3,'BYAKUREN1_1','BYAKUREN1_1'], [4,7,'BYAKUREN1_2','BYAKUREN1_2'], [8,11,'BYAKUREN1_3','BYAKUREN1_3'], [12,15,'BYAKUREN1_4','BYAKUREN1_4'], [16,19,'BYAKUREN1_5','BYAKUREN1_5'], [20,255,'BYAKUREN1_6','BYAKUREN1_6'],    ], ['TXT_KEY_SPELL_BYAKUREN_EXTRA1',],  ['TXT_KEY_SPELL_BYAKUREN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_NUE1' , [    [   [1,255,'NUE1_1','NUE1_1'],    ], ['TXT_KEY_SPELL_NUE_EXTRA1',],  ['TXT_KEY_SPELL_NUE_PHANTASM1',],   ],   ],
-							 [ 'UNIT_YOSHIKA1' , [    [   [1,7,'YOSHIKA1_1','YOSHIKA1_1'],[8,255,'YOSHIKA1_2','YOSHIKA1_1'],    ], ['TXT_KEY_SPELL_YOSHIKA_EXTRA1',],  ['TXT_KEY_SPELL_YOSHIKA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SEIGA1' , [    [   [1,255,'SEIGA1_1','SEIGA1_1'],    ], ['TXT_KEY_SPELL_SEIGA_EXTRA1',],  ['TXT_KEY_SPELL_SEIGA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_TOJIKO1' , [    [   [1,7,'TOJIKO1_1','TOJIKO1_1'],[8,255,'TOJIKO1_2','TOJIKO1_2'],    ], ['TXT_KEY_SPELL_TOJIKO_EXTRA1',],  ['TXT_KEY_SPELL_TOJIKO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_FUTO1' , [    [   [1,7,'FUTO1_1','FUTO1_1'],[8,255,'FUTO1_2','FUTO1_1'],    ], ['TXT_KEY_SPELL_FUTO_EXTRA1',],  ['TXT_KEY_SPELL_FUTO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_MIMIMIKO1' , [    [   [1,15,'MIMIMIKO1_1','MIMIMIKO1_1'],[16,255,'MIMIMIKO1_2','MIMIMIKO1_2'],    ], ['TXT_KEY_SPELL_MIMIMIKO_EXTRA1',],  ['TXT_KEY_SPELL_MIMIMIKO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_YATUHASHI1' , [    [   [1,255,'YATUHASHI1_1','YATUHASHI1_1'],    ], ['TXT_KEY_SPELL_YATUHASHI_EXTRA1',],  ['TXT_KEY_SPELL_YATUHASHI_PHANTASM1',],   ],   ],
-							 [ 'UNIT_BENBEN1' , [    [   [1,255,'BENBEN1_1','BENBEN1_1'],    ], ['TXT_KEY_SPELL_BENBEN_EXTRA1',],  ['TXT_KEY_SPELL_BENBEN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SEIJA1' , [    [   [1,11,'SEIJA1_1','SEIJA1_1'],[12,255,'SEIJA1_2','SEIJA1_2'],    ], ['TXT_KEY_SPELL_SEIJA_EXTRA1',],  ['TXT_KEY_SPELL_SEIJA_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SHINMYOUMARU1' , [    [   [1,7,'SHINMYOUMARU1_1','SHINMYOUMARU1_1'],[8,15,'SHINMYOUMARU1_1','SHINMYOUMARU1_2'],[16,255,'SHINMYOUMARU1_2','SHINMYOUMARU1_3'],    ], ['TXT_KEY_SPELL_SHINMYOUMARU_EXTRA1',],  ['TXT_KEY_SPELL_SHINMYOUMARU_PHANTASM1',],   ],   ],
-							 [ 'UNIT_RAIKO1' , [    [   [1,255,'RAIKO1_1','RAIKO1_1'],    ], ['TXT_KEY_SPELL_RAIKO_EXTRA1',],  ['TXT_KEY_SPELL_RAIKO_PHANTASM1',],  ['TXT_KEY_SPELL_RAIKO_PHANTASM2',]   ],   ],
-							 [ 'UNIT_YORIHIME1' , [    [   [1,255,'YORIHIME1_1','YORIHIME1_1'],[1,255,'YORIHIME2_1','YORIHIME2_1'],[1,255,'YORIHIME3_1','YORIHIME3_1'],    ], ['TXT_KEY_SPELL_YORIHIME_EXTRA1','TXT_KEY_SPELL_YORIHIME_EXTRA2','TXT_KEY_SPELL_YORIHIME_EXTRA3',],  ['TXT_KEY_SPELL_YORIHIME_PHANTASM1','TXT_KEY_SPELL_YORIHIME_PHANTASM2','TXT_KEY_SPELL_YORIHIME_PHANTASM3',],   ],   ],
-							 [ 'UNIT_TOYOHIME1' , [    [   [1,255,'TOYOHIME1_1','TOYOHIME1_1'],    ], ['TXT_KEY_SPELL_TOYOHIME_EXTRA1','TXT_KEY_SPELL_TOYOHIME_EXTRA2',],  ['TXT_KEY_SPELL_TOYOHIME_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SEIRAN1' , [    [   [1,7,'SEIRAN1_1','SEIRAN1_1'],[8,15,'SEIRAN1_1','SEIRAN1_2'],[16,255,'SEIRAN1_1','SEIRAN1_3'],    ], ['TXT_KEY_SPELL_SEIRAN_EXTRA1',],  ['TXT_KEY_SPELL_SEIRAN_PHANTASM1',],   ],   ],
-							 [ 'UNIT_RINGO1' , [    [   [1,11,'RINGO1_1','RINGO1_1'],[12,255,'RINGO1_2','RINGO1_2'],    ], ['TXT_KEY_SPELL_RINGO_EXTRA1',],  ['TXT_KEY_SPELL_RINGO_PHANTASM1',],   ],   ],
-							 [ 'UNIT_DOREMY1' , [    [   [1,255,'DOREMY1_1','DOREMY1_1'],    ], ['TXT_KEY_SPELL_DOREMY_EXTRA1',],  ['TXT_KEY_SPELL_DOREMY_PHANTASM1',],   ],   ],
-							 [ 'UNIT_SAGUME1' , [    [   [1,15,'SAGUME1_1','SAGUME1_1'],[16,255,'SAGUME1_2','SAGUME1_2'],    ], ['TXT_KEY_SPELL_SAGUME_EXTRA1',],  ['TXT_KEY_SPELL_SAGUME_PHANTASM1',],   ],   ],
-
-
-						]
-		
 		self.SpellDic = {}
-		for i in range(len(self.SpellList)):
-			self.SpellDic[gc.getInfoTypeForString(self.SpellList[i][0])] = self.SpellList[i][1]
+		for i in range(len(SpellInfo.TohoUnitSpellHelpList)):
+			self.SpellDic[gc.getInfoTypeForString(SpellInfo.TohoUnitSpellHelpList[i][0])] = SpellInfo.TohoUnitSpellHelpList[i][1]
 
 		# for 統合叙事詩 17.06
-		# 初期化されてなければここでも仮初期化
 		# ゲーム開始前にペディア開く人用
-		SpellInfo.init()
+		SpellInfo.init_helpfunclist()
 		
 		self.SortList = []
 		tempNum = 0;
@@ -704,13 +627,11 @@ class CvPediaTohoUnit:
 		#スペカ
 		screen.addPanel(self.SpellPanel[0], localText.getText("TXT_KEY_PEDIA_CATEGORY_TOHOUNIT_SPELL_CARD", ()), "", true, true, self.X_SPELL_CARD, self.Y_SPELL_CARD, self.W_SPELL_CARD, self.H_SPELL_CARD, PanelStyles.PANEL_STYLE_BLUE50 )
 		szText = ""
-		spellName = ""
 		for Spell in self.SpellDic[self.iUnit][0]:
 			if Spell[0] <= self.CAL and self.CAL <= Spell[1]:
-				szText = szText + "\n\n<color=254,140,50,254>" + localText.getText( "TXT_KEY_SPELLCARD_" + Spell[2], ()) + "</color>\n"
-				tempText = "TXT_KEY_SPELLCARD_" + Spell[3] + "_HELP"
-				spellName = "SPELLCARD_" + Spell[3]
-				szHelpText = self.TextToInt(localText.getText(tempText, ()), spellName)
+				szText = szText + "\n\n<color=254,140,50,254>" + localText.getText(Spell[3], ()) + "</color>\n"
+				helpKey = Spell[4]
+				szHelpText = self.TextToInt(localText.getText(helpKey, ()), Spell[2])
 				szText = szText + szHelpText
 
 		szText = szText[2:]
@@ -721,12 +642,11 @@ class CvPediaTohoUnit:
 		screen.addPanel(self.SpellPanel[2], localText.getText("TXT_KEY_PEDIA_CATEGORY_TOHOUNIT_SPELL_EXTRA", ()), "", true, true, self.X_SPELL_EXTRA, self.Y_SPELL_EXTRA, self.W_SPELL_EXTRA, self.H_SPELL_EXTRA, PanelStyles.PANEL_STYLE_BLUE50 )
 		szText = ""
 		for Spell in self.SpellDic[self.iUnit][1]:
-		
-			szText = szText + "\n\n<color=255,140,50,255>" + localText.getText(Spell, ()) + "</color>\n"
-			tempText = Spell + "_HELP"
-			spellName = Spell.replace("TXT_KEY_", "")
-			szHelpText = self.TextToInt(localText.getText(tempText, ()), spellName)
-			szText = szText + szHelpText
+			if Spell[0] <= self.CAL and self.CAL <= Spell[1]:
+				szText = szText + "\n\n<color=255,140,50,255>" + localText.getText(Spell[3], ()) + "</color>\n"
+				helpKey = Spell[4]
+				szHelpText = self.TextToInt(localText.getText(helpKey, ()), Spell[2])
+				szText = szText + szHelpText
 
 		szText = szText[2:]
 		screen.addMultilineText(self.SpellPanel[3], szText , self.X_SPELL_EXTRA+5, self.Y_SPELL_EXTRA+30, self.W_SPELL_EXTRA-10, self.H_SPELL_EXTRA-35, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)	
@@ -736,12 +656,11 @@ class CvPediaTohoUnit:
 		screen.addPanel(self.SpellPanel[4], localText.getText("TXT_KEY_PEDIA_CATEGORY_TOHOUNIT_SPELL_PHANTASM", ()), "", true, true, self.X_SPELL_PHANTASM, self.Y_SPELL_PHANTASM, self.W_SPELL_PHANTASM, self.H_SPELL_PHANTASM, PanelStyles.PANEL_STYLE_BLUE50 )
 		szText = ""
 		for Spell in self.SpellDic[self.iUnit][2]:
-		
-			szText = szText + "\n\n<color=255,140,50,255>" + localText.getText(Spell, ()) + "</color>\n"
-			tempText = Spell + "_HELP"
-			spellName = Spell.replace("TXT_KEY_", "")
-			szHelpText = self.TextToInt(localText.getText(tempText, ()), spellName)
-			szText = szText + szHelpText
+			if Spell[0] <= self.CAL and self.CAL <= Spell[1]:
+				szText = szText + "\n\n<color=255,140,50,255>" + localText.getText(Spell[3], ()) + "</color>\n"
+				helpKey = Spell[4]
+				szHelpText = self.TextToInt(localText.getText(helpKey, ()), Spell[2])
+				szText = szText + szHelpText
 
 		szText = szText[2:]
 		screen.addMultilineText(self.SpellPanel[5], szText , self.X_SPELL_PHANTASM+5, self.Y_SPELL_PHANTASM+30, self.W_SPELL_PHANTASM-10, self.H_SPELL_PHANTASM-35, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)	
@@ -757,16 +676,14 @@ class CvPediaTohoUnit:
 			s = m.group(0)
 			
 			if s[1] == "p":
-				### ペディア経由だと実物のユニットがいなくてスペル探せないので名前から自力で引く
-				#CvGameUtils.doprint("ctoi:" + s[3:-1])
-				#CvGameUtils.doprint("ctoi:" + spellName)
-				Spells = filter(lambda s: s.getName()==spellName, SpellInfo.getSpells())
-				if Spells:
-					spell = Spells[0]
-					i = spell.getHelpText(s[2:-1], None, self.CAL)
+				# ペディア経由だと実物のユニットがいなくてスペル探せないので名前から専用リストと照合
+				foundItem = filter(lambda s: s[0]==spellName, SpellInfo.SpellToHelpfuncList)
+				if foundItem:
+					helpfunc = foundItem[0][1]
+					i = helpfunc(s[2:-1], None, self.CAL)
 					return "[%d]" % i
 			else:
-				### 直接ぶん投げ用関数に回す。もはやC++を呼び出さない 
+				# 直接ぶん投げ用関数に回す。もはやC++を呼び出さない 
 				i = SpellInterface.getTextToSpellInt([ s[1:-1].encode("utf-8"), None, self.CAL, -1])
 				return "[%d]" % i
 
