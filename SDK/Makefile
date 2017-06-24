@@ -26,7 +26,7 @@ Debug_PROJECT_LIBDIRS=
 Debug_GLOBAL_LIBS=
 Debug_PROJECT_LIBS=
 
-Final_Release_GLOBAL_CFLAGS=
+Final_Release_GLOBAL_CFLAGS= /wd4068 /wd4163
 Final_Release_PROJECT_CFLAGS=
 Final_Release_GLOBAL_LDFLAGS=
 Final_Release_PROJECT_LDFLAGS=
@@ -702,10 +702,10 @@ Final_Release/CvEventReporter.obj: CvEventReporter.cpp
 
 Final_Release/CvMessageControl.obj: CvMessageControl.cpp
 	$(Final_Release_CPP) /nologo $(Final_Release_CFLAGS) $(Final_Release_INCS) /c CvMessageControl.cpp /FoFinal_Release/CvMessageControl.obj
-	
+
 Final_Release/CvMessageData.obj: CvMessageData.cpp
 	$(Final_Release_CPP) /nologo $(Final_Release_CFLAGS) $(Final_Release_INCS) /c CvMessageData.cpp /FoFinal_Release/CvMessageData.obj
-	
+
 Final_Release/CyMessageControl.obj: CyMessageControl.cpp
 	$(Final_Release_CPP) /nologo $(Final_Release_CFLAGS) $(Final_Release_INCS) /c CyMessageControl.cpp /FoFinal_Release/CyMessageControl.obj
 

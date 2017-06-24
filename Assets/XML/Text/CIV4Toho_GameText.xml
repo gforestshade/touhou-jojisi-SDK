@@ -2023,6 +2023,15 @@
 		<Japanese>[LINK=FEATURE_JUNGLE]竹林[\LINK]の開拓</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SPLIT_EMPIRE_2</Tag>
+		<English>Delegate Governance to %s1_player</English>
+		<French>%s1_playerに統治を委任する</French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Japanese>%s1_playerに統治を委任する</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HINT_1</Tag>
 		<English />
 		<French>チョン避けは大事です。自機狙い弾を避ける最高の手段です。ただし画面端には注意しましょう。</French>

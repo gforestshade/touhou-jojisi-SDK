@@ -99,6 +99,7 @@ CvPlayer::CvPlayer()
 	m_iNumMadeMyLove = 0;
 	//東方叙事詩統合MOD追記
 	m_iAmenouzumeFlag = 0;
+	m_iSplitEmpireLeader = NO_LEADER;
 
 /************************************************************************************************/
 /* AI_AUTO_PLAY_MOD                        09/01/07                                MRGENIE      */
@@ -19644,7 +19645,21 @@ bool CvPlayer::getSplitEmpireLeaders(CivLeaderArray& aLeaders) const
 		}
 	}
 
+	// for 統合叙事詩 17.06
+	// 適正な指導者を選ぶ人選、ご苦労！それはそれとして、我々の委任統治者は決定しているのだ！
+	// 的なこと。やってることがバニラ全否定。ひどい。
+	if( m_iSplitEmpireLeader != NO_LEADER )
+	{
+		aLeaders.clear();
+		aLeaders.push_back(std::make_pair(getCivilizationType(), m_iSplitEmpireLeader));
+	}
+	
 	return (aLeaders.size() > 0);
+}
+
+void CvPlayer::setSplitEmpireLeader(LeaderHeadTypes eLeader)
+{
+	m_iSplitEmpireLeader = eLeader;
 }
 
 bool CvPlayer::splitEmpire(int iAreaId)

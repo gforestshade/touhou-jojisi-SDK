@@ -1090,6 +1090,7 @@ public:
 	//“Œ•û––“‡MOD—p
 	int getAmenouzumeFlag();
 	void setAmenouzumeFlag(int iNum);
+	void setSplitEmpireLeader(LeaderHeadTypes eLeader);
 
 protected:
 
@@ -1365,6 +1366,7 @@ protected:
 	int m_iNumMadeMyLove;
 	//“Œ•û––“‡MOD—p
 	int m_iAmenouzumeFlag;
+	LeaderHeadTypes m_iSplitEmpireLeader;
 
 };
 
