@@ -9726,11 +9726,25 @@ int CvCivilizationInfo::getCivilizationBuildings(int i) const
 	return m_piCivilizationBuildings ? m_piCivilizationBuildings[i] : -1;
 }
 
+void CvCivilizationInfo::setCivilizationBuildings(int i, int v)
+{
+	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	m_piCivilizationBuildings[i] = v;
+}
+
 int CvCivilizationInfo::getCivilizationUnits(int i) const
 {
 	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piCivilizationUnits ? m_piCivilizationUnits[i] : -1;
+}
+
+void CvCivilizationInfo::setCivilizationUnits(int i, int v)
+{
+	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	m_piCivilizationUnits[i] = v;
 }
 
 int CvCivilizationInfo::getCivilizationFreeUnitsClass(int i) const
