@@ -176,11 +176,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SAKUYA_SKILL1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]Phanスペルの使用が可能</French>
+		<French>[ICON_BULLET]Phanスペルの使用が可能&#13;[ICON_BULLET]幻象「ルナクロック」が東方ユニットに対しても確実に効力を発揮するようになる&#13;[ICON_BULLET]労働効率上昇</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]Phanスペルの使用が可能</Japanese>
+		<Japanese>[ICON_BULLET]Phanスペルの使用が可能&#13;[ICON_BULLET]幻象「ルナクロック」が東方ユニットに対しても確実に効力を発揮するようになる&#13;[ICON_BULLET]労働効率上昇</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PATCHOULI_SKILL1</Tag>
@@ -466,11 +466,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CHEN_SKILL1_HELP</Tag>
 		<English />
-		<French>倒されたときの経験値ペナルティ-30%</French>
+		<French>[ICON_BULLET]戦闘勝利時Power回復&#13;[ICON_BULLET]倒されたときの経験値ペナルティ-30%</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>倒されたときの経験値ペナルティ-30%</Japanese>
+		<Japanese>[ICON_BULLET]戦闘勝利時Power回復&#13;[ICON_BULLET]倒されたときの経験値ペナルティ-30%</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_YOUMU_SKILL1</Tag>
@@ -693,11 +693,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MYSTIA_SKILL1_HELP</Tag>
 		<English />
-		<French></French>
+		<French>[ICON_BULLET]戦闘勝利時Power回復</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese></Japanese>
+		<Japanese>[ICON_BULLET]戦闘勝利時Power回復</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LETTY_SKILL1</Tag>
@@ -1583,11 +1583,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KOMACHI_SKILL1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]戦闘勝利時に追加の経験値+1　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</French>
+		<French>[ICON_BULLET]戦闘勝利時に25%の確率で追加の経験値+1　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]戦闘勝利時に追加の経験値+1　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</Japanese>
+		<Japanese>[ICON_BULLET]戦闘勝利時に25%の確率で追加の経験値+1　&#13;[ICON_BULLET]戦闘勝利時に倒した相手のレベルに応じて金銭を獲得</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EIKI_SKILL1</Tag>
@@ -1751,6 +1751,24 @@
 		<Spanish />
 		<Japanese>[ICON_BULLET]ターン開始時、50％の確率で自動除去&#13;[ICON_BULLET]東方ユニットの場合はターン開始時、100％の確率で自動除去</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_WHITE</Tag>
+		<English />
+		<French>「白」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>「白」</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BLACK</Tag>
+		<English />
+		<French>「黒」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>「黒」</Japanese>
+	</TEXT>
 <!-- Ningennosato Promotions End-->
 <!-- Chireiden Promotions Start-->
 	<TEXT>
@@ -1765,11 +1783,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PARSEE_SKILL1_HELP</Tag>
 		<English />
-		<French></French>
+		<French>[ICON_BULLET]戦闘勝利時Power回復&#13;[ICON_BULLET]敵対都市の防御値を減少させる</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese></Japanese>
+		<Japanese>[ICON_BULLET]戦闘勝利時Power回復&#13;[ICON_BULLET]敵対都市の防御値を減少させる</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_YUGI_SKILL1</Tag>
@@ -1783,11 +1801,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_YUGI_SKILL1_HELP</Tag>
 		<English />
-		<French></French>
+		<French>[ICON_BULLET]連続戦闘が可能</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese></Japanese>
+		<Japanese>[ICON_BULLET]連続戦闘が可能</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KOISHI_SKILL1</Tag>
@@ -1837,11 +1855,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RIN_SKILL1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]周囲１マスでユニットが死亡すると25％の確率で経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</French>
+		<French>[ICON_BULLET]猫形態への変化が可能になる&#13;[ICON_BULLET]周囲１マスでユニットが死亡すると5％の確率で経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]周囲１マスでユニットが死亡すると25％の確率で経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</Japanese>
+		<Japanese>[ICON_BULLET]猫形態への変化が可能になる&#13;[ICON_BULLET]周囲１マスでユニットが死亡すると5％の確率で経験値＋１&#13;[ICON_BULLET]1ターン中に獲得可能な経験値の上限はレベルと同じ</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ZOMBIEFAIRY</Tag>
@@ -2952,11 +2970,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DANGO_FEVER_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]特殊スペル「ダンゴフィーバー」を使用可能になる&#13;[ICON_BULLET]テラフォーミングで本来犠牲になるシチュエーションの場合、この昇進の除去と引き換えに犠牲を回避出来る（[COLOR_RED]「氾濫源化」は例外[COLOR_REVERT]）&#13;[ICON_BULLET]「ダンゴフィーバー」使用後に除去される</French>
+		<French>[ICON_BULLET]特殊スペル「ダンゴフィーバー」を使用可能になる&#13;[ICON_BULLET]テラフォーミングで本来犠牲になるシチュエーションの場合、この昇進の除去と引き換えに犠牲を回避出来る（[COLOR_RED]「氾濫源化」は例外[COLOR_REVERT]）&#13;[ICON_BULLET]労働効率上昇&#13;[ICON_BULLET]「ダンゴフィーバー」使用後に除去される</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]特殊スペル「ダンゴフィーバー」を使用可能になる&#13;[ICON_BULLET]テラフォーミングで本来犠牲になるシチュエーションの場合、この昇進の除去と引き換えに犠牲を回避出来る（[COLOR_RED]「氾濫源化」は例外[COLOR_REVERT]）&#13;[ICON_BULLET]「ダンゴフィーバー」使用後に除去される</Japanese>
+		<Japanese>[ICON_BULLET]特殊スペル「ダンゴフィーバー」を使用可能になる&#13;[ICON_BULLET]テラフォーミングで本来犠牲になるシチュエーションの場合、この昇進の除去と引き換えに犠牲を回避出来る（[COLOR_RED]「氾濫源化」は例外[COLOR_REVERT]）&#13;[ICON_BULLET]労働効率上昇&#13;[ICON_BULLET]「ダンゴフィーバー」使用後に除去される</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CTHULHU_FAMILY</Tag>
@@ -3105,6 +3123,15 @@
 		<Japanese>永琳マーク</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_EIRIN_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]STG戦闘力1.5倍</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]STG戦闘力1.5倍</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_NITORI</Tag>
 		<English />
 		<French>にとりマーク</French>
@@ -3238,6 +3265,15 @@
 		<Italian />
 		<Spanish />
 		<Japanese>神奈子マーク</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_KANAKO_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]STG戦闘力1.5倍</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]STG戦闘力1.5倍</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_REIMU</Tag>
@@ -3663,6 +3699,15 @@
 		<Japanese>豊姫マーク</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_TOYOHIME_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]戦闘勝利時Power回復</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]戦闘勝利時Power回復</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_SEIRAN</Tag>
 		<English />
 		<French>清蘭マーク</French>
@@ -3670,6 +3715,15 @@
 		<Italian />
 		<Spanish />
 		<Japanese>清蘭マーク</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_SEIRAN_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]STG戦闘力1.5倍</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]STG戦闘力1.5倍</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CHARACTER_MARK_RINGO</Tag>

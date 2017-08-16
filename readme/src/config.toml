@@ -1,0 +1,20 @@
+baseurl = ""
+languageCode = "ja_Jp"
+theme = "bootie"
+title = "東方叙事詩・統合MOD・readmeビューア"
+RelativeURLs = true
+uglyurls = true
+disableKinds = ["RSS", "Sitemap"]
+publishDir = "../html"
+
+[params]
+  Description = "統合MOD・ヘルプ"
+  Author = ""
+
+[blackfriday]
+  extensions = ["hardLineBreak"]
+
+[[menu.main]]
+  name   = "Posts"
+  url    = "/post.html"
+  weight = 10

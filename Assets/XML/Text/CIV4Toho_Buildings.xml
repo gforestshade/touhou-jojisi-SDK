@@ -1359,29 +1359,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOWER_FARM</Tag>
 		<English />
-		<French>集積高層農場</French>
+		<French>スキタイ式馬肉錬成術</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>集積高層農場</Japanese>
+		<Japanese>スキタイ式馬肉錬成術</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOYLENT_SID</Tag>
 		<English />
-		<French>ソイレント・シド</French>
+		<French>ソイレントシステム</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ソイレント・シド</Japanese>
+		<Japanese>ソイレントシステム</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LITTLE_MAID_FARM</Tag>
 		<English />
-		<French>メイドさんの砂糖農場</French>
+		<French>ジャパリパーク</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>メイドさんの砂糖農場</Japanese>
+		<Japanese>ジャパリパーク</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COBBLESTONE_MAKER</Tag>
@@ -1413,11 +1413,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORTUNE_PICKEL</Tag>
 		<English />
-		<French>フォーチュン・ピッケル</French>
+		<French>パルミア大使館</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>フォーチュン・ピッケル</Japanese>
+		<Japanese>パルミア大使館</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KAMINOHI</Tag>

@@ -209,33 +209,6 @@
 		<Japanese>メディスン＝メランコリーは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「悔しく、なんか、ないん、だからっ………！[NEWLINE][NEWLINE]……ぐすっ」</Japanese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_DEFEATED_WATAHIME</Tag>
-		<English />
-		<French>綿月豊姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「地上の民もやるものですわね……完敗ですわ」</French>
-		<German />
-		<Italian />
-		<Spanish />
-		<Japanese>綿月豊姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「地上の民もやるものですわね……完敗ですわ」</Japanese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_DEFEATED_YORIHIME</Tag>
-		<English />
-		<French>綿月依姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「認めましょう。私の力が、貴方に及ばなかった。この結果はそれを反映しているだけです。[NEWLINE][NEWLINE]……まだまだ未熟ね、私も……」</French>
-		<German />
-		<Italian />
-		<Spanish />
-		<Japanese>綿月依姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「認めましょう。私の力が、貴方に及ばなかった。この結果はそれを反映しているだけです。[NEWLINE][NEWLINE]……まだまだ未熟ね、私も……」</Japanese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_DEFEATED_REISEN2</Tag>
-		<English />
-		<French>レイセンは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「な……何なの、ここは。月よりよっぽど怖い！？」</French>
-		<German />
-		<Italian />
-		<Spanish />
-		<Japanese>レイセンは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「な……何なの、ここは。月よりよっぽど怖い！？」</Japanese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_DEFEATED_KAGEROU</Tag>
 		<English />
 		<French>今泉影狼は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「これが本当の負け犬の遠吠え……[NEWLINE][NEWLINE]……って、何言わせてんのよ！？」</French>
@@ -428,6 +401,24 @@
 		<Spanish />
 		<Japanese>黒谷ヤマメは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「ひっどいなあ、もうちょっと手加減してくれたっていいじゃないのさ[NEWLINE]こちとらかわいい1ボスちゃんだよ？」</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEFEATED_CLOWNPIECE</Tag>
+		<English />
+		<French>クラウンピースは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あたいの妖精ランドがーーー！？」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>クラウンピースは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あたいの妖精ランドがーーー！？」</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEFEATED_HECATIA</Tag>
+		<English />
+		<French>ヘカーティア・ラピスラズリは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あらららら……？おかしいわ、こんなはずじゃあ……[NEWLINE]……そ、そのー。出来ればこの事は内密にして貰えるかしら？[NEWLINE]私にも一応、女神としての沽券ってモノがあるから…ね？」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ヘカーティア・ラピスラズリは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あらららら……？おかしいわ、こんなはずじゃあ……[NEWLINE]……そ、そのー。出来ればこの事は内密にして貰えるかしら？[NEWLINE]私にも一応、女神としての沽券ってモノがあるから…ね？」</Japanese>
+	</TEXT>
 <!-- Chireiden Defeated End-->
 <!-- Seirensen Defeated Start-->
 	<TEXT>
@@ -603,6 +594,15 @@
 		<Spanish />
 		<Japanese>わかさぎ姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あの…ところで、そこにスタンバイしてあるてんぷら鍋と衣は、一体……？」</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEFEATED_SUMMERCIRNO</Tag>
+		<English />
+		<French>日焼けしたチルノは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「な、なに！？[NEWLINE]弱点をコクフクしたあたいは…最強じゃなかった…？」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>日焼けしたチルノは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「な、なに！？[NEWLINE]弱点をコクフクしたあたいは…最強じゃなかった…？」</Japanese>
+	</TEXT>
 <!-- Hyouseirengou Defeated End-->
 <!-- Hakureijinja Defeated Start-->
 	<TEXT>
@@ -694,6 +694,15 @@
 		<Italian />
 		<Spanish />
 		<Japanese>茨木華扇は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「…あのですね？そもそも人のものを奪っちゃいけないというのは常識ですよね？[NEWLINE]私が仙人という徳を積んだ存在だから怒らないとでも…………[NEWLINE][NEWLINE]…え？お前仙人じゃないだろ…ですって！？[NEWLINE]だだだ、誰がそんなことを！私は鬼なんかじゃありませんよ！？[NEWLINE][NEWLINE]…え？鬼かどうかなんて聞いてない…って……[NEWLINE]………あわわわわわわ</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEFEATED_JUNKO</Tag>
+		<English />
+		<French>純狐は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「…おい嫦娥ァ！！！[NEWLINE]私がこんな悲惨な目にあってるのもお前の仕業か！？」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>純狐は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「…おい嫦娥ァ！！！[NEWLINE]私がこんな悲惨な目にあってるのもお前の仕業か！？」</Japanese>
 	</TEXT>
 <!-- Hakureijinja Defeated End-->
 <!-- Ningennosato Defeated Start-->
@@ -945,7 +954,34 @@
 		<Japanese>アリスは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「どうせ貴方も好き勝手に奴隷にする気なんでしょう！？[NEWLINE][NEWLINE]うう、ひどいったらありゃしないわ」</Japanese>
 	</TEXT>
 <!-- Kishinjou Defeated End-->
-<!-- Kanjuden? Defeated Start-->
+<!-- Tukinomiyako Defeated Start-->
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEFEATED_WATAHIME</Tag>
+		<English />
+		<French>綿月豊姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「地上の民もやるものですわね……完敗ですわ」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>綿月豊姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「地上の民もやるものですわね……完敗ですわ」</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEFEATED_YORIHIME</Tag>
+		<English />
+		<French>綿月依姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「認めましょう。私の力が、貴方に及ばなかった。この結果はそれを反映しているだけです。[NEWLINE][NEWLINE]……まだまだ未熟ね、私も……」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>綿月依姫は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「認めましょう。私の力が、貴方に及ばなかった。この結果はそれを反映しているだけです。[NEWLINE][NEWLINE]……まだまだ未熟ね、私も……」</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEFEATED_REISEN2</Tag>
+		<English />
+		<French>レイセンは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「な……何なの、ここは。月よりよっぽど怖い！？」</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>レイセンは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「な……何なの、ここは。月よりよっぽど怖い！？」</Japanese>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_DEFEATED_SEIRAN</Tag>
 		<English />
@@ -982,32 +1018,5 @@
 		<Spanish />
 		<Japanese>稀神サグメは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「……いくら事態を逆転させても結果は変わらない。[NEWLINE]そういうこともあるものなのよ。割り切るしか無いわね……」</Japanese>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_DEFEATED_CLOWNPIECE</Tag>
-		<English />
-		<French>クラウンピースは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あたいの妖精ランドがーーー！？」</French>
-		<German />
-		<Italian />
-		<Spanish />
-		<Japanese>クラウンピースは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あたいの妖精ランドがーーー！？」</Japanese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_DEFEATED_JUNKO</Tag>
-		<English />
-		<French>純狐は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「…おい嫦娥ァ！！！[NEWLINE]私がこんな悲惨な目にあってるのもお前の仕業か！？」</French>
-		<German />
-		<Italian />
-		<Spanish />
-		<Japanese>純狐は滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「…おい嫦娥ァ！！！[NEWLINE]私がこんな悲惨な目にあってるのもお前の仕業か！？」</Japanese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_DEFEATED_HECATIA</Tag>
-		<English />
-		<French>ヘカーティア・ラピスラズリは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あらららら……？おかしいわ、こんなはずじゃあ……[NEWLINE]……そ、そのー。出来ればこの事は内密にして貰えるかしら？[NEWLINE]私にも一応、女神としての沽券ってモノがあるから…ね？」</French>
-		<German />
-		<Italian />
-		<Spanish />
-		<Japanese>ヘカーティア・ラピスラズリは滅亡してしまいました！！！[NEWLINE][NEWLINE][NEWLINE]「あ、あらららら……？おかしいわ、こんなはずじゃあ……[NEWLINE]……そ、そのー。出来ればこの事は内密にして貰えるかしら？[NEWLINE]私にも一応、女神としての沽券ってモノがあるから…ね？」</Japanese>
-	</TEXT>
-<!-- Kanjuden? Defeated End-->
+<!-- Tukinomiyako Defeated End-->
 </Civ4GameText>

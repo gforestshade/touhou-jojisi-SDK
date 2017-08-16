@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="../index.xml" type="application/rss+xml" title="東方叙事詩・統合MOD・readmeビューア">
+		<link rel="icon" href="../favicon.ico">
+		<title>内政面その他の変更点 - 東方叙事詩・統合MOD・readmeビューア</title>
+		
+		<link rel="stylesheet" href="../css/highlight/default.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="stylesheet" href="../css/bootie-docs.css">
+		<link rel="stylesheet" href="../css/site.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">東方叙事詩・統合MOD・readmeビューア</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="../index.html">Home</a></li>
+			
+			
+				
+					<li ><a href="../post.html">Posts</a></li>
+				
+			
+				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						
+							<li><a href="../categories/append.html">統合MOD / 追加要素</a></li>
+						
+							<li><a href="../categories/mainchange_170811.html">ver170811における大きな変更点まとめ</a></li>
+						
+							<li><a href="../categories/newciv.html">統合MOD / 新文明</a></li>
+						
+							<li><a href="../categories/old.html">旧情報</a></li>
+						
+							<li><a href="../categories/readme.html">readme</a></li>
+						
+							<li><a href="../categories/summary.html">まとめ</a></li>
+						
+						</ul>
+					</li>
+				
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">内政面その他の変更点</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2017-08-10">August 10, 2017</time></span>
+				</div>
+				<section>
+					
+
+<h1 id="全体に関わる変更点">全体に関わる変更点</h1>
+
+<ul>
+<li><p>「月の都文明」の追加<br />
+詳細は別途、「統合MOD/新文明」カテゴリー内部にある<br />
+「月の都文明」「月の都文明東方ユニット」<br />
+を参照して下さい</p></li>
+
+<li><p>東方ユニットまわりの仕様を変更<br />
+詳細は別途、「ver170811における大きな変更点まとめ」カテゴリー内部にある<br />
+「東方ユニット関連の見直し」<br />
+を参照して下さい</p></li>
+
+<li><p>志向効力の変更・修正</p>
+
+<ul>
+<li>集権志向：<br />
+首都建設時のブーストボーナスはコイン+2に変更<br /></li>
+<li>拡張志向：<br />
+古典時代以降に建設された都市は人口2スタート<br /></li>
+<li>防衛志向：<br />
+機関銃兵に都市駐留1・教練1<br />
+<br /></li>
+</ul></li>
+
+<li><p>@gforest_shade氏作成の新式readmeを導入（現在ご覧になっているこのhtmlファイル）</p></li>
+
+<li><p>指導者の志向組み合わせを一部変更</p>
+
+<ul>
+<li>早苗：帝国・哲学<br /></li>
+<li>朱鷺子：労働・集権<br /></li>
+<li>依姫：金融・帝国<br /></li>
+<li>豊姫：拡張・宗教<br /></li>
+<li>清蘭：攻撃・労働<br /></li>
+<li>サグメ：哲学・集権<br /></li>
+<li>レイセン2号：勤労・防衛<br /></li>
+<li>芳香：帝国・防衛<br />
+<br /></li>
+</ul></li>
+
+<li><p>ゲーム内部の処理を大幅に見直す<br />
+主に東方ユニットのスペル周りやターン開始時処理など<br />
+ゲームバランスそのものには影響していない部分だが、内部的にはほぼ別物レベルで変わっている<br />
+※そのため新しいバグが発生する事があるかも</p></li>
+
+<li><p>上記内部処理変更に関連し、社会制度変更時に自動建設される建造物（労働志向や信仰系など）は即時反映されるように</p></li>
+
+<li><p>小町の独自志向等であった「再生成するたびに出力が増加するバグ」を修正</p></li>
+
+<li><p>その他、気付いた範囲にあった雑多なバグを修正</p></li>
+</ul>
+
+<h1 id="文明単位による個別の変更点">文明単位による個別の変更点</h1>
+
+<h2 id="白玉楼">白玉楼</h2>
+
+<ul>
+<li>指導者「リリーブラック」を削除し、選択できないように<br />
+ただし内部データは消していないため、ランダム指導者時などは出てくる可能性あり<br />
+<br /></li>
+</ul>
+
+<h2 id="永遠亭">永遠亭</h2>
+
+<ul>
+<li>月の都文明新規導入に伴い、以下の指導者は月の都文明に移動<br />
+
+<ul>
+<li>綿月豊姫<br /></li>
+<li>綿月依姫<br /></li>
+<li>レイセン2号<br /></li>
+<li>清蘭<br /></li>
+<li>鈴瑚<br /></li>
+<li>ドレミー・スイート<br /></li>
+<li>稀神サグメ<br />
+<br /></li>
+</ul></li>
+</ul>
+
+<h2 id="氷精連合">氷精連合</h2>
+
+<ul>
+<li>新指導者「日焼けしたチルノ」追加<br />
+志向は攻撃・集権<br />
+独自志向は幸福+1（ただし後々修正予定）<br />
+<br /></li>
+</ul>
+
+<h2 id="博麗神社">博麗神社</h2>
+
+<ul>
+<li>純狐の志向は白兵コスト-15%に変更<br />
+<br /></li>
+</ul>
+
+<h2 id="人間の里">人間の里</h2>
+
+<ul>
+<li>指導者「上白沢慧音(ハクタク)」を削除し、選択できないように<br />
+ただし内部データは消していないため、ランダム指導者時などは出てくる可能性あり<br />
+<br /></li>
+</ul>
+
+<h2 id="神霊廟">神霊廟</h2>
+
+<ul>
+<li><p>「冠位十二階」を取得しても偉人発生時の無償神霊は沸かないように</p></li>
+
+<li><p>神霊廟文明のUI最終段階に普通選挙導入時ハンマー+1追加</p></li>
+
+<li><p>各種太子講は独自技術2段階目から解禁</p></li>
+
+<li><p>布都の独自志向にある龍脈パン+2を+1に変更</p></li>
+</ul>
+
+<h2 id="輝針城">輝針城</h2>
+
+<ul>
+<li>小槌の魔力はライフリングで陳腐化するように<br /></li>
+</ul>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4 class="sidebar-heading">Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">内政面その他の変更点</a></strong></li>
+			</ul>
+			<nav id="TableOfContents">
+<ul>
+<li><a href="#全体に関わる変更点">全体に関わる変更点</a></li>
+<li><a href="#文明単位による個別の変更点">文明単位による個別の変更点</a>
+<ul>
+<li><a href="#白玉楼">白玉楼</a></li>
+<li><a href="#永遠亭">永遠亭</a></li>
+<li><a href="#氷精連合">氷精連合</a></li>
+<li><a href="#博麗神社">博麗神社</a></li>
+<li><a href="#人間の里">人間の里</a></li>
+<li><a href="#神霊廟">神霊廟</a></li>
+<li><a href="#輝針城">輝針城</a></li>
+</ul></li>
+</ul>
+</nav>
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Pages in Categories</h4>
+		<ul class="sidebar-category-list">
+		
+			<li>
+				<a href="../categories/append.html">
+					<span class="doc-list-category">統合MOD / 追加要素</span>
+				</a>
+				<ul>
+					<li><a href="../post/trait_labor.html">労働志向</a>
+					</li>
+				
+					<li><a href="../post/trait_shuken.html">集権志向</a>
+					</li>
+				
+					<li><a href="../post/civic_faith.html">社会制度「信仰」</a>
+					</li>
+				
+					<li><a href="../post/uwabami.html">うわばみ志向</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/mainchange_170811.html">
+					<span class="doc-list-category">ver170811における大きな変更点まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/changetohounit_170811.html">東方ユニット関連の見直し</a>
+					</li>
+				
+					<li>
+						<span class="active">内政面その他の変更点</span>
+						</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/newciv.html">
+					<span class="doc-list-category">統合MOD / 新文明</span>
+				</a>
+				<ul>
+					<li><a href="../post/tukinomiyako_tohounit.html">月の都文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/tukinomiyako.html">月の都文明</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_tohounits.html">輝針城文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_bunmei.html">輝針城文明</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou_tohounit.html">神霊廟文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou.html">神霊廟文明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/old.html">
+					<span class="doc-list-category">旧情報</span>
+				</a>
+				<ul>
+					<li><a href="../post/ai.html">AI挙動変更点</a>
+					</li>
+				
+					<li><a href="../post/arahitogami.html">難易度現人神</a>
+					</li>
+				
+					<li><a href="../post/leaders_setsumei.html">追加指導者詳細</a>
+					</li>
+				
+					<li><a href="../post/redome_multiface.html">readme_multiface</a>
+					</li>
+				
+					<li><a href="../post/redome_henkouten.html">更新履歴（151115ver以前）</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/readme.html">
+					<span class="doc-list-category">readme</span>
+				</a>
+				<ul>
+					<li><a href="../post/redome_cgele.html">ReadMe-CGE-LE</a>
+					</li>
+				
+					<li><a href="../post/about_fullver.html">フルパックバージョンについて</a>
+					</li>
+				
+					<li><a href="../post/platywb.html">ワールドビルダー拡張パッチ</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/summary.html">
+					<span class="doc-list-category">まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/readme_new.html">更新履歴・ver170811以降</a>
+					</li>
+				
+					<li><a href="../post/sozai_new.html">使用素材まとめ（ver170811以降）</a>
+					</li>
+				
+					<li><a href="../post/tougou_setsumei.html">統合MODの説明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="../tags/dev.html">dev</a>
+		
+		</div>
+	</div>
+	</div>
+</div>
+
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#" onclick="resetSidebarPos()">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	
+	
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/bootie-docs.js"></script>
+
+</body>
+</html>

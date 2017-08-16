@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="../index.xml" type="application/rss+xml" title="東方叙事詩・統合MOD・readmeビューア">
+		<link rel="icon" href="../favicon.ico">
+		<title>130626_変更点_作成側向け - 東方叙事詩・統合MOD・readmeビューア</title>
+		
+		<link rel="stylesheet" href="../css/highlight/default.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="stylesheet" href="../css/bootie-docs.css">
+		<link rel="stylesheet" href="../css/site.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">東方叙事詩・統合MOD・readmeビューア</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="../index.html">Home</a></li>
+			
+			
+				
+					<li ><a href="../post.html">Posts</a></li>
+				
+			
+				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						
+							<li><a href="../categories/append.html">統合MOD / 追加要素</a></li>
+						
+							<li><a href="../categories/mainchange_170811.html">ver170811における大きな変更点まとめ</a></li>
+						
+							<li><a href="../categories/newciv.html">統合MOD / 新文明</a></li>
+						
+							<li><a href="../categories/old.html">旧情報</a></li>
+						
+							<li><a href="../categories/readme.html">readme</a></li>
+						
+							<li><a href="../categories/summary.html">まとめ</a></li>
+						
+						</ul>
+					</li>
+				
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">130626_変更点_作成側向け</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2017-06-17">June 17, 2017</time></span>
+				</div>
+				<section>
+					
+
+<h1 id="dll">DLL</h1>
+
+<p>今回は無し</p>
+
+<h1 id="python">Python</h1>
+
+<p>Python/CvEventManager.py<br />
+赤蛮奇やこころちゃんの固有志向部分処理<br />
+社会制度：信仰や労働志向の処理<br />
+ニルヴァーナの処理<br />
+芳香略奪で体力回復処理<br />
+星蓮船最終固有テクの人口増加調整<br />
+教授志向の修正</p>
+
+<p>Python/CvGameUtils.py<br />
+わかさぎ姫・影狼の固有志向部分処理</p>
+
+<p>Python/Spellinfo.py<br />
+布都スペルの変更</p>
+
+<p>Python/Screens/CvCivicsScreen.py<br />
+新社会制度に合わせ社会制度画面の変更</p>
+
+<h1 id="art">art</h1>
+
+<p>Interface/buttons/Civics<br />
+社会制度：信仰関連のボタンファイル</p>
+
+<p>Interface/buttons/Promotions<br />
+赤蛮奇固有志向で付く昇進関連のボタンファイル</p>
+
+<p>art/structures/buildings/Torii<br />
+社会制度：神道採用時に自動建設される建造物のグラフィック本体<br />
+最大まで画面を拡大してようやく見れるかどうかというレベルだが、<br />
+そのものズバリなグラフィックが置いてあったので仕方ない</p>
+
+<p>art/Leaderheads<br />
+新指導者の外交時グラフィック一覧<br />
+マルチフェイスパック差分は今回から別に用意しておくことに</p>
+
+<h1 id="sounds">Sounds</h1>
+
+<p>Sounds/Diplomacy<br />
+新指導者の外交時BGM本体<br />
+現時点では全員共通の仮のBGMとしている<br />
+後々それぞれのテーマ曲に合わせた曲を置きたいところ</p>
+
+<h1 id="xml">XML</h1>
+
+<p>XML/PythonCallbackDefines.xml<br />
+CvGameUtilsで使用する関数が増えたため、それを許可するためのもの</p>
+
+<p>XML/Art/CIV4ArtDefines_Leaderhead.xml<br />
+新指導者ズの画像登録</p>
+
+<p>XML/Art/CIV4ArtDefines_Building.xml<br />
+社会制度：神道採用時に自動建設される建造物のグラフィック登録</p>
+
+<p>XML/Audio/AudioDefines.xml<br />
+XML/Audio/Audio2DScripts.xml<br />
+新指導者外交BGMの登録</p>
+
+<p>XML/Buildings/CIV4BuildingClassInfos.xml<br />
+XML/Buildings/CIV4BuildingInfos.xml<br />
+双方共に建造物の登録<br />
+…に使うのだが、今回のパッチでは労働志向の効力部分や<br />
+首都建設時に固有建造物が建つ志向の処理とのリンク部分がメイン<br />
+その他、神霊廟文明の太子堂作成条件を変更<br />
+ニルヴァーナの登録</p>
+
+<p>XML/Civilizations/CIV4CivilizationInfos.xml<br />
+ベースは都市名称タグ修正パッチ（<a href="http://ux.getuploader.com/tohojojisi_souko/download/39/citynamepatch.zip）のもの">http://ux.getuploader.com/tohojojisi_souko/download/39/citynamepatch.zip）のもの</a><br />
+新指導者を文明の指導者として選択できるように</p>
+
+<p>XML/Civilizations/CIV4LeaderHeadInfos.xml<br />
+現在のベースにはBGM追加パッチ・AI挙動変更有り版を用いているが、<br />
+これに関しては後々、落ち着いてきたら通常版との差分も作る予定<br />
+新指導者の登録、及び社会制度：信仰追加に合わせ既存指導者の好みの社会制度を大幅に変更</p>
+
+<p>XML/Civilizations/CIV4TraitInfos.xml<br />
+新指導者の固有志向登録</p>
+
+<p>XML/Technologies/CIV4TechInfos.xml<br />
+妖怪の山最終固有テクの調整</p>
+
+<p>XML/Terrain/CIV4ImprovementInfos.xml<br />
+龍脈の出力変更</p>
+
+<p>XML/GameInfo/CIV4CivicInfos.xml<br />
+XML/GameInfo/CIV4CivicOptionInfos.xml<br />
+双方共に新しい社会制度の登録</p>
+
+<p>XML/GameInfo/CIV4DiplomacyInfos.xml<br />
+新指導者の外交台詞の登録<br />
+とはいっても以前神霊廟文明作成時に統合MODの人が予め作成しておいたダミータグの名称を変更しただけ<br />
+おかげさまで今回は大分ラクを出来た。改めてありがとう！</p>
+
+<p>XML/Units/CIV4UnitClassInfos.xml<br />
+XML/Units/CIV4UnitInfos.xml<br />
+ベースは統合MOD1219ver修正1（<a href="http://ux.getuploader.com/tohojojisi_souko/download/32/%E7%B5%B1%E5%90%88MOD2%E4%BF%AE%E6%AD%A3%EF%BC%91.zip）のもの">http://ux.getuploader.com/tohojojisi_souko/download/32/%E7%B5%B1%E5%90%88MOD2%E4%BF%AE%E6%AD%A3%EF%BC%91.zip）のもの</a><br />
+影狼の固有志向関連で使用</p>
+
+<p>XML/Units/CIV4PromotionInfos.xml<br />
+赤蛮奇の固有志向関連で使用<br />
+芳香キャラスキルの調整</p>
+
+<p>XML/Units/CIV4AutomateInfos.xml<br />
+布都スペル第二段階でのヘルプを変更するためにXMLで小記述変更</p>
+
+<p>XML/Text/CIV4DiplomacyText.xml<br />
+ベースは統合MOD1219ver用セリフ追加パッチ（<a href="http://ux.getuploader.com/tohojojisi_souko/download/34/talk_patch_in1219ver.zip）のもの">http://ux.getuploader.com/tohojojisi_souko/download/34/talk_patch_in1219ver.zip）のもの</a><br />
+外交台詞のテキスト登録<br />
+マミゾウ・豊姫・ルナ・スター・静葉のセリフを追加</p>
+
+<p>XML/Text/CIV4GameText_BTS.xml<br />
+XML/Text/CIV4GameTextInfos.xml<br />
+双方共に「黄金時代」を「大宴会」という記述に変更</p>
+
+<p>XML/Text/CIV4Toho_CityName.xml<br />
+都市名称タグ修正パッチ（ <a href="http://ux.getuploader.com/tohojojisi_souko/download/39/citynamepatch.zip">http://ux.getuploader.com/tohojojisi_souko/download/39/citynamepatch.zip</a> ）で使用したものをそのまま置いているだけだが、<br />
+ここに書いておかないとまた忘れしそうなので念の為に記載</p>
+
+<p>XML/Text/CIV4Toho_Civics.xml<br />
+社会制度：信仰や労働志向、及びこれらで自動建造処理される建造物のテキスト登録</p>
+
+<p>XML/Text/CIV4Toho_Traits.xml<br />
+新指導者の固有志向や労働志向のテキスト登録</p>
+
+<p>XML/Text/CIV4Toho_Buildings.xml<br />
+こころちゃんの固有志向で建つ首都建造物のテキスト登録<br />
+ニルヴァーナのテキスト登録</p>
+
+<p>XML/Text/CIV4Toho_Promotion_By_F.xml<br />
+芳香キャラスキルのヘルプ変更</p>
+
+<p>XML/Text/CIV4Toho_Spell_By_F.xml<br />
+布都スペルの名称・ヘルプ変更</p>
+
+<p>XML/Text/CIV4Toho_Text_Tech_By_F.xml<br />
+星蓮船最終固有テクのヘルプ変更</p>
+
+<p>XML/Text/CIV4Toho_Leader_Name_and_Tech_Pedia.xml<br />
+新指導者の名称テキスト登録</p>
+
+<p>XML/Text/CIV4Toho_Text_Unsorted.xml<br />
+ニホンオオカミのテキスト登録</p>
+
+<p>XML/Text/CIV4Toho_Text_Promotions.xml<br />
+赤蛮奇固有志向関連で付与される昇進関連のテキスト登録</p>
+
+<p>XML/Text/CIV4Toho_BuildingHelps.xml<br />
+一部建造物のヘルプ補間</p>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4 class="sidebar-heading">Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">130626_変更点_作成側向け</a></strong></li>
+			</ul>
+			<nav id="TableOfContents">
+<ul>
+<li><a href="#dll">DLL</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#art">art</a></li>
+<li><a href="#sounds">Sounds</a></li>
+<li><a href="#xml">XML</a></li>
+</ul>
+</nav>
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Pages in Categories</h4>
+		<ul class="sidebar-category-list">
+		
+			<li>
+				<a href="../categories/append.html">
+					<span class="doc-list-category">統合MOD / 追加要素</span>
+				</a>
+				<ul>
+					<li><a href="../post/trait_labor.html">労働志向</a>
+					</li>
+				
+					<li><a href="../post/trait_shuken.html">集権志向</a>
+					</li>
+				
+					<li><a href="../post/civic_faith.html">社会制度「信仰」</a>
+					</li>
+				
+					<li><a href="../post/uwabami.html">うわばみ志向</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/mainchange_170811.html">
+					<span class="doc-list-category">ver170811における大きな変更点まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/changetohounit_170811.html">東方ユニット関連の見直し</a>
+					</li>
+				
+					<li><a href="../post/changeetc_170811.html">内政面その他の変更点</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/newciv.html">
+					<span class="doc-list-category">統合MOD / 新文明</span>
+				</a>
+				<ul>
+					<li><a href="../post/tukinomiyako_tohounit.html">月の都文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/tukinomiyako.html">月の都文明</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_tohounits.html">輝針城文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_bunmei.html">輝針城文明</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou_tohounit.html">神霊廟文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou.html">神霊廟文明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/old.html">
+					<span class="doc-list-category">旧情報</span>
+				</a>
+				<ul>
+					<li><a href="../post/ai.html">AI挙動変更点</a>
+					</li>
+				
+					<li><a href="../post/arahitogami.html">難易度現人神</a>
+					</li>
+				
+					<li><a href="../post/leaders_setsumei.html">追加指導者詳細</a>
+					</li>
+				
+					<li><a href="../post/redome_multiface.html">readme_multiface</a>
+					</li>
+				
+					<li><a href="../post/redome_henkouten.html">更新履歴（151115ver以前）</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/readme.html">
+					<span class="doc-list-category">readme</span>
+				</a>
+				<ul>
+					<li><a href="../post/redome_cgele.html">ReadMe-CGE-LE</a>
+					</li>
+				
+					<li><a href="../post/about_fullver.html">フルパックバージョンについて</a>
+					</li>
+				
+					<li><a href="../post/platywb.html">ワールドビルダー拡張パッチ</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/summary.html">
+					<span class="doc-list-category">まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/readme_new.html">更新履歴・ver170811以降</a>
+					</li>
+				
+					<li><a href="../post/sozai_new.html">使用素材まとめ（ver170811以降）</a>
+					</li>
+				
+					<li><a href="../post/tougou_setsumei.html">統合MODの説明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="../tags/dev.html">dev</a>
+		
+		</div>
+	</div>
+	</div>
+</div>
+
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#" onclick="resetSidebarPos()">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	
+	
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/bootie-docs.js"></script>
+
+</body>
+</html>

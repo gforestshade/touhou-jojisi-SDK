@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="../index.xml" type="application/rss+xml" title="東方叙事詩・統合MOD・readmeビューア">
+		<link rel="icon" href="../favicon.ico">
+		<title>作業ログ - 東方叙事詩・統合MOD・readmeビューア</title>
+		
+		<link rel="stylesheet" href="../css/highlight/default.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="stylesheet" href="../css/bootie-docs.css">
+		<link rel="stylesheet" href="../css/site.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">東方叙事詩・統合MOD・readmeビューア</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="../index.html">Home</a></li>
+			
+			
+				
+					<li ><a href="../post.html">Posts</a></li>
+				
+			
+				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						
+							<li><a href="../categories/append.html">統合MOD / 追加要素</a></li>
+						
+							<li><a href="../categories/mainchange_170811.html">ver170811における大きな変更点まとめ</a></li>
+						
+							<li><a href="../categories/newciv.html">統合MOD / 新文明</a></li>
+						
+							<li><a href="../categories/old.html">旧情報</a></li>
+						
+							<li><a href="../categories/readme.html">readme</a></li>
+						
+							<li><a href="../categories/summary.html">まとめ</a></li>
+						
+						</ul>
+					</li>
+				
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">作業ログ</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2017-06-17">June 17, 2017</time></span>
+				</div>
+				<section>
+					<p>※ぐだぐだ注意</p>
+
+<p>readme.txtは右も左もわからない人が最初にとりあえず読んでわかるファイルであるべき<br />
+だと思っているので統合叙事詩を一刻も早くプレイさせろ的な向きへ席を空ける<br />
+fullverで最初に読まれるファイルとしては1.13れどめは古すぎる<br />
+敬意を払うにしても1.13れどめの文面自体はそのままに・トップに置いたままにして<br />
+れどめで1.13れどめへ丁寧に案内すれば十分ではないだろうか</p>
+
+<p>それ以外は<del>うざいので</del>doc/に押し込む<br />
+(&ldquo;説明 -  統合.txt&rdquo;も中でいいんじゃないかな PlatyPediaあるし)</p>
+
+<p>さあどうしようか…</p>
+
+<p>正直テストverと正式版とfullverと1.13差分とで説明書き減らさなくってもいいんじゃないかなって<br />
+(現状でもどこに何があるかわからないでござる)</p>
+
+<p>純粋な更新履歴箇条書き系・ゲーム内新要素(文明・スペルetc.)の説明系・<br />
+ゲームシステムの説明系(CGE・multiface・フルパックetc.)・ただのメモ書き<br />
+あたりに大まかに分けられる気がする</p>
+
+<p>Hugoはどうだろう ちょっと大掛かりすぎるかな…<br />
+まあ書き換えてみるみる</p>
+
+<p>区切り線の上の行に文字を書くと節タイトルになってしまう<br />
+空行にしよう</p>
+
+<p>bootie-docs っていうテーマが個人的に気に入った<br />
+説明書用にデザインされてるだけあってデフォルトでそれなりにいいかんじ<br />
+ローカルで見たいのでrelativeUrlsとuglyUrlsをつかう<br />
+テンプレートの方でtagsやcategoriesへのリンクを作っているところは<br />
+uglyurlsのせいで.htmlになるので足したりした</p>
+
+<p>slugに書いた文字列が変換後ファイル名になる<br />
+タグとかカテゴリとかつけたりできる、ブログっぽさある</p>
+
+<pre><code># おっきいタイトル
+## 普通のタイトル
+### 小さいタイトル
+これらは自動で階層化されとべるようになる
+
+ついでにpre句のテスト
+- この中に書いたものは記号であっても解釈されずそのまま表示される
+~~取り消し線とかも引かれない~~
+</code></pre>
+
+<p>いらない区切り線は消していこう<br />
+タイトルにも区切り線レイアウトが使われてるので見づらい<br />
+まあ真面目にタイトルつけていけば要らなくなるはず</p>
+
+<p>行間もうちょっと広いほうがいいなあ<br />
+→狭く感じるのは行間のせいじゃなくて段落と段落の間の広さのせいだった、ひろげた</p>
+
+<p>十分整理されててそのままで読めるやつはReadMeカテゴリにしよう<br />
+この類のは&rdquo;統合&rdquo;された元MODのReadme.txtだったやつに多い</p>
+
+<p>大量にある文明別のテキストファイルにやってきた<br />
+神霊廟以後はこういう感じのが散らばってるっぽい</p>
+
+<p>「追加指導者詳細」は新文明とはちょっと違うような<br />
+でも気持ち的には新指導者もここにあったほうが気持ちいような<br />
+でも「統合追加分の新文明・新指導者」だと冗長なような<br />
+<del>→「統合MOD/新文明・新指導者」にしてみる</del><br />
+→カテゴリ名に記号入れるのよくないみたい<br />
+やっぱ「新文明」と「(その他の)追加要素」にする</p>
+
+<p>同じcategoryの中では日付が新しいほうが上にくる もだーんなスタイルなので、<br />
+日付・時間を調整することで掲載順を制御したりできる</p>
+
+<p>全体を通してあまりいじり過ぎないように注意する<br />
+せいぜいセクションタイトルを明示してページ内でジャンプしやすくする程度か<br />
+このシステムに飽きたらいつでも捨ててテキストファイルだけの世界に戻れるように</p>
+
+<ul>
+<li>「変更点まとめ」を各正式版ごとにファイル分割してしまうかどうか<br />
+→保留。<br />
+<br /></li>
+</ul>
+
+<p>ヘルプとかヒントとかはそれこそPlatyPedia内に書けばいいことなので、<br />
+Readmeはどうあるべきなのかわからなくなってきた</p>
+
+<p>「開発用」はカテゴリではなくタグにしてちょっとだけ辿り着きにくいように</p>
+
+<p>カテゴリやタグの指定は実は必須ではない<br />
+カテゴリもタグもないファイルでも出力先にもファイルとしては存在する<br />
+ただしそこに辿り着くためのリンクは生成されない<br />
+表側に表示したい場合はカテゴリ名をつけること<br />
+新しいタグ/カテゴリを作るための手続きとかはない<br />
+同じタグ名/カテゴリ名がついているページを勝手にまとめてくれる</p>
+
+<p>大事なことを忘れていた<br />
+文字コードをUTF-8に統一している<br />
+メモ帳派には申し訳ないが新規テキストもUTF-8で作らないと化ける</p>
+
+<p>ローカルにビルドするとタグ/カテゴリの日本語リンクがうまく働かないことが発覚<br />
+どうしようもないので泣く泣く英数字縛りに甘んじることに<br />
+かなりわかりにくくなったので、カテゴリはれどめ！追加！まとめ！みたいに雑なくくりにした<br />
+実は日本語のままでもChromeで見れば問題なかったりもするのだが、<br />
+それだけのためにEdgeやIE勢を切り捨てるのはちょっと…<br />
+あるいは手動でリンクの部分を修正するという荒業もあるが…保留。</p>
+
+<p>どーーーーしても日本語使いたいのでさらにさらに模索模索。<br />
+data\categpriesJP.toml に日本語対訳を置いて、templatesをごりごり書き換える。<br />
+なんとかなったっぽい。Microsoft Edgeさんや、<br />
+なんであなたローカルのファイルのときだけUTF-8実体参照のファイル名辿れないの<br />
+そんなに日本語ファイル名が憎いの</p>
+
+<p><a href="example.html">説明書き</a>書いた</p>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4 class="sidebar-heading">Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">作業ログ</a></strong></li>
+			</ul>
+			
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Pages in Categories</h4>
+		<ul class="sidebar-category-list">
+		
+			<li>
+				<a href="../categories/append.html">
+					<span class="doc-list-category">統合MOD / 追加要素</span>
+				</a>
+				<ul>
+					<li><a href="../post/trait_labor.html">労働志向</a>
+					</li>
+				
+					<li><a href="../post/trait_shuken.html">集権志向</a>
+					</li>
+				
+					<li><a href="../post/civic_faith.html">社会制度「信仰」</a>
+					</li>
+				
+					<li><a href="../post/uwabami.html">うわばみ志向</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/mainchange_170811.html">
+					<span class="doc-list-category">ver170811における大きな変更点まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/changetohounit_170811.html">東方ユニット関連の見直し</a>
+					</li>
+				
+					<li><a href="../post/changeetc_170811.html">内政面その他の変更点</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/newciv.html">
+					<span class="doc-list-category">統合MOD / 新文明</span>
+				</a>
+				<ul>
+					<li><a href="../post/tukinomiyako_tohounit.html">月の都文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/tukinomiyako.html">月の都文明</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_tohounits.html">輝針城文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_bunmei.html">輝針城文明</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou_tohounit.html">神霊廟文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou.html">神霊廟文明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/old.html">
+					<span class="doc-list-category">旧情報</span>
+				</a>
+				<ul>
+					<li><a href="../post/ai.html">AI挙動変更点</a>
+					</li>
+				
+					<li><a href="../post/arahitogami.html">難易度現人神</a>
+					</li>
+				
+					<li><a href="../post/leaders_setsumei.html">追加指導者詳細</a>
+					</li>
+				
+					<li><a href="../post/redome_multiface.html">readme_multiface</a>
+					</li>
+				
+					<li><a href="../post/redome_henkouten.html">更新履歴（151115ver以前）</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/readme.html">
+					<span class="doc-list-category">readme</span>
+				</a>
+				<ul>
+					<li><a href="../post/redome_cgele.html">ReadMe-CGE-LE</a>
+					</li>
+				
+					<li><a href="../post/about_fullver.html">フルパックバージョンについて</a>
+					</li>
+				
+					<li><a href="../post/platywb.html">ワールドビルダー拡張パッチ</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/summary.html">
+					<span class="doc-list-category">まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/readme_new.html">更新履歴・ver170811以降</a>
+					</li>
+				
+					<li><a href="../post/sozai_new.html">使用素材まとめ（ver170811以降）</a>
+					</li>
+				
+					<li><a href="../post/tougou_setsumei.html">統合MODの説明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="../tags/dev.html">dev</a>
+		
+		</div>
+	</div>
+	</div>
+</div>
+
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#" onclick="resetSidebarPos()">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	
+	
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/bootie-docs.js"></script>
+
+</body>
+</html>

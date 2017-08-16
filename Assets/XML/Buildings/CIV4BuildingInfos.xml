@@ -18976,7 +18976,7 @@
       <DiploVoteType>NONE</DiploVoteType>
       <bForceTeamVoteEligible>0</bForceTeamVoteEligible>
       <bCapital>0</bCapital>
-      <bGovernmentCenter>0</bGovernmentCenter>
+      <bGovernmentCenter>1</bGovernmentCenter>
       <bGoldenAge>0</bGoldenAge>
       <bAllowsNukes>0</bAllowsNukes>
       <bMapCentering>0</bMapCentering>
@@ -22435,6 +22435,7 @@
       <Description>TXT_KEY_BUILDING_TOWER_FARM</Description>
       <Civilopedia>TXT_KEY_BUILDING_TOWER_FARM_PEDIA</Civilopedia>
       <Strategy>TXT_KEY_BUILDING_TOWER_FARM_STRATEGY</Strategy>
+      <Help>TXT_KEY_BUILDING_TOWER_FARM_HELP</Help>
       <Advisor>ADVISOR_GROWTH</Advisor>
       <ArtDefineTag>ART_DEF_BUILDING_PALACE_BUTTON_RAIKO_PHANTASM_CEREALMILLS</ArtDefineTag>
       <MovieDefineTag>NONE</MovieDefineTag>
@@ -22559,9 +22560,7 @@
       <CommerceChanges />
       <ObsoleteSafeCommerceChanges />
       <CommerceChangeDoubleTimes />
-      <CommerceModifiers>
-        <iCommerce>25</iCommerce>
-      </CommerceModifiers>
+      <CommerceModifiers />
       <GlobalCommerceModifiers />
       <SpecialistExtraCommerces />
       <StateReligionCommerces />
@@ -22723,9 +22722,7 @@
       <CommerceChanges />
       <ObsoleteSafeCommerceChanges />
       <CommerceChangeDoubleTimes />
-      <CommerceModifiers>
-        <iCommerce>25</iCommerce>
-      </CommerceModifiers>
+      <CommerceModifiers />
       <GlobalCommerceModifiers />
       <SpecialistExtraCommerces />
       <StateReligionCommerces />
@@ -22887,10 +22884,7 @@
       <CommerceChanges />
       <ObsoleteSafeCommerceChanges />
       <CommerceChangeDoubleTimes />
-      <CommerceModifiers>
-        <iCommerce>25</iCommerce>
-        <iCommerce>25</iCommerce>
-      </CommerceModifiers>
+      <CommerceModifiers />
       <GlobalCommerceModifiers />
       <SpecialistExtraCommerces />
       <StateReligionCommerces />
@@ -23057,9 +23051,7 @@
       <CommerceChanges />
       <ObsoleteSafeCommerceChanges />
       <CommerceChangeDoubleTimes />
-      <CommerceModifiers>
-        <iCommerce>25</iCommerce>
-      </CommerceModifiers>
+      <CommerceModifiers />
       <GlobalCommerceModifiers />
       <SpecialistExtraCommerces />
       <StateReligionCommerces />
@@ -23221,9 +23213,7 @@
       <CommerceChanges />
       <ObsoleteSafeCommerceChanges />
       <CommerceChangeDoubleTimes />
-      <CommerceModifiers>
-        <iCommerce>25</iCommerce>
-      </CommerceModifiers>
+      <CommerceModifiers />
       <GlobalCommerceModifiers />
       <SpecialistExtraCommerces />
       <StateReligionCommerces />
@@ -23385,9 +23375,7 @@
       <CommerceChanges />
       <ObsoleteSafeCommerceChanges />
       <CommerceChangeDoubleTimes />
-      <CommerceModifiers>
-        <iCommerce>25</iCommerce>
-      </CommerceModifiers>
+      <CommerceModifiers />
       <GlobalCommerceModifiers />
       <SpecialistExtraCommerces />
       <StateReligionCommerces />
@@ -30436,7 +30424,7 @@
       <iHotKeyPriority>0</iHotKeyPriority>
     </BuildingInfo>
     <BuildingInfo>
-      <BuildingClass>BUILDINGCLASS_KISHINJOU_ETHIOPIAN_STELE</BuildingClass>
+      <BuildingClass>BUILDINGCLASS_OBELISK</BuildingClass>
       <Type>BUILDING_KISHINJOU_ETHIOPIAN_STELE</Type>
       <SpecialBuildingType>NONE</SpecialBuildingType>
       <Description>TXT_KEY_BUILDING_ETHIOPIAN_STELE</Description>
@@ -30458,7 +30446,7 @@
       <FreeStartEra>NONE</FreeStartEra>
       <MaxStartEra>NONE</MaxStartEra>
       <ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
-      <PrereqTech>TECH_DUMMY</PrereqTech>
+      <PrereqTech>TECH_MYSTICISM</PrereqTech>
       <TechTypes />
       <Bonus>NONE</Bonus>
       <PrereqBonuses />

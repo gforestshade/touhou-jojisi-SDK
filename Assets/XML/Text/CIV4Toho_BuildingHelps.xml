@@ -124,6 +124,15 @@
 		<Japanese>[ICON_BULLET]都市のユニット生産量2倍</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOWER_FARM_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]この都市で生産された騎乗ユニット、ヘリコプターユニットの生産量2倍</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]この都市で生産された騎乗ユニット、ヘリコプターユニットの生産量2倍</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIKACENTER_HELP</Tag>
 		<English />
 		<French>[ICON_BULLET]この建造物が設置された都市のみ、迎撃回避率が高い特殊核兵器を作成可能</French>

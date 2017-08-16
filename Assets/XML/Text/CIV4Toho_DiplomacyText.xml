@@ -99039,938 +99039,938 @@
 	<TEXT>
 		<Tag>AI_DIPLO_DECLARE_WAR_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>弾幕はパワーだぜ！（[OUR_NAME]は宣戦を布告！）</French>
+		<French>さあ！このグリモワールの知識を活かす時ね！（[OUR_NAME]は宣戦を布告！）</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>弾幕はパワーだぜ！（[OUR_NAME]は宣戦を布告！）</Japanese>
+		<Japanese>さあ！このグリモワールの知識を活かす時ね！（[OUR_NAME]は宣戦を布告！）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DECLARE_WAR_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>動くと撃つ。いや、撃つから動くぜ。（[OUR_NAME]は宣戦を布告！）</French>
+		<French>やっぱり実戦で魔法を試してみないとね！（[OUR_NAME]は宣戦を布告！）</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>動くと撃つ。いや、撃つから動くぜ。（[OUR_NAME]は宣戦を布告！）</Japanese>
+		<Japanese>やっぱり実戦で魔法を試してみないとね！（[OUR_NAME]は宣戦を布告！）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_VASSAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>さて、そろそろ今までの分を返してもらうぜ。</French>
+		<French>今日から私は自由にさせてもらうわね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>さて、そろそろ今までの分を返してもらうぜ。</Japanese>
+		<Japanese>今日から私は自由にさせてもらうわね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_OFFER_VASSAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>すまないがうちの連中を助けると思って匿ってくれ。</French>
+		<French>みんな強すぎー！しばらく頼むわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>すまないがうちの連中を助けると思って匿ってくれ。</Japanese>
+		<Japanese>みんな強すぎー！しばらく頼むわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>よう、こんなところで会うなんて奇遇だな。</French>
+		<French>む！あなたこの「グリモワール」が目当てじゃないでしょうね？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よう、こんなところで会うなんて奇遇だな。</Japanese>
+		<Japanese>む！あなたこの「グリモワール」が目当てじゃないでしょうね？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>おっと、私は忙しいんだ。</French>
+		<French>今日は魔導書を読む日なのよ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>おっと、私は忙しいんだ。</Japanese>
+		<Japanese>今日は魔導書を読む日なのよ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>特に話すことはないなぁ。</French>
+		<French>貴方と話すよりも本を読んでた方が有意義だわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>特に話すことはないなぁ。</Japanese>
+		<Japanese>貴方と話すよりも本を読んでた方が有意義だわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_PEACE_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>おう、またよろしくな。</French>
+		<French>これからよろしくね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>おう、またよろしくな。</Japanese>
+		<Japanese>これからよろしくね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>いいや、まだあるだけとらせて貰うぜ！</French>
+		<French>魔界のルールでは和平交渉は認められないのよ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>いいや、まだあるだけとらせて貰うぜ！</Japanese>
+		<Japanese>魔界のルールでは和平交渉は認められないのよ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>戦争中に来るとはいい度胸だぜが、話すことなんか無いぜ？</French>
+		<French>む？いい度胸してるじゃない。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>戦争中に来るとはいい度胸だぜが、話すことなんか無いぜ？</Japanese>
+		<Japanese>む？いい度胸してるじゃない。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>よお、わざわざこんなところまでご苦労なことだ。ゆっくりしていってね！</French>
+		<French>いらっしゃい、今度時間ある時に私のママを紹介するわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よお、わざわざこんなところまでご苦労なことだ。ゆっくりしていってね！</Japanese>
+		<Japanese>いらっしゃい、今度時間ある時に私のママを紹介するわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>まぁ汚いところだが、あがって行ってくれ。</French>
+		<French>魔界って来るのに不便そうよね、申し訳ないけど。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>まぁ汚いところだが、あがって行ってくれ。</Japanese>
+		<Japanese>魔界って来るのに不便そうよね、申し訳ないけど。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_LOLISE_3</Tag>
 		<English />
-		<French>よう、私に何か用か？</French>
+		<French>今日はどんな魔法を教えてくれる？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よう、私に何か用か？</Japanese>
+		<Japanese>今日はどんな魔法を教えてくれる？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>おおっと、新しい魔法の実験台が来たようだ。</French>
+		<French>魔法の試し打ちにちょうどいい人が…。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>おおっと、新しい魔法の実験台が来たようだ。</Japanese>
+		<Japanese>魔法の試し打ちにちょうどいい人が…。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>何のようだ？別に呼んだ覚えも無いぜ？</French>
+		<French>用は何？私は呼んでないけど？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>何のようだ？別に呼んだ覚えも無いぜ？</Japanese>
+		<Japanese>用は何？私は呼んでないけど？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_LOLISE_3</Tag>
 		<English />
-		<French>何か特に話すことは無いんだが？</French>
+		<French>そうね、貴方を的にして魔法の矢でダーツでもする？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>何か特に話すことは無いんだが？</Japanese>
+		<Japanese>そうね、貴方を的にして魔法の矢でダーツでもする？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_TRADING_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>そっちの提案は何だ？</French>
+		<French>そっちの望みは？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>そっちの提案は何だ？</Japanese>
+		<Japanese>そっちの望みは？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_TRADING_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>うまい話を期待するぜ。</French>
+		<French>魔法の交換ね、いいわよ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>うまい話を期待するぜ。</Japanese>	
+		<Japanese>魔法の交換ね、いいわよ。</Japanese>	
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>ばっちりだ。</French>
+		<French>これはグリモワールにも書いてない魔法ね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ばっちりだ。</Japanese>
+		<Japanese>これはグリモワールにも書いてない魔法ね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>いい話じゃあないか。</French>
+		<French>その条件なら飲むわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>いい話じゃあないか。</Japanese>
+		<Japanese>その条件なら飲むわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_REJECT_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>もっと何か色々と付けてくれよ。</French>
+		<French>まだまだ何かないのー？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>もっと何か色々と付けてくれよ。</Japanese>
+		<Japanese>まだまだ何かないのー？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_REJECT_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>そんなにやれるほどは無いぜ？</French>
+		<French>ちょっと。ちょっと！私との仲じゃない。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>そんなにやれるほどは無いぜ？</Japanese>
+		<Japanese>ちょっと。ちょっと！私との仲じゃない。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_REJECT_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>話にならないな。</French>
+		<French>うーん、ありきたりね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>話にならないな。</Japanese>
+		<Japanese>うーん、ありきたりね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_REJECT_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>冗談はこういうときには言うもんじゃないぜ？</French>
+		<French>この条件だと私がママに怒られちゃうわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>冗談はこういうときには言うもんじゃないぜ？</Japanese>
+		<Japanese>この条件だと私がママに怒られちゃうわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_GLAD_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>サンキュー。</French>
+		<French>あら、くれるの。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>サンキュー。</Japanese>
+		<Japanese>あら、くれるの。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_GLAD_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>いいものを貰ったぜ。</French>
+		<French>ふふっ、ありがとう。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>いいものを貰ったぜ。</Japanese>
+		<Japanese>ふふっ、ありがとう。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_GLAD_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>よし、いただいたぜ。</French>
+		<French>ご機嫌取りってわけね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よし、いただいたぜ。</Japanese>
+		<Japanese>ご機嫌取りってわけね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_GLAD_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>悪くは無いな。</French>
+		<French>いい魔法貰っちゃったー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>悪くは無いな。</Japanese>
+		<Japanese>いい魔法貰っちゃったー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_SORRY_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>うーん、じゃあほかに何がいい？</French>
+		<French>うーん、どうすればいいのかな？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>うーん、じゃあほかに何がいい？</Japanese>
+		<Japanese>うーん、どうすればいいのかな？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_SORRY_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>残念だぜ。</French>
+		<French>えー、魔法くれないのー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>残念だぜ。</Japanese>
+		<Japanese>えー、魔法くれないのー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_SORRY_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>お前もちゃんと考えてくれよう。</French>
+		<French>そんな後先考えない答えでいいのかなー？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>お前もちゃんと考えてくれよう。</Japanese>
+		<Japanese>そんな後先考えない答えでいいのかなー？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_SORRY_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>後先考えて物を言ったほうがいいぜ？</French>
+		<French>ママに言いつけちゃう！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>後先考えて物を言ったほうがいいぜ？</Japanese>
+		<Japanese>ママに言いつけちゃう！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_TRY_THIS_DEAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これでオッケーだ。</French>
+		<French>これでいいわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これでオッケーだ。</Japanese>
+		<Japanese>これでいいわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_TRY_THIS_DEAL_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>これならどうだ？</French>
+		<French>うーん、これなら成立かな？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これならどうだ？</Japanese>
+		<Japanese>うーん、これなら成立かな？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_NO_DEAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>もうちょっといい取引がしたいところだ。</French>
+		<French>もうグリモワールに書いてある魔法よ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>もうちょっといい取引がしたいところだ。</Japanese>
+		<Japanese>もうグリモワールに書いてある魔法よ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_NO_DEAL_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>これじゃあ私が損だぜ。</French>
+		<French>これじゃ次のお茶会はなしー！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これじゃあ私が損だぜ。</Japanese>
+		<Japanese>これじゃ次のお茶会はなしー！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_NO_DEAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>今は冗談を言う状況じゃないぜ？</French>
+		<French>私の魔法を味わいたいんだ？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>今は冗談を言う状況じゃないぜ？</Japanese>
+		<Japanese>私の魔法を味わいたいんだ？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_NO_DEAL_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>恋符でも食らいたいのか？</French>
+		<French>いいよ、さっき覚えた魔法の試し相手になってね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>恋符でも食らいたいのか？</Japanese>
+		<Japanese>いいよ、さっき覚えた魔法の試し相手になってね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_OFFER_PEACE_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>さて、そろそろ十分だろう。終わりにしようぜ。</French>
+		<French>魔法のテスト終わりー！いい結果が出たわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>さて、そろそろ十分だろう。終わりにしようぜ。</Japanese>
+		<Japanese>魔法のテスト終わりー！いい結果が出たわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_OFFER_CITY_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>さぁ、これをくれてやるぜ</French>
+		<French>この都市あげるね、見返りは今度ちょうだい。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>さぁ、これをくれてやるぜ</Japanese>
+		<Japanese>この都市あげるね、見返りは今度ちょうだい。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_OFFER_DEAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>今日はまともに取引に来たぜ。</French>
+		<French>魔法の交換に来たよー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>今日はまともに取引に来たぜ。</Japanese>
+		<Japanese>魔法の交換に来たよー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_OFFER_DEAL_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>こんなんどうだ？</French>
+		<French>グリモワールの魔法を分けてあげる。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>こんなんどうだ？</Japanese>
+		<Japanese>グリモワールの魔法を分けてあげる。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_OFFER_DEAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>よし、交換だ！</French>
+		<French>貴重な魔法を教えてあげるわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よし、交換だ！</Japanese>
+		<Japanese>貴重な魔法を教えてあげるわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_OFFER_DEAL_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>さぁどうだ？</French>
+		<French>魔法の技術は安くないのよ？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>さぁどうだ？</Japanese>
+		<Japanese>魔法の技術は安くないのよ？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_CANCEL_DEAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これはもう使わなくなったから返すぜ。</French>
+		<French>この魔法もう古いよー、捨てちゃうね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これはもう使わなくなったから返すぜ。</Japanese>
+		<Japanese>この魔法もう古いよー、捨てちゃうね。。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_CANCEL_DEAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これ、もう家じゃあ使わないぜ</French>
+		<French>新しい魔法覚えたから返すわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これ、もう家じゃあ使わないぜ</Japanese>
+		<Japanese>新しい魔法覚えたから返すわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_THANKS_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>よし、今後ともよろしくな。</French>
+		<French>交換成立！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よし、今後ともよろしくな。</Japanese>
+		<Japanese>交換成立！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_THANKS_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>なかなかうまい話だったぜ。</French>
+		<French>よーし！帰って試し打ちしてみよー！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>なかなかうまい話だったぜ。</Japanese>
+		<Japanese>よーし！帰って試し打ちしてみよー！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_THANKS_LEADER_LOLISE_3</Tag>
 		<English />
-		<French>ばっちりだ。</French>
+		<French>新しい魔法が手に入ったわ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ばっちりだ。</Japanese>
+		<Japanese>新しい魔法が手に入ったわ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_CURRENT_DEALS_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>こういう取引をしているな。</French>
+		<French>グリモワールにメモ書きしてるのよ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>こういう取引をしているな。</Japanese>
+		<Japanese>グリモワールにメモ書きしてるのよ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_ASK_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>よし、くれてやるぜ。</French>
+		<French>あげるから大切に使ってね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よし、くれてやるぜ。</Japanese>
+		<Japanese>あげるから大切に使ってね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REJECT_ASK_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>いや、それはまだ使うんだ。</French>
+		<French>うー…その本はまだ使うの。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>いや、それはまだ使うんだ。</Japanese>
+		<Japanese>うー…その本はまだ使うの。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>うー。覚えてろよ。</French>
+		<French>えーん！ママに言いつけてやるぅ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>うー。覚えてろよ。</Japanese>
+		<Japanese>えーん！ママに言いつけてやるぅ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>今はしょうがないがそのうち返してもらうぜ。</French>
+		<French>まだ最後まで読んでないから今度返してよね！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>今はしょうがないがそのうち返してもらうぜ。</Japanese>
+		<Japanese>まだ最後まで読んでないから今度返してよね！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_TEAM_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>おう、了解だぜ。</French>
+		<French>わかったわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>おう、了解だぜ。</Japanese>
+		<Japanese>わかったわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REJECT_DEMAND_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>人のものをとるとは不埒なやつだ。</French>
+		<French>グリモワールを取りに来た泥棒ね！出ていけー！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>人のものをとるとは不埒なやつだ。</Japanese>
+		<Japanese>グリモワールを取りに来た泥棒ね！出ていけー！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REJECT_DEMAND_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>物には限度ってやつがあるぜ？</French>
+		<French>子供相手に恥ずかしくないの！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>物には限度ってやつがあるぜ？</Japanese>
+		<Japanese>子供相手に恥ずかしくないの！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GIVE_HELP_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これ使うか？</French>
+		<French>これ読み終わったからあげるね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これ使うか？</Japanese>
+		<Japanese>これ読み終わったからあげるね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GIVE_HELP_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>ほら、私からのプレゼントだ。</French>
+		<French>お人形さんのプレゼント！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ほら、私からのプレゼントだ。</Japanese>
+		<Japanese>お人形さんのプレゼント！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_ASK_FOR_HELP_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これは持って行っていいのか？</French>
+		<French>この本ちょーだい？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これは持って行っていいのか？</Japanese>
+		<Japanese>この本ちょーだい？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_ASK_FOR_HELP_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>友達だろう。これくらい分けてくれよ。</French>
+		<French>いっぱい持ってるみたいだから少しちょーだい。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>友達だろう。これくらい分けてくれよ。</Japanese>
+		<Japanese>いっぱい持ってるみたいだから少しちょーだい。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_ASK_FOR_HELP_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これは貰って行くぜ！</French>
+		<French>この魔法いいなー、貰ってこ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これは貰って行くぜ！</Japanese>
+		<Japanese>この魔法いいなー、貰ってこ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_ASK_FOR_HELP_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>お前には二つの選択肢がある。黒焦げになるか、平和的に脅されるかだ。</French>
+		<French>くれなかったらママに言いつけちゃうぞー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>お前には二つの選択肢がある。黒焦げになるか、平和的に脅されるかだ。</Japanese>
+		<Japanese>くれなかったらママに言いつけちゃうぞー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_HELP_REFUSED_WEAKER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>しょうがないなぁ。</French>
+		<French>仕方ないよね。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>しょうがないなぁ。</Japanese>
+		<Japanese>仕方ないよね。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_HELP_REFUSED_WEAKER_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>ブーブー。</French>
+		<French>その魔法いいなー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ブーブー。</Japanese>
+		<Japanese>その魔法いいなー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_HELP_REFUSED_EQUAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>けちな奴だぜ。</French>
+		<French>本は共有されるべき財産なんだよ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>けちな奴だぜ。</Japanese>
+		<Japanese>本は共有されるべき財産なんだよ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_HELP_REFUSED_EQUAL_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>どうなっても知らないぜ。</French>
+		<French>魔法のテスト相手になっても知らないよ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>どうなっても知らないぜ。</Japanese>
+		<Japanese>魔法のテスト相手になっても知らないよ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_HELP_REFUSED_STRONGER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>なら奪うまでだぜ？</French>
+		<French>力で奪うのは好きじゃないんだけどなー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>なら奪うまでだぜ？</Japanese>
+		<Japanese>力で奪うのは好きじゃないんだけどなー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_HELP_REFUSED_STRONGER_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>ほー、強硬手段のお望みらしいな。</French>
+		<French>ママに相談してみよーっと。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ほー、強硬手段のお望みらしいな。</Japanese>
+		<Japanese>ママに相談してみよーっと。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これはいただいた！？</French>
+		<French>私のママは魔界神なのよ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これはいただいた！？</Japanese>
+		<Japanese>こ私のママは魔界神なのよ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>頼むよ。</French>
+		<French>この魔法欲しいなー？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>頼むよ。</Japanese>
+		<Japanese>この魔法欲しいなー？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>珍しくお願いに来てるんだ。聞いてくれても罰は当たらないぜ。</French>
+		<French>まだ読んだことのない本なの、読ませてほしいな？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>珍しくお願いに来てるんだ。聞いてくれても罰は当たらないぜ。</Japanese>
+		<Japanese>まだ読んだことのない本なの、読ませてほしいな？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>これ、貰っていいか？</French>
+		<French>珍しい魔導書があるわ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>これ、貰っていいか？</Japanese>
+		<Japanese>珍しい魔導書があるわ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>いいものがあるじゃあないか。</French>
+		<French>お人形さんがこれちょうだいって。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>いいものがあるじゃあないか。</Japanese>
+		<Japanese>お人形さんがこれちょうだいって。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>よこすか吹っ飛ばされるかだぜ！</French>
+		<French>今日は機嫌が悪いんだから言うこと聞いた方がいいよ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>よこすか吹っ飛ばされるかだぜ！</Japanese>
+		<Japanese>今日は機嫌が悪いんだから言うこと聞いた方がいいよ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>ぺんぺん草くらい残して欲しかったらこれをよこすんだな。</French>
+		<French>その魔導書がどーしても欲しいの！実力行使でもね！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ぺんぺん草くらい残して欲しかったらこれをよこすんだな。</Japanese>
+		<Japanese>その魔導書がどーしても欲しいの！実力行使でもね！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_REJECTED_POWER_WEAKER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>ケチケチするなよう。</French>
+		<French>えー、教えてよう。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ケチケチするなよう。</Japanese>
+		<Japanese>えー教えてよう。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_REJECTED_POWER_EQUAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>そうか、なら別の方法で何とかするまでだぜ</French>
+		<French>断られたら余計に中身が気になってきたわ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>そうか、なら別の方法で何とかするまでだぜ</Japanese>
+		<Japanese>断られたら余計に中身が気になってきたわ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_REJECTED_POWER_STRONGER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>いい度胸してるじゃあないか！</French>
+		<French>貴方は魔界を敵に回す怖さを知らないのね！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>いい度胸してるじゃあないか！</Japanese>
+		<Japanese>貴方は魔界を敵に回す怖さを知らないのね！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RELIGION_PRESSURE_WEAKER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>こっちのほうがいいぜ？</French>
+		<French>最近教えてもらったの。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>こっちのほうがいいぜ？</Japanese>
+		<Japanese>最近教えてもらったの。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RELIGION_PRESSURE_EQUAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>[OUR_STATE_RELIGION]にすることをお勧めするぜ。</French>
+		<French>[OUR_STATE_RELIGION]はどう？お人形さんもそういってるよ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[OUR_STATE_RELIGION]にすることをお勧めするぜ。</Japanese>
+		<Japanese>[OUR_STATE_RELIGION]はどう？お人形さんもそういってるよ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RELIGION_PRESSURE_STRONGER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>[OUR_STATE_RELIGION]にしな！</French>
+		<French>[OUR_STATE_RELIGION]が絶対いいよ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[OUR_STATE_RELIGION]にしな！</Japanese>
+		<Japanese>[OUR_STATE_RELIGION]が絶対いいよ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RELIGION_DENIED_WEAKER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>まぁしょうがない。</French>
+		<French>また考えてみてね？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>まぁしょうがない。</Japanese>
+		<Japanese>また考えてみてね？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RELIGION_DENIED_EQUAL_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>こっちのほうがいいのになぁ。</French>
+		<French>お人形さんはそう言ってるのになぁ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>こっちのほうがいいのになぁ。</Japanese>
+		<Japanese>お人形さんはそう言ってるのになぁ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RELIGION_DENIED_STRONGER_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>後で後悔する羽目になるぜ？</French>
+		<French>ふーん、仲間はずれにしちゃお。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>後で後悔する羽目になるぜ？</Japanese>
+		<Japanese>ふーん、仲間はずれにしちゃお。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_CIVIC_PRESSURE_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>%s1だと何かと便利だぜ？</French>
+		<French>%s1が今の最先端の魔法なの！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>%s1だと何かと便利だぜ？</Japanese>
+		<Japanese>%s1が今の最先端の魔法なの！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_CIVIC_DENIED_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>どうなっても知らないぜ。</French>
+		<French>便利な魔法なのになー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>どうなっても知らないぜ。</Japanese>
+		<Japanese>便利な魔法なのになー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_JOIN_WAR_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>一緒に%s1を吹っ飛ばそうぜ！</French>
+		<French>一緒に%s1を攻めるのよ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>一緒に%s1を吹っ飛ばそうぜ！</Japanese>
+		<Japanese>一緒に%s1を攻めるのよ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_JOIN_WAR_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>%s1を何とかしないか？</French>
+		<French>%s1が魔法を独り占めしてるわ！許せないでしょ？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>%s1を何とかしないか？</Japanese>
+		<Japanese>%s1が魔法を独り占めしてるわ！許せないでしょ？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_JOIN_DENIED_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>一緒に吹っ飛んでも知らないぜ？</French>
+		<French>むむむ、貴方友達いなさそう。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>一緒に吹っ飛んでも知らないぜ？</Japanese>
+		<Japanese>むむむ、貴方友達いなさそう。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_JOIN_DENIED_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>後で怖いぜ？</French>
+		<French>貴方もそっち側ってことかしら。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>後で怖いぜ？</Japanese>
+		<Japanese>貴方もそっち側ってことかしら。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_STOP_TRADING_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>おっと、%s1との取引はここまでだ。</French>
+		<French>%s1との魔法交換はストップよ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>おっと、%s1との取引はここまでだ。</Japanese>
+		<Japanese>%s1との魔法交換はストップよ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_STOP_DENIED_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>なら仕方が無い。</French>
+		<French>じゃあ、私にも教えてよー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>なら仕方が無い。</Japanese>
+		<Japanese>じゃあ、私にも教えてよー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_UNIT_BRAG_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>[OUR_BEST_UNIT]通った後はぺんぺん草一本も残らないぜ。</French>
+		<French>グリモワールから目覚めた[OUR_BEST_UNIT]は一味も二味も違うわ！</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[OUR_BEST_UNIT]通った後はぺんぺん草一本も残らないぜ。</Japanese>
+		<Japanese>グリモワールから目覚めた[OUR_BEST_UNIT]は一味も二味も違うわ！</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_UNIT_BRAG_LEADER_LOLISE_2</Tag>
 		<English />
-		<French>[OUR_BEST_UNIT]が遊び相手を探してるぜ。</French>
+		<French>ママのくれた[OUR_BEST_UNIT]が私を守ってくれてるの。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[OUR_BEST_UNIT]が遊び相手を探してるぜ。</Japanese>
+		<Japanese>ママのくれた[OUR_BEST_UNIT]が私を守ってくれてるの。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NUKES_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>さぁ、核を落とす場所を決めないとね。</French>
+		<French>広範囲な巨大魔法だよ！どこに打とうかな。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>さぁ、核を落とす場所を決めないとね。</Japanese>
+		<Japanese>広範囲な巨大魔法だよ！どこに打とうかな。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_WORST_ENEMY_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>[OUR_WORST_ENEMY]には気をつけたほうがいいぜ！</French>
+		<French>[OUR_WORST_ENEMY]はママが気をつけろって</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[OUR_WORST_ENEMY]には気をつけたほうがいいぜ！</Japanese>
+		<Japanese>[OUR_WORST_ENEMY]はママが気をつけろって</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_WORST_ENEMY_TRADING_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>[OUR_WORST_ENEMY]との取引はやめときな。</French>
+		<French>[OUR_WORST_ENEMY]との取引は貴方の損になるよ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[OUR_WORST_ENEMY]との取引はやめときな。</Japanese>
+		<Japanese>[OUR_WORST_ENEMY]との取引は貴方の損になるよ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_SOMETHING_ELSE_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>ほかになにか？</French>
+		<French>他に？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>ほかになにか？</Japanese>
+		<Japanese>他に？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RESEARCH_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>何を研究すればいいんだ？</French>
+		<French>どの魔法を作ればいいのかしら？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>何を研究すればいいんだ？</Japanese>
+		<Japanese>どの魔法を作ればいいのかしら？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RESEARCH_TECH_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>分かった、分かった。</French>
+		<French>じゃあ、作り始めるわ。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>分かった、分かった。</Japanese>
+		<Japanese>じゃあ、作り始めるわ。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>何だ？</French>
+		<French>何よ？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>何だ？</Japanese>
+		<Japanese>何よ？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_TARGET_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>どこを攻めればいいんだ？</French>
+		<French>どこに魔法を打てばいいの？</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>どこを攻めればいいんだ？</Japanese>
+		<Japanese>どこに魔法を打てばいいの？</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_TARGET_CITY_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>了解だぜ。</French>
+		<French>わかったよー。</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>了解だぜ。</Japanese>
+		<Japanese>わかったよー。</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_WELL_LEADER_LOLISE_1</Tag>
@@ -99984,47 +99984,47 @@
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_FURIOUS_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>あいつとは今絶交中だぜ（怒っている）</French>
+		<French>あの人とはママが付き合うなって。（怒っている）</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>あいつとは今絶交中だぜ（怒っている）</Japanese>
+		<Japanese>あの人とはママが付き合うなって。（怒っている）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>何か腹が立つなぁ。（いらだっている）</French>
+		<French>%s1はこの前、私のグリモワールを盗もうとしたんだよ。（いらだっている）</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>何か腹が立つなぁ。（いらだっている）</Japanese>
+		<Japanese>%s1はこの前、私のグリモワールを盗もうとしたんだよ。（いらだっている）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>%s1は何を考えてるんだろう。（用心している）</French>
+		<French>%s1は私のグリモワールを狙ってるかも。（用心している）</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>%s1は何を考えてるんだろう。（用心している）</Japanese>
+		<Japanese>%s1は私のグリモワールを狙ってるかも。（用心している）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_PLEASED_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>%s1はなかなかうまい奴だぜ。（不満はない）</French>
+		<French>%s1は一緒にお人形遊びをしてくれるの！（不満はない）</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>%s1はなかなかうまい奴だぜ。（不満はない）</Japanese>
+		<Japanese>%s1は一緒にお人形遊びをしてくれるの！（不満はない）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_FRIENDLY_LEADER_LOLISE_1</Tag>
 		<English />
-		<French>%s1はいい奴だ。（親しみを感じている）</French>
+		<French>%s1は今度お茶会に招待するつもりなの。（親しみを感じている）</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>%s1はいい奴だ。（親しみを感じている）</Japanese>
+		<Japanese>%s1は今度お茶会に招待するつもりなの。（親しみを感じている）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DECLARE_WAR_LEADER_SUMIREKO_1</Tag>
@@ -101996,6 +101996,15 @@
 		<Italian/>
 		<Spanish/>
 		<Japanese>%s1は地上民にしてはなかなか見所があるわね（不満はない）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_ATTITUDE_PLAYER_FRIENDLY_LEADER_SEIRAN_1</Tag>
+		<English/>
+		<French>%s1が望むなら月に招待したいくらいだわ（親しみを感じている）</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Japanese>%s1が望むなら月に招待したいくらいだわ（親しみを感じている）</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DECLARE_WAR_LEADER_RINGO_1</Tag>

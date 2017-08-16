@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="../index.xml" type="application/rss+xml" title="東方叙事詩・統合MOD・readmeビューア">
+		<link rel="icon" href="../favicon.ico">
+		<title>制作環境(神霊廟) - 東方叙事詩・統合MOD・readmeビューア</title>
+		
+		<link rel="stylesheet" href="../css/highlight/default.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="stylesheet" href="../css/bootie-docs.css">
+		<link rel="stylesheet" href="../css/site.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">東方叙事詩・統合MOD・readmeビューア</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="../index.html">Home</a></li>
+			
+			
+				
+					<li ><a href="../post.html">Posts</a></li>
+				
+			
+				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						
+							<li><a href="../categories/append.html">統合MOD / 追加要素</a></li>
+						
+							<li><a href="../categories/mainchange_170811.html">ver170811における大きな変更点まとめ</a></li>
+						
+							<li><a href="../categories/newciv.html">統合MOD / 新文明</a></li>
+						
+							<li><a href="../categories/old.html">旧情報</a></li>
+						
+							<li><a href="../categories/readme.html">readme</a></li>
+						
+							<li><a href="../categories/summary.html">まとめ</a></li>
+						
+						</ul>
+					</li>
+				
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">制作環境(神霊廟)</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2017-06-17">June 17, 2017</time></span>
+				</div>
+				<section>
+					<p>12/12/</p>
+
+<p>・神霊廟独自イベント作成<br />
+・神霊労働者に防諜機能を追加<br />
+・白狼天狗の昇進が歩哨から天狗の観察眼(視界＋３)に変更<br />
+・迷いの竹林の川沿いのコイン＋１が追加されてなかったバグfix<br />
+・星蓮船最終テクノロジーの幸福度＋１→＋３<br />
+・地霊殿の最終テクノロジーの幸福度＋１を削除<br />
+・地霊殿の核の生産コストが若干減少　戦術核(250→200) ICBM(500→400)</p>
+
+<p>12/12/12</p>
+
+<p>・青娥スペル「ゾウフォルゥモォ」をAIが使用した時、諸所の事情で挙動が残念な事になっていたので<br />
+　AI使用時は反乱は起きず、代わりに都市防御-150%になるよう修正</p>
+
+<p>12/12/11</p>
+
+<p>・新ゲームオプション「AIの永夜返し効果変化」追加<br />
+　このゲームオプションをONにしていると、AIがユニット輝夜を生産した際は<br />
+　スペル「永夜返し」の効果が周囲1マスの敵対ユニットに範囲ダメージの効果に変化します<br />
+　プレイヤーの場合は効果は無く、普通に無政府状態発生の永夜返しになります</p>
+
+<p>・AIユニット萃香がキャラクタースキルを取得した場合、小萃香分裂をしなくなるように<br />
+　プレイヤーが生産したユニット萃香には関係ありません</p>
+
+<p>・AIユニット萃香がスペルを発動させた際にはスタックダメージスペルへと変化するように<br />
+　やはり上記と同じくプレイヤーが生産したユニット萃香には関係ありません</p>
+
+<p>・神子スペルで一般兵に「集まる神霊」がついた場合、海洋ユニットでは神霊は発生しないように<br />
+　主に海上で神霊が発生するのを阻止するため。昇進自体は付く</p>
+
+<p>・その他、細かいテキスト修正</p>
+
+<p>12/12/06</p>
+
+<p>・修正したつもりがされていなかった、入鹿の雷のテキストを修正</p>
+
+<p>・神子キャラクタースキルの性能を変更<br />
+　戦闘力上昇は10％に低下するが、その代わり更に追加の神霊発生率を手に入れるように</p>
+
+<p>・太子堂のハンマー修正　300→200</p>
+
+<p>12/12/01…β版0.1</p>
+
+<p>AIを実装、同時に遊ぶのに耐えれる仕様になったと思うためβ版とする<br />
+以後、テストプレイを繰り返しある程度バランスを取った上で統合MODへマージして頂きたい所存<br />
+各種新要素の詳しい説明は付属している他txtを参照して下さい<br />
+以下、α版0.5からの変更点</p>
+
+<p>・AI実装<br />
+・ちゆり・夢見は神霊廟所属に<br />
+・「茨華仙」は「茨木華仙」へ名称変更。<br />
+　村紗やお燐などは通称ではなく本名で登録されているため、<br />
+　華仙も通称である「茨華仙」より、本名と思われる「茨木華仙」の方が適していると判断<br />
+・うわばみ志向の性能実装<br />
+・最終を除く星蓮船固有テクノロジーの前提技術変更<br />
+・法隆寺を強化<br />
+・AIがあまり固有社会制度を採用しなくなるように（ただしプラシーボ効果レベル）<br />
+・神霊廟固有テクノロジー2・4・6でそれぞれ無償の神霊を獲得できるように<br />
+・神子スペル発動時に神子と同じタイルに一般兵がいた場合、<br />
+　戦闘力微増＆神霊発生率極小性能が付く昇進を与えるように<br />
+・青娥EXは移動力+1を与えるように。その代わり東方ユニットには付かないように。<br />
+・青娥キャラクタースキルに移動コスト-1追加<br />
+・神霊廟最終固有テクで解禁されるリサイクルセンター追加。UB扱い</p>
+
+<p>12/11/29…α版0.5</p>
+
+<p>レイセン、博麗靈夢（旧作霊夢）追加<br />
+志向の変更バグfixが中心以下詳細</p>
+
+<p>・レイセン、博麗靈夢（旧作霊夢）追加<br />
+・Diplomacyの中+指導者にDUMMY01~04を追加<br />
+・CIV4DiplomacyTextを軽くしてみました、外交台詞で何か問題が生じましたらおっしゃって下さい<br />
+・別の文明の都市の中心に官道が引かれるバグfix、キョンシー製作所を世界遺産に変更<br />
+・うわばみ志向、各固有志向の外枠だけ追加<br />
+・星蓮船のテクノロジーと神霊廟のテクノロジーの説明を追加</p>
+
+<p>12/11/20…α版0.4<br />
+主に東方ユニット関連。スペルや具体的スキル等を作成<br />
+及び、</p>
+
+<p>・神霊廟最終テクノロジーの全偉人獲得<br />
+・他国UIはWB等で他国UWを配置したとしても作成出来ないように<br />
+　（これで恐らく、作成スレにてしばしば報告されていた「ジャングルを残す」現象が改善される、と思う）<br />
+・ピラミッドを作成しても、神霊廟文明以外は「十七条憲法」を採用出来ないように</p>
+
+<p>を実装。</p>
+
+<p>その他、未完成部分まとめ<br />
+・UWの特殊能力<br />
+・神霊廟の都市名（まだ足りない）<br />
+・星蓮船の前提テクノロジー（最終だけは変わったが、現状他はまだ地霊殿と一緒なので）<br />
+・スペル系で付く昇進のボタン画像（現状、かなり適当）<br />
+・東方ユニットのグラフィック</p>
+
+<p>以下、具体的な性能</p>
+
+<p>※神霊廟東方ユニットのキャラクターマークは<br />
+豪族組は全員「敵撃破時、確率で特殊偉人神霊ゲット＋α」となっている<br />
+が、それぞれ確率は違う。たとえば屠自古は滅多に沸かないが<br />
+逆に神子はそこそこの確率で沸くように<br />
+ただし、いくら沸くとはいってもあまりポコポコ沸かれまくっても困るため<br />
+神子でも確率はかなり渋めに設定する。</p>
+
+<p>一方、芳香と青娥は倒した敵ユニットに<br />
+「キョンシー」の昇進を付けて獲得出来るようにする<br />
+勿論確率は低めに設定。確率が高いと事実上コンバットパッチェさんの上位互換になるため。</p>
+
+<hr />
+
+<p>芳香<br />
+キャラクターマーク　都市防衛＋20％　キョンシー発生：中<br />
+キャラクタースキル　死なない殺人鬼 連続攻撃が可能<br />
+　　　　　　　　　　　　　　　　　 同じタイルにいるユニットの回復+15%/Turn</p>
+
+<p>方向性…神霊廟のコンバット特化枠<br />
+　　　　殴り合いだけなら5人中一番強い</p>
+
+<p>スペル　毒爪「ポイズンマーダー」<br />
+　　　　スタック小ダメージ＆敵スタックに確率で昇進「ゾンビの毒」付与<br />
+　　　　大体メディと似たような感じになるが、スタックダメージが付く分毒の効力は低めで</p>
+
+<p>EX…回復「ヒールバイデザイア」<br />
+　　味方スタックをCAL分回復</p>
+
+<p>Ph…欲霊「スコアデザイアイーター」<br />
+　　使用すると1ターンで消滅する自己強化系昇進をつける<br />
+　　戦闘力+15％　先制攻撃+1　移動力+1　電撃戦　パワー0.15使用</p>
+
+<hr />
+
+<p>青娥<br />
+キャラクターマーク　防御ボーナス無し　キョンシー発生：大<br />
+キャラクタースキル　壁抜けの邪仙　特別奇襲効果<br />
+　　　　　　　　　　　　　　　　　退却率+50％</p>
+
+<p>方向性…芳香や一般兵の支援が得意<br />
+　　　　本人は移動力は高いものの、直接戦闘力は低い<br />
+　　　　戦争に出す場合は良くも悪くも芳香＆一般兵がメイン<br />
+　　　　キャラクタースキルでは事実上誰よりも早く特別奇襲がつくが、<br />
+　　　　やはり本人はあまり強くないのでムチャさせすぎるとすぐに倒される</p>
+
+<p>スペル　入魔「ゾウフォルゥモォ」<br />
+　　　　隣接している状態で使うと1ターン都市反乱<br />
+　　　　＆同じスタックにいる味方一般兵に一時的昇進「狂乱」<br />
+　　　　狂乱の性能はCAL依存で上昇、ただし同時に対ボスマイナスもつける</p>
+
+<p>Ex　降霊「死人タンキー」<br />
+　　同じタイルのユニットに昇進「壁抜け」<br />
+　　壁抜け…地形移動コストを無視　先制攻撃＋１　1ターンで消滅</p>
+
+<p>Ph　通霊「トンリン芳香」<br />
+　　芳香を全快状態で召喚＆同スタック内の一般兵をCAL*4/3分回復</p>
+
+<hr />
+
+<p>屠自古<br />
+キャラクターマーク　防御ボーナス無し　先制攻撃のチャンス+1 神霊発生：小<br />
+キャラクタースキル　怨霊の雷<br />
+　　　　　　　　　　戦闘力+10％<br />
+　　　　　　　　　　副次的損害＋25％（ダメージ上限50%　数上限4）<br />
+　　　　　　　　　　（弱めの設定なのは、スペルとのシナジー効果が高いため）</p>
+
+<p>方向性…やってやんよ！<br />
+　　　　豪族組の豪腕枠。割と何やらせても便利かも</p>
+
+<p>スペル…雷矢「ガゴウジトルネード」<br />
+　　　　単純なスタックダメージ系</p>
+
+<p>EX…隋の学問<br />
+　　都市に「隋学研究所」（文化＋１　研究+10％　科学者枠＋１）を建設<br />
+　　移動しても消滅しない</p>
+
+<p>Ph…怨霊「入鹿の雷」<br />
+　　移動消滅系建造物「入鹿の雷」 建設<br />
+　　電力供給＆ハンマーボーナス+50%</p>
+
+<hr />
+
+<p>布都<br />
+キャラクターマーク　撤退率+20％　防御ボーナス無し　神霊発生：中<br />
+キャラクタースキル　風水師<br />
+　　　　　　　　　　先制攻撃1,先制攻撃無効,渡河攻撃ペナルティ無し<br />
+　　　　　　　　　　騎兵ユニットに対し戦闘力+25％</p>
+
+<p>方向性…現状では神霊廟の内政ユニット枠濃厚<br />
+　　　　取り合えずスペルは考えてみたものの、後々変える事になるかも<br />
+　　　　特に「周囲2×2タイルの山岳タイルにハンマー追加」は出来るかどうかも怪しいし、<br />
+　　　　出来たとしても効力的にいまいち見合わない可能性も高い<br />
+　　　　取り合えず仮でこの案としておくけど、後々変更になる可能性も非常に高い</p>
+
+<p>スペル…聖童女「大物忌正餐」<br />
+　　　　都市で使用すると周囲2×2タイルの山岳タイルにハンマー追加<br />
+　　　　具体的な追加ハンマー量に関してはバランスを見ながらになるかも<br />
+　　　　妹紅と同じような感じになるかな？</p>
+
+<p>　　　　or</p>
+
+<p>　　　　「物部の秘術」<br />
+　　　　砂漠タイルで発動させると草原化<br />
+　　　　効果だけなら果てしなく強いが、他地形改善系と比べると燃費が悪い</p>
+
+<p>EX…布都EXスペル「物部の秘術」<br />
+　　周囲1×1タイルの中に山岳がある場合のみ使用可能<br />
+　　該当する山岳タイル全てに特殊改善「龍脈」を置く<br />
+　　同時に、術者本人がいるタイルに特殊改善「龍穴」を置く<br />
+　　山岳の条件を満たしていて、かつ森林・ジャングル・見えている資源・オアシス・沿岸・遠洋タイルで使用した場合は<br />
+　　山岳に龍脈は建つが、龍穴は発生しない<br />
+　　（都市タイルは悩んだけど龍穴は置けるように。龍穴といえばパワースポットだから一応それらしいといえばそれらしいし）</p>
+
+<p>　　本物の風水学と龍穴・龍脈の関係と比べると大分怪しいが、そこは目を瞑る方向で。<br />
+　　また、使用できる状況が限定的な割にはタイルの出力は少々弱めかもしれない<br />
+　　この辺は実際にテストプレイするようになったら様子を見て変更で。</p>
+
+<p>　　龍脈…ハンマー+3　幸福+1　太子堂or国立公園で無償の専門家<br />
+　　龍穴…食料+1　ハンマー+1　コイン+1<br />
+　　　　 都市の維持50ターンで「大龍穴（食料+1　ハンマー+3　コイン+2）」に変化</p>
+
+<p>Ph…天符「天の磐舟よ天へ昇れ」<br />
+　　術者移動消滅系宇宙船加速建造物「天の磐舟」建設<br />
+　　宇宙船開発速度上昇＆１アルミニウム供与</p>
+
+<hr />
+
+<p>神子<br />
+キャラクターマーク　防御ボーナス無し　神霊発生：高<br />
+キャラクタースキル　日出ずる処の天子<br />
+　　　　　　　　　　戦闘力+20％</p>
+
+<p>方向性…コンバットに向かわせて神霊獲得してもいいし、<br />
+　　　　一方でスペルルート等も便利なものを揃えた神霊廟のエース枠<br />
+　　　　ただしコンバットは神霊獲得率は高いが、スキル性能そのものはいまいち<br />
+　　　　スペル等も直接戦闘には関わりは無いため、<br />
+　　　　他東方ユニットや一般兵の支援が必要となるだろう</p>
+
+<p>スペル　眼光「十七条のレーザー」<br />
+　　　　1+CAL/8 ターン（端数切捨）の黄金期を到来させる<br />
+　　　　CAL16以上の場合は名称が　神光「逆らう事なきを宗とせよ」　に変化</p>
+
+<p>EX　秘宝「斑鳩寺の天球儀」<br />
+　　都市移動消滅系建造物「聖徳太子のオーパーツ」建設<br />
+　　文化+4　偉人発生+25%<br />
+　　定住神霊から追加のコイン+3</p>
+
+<p>Ph　召喚「豪族乱舞」<br />
+　　ユニット屠自古・布都がいたらその場に召喚する<br />
+　　双方召喚時に一時的な移動力増加+2</p>
+
+<hr />
+
+<p>12/11/17…α版0.3<br />
+建設物・神霊関連・UI/UW関連の作成、文明その他もろもろ</p>
+
+<p>文明<br />
+・神霊廟の色変更<br />
+・星蓮船の色変更<br />
+・神霊廟の都市名変更</p>
+
+<p>建設物<br />
+・四猿像<br />
+・風水研究所<br />
+・キョンシー生産場<br />
+・太子堂<br />
+・法隆寺</p>
+
+<p>ユニット、偉人<br />
+・神霊<br />
+移動力２　完全不可視（他文明から一切見えない）</p>
+
+<p>　　　　グラフィックはFfH Age of Ice　のファイアボールから<br />
+　　　　大将軍を元にして作りＡＩもそれとしました<br />
+    AIのテストしましたが。何もしてないと定住しませんが、太子堂作成や代議制だと定住します</p>
+
+<pre><code>UI/UW
+・死欲の小屋
+・我欲の村落
+・強欲の村
+・五欲の町
+
+・官道
+
+・神霊労働者
+
+UIは作成完了
+UWの神霊労働者は現在特殊能力なし、ただしUIを作れるように関連付けは完成済み
+
+
+その他
+・星蓮船の最終テクノロジーを核融合→飛行機
+
+個人的な変更、他にも変えていいかも
+
+
+未完成部分まとめ
+・最終テクノロジーの全偉人獲得（おそらくpyの編集が必要）
+・UWの特殊能力
+・神霊廟の都市名（まだ足りない）
+</code></pre>
+
+<p>12/11/08…以下の5人を形だけは東方ユニットとして何とか運用出来るように。</p>
+
+<p>　　　　　神霊廟<br />
+　　　　　・宮古芳香<br />
+　　　　　・霍青娥<br />
+　　　　　・蘇我屠自古<br />
+　　　　　・物部布都<br />
+　　　　　・豊聡耳神子</p>
+
+<p>　　　　　ただし現状では全員魅魔様と同じ性能です。<br />
+　　　　　EXスペル博麗神社の怨霊はほぼ十中八九不具合も出ます。<br />
+　　　　　この辺は後日具体的な性能が煮詰まったら<br />
+　　　　　spellinfo.pyと関連XMLの修正のみで実装となるはず</p>
+
+<p>12/11/04…取り合えず以下の9人の指導者を選ぶ事だけは出来るように。</p>
+
+<p>　　　　　神霊廟<br />
+　　　　　・霍青娥<br />
+　　　　　・蘇我屠自古<br />
+　　　　　・物部布都<br />
+　　　　　・豊聡耳神子</p>
+
+<p>　　　　　星蓮船<br />
+　　　　　・二ッ岩マミゾウ</p>
+
+<p>　　　　　博麗神社<br />
+　　　　　・茨華仙</p>
+
+<p>　　　　　人間の里<br />
+　　　　　・本居小鈴</p>
+
+<p>　　　　　紅魔館<br />
+　　　　　・北白河ちゆり<br />
+　　　　　・岡崎夢美</p>
+
+<p>　　　　　ただし現状追加された9人の指導者全員が同じアレクサンドロスAIな上、<br />
+　　　　　神霊廟文明の具体的な味付けは未だ手付かずのため、<br />
+　　　　　まだとても遊べる代物ではないです</p>
+
+<p>統合MOD10/05AI変更なしを基にして作成</p>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4 class="sidebar-heading">Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">制作環境(神霊廟)</a></strong></li>
+			</ul>
+			
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Pages in Categories</h4>
+		<ul class="sidebar-category-list">
+		
+			<li>
+				<a href="../categories/append.html">
+					<span class="doc-list-category">統合MOD / 追加要素</span>
+				</a>
+				<ul>
+					<li><a href="../post/trait_labor.html">労働志向</a>
+					</li>
+				
+					<li><a href="../post/trait_shuken.html">集権志向</a>
+					</li>
+				
+					<li><a href="../post/civic_faith.html">社会制度「信仰」</a>
+					</li>
+				
+					<li><a href="../post/uwabami.html">うわばみ志向</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/mainchange_170811.html">
+					<span class="doc-list-category">ver170811における大きな変更点まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/changetohounit_170811.html">東方ユニット関連の見直し</a>
+					</li>
+				
+					<li><a href="../post/changeetc_170811.html">内政面その他の変更点</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/newciv.html">
+					<span class="doc-list-category">統合MOD / 新文明</span>
+				</a>
+				<ul>
+					<li><a href="../post/tukinomiyako_tohounit.html">月の都文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/tukinomiyako.html">月の都文明</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_tohounits.html">輝針城文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_bunmei.html">輝針城文明</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou_tohounit.html">神霊廟文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou.html">神霊廟文明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/old.html">
+					<span class="doc-list-category">旧情報</span>
+				</a>
+				<ul>
+					<li><a href="../post/ai.html">AI挙動変更点</a>
+					</li>
+				
+					<li><a href="../post/arahitogami.html">難易度現人神</a>
+					</li>
+				
+					<li><a href="../post/leaders_setsumei.html">追加指導者詳細</a>
+					</li>
+				
+					<li><a href="../post/redome_multiface.html">readme_multiface</a>
+					</li>
+				
+					<li><a href="../post/redome_henkouten.html">更新履歴（151115ver以前）</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/readme.html">
+					<span class="doc-list-category">readme</span>
+				</a>
+				<ul>
+					<li><a href="../post/redome_cgele.html">ReadMe-CGE-LE</a>
+					</li>
+				
+					<li><a href="../post/about_fullver.html">フルパックバージョンについて</a>
+					</li>
+				
+					<li><a href="../post/platywb.html">ワールドビルダー拡張パッチ</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/summary.html">
+					<span class="doc-list-category">まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/readme_new.html">更新履歴・ver170811以降</a>
+					</li>
+				
+					<li><a href="../post/sozai_new.html">使用素材まとめ（ver170811以降）</a>
+					</li>
+				
+					<li><a href="../post/tougou_setsumei.html">統合MODの説明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="../tags/dev.html">dev</a>
+		
+		</div>
+	</div>
+	</div>
+</div>
+
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#" onclick="resetSidebarPos()">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	
+	
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/bootie-docs.js"></script>
+
+</body>
+</html>

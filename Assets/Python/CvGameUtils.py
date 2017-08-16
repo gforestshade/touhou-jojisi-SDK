@@ -783,6 +783,11 @@ class CvGameUtils:
 		pTeam = gc.getTeam(pPlayer.getTeam())
 		eBuildingClass = gc.getBuildingInfo(eBuilding).getBuildingClassType()
 		
+		# 作成中の建造物はグレーアウト
+		if not bTestVisible and not bContinue:
+			if pCity.getFirstBuildingOrder(eBuilding) != -1:
+				return False
+
 		#輝針城・雷鼓の呪法-内の処理
 		if pPlayer.countNumBuildings(gc.getInfoTypeForString("BUILDING_RAIKO_MAGIC_B")) == 1:
 			if pTeam.isHasTech(gc.getInfoTypeForString('TECH_GUILDS')) and pTeam.isHasTech(gc.getInfoTypeForString('TECH_CURRENCY')):
@@ -842,14 +847,15 @@ class CvGameUtils:
 			
 		
 		#弁々はモニュメントの代わりにステラ作成可能
-		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
-			obsoleteTech = gc.getBuildingInfo(gc.getInfoTypeForString("BUILDING_KISHINJOU_ETHIOPIAN_STELE")).getObsoleteTech()
-			if ( pTeam.isHasTech(obsoleteTech) == false or obsoleteTech == -1 ):
-				if pTeam.isHasTech(gc.getInfoTypeForString('TECH_MYSTICISM')):
-					if not pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_OBELISK')):
-						if not pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_KISHINJOU_ETHIOPIAN_STELE')):
-							if eBuildingClass == gc.getInfoTypeForString('BUILDINGCLASS_KISHINJOU_ETHIOPIAN_STELE'):
-								return True
+# 		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
+# 			obsoleteTech = gc.getBuildingInfo(gc.getInfoTypeForString("BUILDING_KISHINJOU_ETHIOPIAN_STELE")).getObsoleteTech()
+# 			if ( pTeam.isHasTech(obsoleteTech) == false or obsoleteTech == -1 ):
+# 				if pTeam.isHasTech(gc.getInfoTypeForString('TECH_MYSTICISM')):
+# 					if not pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_OBELISK')):
+# 						if not pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_KISHINJOU_ETHIOPIAN_STELE')):
+# 							if eBuilding == gc.getInfoTypeForString('BUILDING_KISHINJOU_ETHIOPIAN_STELE'):
+# # #							if eBuildingClass == gc.getInfoTypeForString('BUILDINGCLASS_KISHINJOU_ETHIOPIAN_STELE'):
+# 								return True
 		
 		#社会制度変更決議無しオプション時は特殊国連建設可能に
 		
@@ -936,9 +942,9 @@ class CvGameUtils:
 				return True
 		
 		#弁々はノーマルモニュ作成不可
-		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
-			if eBuildingClass == gc.getInfoTypeForString('BUILDINGCLASS_OBELISK'):
-				return True
+		# if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
+		# 	if eBuilding == gc.getInfoTypeForString('BUILDING_OBELISK'):
+		# 		return True
 		
 		#陰陽寮（×）が都市に存在している場合、陰陽寮（○）は作成不可
 		if pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_ONMYOURYOU2')):

@@ -4533,6 +4533,7 @@ def doTraitKokoro3(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 	iPlayer = kTriggeredData.ePlayer
+	py = PyPlayer(iPlayer)
 	pPlayer = gc.getPlayer(iPlayer)
 	if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST')):
 		for i in xrange(gc.getNumTraitInfos()):	
@@ -4545,11 +4546,51 @@ def doTraitKokoro3(argsList):
 		pPlayer.setHasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST'),True)
 		pPlayer.setHasTrait(gc.getInfoTypeForString(Traits[iRnd1]),True)
 		pPlayer.setHasTrait(gc.getInfoTypeForString(Traits[iRnd2]),True)
+		
+		#Ç‡ÇµòJì≠éuå¸Ç…Ç»Ç¡ÇΩéû
+		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_LABORLIST')):
+			#ÇªÇÃÉvÉåÉCÉÑÅ[ÇÃìsésëSëñç∏
+			for pPyCity in py.getCityList():
+				pCity = pPlayer.getCity(pPyCity.getID())
+				pCapital = gc.getPlayer(pCity.getOwner()).getCapitalCity()
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_TRIBALISM')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_TRIBALISM")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_TRIBALISM'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_SLAVERY')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SLAVERY_1")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SLAVERY_1'),1)
+					if pCapital.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SLAVERY_2")) == False:
+						pCapital.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SLAVERY_2'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_SERFDOM')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SERFDOM")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SERFDOM'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_CASTE_SYSTEM')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_CASTE_1")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_CASTE_1'),1)
+					if pCapital.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_CASTE_2")) == False:
+						pCapital.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_CASTE_2'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_EMANCIPATION')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_EMANCIPATION")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_EMANCIPATION'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_SISHANOOUKOKU')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SISHANOOUKOKU")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SISHANOOUKOKU'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_HAKUREISIKI')) == True:
+					if pCapital.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_HAKUREISIKI")) == False:
+						pCapital.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_HAKUREISIKI'),1)
+		
 
 def doTraitKokoro4(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 	iPlayer = kTriggeredData.ePlayer
+	py = PyPlayer(iPlayer)
 	pPlayer = gc.getPlayer(iPlayer)
 	if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST')):
 		for i in xrange(gc.getNumTraitInfos()):	
@@ -4562,6 +4603,44 @@ def doTraitKokoro4(argsList):
 		pPlayer.setHasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST'),True)
 		pPlayer.setHasTrait(gc.getInfoTypeForString(Traits[iRnd1]),True)
 		pPlayer.setHasTrait(gc.getInfoTypeForString(Traits[iRnd2]),True)
+		
+		#Ç‡ÇµòJì≠éuå¸Ç…Ç»Ç¡ÇΩéû
+		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_LABORLIST')):
+			#ÇªÇÃÉvÉåÉCÉÑÅ[ÇÃìsésëSëñç∏
+			for pPyCity in py.getCityList():
+				pCity = pPlayer.getCity(pPyCity.getID())
+				pCapital = gc.getPlayer(pCity.getOwner()).getCapitalCity()
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_TRIBALISM')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_TRIBALISM")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_TRIBALISM'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_SLAVERY')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SLAVERY_1")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SLAVERY_1'),1)
+					if pCapital.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SLAVERY_2")) == False:
+						pCapital.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SLAVERY_2'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_SERFDOM')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SERFDOM")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SERFDOM'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_CASTE_SYSTEM')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_CASTE_1")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_CASTE_1'),1)
+					if pCapital.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_CASTE_2")) == False:
+						pCapital.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_CASTE_2'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_EMANCIPATION')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_EMANCIPATION")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_EMANCIPATION'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_SISHANOOUKOKU')) == True:
+					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_SISHANOOUKOKU")) == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_SISHANOOUKOKU'),1)
+				
+				if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_HAKUREISIKI')) == True:
+					if pCapital.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_LABORLIST_HAKUREISIKI")) == False:
+						pCapital.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_HAKUREISIKI'),1)
 
 def doTraitKokoro5(argsList):
 	iEvent = argsList[0]

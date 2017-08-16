@@ -8574,6 +8574,7 @@
     <PromotionInfo>
       <Type>PROMOTION_EIRIN</Type>
       <Description>TXT_KEY_PROMOTION_CHARACTER_MARK_EIRIN</Description>
+      <Help>TXT_KEY_PROMOTION_CHARACTER_MARK_EIRIN_HELP</Help>
       <Sound>AS2D_IF_LEVELUP</Sound>
       <LayerAnimationPath>NONE</LayerAnimationPath>
       <PromotionPrereq>NONE</PromotionPrereq>
@@ -9390,6 +9391,7 @@
     <PromotionInfo>
       <Type>PROMOTION_KANAKO</Type>
       <Description>TXT_KEY_PROMOTION_CHARACTER_MARK_KANAKO</Description>
+      <Help>TXT_KEY_PROMOTION_CHARACTER_MARK_KANAKO_HELP</Help>
       <Sound>AS2D_IF_LEVELUP</Sound>
       <LayerAnimationPath>NONE</LayerAnimationPath>
       <PromotionPrereq>NONE</PromotionPrereq>
@@ -10454,7 +10456,7 @@
       <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
       <iCombatPercent>0</iCombatPercent>
       <iCityAttack>25</iCityAttack>
-      <iCityDefense>-25</iCityDefense>
+      <iCityDefense>0</iCityDefense>
       <iHillsAttack>0</iHillsAttack>
       <iHillsDefense>0</iHillsDefense>
       <iKamikazePercent>0</iKamikazePercent>
@@ -11785,7 +11787,7 @@
       <UnitCombatMods>
         <UnitCombatMod>
           <UnitCombatType>UNITCOMBAT_BOSS</UnitCombatType>
-          <iUnitCombatMod>200</iUnitCombatMod>
+          <iUnitCombatMod>250</iUnitCombatMod>
         </UnitCombatMod>
       </UnitCombatMods>
       <DomainMods />
@@ -12012,6 +12014,7 @@
     <PromotionInfo>
       <Type>PROMOTION_TOYOHIME</Type>
       <Description>TXT_KEY_PROMOTION_CHARACTER_MARK_TOYOHIME</Description>
+      <Help>TXT_KEY_PROMOTION_CHARACTER_MARK_TOYOHIME_HELP</Help>
       <Sound>AS2D_IF_LEVELUP</Sound>
       <LayerAnimationPath>NONE</LayerAnimationPath>
       <PromotionPrereq>NONE</PromotionPrereq>
@@ -12080,6 +12083,7 @@
     <PromotionInfo>
       <Type>PROMOTION_SEIRAN</Type>
       <Description>TXT_KEY_PROMOTION_CHARACTER_MARK_SEIRAN</Description>
+      <Help>TXT_KEY_PROMOTION_CHARACTER_MARK_SEIRAN_HELP</Help>
       <Sound>AS2D_IF_LEVELUP</Sound>
       <LayerAnimationPath>NONE</LayerAnimationPath>
       <PromotionPrereq>NONE</PromotionPrereq>
@@ -13749,7 +13753,7 @@
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
-      <iMovesChange>0</iMovesChange>
+      <iMovesChange>-1</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
       <iAirRangeChange>0</iAirRangeChange>
       <iInterceptChange>0</iInterceptChange>
@@ -13812,7 +13816,7 @@
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
-      <iMovesChange>0</iMovesChange>
+      <iMovesChange>-5</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
       <iAirRangeChange>0</iAirRangeChange>
       <iInterceptChange>0</iInterceptChange>
@@ -17297,7 +17301,7 @@
       <iCollateralDamageProtection>0</iCollateralDamageProtection>
       <iPillageChange>0</iPillageChange>
       <iUpgradeDiscount>0</iUpgradeDiscount>
-      <iExperiencePercent>0</iExperiencePercent>
+      <iExperiencePercent>-100</iExperiencePercent>
       <TerrainAttacks />
       <TerrainDefenses />
       <FeatureAttacks />
@@ -22560,7 +22564,7 @@
       <bAmphib>0</bAmphib>
       <bRiver>0</bRiver>
       <bEnemyRoute>0</bEnemyRoute>
-      <bAlwaysHeal>0</bAlwaysHeal>
+      <bAlwaysHeal>1</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
@@ -22905,7 +22909,7 @@
       <bAmphib>0</bAmphib>
       <bRiver>0</bRiver>
       <bEnemyRoute>0</bEnemyRoute>
-      <bAlwaysHeal>0</bAlwaysHeal>
+      <bAlwaysHeal>1</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
@@ -23133,7 +23137,7 @@
       <iSameTileHealChange>0</iSameTileHealChange>
       <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
       <iCombatPercent>0</iCombatPercent>
-      <iCityAttack>60</iCityAttack>
+      <iCityAttack>40</iCityAttack>
       <iCityDefense>0</iCityDefense>
       <iHillsAttack>0</iHillsAttack>
       <iHillsDefense>0</iHillsDefense>
@@ -23186,7 +23190,7 @@
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
       <iMovesChange>0</iMovesChange>
-      <iMoveDiscountChange>0</iMoveDiscountChange>
+      <iMoveDiscountChange>1</iMoveDiscountChange>
       <iAirRangeChange>0</iAirRangeChange>
       <iInterceptChange>0</iInterceptChange>
       <iEvasionChange>0</iEvasionChange>
@@ -23324,7 +23328,7 @@
       <bAmphib>0</bAmphib>
       <bRiver>0</bRiver>
       <bEnemyRoute>0</bEnemyRoute>
-      <bAlwaysHeal>0</bAlwaysHeal>
+      <bAlwaysHeal>1</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
@@ -23395,7 +23399,7 @@
       <bEnemyRoute>0</bEnemyRoute>
       <bAlwaysHeal>0</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
-      <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
+      <bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
       <iMovesChange>0</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
@@ -24184,7 +24188,7 @@
       <bEnemyRoute>0</bEnemyRoute>
       <bAlwaysHeal>0</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
-      <bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
+      <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
       <iMovesChange>0</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
@@ -24596,7 +24600,7 @@
       <bAmphib>0</bAmphib>
       <bRiver>0</bRiver>
       <bEnemyRoute>0</bEnemyRoute>
-      <bAlwaysHeal>0</bAlwaysHeal>
+      <bAlwaysHeal>1</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
@@ -26073,7 +26077,7 @@
       <bAmphib>0</bAmphib>
       <bRiver>0</bRiver>
       <bEnemyRoute>1</bEnemyRoute>
-      <bAlwaysHeal>0</bAlwaysHeal>
+      <bAlwaysHeal>1</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
       <iVisibilityChange>0</iVisibilityChange>
@@ -27332,6 +27336,130 @@
       <bCtrlDown>0</bCtrlDown>
       <iHotKeyPriority>0</iHotKeyPriority>
       <Button>Art/Interface/Buttons/Promotions/stan.dds</Button>
+    </PromotionInfo>
+    <PromotionInfo>
+      <Type>PROMOTION_WHITE</Type>
+      <Description>TXT_KEY_PROMOTION_WHITE</Description>
+      <Sound>AS2D_IF_LEVELUP</Sound>
+      <LayerAnimationPath>NONE</LayerAnimationPath>
+      <PromotionPrereq>NONE</PromotionPrereq>
+      <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
+      <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
+      <TechPrereq>NONE</TechPrereq>
+      <StateReligionPrereq>NONE</StateReligionPrereq>
+      <bLeader>0</bLeader>
+      <bBlitz>0</bBlitz>
+      <bAmphib>0</bAmphib>
+      <bRiver>0</bRiver>
+      <bEnemyRoute>0</bEnemyRoute>
+      <bAlwaysHeal>1</bAlwaysHeal>
+      <bHillsDoubleMove>0</bHillsDoubleMove>
+      <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
+      <iVisibilityChange>0</iVisibilityChange>
+      <iMovesChange>0</iMovesChange>
+      <iMoveDiscountChange>0</iMoveDiscountChange>
+      <iAirRangeChange>0</iAirRangeChange>
+      <iInterceptChange>0</iInterceptChange>
+      <iEvasionChange>0</iEvasionChange>
+      <iWithdrawalChange>0</iWithdrawalChange>
+      <iCargoChange>0</iCargoChange>
+      <iCollateralDamageChange>0</iCollateralDamageChange>
+      <iBombardRateChange>0</iBombardRateChange>
+      <iFirstStrikesChange>0</iFirstStrikesChange>
+      <iChanceFirstStrikesChange>0</iChanceFirstStrikesChange>
+      <iEnemyHealChange>0</iEnemyHealChange>
+      <iNeutralHealChange>0</iNeutralHealChange>
+      <iFriendlyHealChange>0</iFriendlyHealChange>
+      <iSameTileHealChange>10</iSameTileHealChange>
+      <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
+      <iCombatPercent>0</iCombatPercent>
+      <iCityAttack>0</iCityAttack>
+      <iCityDefense>0</iCityDefense>
+      <iHillsAttack>0</iHillsAttack>
+      <iHillsDefense>0</iHillsDefense>
+      <iKamikazePercent>0</iKamikazePercent>
+      <iRevoltProtection>0</iRevoltProtection>
+      <iCollateralDamageProtection>0</iCollateralDamageProtection>
+      <iPillageChange>0</iPillageChange>
+      <iUpgradeDiscount>0</iUpgradeDiscount>
+      <iExperiencePercent>0</iExperiencePercent>
+      <TerrainAttacks />
+      <TerrainDefenses />
+      <FeatureAttacks />
+      <FeatureDefenses />
+      <UnitCombatMods />
+      <DomainMods />
+      <TerrainDoubleMoves />
+      <FeatureDoubleMoves />
+      <UnitCombats />
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <Button>Art/Interface/Buttons/Promotions/white.dds</Button>
+    </PromotionInfo>
+    <PromotionInfo>
+      <Type>PROMOTION_BLACK</Type>
+      <Description>TXT_KEY_PROMOTION_BLACK</Description>
+      <Sound>AS2D_IF_LEVELUP</Sound>
+      <LayerAnimationPath>NONE</LayerAnimationPath>
+      <PromotionPrereq>NONE</PromotionPrereq>
+      <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
+      <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
+      <TechPrereq>NONE</TechPrereq>
+      <StateReligionPrereq>NONE</StateReligionPrereq>
+      <bLeader>0</bLeader>
+      <bBlitz>0</bBlitz>
+      <bAmphib>0</bAmphib>
+      <bRiver>0</bRiver>
+      <bEnemyRoute>0</bEnemyRoute>
+      <bAlwaysHeal>0</bAlwaysHeal>
+      <bHillsDoubleMove>0</bHillsDoubleMove>
+      <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
+      <iVisibilityChange>0</iVisibilityChange>
+      <iMovesChange>0</iMovesChange>
+      <iMoveDiscountChange>0</iMoveDiscountChange>
+      <iAirRangeChange>0</iAirRangeChange>
+      <iInterceptChange>0</iInterceptChange>
+      <iEvasionChange>0</iEvasionChange>
+      <iWithdrawalChange>0</iWithdrawalChange>
+      <iCargoChange>0</iCargoChange>
+      <iCollateralDamageChange>0</iCollateralDamageChange>
+      <iBombardRateChange>0</iBombardRateChange>
+      <iFirstStrikesChange>0</iFirstStrikesChange>
+      <iChanceFirstStrikesChange>0</iChanceFirstStrikesChange>
+      <iEnemyHealChange>0</iEnemyHealChange>
+      <iNeutralHealChange>0</iNeutralHealChange>
+      <iFriendlyHealChange>0</iFriendlyHealChange>
+      <iSameTileHealChange>00</iSameTileHealChange>
+      <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
+      <iCombatPercent>10</iCombatPercent>
+      <iCityAttack>10</iCityAttack>
+      <iCityDefense>0</iCityDefense>
+      <iHillsAttack>0</iHillsAttack>
+      <iHillsDefense>0</iHillsDefense>
+      <iKamikazePercent>0</iKamikazePercent>
+      <iRevoltProtection>0</iRevoltProtection>
+      <iCollateralDamageProtection>0</iCollateralDamageProtection>
+      <iPillageChange>0</iPillageChange>
+      <iUpgradeDiscount>0</iUpgradeDiscount>
+      <iExperiencePercent>0</iExperiencePercent>
+      <TerrainAttacks />
+      <TerrainDefenses />
+      <FeatureAttacks />
+      <FeatureDefenses />
+      <UnitCombatMods />
+      <DomainMods />
+      <TerrainDoubleMoves />
+      <FeatureDoubleMoves />
+      <UnitCombats />
+      <HotKey />
+      <bAltDown>0</bAltDown>
+      <bShiftDown>0</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <Button>Art/Interface/Buttons/Promotions/black.dds</Button>
     </PromotionInfo>
   </PromotionInfos>
 </Civ4PromotionInfos>

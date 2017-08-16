@@ -831,7 +831,7 @@ GPmap = {
  ur'大キュロス' : 'Cyrus',
  ur'ダレイオス1世' : 'Darius I',
  ur'ド・ゴール' : 'De Gaulle',
- ur'エリザベス' : 'Elizabeth',
+ ur'エリザベス' : 'Elizabeth I',
  ur'フリードリッヒ' : 'Frederick',
  ur'ガンジー' : 'Gandhi',
  ur'チンギス・ハーン' : 'Genghis Khan',

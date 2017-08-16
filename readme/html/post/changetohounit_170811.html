@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="../index.xml" type="application/rss+xml" title="東方叙事詩・統合MOD・readmeビューア">
+		<link rel="icon" href="../favicon.ico">
+		<title>東方ユニット関連の見直し - 東方叙事詩・統合MOD・readmeビューア</title>
+		
+		<link rel="stylesheet" href="../css/highlight/default.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="stylesheet" href="../css/bootie-docs.css">
+		<link rel="stylesheet" href="../css/site.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">東方叙事詩・統合MOD・readmeビューア</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="../index.html">Home</a></li>
+			
+			
+				
+					<li ><a href="../post.html">Posts</a></li>
+				
+			
+				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						
+							<li><a href="../categories/append.html">統合MOD / 追加要素</a></li>
+						
+							<li><a href="../categories/mainchange_170811.html">ver170811における大きな変更点まとめ</a></li>
+						
+							<li><a href="../categories/newciv.html">統合MOD / 新文明</a></li>
+						
+							<li><a href="../categories/old.html">旧情報</a></li>
+						
+							<li><a href="../categories/readme.html">readme</a></li>
+						
+							<li><a href="../categories/summary.html">まとめ</a></li>
+						
+						</ul>
+					</li>
+				
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">東方ユニット関連の見直し</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2017-08-16">August 16, 2017</time></span>
+				</div>
+				<section>
+					
+
+<h1 id="コンバットルート関連の変更点">コンバットルート関連の変更点</h1>
+
+<p>一言で言うと「全体的には弱体化」します<br />
+ただしキャラクタースキルは今までより取りやすくなったので<br />
+今バージョンからはキャラクタースキルの性能がより重要視されるようになります</p>
+
+<h1 id="シューティングルート関連の変更点">シューティングルート関連の変更点</h1>
+
+<p>新昇進「副次的損害」「シューティングオプション」が追加されます<br />
+副次的損害は弾幕ルートにおける最終終着点の昇進であり<br />
+その名の通りSTGによる攻撃で（あと副作用で普通に殴った時にも）副次的損害が発生します<br />
+シューティングオプションは四者択一でどれか1つを取ると他のオプションは取得できなくなる昇進です<br />
+こちらに関しては後述の詳細を確認してください</p>
+
+<h2 id="新昇進-シューティングオプション-まとめ">新昇進「シューティングオプション」まとめ</h2>
+
+<p>遠距離攻撃2＋弾幕2or5wayshotまで取得すると新昇進「シューティングオプション」を取得出来るようになります<br />
+シューティングオプションは以下の4種類があり、そのうち1種類のみ取得可能<br />
+（シューティングオプション4種のうちのどれか、あるいは基本操作5を取得していると他は取得不可）<br />
+要するに「4択で取れる新しいシューティングルートの昇進」</p>
+
+<hr />
+
+<h3 id="シューティングオプション-鷹の目">シューティングオプション「鷹の目」</h3>
+
+<ul>
+<li>命中率+30%<br /></li>
+<li>部隊戦闘力+10%<br /></li>
+<li>視界距離+2<br />
+<br /></li>
+</ul>
+
+<p>旧シューティングスキルをそのまま流用＋強化</p>
+
+<hr />
+
+<h3 id="シューティングオプション-マルチプルショット">シューティングオプション「マルチプルショット」</h3>
+
+<ul>
+<li>砲撃数+2<br /></li>
+<li>威力低下ペナ無し<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h3 id="シューティングオプション-溜め撃ち">シューティングオプション「溜め撃ち」</h3>
+
+<ul>
+<li>特殊スペル「溜め撃ち」を使用可能になる<br /></li>
+<li>移動力が残っている状態のみ使用可能で、使用したターンは行動不可になり、次のターンに<br />
+戦闘力+2<br />
+威力+50%<br />
+射程範囲+2<br />
+の効力を持つ昇進が付与される<br /></li>
+<li>その次のターンで消滅<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h3 id="シューティングオプション-ハイスピードムーブ">シューティングオプション「ハイスピードムーブ」</h3>
+
+<ul>
+<li>特殊スペル「ハイスピードムーブ」を使用可能になる<br /></li>
+<li>使用すると<br />
+戦闘力-2<br />
+威力-30%<br />
+移動力+1<br />
+移動コスト無視<br />
+の効力がある昇進が付与される<br /></li>
+<li>特殊スペルのほうを再発動させることで昇進が解除される<br />
+<br /></li>
+</ul>
+
+<h1 id="全東方ユニットに関わる変更点まとめ">全東方ユニットに関わる変更点まとめ</h1>
+
+<ul>
+<li>昇進：連続攻撃は蒸気機関の技術を取得しないと取れないように<br /></li>
+<li>スタックボーナスにスペル耐性+10%付与<br /></li>
+<li>基本操作5はシューティングオプション（後述）を取得していると取得不可に<br /></li>
+<li>従来の昇進：連射はwayshot系列からのみ取得可能に<br /></li>
+<li>弾幕ルートの最終終着点からは新昇進「副次的損害」を取得出来るように<br /></li>
+<li>遠距離攻撃2＋弾幕2or5wayshotで新昇進「シューティングオプション」を取得出来るように<br /></li>
+<li>昇進：行軍（東方ユニット版）は基本操作5と医術が必要に<br /></li>
+<li>キャラクタースキルは基本操作4＆判定見切りが必要に<br /></li>
+<li>挙動が怪しかった「スタン」の処理を全般的に見直す<br /></li>
+<li>昇進付与系スペルのパワーゲインは廃止<br /></li>
+<li>戦闘勝利時のパワーゲインは廃止<br />
+　（上記昇進付与系スペルゲイン廃止と同様に、今後は基本的に自然回復か昇進pow回復を待つ方向で。<br />
+　　ただしたまにスキルやキャラクターマークで戦闘勝利時パワーゲインが可能になるキャラも出てくる）<br />
+<br /></li>
+</ul>
+
+<h1 id="個別の東方ユニットに関わる変更点まとめ">個別の東方ユニットに関わる変更点まとめ</h1>
+
+<h2 id="紅魔館">紅魔館</h2>
+
+<ul>
+<li>レミリアEXのpower消費をゼロに（ほぼ上位互換のせーらんEXとの違いを出すため）<br /></li>
+<li>パチュリーのキャラクタースキルに戦闘勝利時パワーゲイン効果追加<br /></li>
+<li>フランのキャラスキルに行軍効果追加<br /></li>
+<li>幻象「ルナクロック」の効力を見直し<br />
+CALによる効力上昇は鈍くなるが、代わりに高CAL時は昇進「ザ・ワールド」が移動力低下の効力も与えるようになる<br />
+（HARD…移動力-1 LUNATIC…移動力-5）<br /></li>
+<li>咲夜のキャラスキル取得で東方ユニットに対しても100%昇進を与えるように<br />
+咲夜のキャラスキル取得で労働効率上昇<br />
+咲夜は移動力2枠に変更<br />
+<br /></li>
+</ul>
+
+<h2 id="白玉楼">白玉楼</h2>
+
+<ul>
+<li>紫Phは発動後の移動力消費が無くなるように（即時移動が可能に　同様の仕様にした豊姫EXと見劣りしないように）<br /></li>
+<li>橙のキャラスキルにPower回復効果付与<br /></li>
+<li>幽々子のキャラスキルに行軍効果追加<br />
+<br /></li>
+</ul>
+
+<h2 id="永遠亭">永遠亭</h2>
+
+<ul>
+<li>てゐの竹林発生はPhから解禁＆Power消費0.3が必要に<br /></li>
+<li>永琳は防御ボーナスを受けれるように<br />
+永琳のキャラマークにSTG戦闘力1.5倍効力付与<br />
+<br /></li>
+</ul>
+
+<h2 id="妖怪の山">妖怪の山</h2>
+
+<ul>
+<li>神奈子キャラクターマークにSTG威力1.5倍効力付与<br /></li>
+<li>天子のキャラマークから都市防御-25%を削除<br />
+天子のキャラスキルに行軍効果付与<br />
+<br /></li>
+</ul>
+
+<h2 id="地霊殿">地霊殿</h2>
+
+<ul>
+<li>パルスィのキャラスキルの都市襲撃を+40%に<br />
+パルスィのキャラスキルにPower回復効果付与<br />
+パルスィのキャラスキルに都市防御削減効果付与<br /></li>
+<li>勇儀のキャラスキルに連続攻撃＆地形移動コスト-1付与<br /></li>
+<li>お燐キャラスキルの追加経験値は5%の確率で入手可能に<br />
+お燐キャラスキル取得でEXスペル使用可能（猫形態に変化可能に）<br />
+お燐猫モードは戦闘による経験値を取得できないように<br />
+ノーマルお燐→お燐猫モード変化の際にちゃんと「スペル詠唱済み」が付くように<br /></li>
+<li>こいしスキルにより不可視化している状態で攻撃した際、元に戻る時に「不可視化」のスキルが外れていなかった不具合を修正<br />
+<br /></li>
+</ul>
+
+<h2 id="氷精連合">氷精連合</h2>
+
+<ul>
+<li>ルーミアのキャラスキルに先制攻撃無効効果付与<br /></li>
+<li>ミスティアのキャラスキルから先制攻撃無効効果削除<br />
+代わりにミスティアのキャラスキルにPower回復効果付与<br />
+<br /></li>
+</ul>
+
+<h2 id="博麗神社">博麗神社</h2>
+
+<ul>
+<li>アリスのキャラスキルに行軍効果追加<br />
+<br /></li>
+</ul>
+
+<h2 id="人間の里">人間の里</h2>
+
+<ul>
+<li>小町スキルの追加経験値は戦闘勝利時25%の確率で入手可能に<br /></li>
+<li>映姫のEX建造物は周囲の維持費削減効果（紫禁城効果）も追加<br /></li>
+<li>映姫のPhを実装（効力レベルで抜本的に見直す）<br />
+Ph 審判「ギルティ・オワ・ノットギルティ」<br />
+映姫と同スタック内の一般ユニット（映姫CAL/3+1）体に対し「白」か「黒」の昇進を与える<br />
+「白」は行軍効果＆回復10%（衛生兵1と同じ）<br />
+「黒」は戦闘力+10%＆都市襲撃+10%<br />
+両方とも独立した昇進になる<br />
+power消費0.15<br />
+<br /></li>
+</ul>
+
+<h2 id="星蓮船">星蓮船</h2>
+
+<ul>
+<li>白蓮の自己回復スペル（スキルで取得できるやつ）はPower0.30消費<br />
+<br /></li>
+</ul>
+
+<h2 id="神霊廟">神霊廟</h2>
+
+<ul>
+<li>芳香EXスペルのPower消費を0.15に変更<br /></li>
+<li>芳香PhスペルのPower消費を0.30に変更<br /></li>
+<li>布都（東方ユニットの方）のスペルはCALが上昇しても範囲1マスのままに。ついでに効力も弱体化<br /></li>
+<li>青娥EXの壁抜けは東方ユニットにも付与されるように<br />
+<br /></li>
+</ul>
+
+<h2 id="輝針城">輝針城</h2>
+
+<ul>
+<li>正邪のキャラマークの対東方ユニットボーナスを+250%に<br /></li>
+<li>針妙丸のキャラスキルに行軍効果追加<br /></li>
+<li>雷鼓EXが今までPower消費がなされていなかった事に気付いたのでちゃんとPowerを消費するように<br /></li>
+<li>雷鼓Phの建造物から金銭+25%を削除（ただしジュエリー社のもののみ50%のまま残す）<br /></li>
+<li>（ほぼフレーバー要素だが）ネタがマイ○ク○フトに偏ってた雷鼓Phの名称見直し＆ペディア変更<br />
+シリアル・ミルの場合：「スキタイ式馬肉錬成術」（追加効果で騎兵・ヘリ生産は2倍に）<br />
+スタンダード・エタノールの場合：「ジャパリパーク」<br />
+シド寿司の場合：「ソイレントシステム」（やっぱりぼかさずに缶詰そのものにする）<br />
+シヴィライズド・ジュエリーの場合：「パルミア大使館」<br />
+<br /></li>
+</ul>
+
+<h2 id="月の都">月の都</h2>
+
+<ul>
+<li>依姫スキルの回復スペルはPower消費0.30に<br /></li>
+<li>豊姫キャラクターマークにPower回復効果付与<br /></li>
+<li>鈴瑚スペルので「ダンゴフィーバー」を与えた場合、労働者の作業効率上昇<br /></li>
+<li>清蘭キャラクターマークにSTG威力1.5追加<br /></li>
+<li>ドレミーキャラマークに防御ボーナス無し追加<br /></li>
+</ul>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4 class="sidebar-heading">Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">東方ユニット関連の見直し</a></strong></li>
+			</ul>
+			<nav id="TableOfContents">
+<ul>
+<li><a href="#コンバットルート関連の変更点">コンバットルート関連の変更点</a></li>
+<li><a href="#シューティングルート関連の変更点">シューティングルート関連の変更点</a>
+<ul>
+<li><a href="#新昇進-シューティングオプション-まとめ">新昇進「シューティングオプション」まとめ</a>
+<ul>
+<li><a href="#シューティングオプション-鷹の目">シューティングオプション「鷹の目」</a></li>
+<li><a href="#シューティングオプション-マルチプルショット">シューティングオプション「マルチプルショット」</a></li>
+<li><a href="#シューティングオプション-溜め撃ち">シューティングオプション「溜め撃ち」</a></li>
+<li><a href="#シューティングオプション-ハイスピードムーブ">シューティングオプション「ハイスピードムーブ」</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#全東方ユニットに関わる変更点まとめ">全東方ユニットに関わる変更点まとめ</a></li>
+<li><a href="#個別の東方ユニットに関わる変更点まとめ">個別の東方ユニットに関わる変更点まとめ</a>
+<ul>
+<li><a href="#紅魔館">紅魔館</a></li>
+<li><a href="#白玉楼">白玉楼</a></li>
+<li><a href="#永遠亭">永遠亭</a></li>
+<li><a href="#妖怪の山">妖怪の山</a></li>
+<li><a href="#地霊殿">地霊殿</a></li>
+<li><a href="#氷精連合">氷精連合</a></li>
+<li><a href="#博麗神社">博麗神社</a></li>
+<li><a href="#人間の里">人間の里</a></li>
+<li><a href="#星蓮船">星蓮船</a></li>
+<li><a href="#神霊廟">神霊廟</a></li>
+<li><a href="#輝針城">輝針城</a></li>
+<li><a href="#月の都">月の都</a></li>
+</ul></li>
+</ul>
+</nav>
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Pages in Categories</h4>
+		<ul class="sidebar-category-list">
+		
+			<li>
+				<a href="../categories/append.html">
+					<span class="doc-list-category">統合MOD / 追加要素</span>
+				</a>
+				<ul>
+					<li><a href="../post/trait_labor.html">労働志向</a>
+					</li>
+				
+					<li><a href="../post/trait_shuken.html">集権志向</a>
+					</li>
+				
+					<li><a href="../post/civic_faith.html">社会制度「信仰」</a>
+					</li>
+				
+					<li><a href="../post/uwabami.html">うわばみ志向</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/mainchange_170811.html">
+					<span class="doc-list-category">ver170811における大きな変更点まとめ</span>
+				</a>
+				<ul>
+					<li>
+						<span class="active">東方ユニット関連の見直し</span>
+						</li>
+				
+					<li><a href="../post/changeetc_170811.html">内政面その他の変更点</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/newciv.html">
+					<span class="doc-list-category">統合MOD / 新文明</span>
+				</a>
+				<ul>
+					<li><a href="../post/tukinomiyako_tohounit.html">月の都文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/tukinomiyako.html">月の都文明</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_tohounits.html">輝針城文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_bunmei.html">輝針城文明</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou_tohounit.html">神霊廟文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou.html">神霊廟文明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/old.html">
+					<span class="doc-list-category">旧情報</span>
+				</a>
+				<ul>
+					<li><a href="../post/ai.html">AI挙動変更点</a>
+					</li>
+				
+					<li><a href="../post/arahitogami.html">難易度現人神</a>
+					</li>
+				
+					<li><a href="../post/leaders_setsumei.html">追加指導者詳細</a>
+					</li>
+				
+					<li><a href="../post/redome_multiface.html">readme_multiface</a>
+					</li>
+				
+					<li><a href="../post/redome_henkouten.html">更新履歴（151115ver以前）</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/readme.html">
+					<span class="doc-list-category">readme</span>
+				</a>
+				<ul>
+					<li><a href="../post/redome_cgele.html">ReadMe-CGE-LE</a>
+					</li>
+				
+					<li><a href="../post/about_fullver.html">フルパックバージョンについて</a>
+					</li>
+				
+					<li><a href="../post/platywb.html">ワールドビルダー拡張パッチ</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/summary.html">
+					<span class="doc-list-category">まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/readme_new.html">更新履歴・ver170811以降</a>
+					</li>
+				
+					<li><a href="../post/sozai_new.html">使用素材まとめ（ver170811以降）</a>
+					</li>
+				
+					<li><a href="../post/tougou_setsumei.html">統合MODの説明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="../tags/dev.html">dev</a>
+		
+		</div>
+	</div>
+	</div>
+</div>
+
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#" onclick="resetSidebarPos()">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	
+	
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/bootie-docs.js"></script>
+
+</body>
+</html>

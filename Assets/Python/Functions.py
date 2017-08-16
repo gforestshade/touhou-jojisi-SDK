@@ -220,16 +220,17 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 									iDamage = 0
 								if 100 - pUnit.getDamage() - iDamage >= iLimitDamage and (100-pUnit.getDamage()) <= iLimitDamage:
 									iDamage = (100-pUnit.getDamage()) - iLimitDamage
-							
+
+							ow = pUnit.getOwner()
 							if iSpecial == 4: #てゐトラップ用
 								if gc.getGame().getSorenRandNum(100,"Tewi Trap") < 50:
 									#pUnit.changeDamage(iDamage,caster.getOwner())
-									damageUnitList.append( [pUnit,iDamage] )
+									damageUnitList.append( [pUnit,ow,iDamage] )
 							else:
 								iTrialCalcNum = iTrialCalcNum + iDamage
 								if bTrialCalc == False:
 									#pUnit.changeDamage(iDamage,caster.getOwner())
-									damageUnitList.append( [pUnit,iDamage] )
+									damageUnitList.append( [pUnit,ow,iDamage] )
 								
 							if iSpecial == 1: #小町用
 								if pUnit.getDamage() + iDamage >= 100:
@@ -245,7 +246,12 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 	
 	#実際のダメージ計算
 	for item in damageUnitList:
-		item[0].changeDamage(item[1],caster.getOwner())
+		if iLimitDamage <= 0:
+			#キャップ0以下の場合、本当にあるか再度確認する
+			if gc.getPlayer(item[1]).getUnit(item[0].getID()).getUnitType() != -1:
+				item[0].changeDamage(item[2],caster.getOwner())
+		else:
+			item[0].changeDamage(item[2],caster.getOwner())
 	
 	##casterへのPowerゲイン ダメージ系のときのみ
 	#if minDamage >= 0 and maxDamage>=0:

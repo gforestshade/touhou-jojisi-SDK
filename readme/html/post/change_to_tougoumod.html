@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="../index.xml" type="application/rss+xml" title="東方叙事詩・統合MOD・readmeビューア">
+		<link rel="icon" href="../favicon.ico">
+		<title>弄ったところ(統合MODへ) - 東方叙事詩・統合MOD・readmeビューア</title>
+		
+		<link rel="stylesheet" href="../css/highlight/default.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="stylesheet" href="../css/bootie-docs.css">
+		<link rel="stylesheet" href="../css/site.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">東方叙事詩・統合MOD・readmeビューア</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="../index.html">Home</a></li>
+			
+			
+				
+					<li ><a href="../post.html">Posts</a></li>
+				
+			
+				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						
+							<li><a href="../categories/append.html">統合MOD / 追加要素</a></li>
+						
+							<li><a href="../categories/mainchange_170811.html">ver170811における大きな変更点まとめ</a></li>
+						
+							<li><a href="../categories/newciv.html">統合MOD / 新文明</a></li>
+						
+							<li><a href="../categories/old.html">旧情報</a></li>
+						
+							<li><a href="../categories/readme.html">readme</a></li>
+						
+							<li><a href="../categories/summary.html">まとめ</a></li>
+						
+						</ul>
+					</li>
+				
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">弄ったところ(統合MODへ)</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2017-06-17">June 17, 2017</time></span>
+				</div>
+				<section>
+					<p>Assets\art\Leaderheads</p>
+
+<p>minoriko<br />
+minoriko_button<br />
+sizuha<br />
+sizuha_button<br />
+momizi<br />
+momizi_button<br />
+star<br />
+star_button<br />
+sunny<br />
+sunny_button<br />
+luna<br />
+luna_button<br />
+yorihime<br />
+yorihime_button<br />
+watahime<br />
+watahime_button<br />
+kisume<br />
+kisume_button<br />
+yamame<br />
+yamame_button<br />
+hatate<br />
+hatate_button<br />
+mima<br />
+shinki<br />
+shinki_button<br />
+kyouko<br />
+kyouko_button<br />
+yoshika<br />
+yoshika_button<br />
+hakutaku<br />
+hakutaku_button</p>
+
+<p>→ボタンと指導者のアイコンを追加</p>
+
+<p>Assets\Python</p>
+
+<p>　CvEventManager<br />
+　→いろいろ設定</p>
+
+<p>　SpellInfo<br />
+　→スペル</p>
+
+<p>　Function<br />
+　→敵AIスペル</p>
+
+<p>Assets\Python\entrypoints<br />
+　CvRandomEventInterface<br />
+　→イベント</p>
+
+<p>Assets\XML</p>
+
+<p>GlobalDefines<br />
+ →交易路の変更、撤退率の変更</p>
+
+<p>Assets\XML\Art<br />
+　<br />
+　CIV4ArtDefines_Leaderhead<br />
+　→指導者の画像の設定</p>
+
+<p>Assets\XML\BasicInfos</p>
+
+<p>　CIV4InvisibleInfos<br />
+　→不可視の定義</p>
+
+<p>Assets\XML\Buildings</p>
+
+<p>CIV4BuildingClassInfos<br />
+　→建物の定義</p>
+
+<p>　CIV4BuildingInfos<br />
+　→建物の設定<br />
+　<br />
+Assets\XML\Civilizations</p>
+
+<p>　CIV4LeaderHeadInfos.xml<br />
+　→指導者の設定</p>
+
+<p>　CIV4CivilizationInfos.xml<br />
+　→文明の設定</p>
+
+<p>　CIV4TraitInfos.xml<br />
+　→志向の設定</p>
+
+<p>Assets\XML\Events<br />
+　<br />
+　CIV4EventInfos<br />
+　→イベント追加</p>
+
+<p>　CIV4EventTriggerInfos<br />
+　→イベント</p>
+
+<p>Assets\XML\Gameinfo</p>
+
+<p>　CIV4DiplomacyInfos<br />
+　→指導者台詞の定義</p>
+
+<p>　CivicInfos<br />
+　→社会制度</p>
+
+<p>　CIV4HandicapInfo<br />
+　→難易度</p>
+
+<p>Assets\XML\Terrain<br />
+　CIV4ImprovementInfos<br />
+　→地形改善</p>
+
+<p>Assets\XML\Text</p>
+
+<p>　CIV4Toho_Traits.xml<br />
+　→志向の名前</p>
+
+<p>　CIV4Toho_Leader_Name_and_Tech_Pedia.xml<br />
+　→指導者の名前</p>
+
+<p>　CIV4Toho_Buildings<br />
+　→建造物の名前</p>
+
+<p>　CIV4DiplomacyText<br />
+　→指導者の台詞</p>
+
+<p>　CIV4GameTextInfos<br />
+　→幻想郷入り変更</p>
+
+<p>　CIV4GameTextInfos_Cities<br />
+　→都市名追加パッチ</p>
+
+<p>　CIV4GameText_Events_BTS<br />
+　→イベント用</p>
+
+<p>　CIV4Amd_UW_UI<br />
+　→UW/UIの説明</p>
+
+<p>　CIV4Toho_Spell_By_F<br />
+　→スペルのテキスト</p>
+
+<p>　CIV4GameText_Misc1<br />
+　→評価</p>
+
+<p>Assets\XML\Units</p>
+
+<p>　CIV4UnitInfos<br />
+　→ユニットの設定</p>
+
+<p>　CIV4BuildInfos<br />
+　→ＵＩの設定</p>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4 class="sidebar-heading">Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">弄ったところ(統合MODへ)</a></strong></li>
+			</ul>
+			
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Pages in Categories</h4>
+		<ul class="sidebar-category-list">
+		
+			<li>
+				<a href="../categories/append.html">
+					<span class="doc-list-category">統合MOD / 追加要素</span>
+				</a>
+				<ul>
+					<li><a href="../post/trait_labor.html">労働志向</a>
+					</li>
+				
+					<li><a href="../post/trait_shuken.html">集権志向</a>
+					</li>
+				
+					<li><a href="../post/civic_faith.html">社会制度「信仰」</a>
+					</li>
+				
+					<li><a href="../post/uwabami.html">うわばみ志向</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/mainchange_170811.html">
+					<span class="doc-list-category">ver170811における大きな変更点まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/changetohounit_170811.html">東方ユニット関連の見直し</a>
+					</li>
+				
+					<li><a href="../post/changeetc_170811.html">内政面その他の変更点</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/newciv.html">
+					<span class="doc-list-category">統合MOD / 新文明</span>
+				</a>
+				<ul>
+					<li><a href="../post/tukinomiyako_tohounit.html">月の都文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/tukinomiyako.html">月の都文明</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_tohounits.html">輝針城文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/kishinjou_bunmei.html">輝針城文明</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou_tohounit.html">神霊廟文明東方ユニット</a>
+					</li>
+				
+					<li><a href="../post/shinreibyou.html">神霊廟文明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/old.html">
+					<span class="doc-list-category">旧情報</span>
+				</a>
+				<ul>
+					<li><a href="../post/ai.html">AI挙動変更点</a>
+					</li>
+				
+					<li><a href="../post/arahitogami.html">難易度現人神</a>
+					</li>
+				
+					<li><a href="../post/leaders_setsumei.html">追加指導者詳細</a>
+					</li>
+				
+					<li><a href="../post/redome_multiface.html">readme_multiface</a>
+					</li>
+				
+					<li><a href="../post/redome_henkouten.html">更新履歴（151115ver以前）</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/readme.html">
+					<span class="doc-list-category">readme</span>
+				</a>
+				<ul>
+					<li><a href="../post/redome_cgele.html">ReadMe-CGE-LE</a>
+					</li>
+				
+					<li><a href="../post/about_fullver.html">フルパックバージョンについて</a>
+					</li>
+				
+					<li><a href="../post/platywb.html">ワールドビルダー拡張パッチ</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+			<li>
+				<a href="../categories/summary.html">
+					<span class="doc-list-category">まとめ</span>
+				</a>
+				<ul>
+					<li><a href="../post/readme_new.html">更新履歴・ver170811以降</a>
+					</li>
+				
+					<li><a href="../post/sozai_new.html">使用素材まとめ（ver170811以降）</a>
+					</li>
+				
+					<li><a href="../post/tougou_setsumei.html">統合MODの説明</a>
+					</li>
+				
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+	<div class="sidebar-module">
+		<h4 class="sidebar-heading">Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="../tags/dev.html">dev</a>
+		
+		</div>
+	</div>
+	</div>
+</div>
+
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#" onclick="resetSidebarPos()">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	
+	
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/bootie-docs.js"></script>
+
+</body>
+</html>

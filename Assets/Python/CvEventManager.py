@@ -221,8 +221,10 @@ class CvEventManager:
 		if (config != None):
 			CFG_EnabledCitizensAutomated = config.getboolean( "Citizens Automated", "Enabled", True)
 
-                # 地霊殿持ち越し用
-                self.ChireidenOverflow = (-1, 0)
+		# 地霊殿持ち越し用
+		self.ChireidenOverflow = (-1, 0)
+		# UB変更履歴
+		self.oldCivBuildings = []
 
 #################### EVENT STARTERS ######################
 	def handleEvent(self, argsList):
@@ -472,11 +474,45 @@ class CvEventManager:
 		"return the string to be saved - Must be a string"
 		return ""
 
+	def setTraitUB(self):
+		iNumPlayer = 19     # 19でいいのかほんとに
+
+		TraitBuildingclassBuildingList = [
+			['TRAIT_BENBENLIST', 'BUILDINGCLASS_OBELISK', 'BUILDING_KISHINJOU_ETHIOPIAN_STELE'],
+		]
+
+		# もどす
+		for it in self.oldCivBuildings:
+			iCiv, ibC, idB = it
+			pCiv = gc.getCivilizationInfo(iCiv)
+			pCiv.setCivilizationBuildings(ibC, idB)
+
+		for it in TraitBuildingclassBuildingList:
+			trait, bclass, build = it
+			found = False
+			for i in range(iNumPlayer):
+				pPlayer = gc.getPlayer(i)
+				pCiv = gc.getCivilizationInfo( pPlayer.getCivilizationType() )
+				ibC = gc.getInfoTypeForString(bclass)
+				#その志向があれば
+				if pPlayer.hasTrait(gc.getInfoTypeForString(trait)):
+					iB = gc.getInfoTypeForString(build)
+					# おぼえる
+					self.oldCivBuildings.append( [pPlayer.getCivilizationType(), ibC, pCiv.getCivilizationBuildings(ibC)] )
+					# かえる
+					pCiv.setCivilizationBuildings(ibC, iB)
+				
+		
 	def onLoadGame(self, argsList):
+		self.setTraitUB()
 		return 0
 
 	def onGameStart(self, argsList):
 		'Called at the start of the game'
+
+		# before Starting Popup Widget
+		self.setTraitUB()
+		
 		if (gc.getGame().getGameTurnYear() == gc.getDefineINT("START_YEAR") and not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
 			for iPlayer in range(gc.getMAX_PLAYERS()):
 				player = gc.getPlayer(iPlayer)
@@ -589,9 +625,9 @@ class CvEventManager:
 				#月の都
 				if iCiv == gc.getInfoTypeForString('CIVILIZATION_AMERICA'):
 					pTeam.setHasTech(gc.getInfoTypeForString('TECH_MOON_WAR_FIRST'),True,i,True,True)
-
 			
-		##### </written by F> #####
+			##### </written by F> #####
+			
 		
 		
 	def onGameEnd(self, argsList):
@@ -979,12 +1015,6 @@ class CvEventManager:
 									pUnit.setNumAcquisSpellPromotion(pUnit.getNumAcquisSpellPromotion()+1)
 								else:
 									break
-									
-				#スペルルートのAI東方ユニットにスペルを使用させる
-				#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
-				#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS') and pUnit.getAIPromotionRoute() == 3 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED')) == False:
-				#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS') and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED')) == False:
-				Functions.AISpellCast(pUnit)
 
 		
 		
@@ -1962,8 +1992,8 @@ class CvEventManager:
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False)
 			
 			#PROMOTION_ILLUSIONをもってる子がいたら、その子を削除
-			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ILLUSION')):
-				pUnit.changeDamage(100,iPlayer)
+			#if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ILLUSION')):
+			#	pUnit.changeDamage(100,iPlayer)
 			
 			#自然回復があれば回復
 			if pUnit.countAutoHeal() > 0:
@@ -2004,6 +2034,13 @@ class CvEventManager:
 						point = pUnit.plot().getPoint()
 						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
 						CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+			
+			#スペルルートのAI東方ユニットにスペルを使用させる
+			#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
+			#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS') and pUnit.getAIPromotionRoute() == 3 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED')) == False:
+			#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS') and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED')) == False:
+			#if pUnit.isHuman() == False:
+			#	Functions.AISpellCast(pUnit)
 		
 		#AIのとき
 		if pPlayer.isHuman() == False:
@@ -2031,6 +2068,10 @@ class CvEventManager:
 			
 			#プレイヤーに倒されたフラグをへし折る
 			pUnit.setbLoseByPlayer(False)
+			
+			#PROMOTION_ILLUSIONをもってる子がいたら、その子を削除
+			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ILLUSION')):
+				pUnit.changeDamage(100,iPlayer)
 			
 			#スペルルートのAI東方ユニットにスペルを使用させる
 			#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
@@ -2118,6 +2159,7 @@ class CvEventManager:
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLAN_SKILL1')) or
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOUMU_SKILL1')) or
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TENSHI_SKILL1')) or
+			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YUGI_SKILL1')) or
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YUKA_SKILL1')) or
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BYAKUREN_SKILL1')) or
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOSHIKA_SKILL1')) or
@@ -2233,10 +2275,12 @@ class CvEventManager:
 				newUnit1.setHasPromotion(gc.getInfoTypeForString('PROMOTION_GOLEM'),True)
 				newUnit1.finishMoves()
 		
-		#小町のスキル持ちは、戦闘勝利に追加の経験値と金銭を獲得する
+		#小町のスキル持ちは、戦闘勝利時に追加の金銭を獲得する
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KOMACHI_SKILL1')):
-			pWinner.changeExperience(1,-1,False,False,False)
 			gc.getPlayer(pWinner.getOwner()).changeGold(pLoser.getLevel()*5)
+			#その際25％の確率で追加経験値
+			if gc.getGame().getSorenRandNum(100, "komachi skill") < 25:
+				pWinner.changeExperience(1,-1,False,False,False)
 
 		#統合MOD追記部分
 		#星スキル持ちは、戦闘勝利に追加の金銭を獲得する
@@ -2329,7 +2373,7 @@ class CvEventManager:
 					PromotionList.append(CanLearningList[i])
 			if len(PromotionList) > 0:
 				#統合MOD追記部分
-				#魔理沙スキルは判定見切り取得までは確率半減
+				#魔理沙スキルは判定見切り取得までは確率1/4
 				pTeam = gc.getTeam(pWinner.getTeam())
 				if pTeam.isHasTech(gc.getInfoTypeForString('TECH_SHOOTING_TECHNIQUE3')):
 					iNumPromotion = gc.getGame().getSorenRandNum(len(PromotionList), "MARISA Learning")
@@ -2379,6 +2423,7 @@ class CvEventManager:
 			newUnit1.convert(pWinner)
 			#newUnit1.setMoves(pWinner.getMoves()+50)
 			newUnit1.finishMoves()
+			newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SUBCONSCIOUS'),False )
 			newUnit1.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True)
 		
 		
@@ -2548,8 +2593,9 @@ class CvEventManager:
 						pPlot.getUnit(i).setHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR'),True)
 						pPlot.getUnit(i).setNumTurnPromo(pUnit.getNumTurnPromo() +1)
 		
-		#八橋スキルの文化防御減少処理
-		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATUHASHI_SKILL1')):
+		#八橋スキルとパルスィスキルの文化防御減少処理
+		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATUHASHI_SKILL1')) or \
+		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PARSEE_SKILL1')):
 			pPlot2 = pLoser.plot()
 			if pPlot2.isCity():
 				pCity2 = pPlot2.getPlotCity()
@@ -2643,10 +2689,14 @@ class CvEventManager:
 		
 		#戦闘勝利時Power回復
 		#以後このPower回復は基本的に一部東方ユニットのキャラクタースキルもしくは特性で
-		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SAGUME_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATCHOULI_SKILL1')) or \
+		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATCHOULI_SKILL1')) or \
+		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHEN_SKILL1')) or \
+		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PARSEE_SKILL1')) or \
+		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MYSTIA_SKILL1')) or \
 		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MARISA_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BYAKUREN_SKILL1')):
+		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BYAKUREN_SKILL1')) or \
+		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOYOHIME')) or \
+		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SAGUME_SKILL1')):
 			pWinner.setPower(pWinner.getPower() + 0.03)
 		
 		
@@ -2970,10 +3020,10 @@ class CvEventManager:
 					ppCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_SUPERMARKET'),0)
 		
 		#もしも弁々がストーンヘンジを建設した場合、特殊ストーンヘンジに自動変換
-		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
-			if iBuildingType == gc.getInfoTypeForString('BUILDING_STONEHENGE'):
-				pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_STONEHENGE'),0)
-				pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BENBEN_STONEHENGE'),1)
+		#if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
+		#	if iBuildingType == gc.getInfoTypeForString('BUILDING_STONEHENGE'):
+		#		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_STONEHENGE'),0)
+		#		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BENBEN_STONEHENGE'),1)
 		
 		#月読神社を建設した都市の周囲2マス圏内に農場および保安林があったら変換させる
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_TSUKUYOMI_SHRINE'):
@@ -3340,6 +3390,12 @@ class CvEventManager:
 			if unit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_STANDBY'):
 				newUnit = pPlayer.initUnit(unit.getUnitType(), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 				newUnit.changeExperience(unit.getExperience(),-1,False,False,False)
+		#スキタイ式馬肉錬成術の場合は騎兵とヘリの生産数2倍
+		if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TOWER_FARM')):
+			if unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MOUNTED') or \
+			unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_HELICOPTER'):
+				newUnit = pPlayer.initUnit(unit.getUnitType(), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				newUnit.changeExperience(unit.getExperience(),-1,False,False,False)
 		
 		#防衛志向で機関銃兵を作ると都市駐留1・教練1がつく
 		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_PROTECTIVE")):
@@ -3387,7 +3443,7 @@ class CvEventManager:
 		if Functions.checkUnit(unit.getX(),unit.getY(),RangeList,gc.getInfoTypeForString('UNIT_RIN0'),gc.getInfoTypeForString('UNIT_RIN_CATMODE6')):
 			pUnit = Functions.checkUnit(unit.getX(),unit.getY(),RangeList,gc.getInfoTypeForString('UNIT_RIN0'),gc.getInfoTypeForString('UNIT_RIN_CATMODE6'),1)
 			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_RIN_SKILL1')) :
-				if gc.getGame().getSorenRandNum(100, "orin skill") < 25:
+				if gc.getGame().getSorenRandNum(100, "orin skill") < 5:
 					if pUnit.getSpecialNumber() < pUnit.getLevel():
 						pUnit.changeExperience(1,-1,False,False,False)
 						pUnit.setSpecialNumber(pUnit.getSpecialNumber()+1)
@@ -4134,12 +4190,6 @@ class CvEventManager:
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_EIRIN",()),'art/interface/popups/eirin_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_MEDICIN'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_MEDICIN",()),'art/interface/popups/medicine_defeated.dds')
-				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_WATAHIME'):
-					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_WATAHIME",()),'art/interface/popups/toyohime_defeated.dds')
-				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_YORIHIME'):
-					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_YORIHIME",()),'art/interface/popups/yorihime_defeated.dds')
-				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_REISEN2'):
-					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_REISEN2",()),'art/interface/popups/reisen2_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_KAGEROU'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_KAGEROU",()),'art/interface/popups/kagerou_defeated.dds')
 				#妖怪の山
@@ -4184,6 +4234,10 @@ class CvEventManager:
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_KISUME",()),'art/interface/popups/kisume_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_YAMAME'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_YAMAME",()),'art/interface/popups/yamame_defeated.dds')
+				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_CLOWNPIECE'):
+					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_CLOWNPIECE",()),'art/interface/popups/clownpiece_defeated.dds')
+				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_HECATIA'):
+					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_HECATIA",()),'art/interface/popups/hecatia_defeated.dds')
 				#星蓮船
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_NAZRIN'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_NAZRIN",()),'art/interface/popups/nazrin_defeated.dds')
@@ -4224,6 +4278,8 @@ class CvEventManager:
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_SUNNY",()),'art/interface/popups/sunny_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_WAKASAGIHIME'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_WAKASAGIHIME",()),'art/interface/popups/wakasagihime_defeated.dds')
+				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_SUMMERCIRNO'):
+					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_SUMMERCIRNO",()),'art/interface/popups/summercirno_defeated.dds')
 				#博麗神社
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_REIMU'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_REIMU",()),'art/interface/popups/reimu_defeated.dds')
@@ -4245,6 +4301,8 @@ class CvEventManager:
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_SHINKI",()),'art/interface/popups/shinki_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_KASEN'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_KASEN",()),'art/interface/popups/kasen_defeated.dds')
+				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_JUNKO'):
+					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_JUNKO",()),'art/interface/popups/junko_defeated.dds')
 				#人間の里
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_YUKA'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_YUKA",()),'art/interface/popups/yuka_defeated.dds')
@@ -4302,7 +4360,13 @@ class CvEventManager:
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_KYUUMARISA",()),'art/interface/popups/kyuumarisa_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_LOLISE'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_LOLISE",()),'art/interface/popups/lolise_defeated.dds')
-				#紺珠伝（推定、月の都）
+				#月の都
+				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_WATAHIME'):
+					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_WATAHIME",()),'art/interface/popups/toyohime_defeated.dds')
+				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_YORIHIME'):
+					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_YORIHIME",()),'art/interface/popups/yorihime_defeated.dds')
+				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_REISEN2'):
+					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_REISEN2",()),'art/interface/popups/reisen2_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_SEIRAN'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_SEIRAN",()),'art/interface/popups/seiran_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_RINGO'):
@@ -4311,12 +4375,6 @@ class CvEventManager:
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_DOREMY",()),'art/interface/popups/doremy_defeated.dds')
 				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_SAGUME'):
 					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_SAGUME",()),'art/interface/popups/sagume_defeated.dds')
-				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_CLOWNPIECE'):
-					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_CLOWNPIECE",()),'art/interface/popups/clownpiece_defeated.dds')
-				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_JUNKO'):
-					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_JUNKO",()),'art/interface/popups/junko_defeated.dds')
-				if pPlayer.getLeaderType() == gc.getInfoTypeForString('LEADER_HECATIA'):
-					cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_DEFEATED_HECATIA",()),'art/interface/popups/hecatia_defeated.dds')
 
 	def onPlayerChangeStateReligion(self, argsList):
 		'Player changes his state religion'
@@ -4665,7 +4723,6 @@ class CvEventManager:
 		
 		#こいしの志向があれば反乱３割引
 		if gc.getPlayer(pCity.getOwner()).hasTrait(gc.getInfoTypeForString('TRAIT_KOISHILIST')):
-			if pCity.isCapital():
 				pCity.changeOccupationTimer( -(pCity.getOccupationTimer()*3/10)  )
 		
 		#統合MOD追記部分ここから
@@ -4744,15 +4801,15 @@ class CvEventManager:
 		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_SINDEKURERU'),0)
 		
 		#弁々がヘンジ付き都市を占領した場合は特殊ヘンジに変換
-		if gc.getPlayer(pCity.getOwner()).hasTrait(gc.getInfoTypeForString('TRAIT_BENBENLIST')):
-			if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_STONEHENGE")):
-				pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_STONEHENGE'),0)
-				pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BENBEN_STONEHENGE'),1)
+		#if gc.getPlayer(pCity.getOwner()).hasTrait(gc.getInfoTypeForString('TRAIT_BENBENLIST')):
+		#	if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_STONEHENGE")):
+		#		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_STONEHENGE'),0)
+		#		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BENBEN_STONEHENGE'),1)
 		#逆に弁々以外が特殊ヘンジ都市を占領した場合はノーマルヘンジに変換
-		if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_BENBEN_STONEHENGE")):
-			if not gc.getPlayer(pCity.getOwner()).hasTrait(gc.getInfoTypeForString('TRAIT_BENBENLIST')):
-				pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BENBEN_STONEHENGE'),0)
-				pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_STONEHENGE'),1)
+		#if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_BENBEN_STONEHENGE")):
+		#	if not gc.getPlayer(pCity.getOwner()).hasTrait(gc.getInfoTypeForString('TRAIT_BENBENLIST')):
+		#		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_BENBEN_STONEHENGE'),0)
+		#		pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_STONEHENGE'),1)
 		
 		#神道を採用している場合、都市に鳥居自動建設
 		if (gc.getPlayer(pCity.getOwner()).getCivics(gc.getInfoTypeForString('CIVICOPTION_FAITH')) == gc.getInfoTypeForString('CIVIC_FAITH_SHINTO')) == True:

@@ -169,10 +169,10 @@ def init_force():
 	SpellInfo("SPELLCARD_PARSEE1_1",req_PARSEE1,spellcard_PARSEE1,spellcard_PARSEE1_Estimate,None,1.0,1,7),
 	SpellInfo("SPELLCARD_PARSEE1_2",req_PARSEE1,spellcard_PARSEE1,spellcard_PARSEE1_Estimate,None,1.0,8,255),
 	SpellInfo("SPELLCARD_YUGI1_1",req_YUGI1,spellcard_YUGI1,spellcard_YUGI1_Estimate,None,1.0,1,255),
-	SpellInfo("SPELLCARD_SAKUYA1_1",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,1,3),
-	SpellInfo("SPELLCARD_SAKUYA1_2",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,4,7),
-	SpellInfo("SPELLCARD_SAKUYA1_3",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,8,11),
-	SpellInfo("SPELLCARD_SAKUYA1_4",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,12,255),
+	SpellInfo("SPELLCARD_SAKUYA1_1",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,1,6),
+	SpellInfo("SPELLCARD_SAKUYA1_2",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,7,11),
+	SpellInfo("SPELLCARD_SAKUYA1_3",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,12,15),
+	SpellInfo("SPELLCARD_SAKUYA1_4",req_SAKUYA1,spellcard_SAKUYA1,spellcard_SAKUYA1_Estimate,None,1.0,16,255),
 	SpellInfo("SPELLCARD_YUYUKO1_1",req_YUYUKO1,spellcard_YUYUKO1,spellcard_YUYUKO1_Estimate,None,1.0,1,3),
 	SpellInfo("SPELLCARD_YUYUKO1_2",req_YUYUKO1,spellcard_YUYUKO1,spellcard_YUYUKO1_Estimate,None,1.0,4,7),
 	SpellInfo("SPELLCARD_YUYUKO1_3",req_YUYUKO1,spellcard_YUYUKO1,spellcard_YUYUKO1_Estimate,None,1.0,8,11),
@@ -256,8 +256,8 @@ def init_force():
 	SpellInfo("SPELLCARD_SEIGA1_3",req_SEIGA1,spellcard_SEIGA1,spellcard_SEIGA1_Estimate,None,1.0,16,255),
 	SpellInfo("SPELLCARD_TOJIKO1_1",req_TOJIKO1,spellcard_TOJIKO1,spellcard_TOJIKO1_Estimate,None,1.0,1,7),
 	SpellInfo("SPELLCARD_TOJIKO1_2",req_TOJIKO1,spellcard_TOJIKO1,spellcard_TOJIKO1_Estimate,None,1.0,8,255),
-	SpellInfo("SPELLCARD_FUTO1_1",req_FUTO1,spellcard_FUTO1,spellcard_FUTO1_Estimate,None,1.0,1,7),
-	SpellInfo("SPELLCARD_FUTO1_2",req_FUTO1,spellcard_FUTO1,spellcard_FUTO1_Estimate,None,1.0,8,255),
+	SpellInfo("SPELLCARD_FUTO1_1",req_FUTO1,spellcard_FUTO1,spellcard_FUTO1_Estimate,help_FUTO1,1.0,1,11),
+	SpellInfo("SPELLCARD_FUTO1_2",req_FUTO1,spellcard_FUTO1,spellcard_FUTO1_Estimate,help_FUTO1,1.0,12,255),
 	SpellInfo("SPELLCARD_MIMIMIKO1_1",req_MIMIMIKO1,spellcard_MIMIMIKO1,spellcard_MIMIMIKO1_Estimate,None,1.0,1,15),
 	SpellInfo("SPELLCARD_MIMIMIKO1_2",req_MIMIMIKO1,spellcard_MIMIMIKO1,spellcard_MIMIMIKO1_Estimate,None,1.0,16,255),
 	SpellInfo("SPELLCARD_YATUHASHI1_1",req_YATUHASHI1,spellcard_YATUHASHI1,spellcard_YATUHASHI1_Estimate,None,1.0,1,255),
@@ -383,7 +383,7 @@ def init_force():
 	SpellInfo("SPELL_MIMA_EXTRA1",req_MIMA_EXTRA1,spell_MIMA_EXTRA1),
 	SpellInfo("SPELL_MIMA_PHANTASM1",req_MIMA_PHANTASM1,spell_MIMA_PHANTASM1,tempIsAISpellCast,None,0.10,1,255),
 	SpellInfo("SPELL_EIKI_EXTRA1",req_EIKI_EXTRA1,spell_EIKI_EXTRA1),
-	SpellInfo("SPELL_EIKI_PHANTASM1",req_EIKI_PHANTASM1,spell_EIKI_PHANTASM1),
+	SpellInfo("SPELL_EIKI_PHANTASM1",req_EIKI_PHANTASM1,spell_EIKI_PHANTASM1,tempIsAISpellCast,help_EIKI_PHANTASM1,0.15,1,255),
 	SpellInfo("SPELL_NAZRIN_EXTRA1",req_NAZRIN_EXTRA1,spell_NAZRIN_EXTRA1),
 	SpellInfo("SPELL_NAZRIN_PHANTASM1",req_NAZRIN_PHANTASM1,spell_NAZRIN_PHANTASM1,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_KOGASA_EXTRA1",req_KOGASA_EXTRA1,spell_KOGASA_EXTRA1),
@@ -395,13 +395,13 @@ def init_force():
 	SpellInfo("SPELL_MINAMITSU_PHANTASM1",req_MINAMITSU_PHANTASM1,spell_MINAMITSU_PHANTASM1),
 	SpellInfo("SPELL_SYOU_EXTRA1",req_SYOU_EXTRA1,spell_SYOU_EXTRA1,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_SYOU_PHANTASM1",req_SYOU_PHANTASM1,spell_SYOU_PHANTASM1),
-	SpellInfo("SPELL_BYAKUREN_SKILL1",req_BYAKUREN_SKILL1,spell_BYAKUREN_SKILL1),
+	SpellInfo("SPELL_BYAKUREN_SKILL1",req_BYAKUREN_SKILL1,spell_BYAKUREN_SKILL1,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_BYAKUREN_EXTRA1",req_BYAKUREN_EXTRA1,spell_BYAKUREN_EXTRA1),
 	SpellInfo("SPELL_BYAKUREN_PHANTASM1",req_BYAKUREN_PHANTASM1,spell_BYAKUREN_PHANTASM1,tempIsAISpellCast,None,0.10,1,255),
 	SpellInfo("SPELL_NUE_EXTRA1",req_NUE_EXTRA1,spell_NUE_EXTRA1),
 	SpellInfo("SPELL_NUE_PHANTASM1",req_NUE_PHANTASM1,spell_NUE_PHANTASM1,tempIsAISpellCast,None,0.10,1,255),
-	SpellInfo("SPELL_YOSHIKA_EXTRA1",req_YOSHIKA_EXTRA1,spell_YOSHIKA_EXTRA1),
-	SpellInfo("SPELL_YOSHIKA_PHANTASM1",req_YOSHIKA_PHANTASM1,spell_YOSHIKA_PHANTASM1,tempIsAISpellCast,None,0.15,1,255),
+	SpellInfo("SPELL_YOSHIKA_EXTRA1",req_YOSHIKA_EXTRA1,spell_YOSHIKA_EXTRA1,tempIsAISpellCast,None,0.15,1,255),
+	SpellInfo("SPELL_YOSHIKA_PHANTASM1",req_YOSHIKA_PHANTASM1,spell_YOSHIKA_PHANTASM1,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_SEIGA_EXTRA1",req_SEIGA_EXTRA1,spell_SEIGA_EXTRA1),
 	SpellInfo("SPELL_SEIGA_PHANTASM1",req_SEIGA_PHANTASM1,spell_SEIGA_PHANTASM1),
 	SpellInfo("SPELL_TOJIKO_EXTRA1",req_TOJIKO_EXTRA1,spell_TOJIKO_EXTRA1),
@@ -421,7 +421,7 @@ def init_force():
 	SpellInfo("SPELL_RAIKO_EXTRA1",req_RAIKO_EXTRA1,spell_RAIKO_EXTRA1,tempIsAISpellCast,None,0.15,1,255),
 	SpellInfo("SPELL_RAIKO_PHANTASM1",req_RAIKO_PHANTASM1,spell_RAIKO_PHANTASM1),
 	SpellInfo("SPELL_RAIKO_PHANTASM2",req_RAIKO_PHANTASM2,spell_RAIKO_PHANTASM2),
-	SpellInfo("SPELL_YORIHIME_SKILL1",req_YORIHIME_SKILL1,spell_YORIHIME_SKILL1),
+	SpellInfo("SPELL_YORIHIME_SKILL1",req_YORIHIME_SKILL1,spell_YORIHIME_SKILL1,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_YORIHIME_EXTRA1",req_YORIHIME_EXTRA1,spell_YORIHIME_EXTRA1,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_YORIHIME_EXTRA2",req_YORIHIME_EXTRA2,spell_YORIHIME_EXTRA2,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_YORIHIME_EXTRA3",req_YORIHIME_EXTRA3,spell_YORIHIME_EXTRA3,tempIsAISpellCast,None,0.30,1,255),
@@ -461,10 +461,10 @@ def init_force():
 	SpellInfo("SPELL_SPECIAL_TANTIGATA_KIRAI_2",req_SPECIAL_TANTIGATA_KIRAI_2,spell_SPECIAL_TANTIGATA_KIRAI_2),
 	SpellInfo("SPELL_SPECIAL_TANTIGATA_KIRAI_3",req_SPECIAL_TANTIGATA_KIRAI_3,spell_SPECIAL_TANTIGATA_KIRAI_3),
 	SpellInfo("SPELL_SPECIAL_JIBAKU",req_SPECIAL_JIBAKU,spell_SPECIAL_JIBAKU),
-	SpellInfo("SPELL_TERRAFORM_PLAIN",req_TERRAFORM_PLAIN,spell_TERRAFORM_PLAIN), #以下テラフォーミング系
-	SpellInfo("SPELL_TERRAFORM_PLAIN_NO_SACRIFICE",req_TERRAFORM_PLAIN_NO_SACRIFICE,spell_TERRAFORM_PLAIN_NO_SACRIFICE),
-	SpellInfo("SPELL_TERRAFORM_GRASS",req_TERRAFORM_GRASS,spell_TERRAFORM_GRASS),
-	SpellInfo("SPELL_TERRAFORM_GRASS_NO_SACRIFICE",req_TERRAFORM_GRASS_NO_SACRIFICE,spell_TERRAFORM_GRASS_NO_SACRIFICE),
+	SpellInfo("SPELL_TERRAFORM_PLAIN",req_TERRAFORM_PLAIN,spell_TERRAFORM_PLAIN,spell_TERRAFORM_PLAIN_Estimate), #以下テラフォーミング系
+	SpellInfo("SPELL_TERRAFORM_PLAIN_NO_SACRIFICE",req_TERRAFORM_PLAIN_NO_SACRIFICE,spell_TERRAFORM_PLAIN_NO_SACRIFICE,spell_TERRAFORM_PLAIN_Estimate),
+	SpellInfo("SPELL_TERRAFORM_GRASS",req_TERRAFORM_GRASS,spell_TERRAFORM_GRASS,spell_TERRAFORM_GRASS_Estimate),
+	SpellInfo("SPELL_TERRAFORM_GRASS_NO_SACRIFICE",req_TERRAFORM_GRASS_NO_SACRIFICE,spell_TERRAFORM_GRASS_NO_SACRIFICE,spell_TERRAFORM_GRASS_Estimate),
 	SpellInfo("SPELL_TERRAFORM_HILL",req_TERRAFORM_HILL,spell_TERRAFORM_HILL),
 	SpellInfo("SPELL_TERRAFORM_HILL_NO_SACRIFICE",req_TERRAFORM_HILL_NO_SACRIFICE,spell_TERRAFORM_HILL_NO_SACRIFICE),
 	SpellInfo("SPELL_TERRAFORM_FLATLAND",req_TERRAFORM_FLATLAND,spell_TERRAFORM_FLATLAND),
@@ -821,16 +821,16 @@ TohoUnitSpellHelpList = [
 		   'TXT_KEY_SPELL_HAKUTAKUKEINE_PHANTASM1',
 		   'TXT_KEY_SPELL_HAKUTAKUKEINE_PHANTASM1_HELP',],], ], ],
 	[ 'UNIT_SAKUYA1' , [
-		[ [1,3,'SPELLCARD_SAKUYA1_1',
+		[ [1,6,'SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_1_HELP'],
-		  [4,7,'SPELLCARD_SAKUYA1_1',
+		  [7,11,'SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_2_HELP'],
-		  [8,11,'SPELLCARD_SAKUYA1_1',
+		  [12,15,'SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_3_HELP'],
-		  [12,255,'SPELLCARD_SAKUYA1_1',
+		  [16,255,'SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_1',
 		   'TXT_KEY_SPELLCARD_SAKUYA1_4_HELP'], ],
 		[ [1,255,'SPELL_SAKUYA_EXTRA1',
@@ -1391,12 +1391,12 @@ TohoUnitSpellHelpList = [
 		   'TXT_KEY_SPELL_TOJIKO_PHANTASM1',
 		   'TXT_KEY_SPELL_TOJIKO_PHANTASM1_HELP',],], ], ],
 	[ 'UNIT_FUTO1' , [
-		[ [1,7,'SPELLCARD_FUTO1_1',
+		[ [1,11,'SPELLCARD_FUTO1_1',
 		   'TXT_KEY_SPELLCARD_FUTO1_1',
 		   'TXT_KEY_SPELLCARD_FUTO1_1_HELP'],
-		  [8,255,'SPELLCARD_FUTO1_2',
+		  [12,255,'SPELLCARD_FUTO1_2',
 		   'TXT_KEY_SPELLCARD_FUTO1_2',
-		   'TXT_KEY_SPELLCARD_FUTO1_1_HELP'],    ],
+		   'TXT_KEY_SPELLCARD_FUTO1_2_HELP'],    ],
 		[ [1,255,'SPELL_FUTO_EXTRA1',
 		   'TXT_KEY_SPELL_FUTO_EXTRA1',
 		   'TXT_KEY_SPELL_FUTO_EXTRA1_HELP',],],
@@ -1562,7 +1562,7 @@ TohoUnitSpellHelpList = [
 		[ [1,15,'SPELLCARD_SAGUME1_1',
 		   'TXT_KEY_SPELLCARD_SAGUME1_1',
 		   'TXT_KEY_SPELLCARD_SAGUME1_1_HELP'],
-		  [16,255,'SPELLCARD_SAGUME1_2',
+		  [15,255,'SPELLCARD_SAGUME1_2',
 		   'TXT_KEY_SPELLCARD_SAGUME1_2',
 		   'TXT_KEY_SPELLCARD_SAGUME1_2_HELP'],    ],
 		[ [1,255,'SPELL_SAGUME_EXTRA1',
@@ -1580,6 +1580,8 @@ SpellToHelpfuncList = None
 def init_helpfunclist():
 	global SpellToHelpfuncList
 	SpellToHelpfuncList = [
+		["SPELLCARD_FUTO1_1",help_FUTO1],
+		["SPELLCARD_FUTO1_2",help_FUTO1],
 		["SPELLCARD_SHINMYOUMARU1_1",help_SHINMYOUMARU1],
 		["SPELLCARD_SHINMYOUMARU1_2",help_SHINMYOUMARU1],
 		["SPELLCARD_SHINMYOUMARU1_3",help_SHINMYOUMARU1],
@@ -1588,6 +1590,7 @@ def init_helpfunclist():
 		["SPELLCARD_RINGO1_1",help_RINGO1],
 		["SPELLCARD_RINGO1_2",help_RINGO1],
 		["SPELLCARD_DOREMY1_1",help_DOREMY1],
+		["SPELL_EIKI_PHANTASM1",help_EIKI_PHANTASM1],
 		["SPELL_YORIHIME_PHANTASM1",help_YORIHIME_PHANTASM1],
 		["SPELL_YORIHIME_PHANTASM3",help_YORIHIME_PHANTASM3],
 		["SPELL_SEIRAN_EXTRA1",help_SEIRAN_EXTRA1],
@@ -2520,7 +2523,7 @@ def spellcard_YUGI1_Estimate(caster):
 	CAL = caster.countCardAttackLevel()
 	
 	estimatePoint = estimatePoint + Functions.changeDamage(RangeList1,caster,0,CAL*7,0,True,False,False,True,-1,False,True,True,True,-1,False,0,0,True)
-	estimatePoint = estimatePoint + Functions.changeDamage(RangeList1,caster,0,(CAL*7)/2,(5+CAL*2)/2,0,True,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList1,caster,0,(CAL*7)/2,0,True,False,False,True,-1,True,False,True,True,-1,False,0,0,True)
 	
 	estimatePoint = estimatePoint / (AISpellCastBaseNum * (CAL*4)) * 100
 	
@@ -2542,18 +2545,30 @@ def spellcard_SAKUYA1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 	
-	if CAL <= 3:
+	if CAL <= 5:
 		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
-	elif CAL <= 7:
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SAKUYA_SKILL1')):
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		else:
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_EASY',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	elif CAL <= 11:
+		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SAKUYA_SKILL1')):
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		else:
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_NORMAL',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+	elif CAL <= 15:
 		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SAKUYA_SKILL1')):
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		else:
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_HARD',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 	else:
 		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,100,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
-		Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SAKUYA_SKILL1')):
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,100,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
+		else:
+			Functions.setPromotion(RangeList1,caster,'PROMOTION_THEWORLD_LUNATIC',True,50,False,False,True,-1,True,False,True,True,-1,False,0,0,False,False,-1,+1)
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -4083,7 +4098,7 @@ def spellcard_MINAMITSU1_Estimate(caster):
 				if pPlot.isCity():
 					pCity = pPlot.getPlotCity()
 					if pTeam.isAtWar( pCity.getTeam() ):
-						estimatePoint = estimatePoint + ( 100 - pCity.getDefenseDamage )
+						estimatePoint = (estimatePoint + ( 100 - pCity.getDefenseDamage ))
 	
 	
 	if estimatePoint < 35:
@@ -4435,25 +4450,23 @@ def spellcard_FUTO1(caster,cost):
 	
 	else:
 		if caster.plot().getTeam() == caster.getTeam():
-			if CAL <= 7:
-				for iX in range(-1,2):
-					for iY in range(-1,2):
+			for iX in range(-1,2):
+				for iY in range(-1,2):
+					if CAL <= 11:
 						if Functions.isPlot(caster.getX()+iX,caster.getY()+iY):
 							pPlot = gc.getMap().plot(caster.getX()+iX,caster.getY()+iY)
 							if pPlot.getPlotType() == PlotTypes.PLOT_PEAK:
 								pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_RYUMYAKU'))
-			else:
-				for iX in range(-2,3):
-					for iY in range(-2,3):
+					else:
 						if Functions.isPlot(caster.getX()+iX,caster.getY()+iY):
 							pPlot = gc.getMap().plot(caster.getX()+iX,caster.getY()+iY)
 							if pPlot.getPlotType() == PlotTypes.PLOT_PEAK:
 								pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_RYUMYAKU'))
 							if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_RYUMYAKU'):
-								gc.getGame().setPlotExtraYield(pPlot.getX(),pPlot.getY(),1,CAL/8)
+								gc.getGame().setPlotExtraYield(pPlot.getX(),pPlot.getY(),1,CAL/12)
 			iX = caster.getX()
 			iY = caster.getY()
-			gc.getGame().setPlotExtraYield(iX,iY,2,CAL/6+1)
+			gc.getGame().setPlotExtraYield(iX,iY,2,CAL/10+1)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -4486,7 +4499,13 @@ def spellcard_FUTO1_Estimate(caster):
 	
 	return estimatePoint
 
+def help_FUTO1(szText, caster, CAL):
 
+	CvGameUtils.doprint(szText)
+	if szText == "001":
+		return CAL/12
+	if szText == "002":
+		return CAL/10+1
 
 
 
@@ -4978,7 +4997,7 @@ def spellcard_YORIHIME1(caster,cost):
 	pPlayer = gc.getPlayer(iPlayer)
 	pPlot = caster.plot()
 	RangeList = []
-	
+	sokushiUnits = []
 	
 	if pPlayer.getAmenouzumeFlag() == 1:
 		iWidth = gc.getMap().getGridWidth()
@@ -4986,6 +5005,17 @@ def spellcard_YORIHIME1(caster,cost):
 		for iX in range(iWidth):
 			for iY in range(iHeight):
 				RangeList.append([iX - caster.getX(),iY - caster.getY()])
+				if pPlot.isCity():
+					pCity = pPlot.getPlotCity()
+					if caster.getTeam() != pCity.getTeam() and pTeam.isAtWar(pCity.getTeam()) == True:
+						pCity.changeDefenseDamage(500)
+		
+		Functions.changeDamage(RangeList,caster,-100,-100,100,False,True,False,False,-1,True,True,True,True,-1,True,1)
+		Functions.changeDamage(RangeList,caster,CAL*3,CAL*6,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
+		Functions.changeDamage(RangeList,caster,(CAL*3)/2,(CAL*6)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+
+		for iX in range(iWidth):
+			for iY in range(iHeight):
 				pPlot = gc.getMap().plot(iX,iY)
 				for i in range(pPlot.getNumUnits()):
 					pTeam = gc.getTeam(caster.getTeam())
@@ -5000,26 +5030,19 @@ def spellcard_YORIHIME1(caster,cost):
 								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MINAMITSU')) or
 								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOSHIKA')) or
 								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOJIKO')) ):
-								pUnit.changeDamage(100,pUnit.getOwner())
+								sokushiUnits.append(pUnit)
 						else:
 							if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ZOMBIEFAIRY')) or
 								pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KYONSHII')) ):
-								pUnit.changeDamage(100,pUnit.getOwner())
-				if pPlot.isCity():
-					pCity = pPlot.getPlotCity()
-					if caster.getTeam() != pCity.getTeam() and pTeam.isAtWar(pCity.getTeam()) == True:
-						pCity.changeDefenseDamage(500)
-		
-		pPlayer.setAmenouzumeFlag(0)
-		Functions.changeDamage(RangeList,caster,-100,-100,100,False,True,False,False,-1,True,True,True,True,-1,True,1)
-		Functions.changeDamage(RangeList,caster,CAL*3,CAL*6,0,False,False,False,True,-1,False,True,True,True,-1,False,0)
-		Functions.changeDamage(RangeList,caster,(CAL*3)/2,(CAL*6)/2,0,False,False,False,True,-1,True,False,True,True,-1,False,0)
+								sokushiUnits.append(pUnit)
+		for pUnit in sokushiUnits:
+			pUnit.changeDamage(100, pUnit.getOwner())
 
 		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 		caster.setPower(caster.getPower()-cost)
+		pPlayer.setAmenouzumeFlag(0)
 	
-		point = caster.plot().getPoint()
-	
+	point = caster.plot().getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
 	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
 	
@@ -5159,18 +5182,18 @@ def spellcard_YORIHIME3_Estimate(caster):
 		ppTeam = gc.getTeam(i)
 		if ppTeam.isBarbarian() == False:
 			if not pTeam.isAtWar(i):
-				estimatePoint = +30
+				estimatePoint = estimatePoint + 100
 	
 	if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
-		estimatePoint = +10
+		estimatePoint = estimatePoint + 50
 	
 	if iBonus == gc.getInfoTypeForString('BONUS_SILK'):
-		estimatePoint = +10
+		estimatePoint = estimatePoint + 50
 	
 	if pPlot.getImprovementType() != -1:
-		estimatePoint = -10
+		estimatePoint = estimatePoint - 50
 	
-	if estimatePoint < 35:
+	if estimatePoint < 110:
 		estimatePoint = 0
 	
 	return estimatePoint
@@ -5288,19 +5311,21 @@ def spellcard_SEIRAN1_Estimate(caster):
 
 	estimatePoint = 0
 	CAL = caster.countCardAttackLevel()
+	iX = caster.getX()
+	iY = caster.getY()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	pTeam = gc.getTeam(pPlayer.getTeam())
+	iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
 	
-	for i in range(iNumTeam):
-		ppTeam = gc.getTeam(i)
-		if ppTeam.isBarbarian() == False:
-			if pTeam.isAtWar(i):
-				estimatePoint = +30
+	if Functions.isWar(caster.getOwner()):
+		estimatePoint = estimatePoint + 30
 	
 	for iiX in range(iX-2,iX+3):
 		for iiY in range(iY-2,iY+3):
 			pPlot = gc.getMap().plot(iiX,iiY)
 			pUnit = pPlot.getUnit(i)
 			if caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()) == True:
-				estimatePoint = +pUnit
+				estimatePoint = estimatePoint + pUnit
 	
 	if estimatePoint < 35:
 		estimatePoint = 0
@@ -6065,7 +6090,7 @@ def req_SPECIAL_TAMEUTI(bTestVisible,caster,sCAL,eCAL,cost):
 def spell_SPECIAL_TAMEUTI(caster,cost):
 	
 	caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TAMETYUU'),True)
-	caster.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	caster.setNumTurnPromo(caster.getNumTurnPromo() +1)
 	caster.finishMoves()
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
@@ -8982,7 +9007,16 @@ def spell_RIN_PHANTASM1(caster,cost):
 
 
 def req_SPELL_RIN_TO_CAT(bTestVisible,caster,sCAL,eCAL,cost):
-	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_RIN1','UNIT_RIN6',cost)
+	
+	if bTestVisible:
+		if gc.getInfoTypeForString('UNIT_RIN1') <= caster.getUnitType() and caster.getUnitType() <= gc.getInfoTypeForString('UNIT_RIN6'):
+			return True
+	else:
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MODE_EXTRA')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_RIN_SKILL1')):
+			if caster.getPower()>=cost:
+				if caster.isHasPromotion(gc.getInfoTypeForString("PROMOTION_SPELL_CASTED")) == False:
+					return True
+	return False
 
 def spell_SPELL_RIN_TO_CAT(caster,cost):
 	
@@ -8998,9 +9032,7 @@ def spell_SPELL_RIN_TO_CAT(caster,cost):
 	newUnit1.convert(caster)
 	newUnit1.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CATMODE'),True)
 	
-	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-	
-	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	newUnit1.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
 	point = caster.plot().getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
@@ -9010,7 +9042,17 @@ def spell_SPELL_RIN_TO_CAT(caster,cost):
 	
 	
 def req_SPELL_RIN_TO_RIN(bTestVisible,caster,sCAL,eCAL,cost):
-	return Functions.req_Spell(bTestVisible,caster,'PROMOTION_MODE_EXTRA','UNIT_RIN_CATMODE1','UNIT_RIN_CATMODE6',cost)
+	
+	if bTestVisible:
+		if gc.getInfoTypeForString('UNIT_RIN_CATMODE1') <= caster.getUnitType() and caster.getUnitType() <= gc.getInfoTypeForString('UNIT_RIN_CATMODE6'):
+			return True
+	else:
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MODE_EXTRA')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_RIN_SKILL1')):
+			if caster.getPower()>=cost:
+				if caster.isHasPromotion(gc.getInfoTypeForString("PROMOTION_SPELL_CASTED")) == False:
+					return True
+	return False
+
 
 def spell_SPELL_RIN_TO_RIN(caster,cost):
 	
@@ -9176,9 +9218,35 @@ def req_EIKI_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
 def spell_EIKI_PHANTASM1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	eTeam = gc.getTeam(pPlayer.getTeam())
+	iX = caster.getX()
+	iY = caster.getY()
 	
+	UnitList = []
+	iNumUnit = pPlot.getNumUnits()
+	for i in range(iNumUnit):
+		pUnit = pPlot.getUnit(i)
+		if pPlot.getUnit(i).getUnitCombatType() != gc.getInfoTypeForString("UNITCOMBAT_BOSS") and pPlot.getUnit(i).getUnitCombatType() != gc.getInfoTypeForString("UNITCOMBAT_STANDBY"):
+			if pUnit.getTeam() == caster.getTeam():
+				if (pUnit.isHasPromotion(gc.getInfoTypeForString("PROMOTION_WHITE")) == False) and (pUnit.isHasPromotion(gc.getInfoTypeForString("PROMOTION_BLACK")) == False):
+					UnitList.append(pUnit)
+	
+	if len(UnitList) != 0:
+		iLoopNum = CAL/3+1
+		if iLoopNum > len(UnitList):
+			iLoopNum = len(UnitList)
+		for i in range(iLoopNum):
+			iRandNum = gc.getGame().getSorenRandNum(len(UnitList),"eiki Phantasm Spell")
+			pUnit = UnitList.pop(iRandNum)
+			if gc.getGame().getSorenRandNum(100, "write or black") < 50:
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WHITE'),True)
+			else:
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLACK'),True)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
 	
 	point = caster.plot().getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
@@ -9186,8 +9254,11 @@ def spell_EIKI_PHANTASM1(caster,cost):
 	
 	return True
 
+def help_EIKI_PHANTASM1(szText, caster, CAL):
 
-
+	CvGameUtils.doprint(szText)
+	if szText == "001":
+		return CAL/3+1
 
 
 
@@ -9553,6 +9624,7 @@ def spell_BYAKUREN_SKILL1(caster,cost):
 	
 	caster.changeDamage(-50,caster.getOwner())
 		
+	caster.setPower(caster.getPower()-cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
 	point = caster.plot().getPoint()
@@ -9718,6 +9790,7 @@ def spell_YOSHIKA_EXTRA1(caster,cost):
 	Functions.changeDamage(RangeList0,caster,-CAL,-CAL,100,False,True,True,False,-1,True,True,True,True,-1,True,0)
 				
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
+	caster.setPower(caster.getPower()-cost)
 
 	point = caster.plot().getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
@@ -9732,7 +9805,7 @@ def req_YOSHIKA_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
 def spell_YOSHIKA_PHANTASM1(caster,cost):
 	
 	caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCORE_DESIRE'),True)
-	pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+	caster.setNumTurnPromo(caster.getNumTurnPromo() +1)
 			
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -10360,6 +10433,7 @@ def spell_YORIHIME_SKILL1(caster,cost):
 	
 	caster.changeDamage(-50,caster.getOwner())
 		
+	caster.setPower(caster.getPower()-cost)
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
 	point = caster.plot().getPoint()
@@ -11274,11 +11348,13 @@ def req_TERRAFORM_PLAIN(bTestVisible,caster,sCAL,eCAL,cost):
 		
 		elif pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT') or \
 		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW'):
-			return False
+			if caster.isHuman():
+				return False
 		
 		elif pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA') and \
 		not pTeam.isHasTech(gc.getInfoTypeForString('TECH_APOLLO_CONSPIRACY')):
-			return False
+			if caster.isHuman():
+				return False
 		
 		elif caster.plot().isCity():
 			return False
@@ -11325,13 +11401,50 @@ def spell_TERRAFORM_PLAIN(caster,cost):
 		caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False)
 		caster.finishMoves()
 	else:
-		caster.changeDamage(100,caster.getOwner())
+		if caster.isHuman():
+			caster.changeDamage(100,caster.getOwner())
+		else:
+			caster.finishMoves()
 	
 	point = caster.plot().getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
 	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
 	
 	return True
+
+def spell_TERRAFORM_PLAIN_Estimate(caster):
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iBonus = pPlot.getBonusType(caster.getTeam())
+	pTeam = gc.getTeam(pPlayer.getTeam())
+	iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
+	
+	if pPlot.getTeam() == caster.getTeam():
+		if pPlot.getPlotType() != PlotTypes.PLOT_OCEAN:
+			if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_PLAINS'):
+				if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_GRASS'):
+					if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA') or \
+					pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW'):
+						estimatePoint = estimatePoint + 100
+					if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT'):
+						estimatePoint = estimatePoint + 100
+						if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
+							estimatePoint = estimatePoint + 100
+					if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_OASIS'):
+						estimatePoint = estimatePoint + 100
+			
+			
+					if pPlot.getBonusType(caster.getTeam()) != -1:
+						estimatePoint = estimatePoint + 100
+	
+	if estimatePoint < 90:
+		estimatePoint = 0
+	
+	return estimatePoint
+
 #######################################
 #無犠牲版
 #こっちが本命
@@ -11354,7 +11467,8 @@ def req_TERRAFORM_PLAIN_NO_SACRIFICE(bTestVisible,caster,sCAL,eCAL,cost):
 		
 		elif pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS') and \
 		not pTeam.isHasTech(gc.getInfoTypeForString('TECH_SAKE_OF_THE_WATATSUKI')):
-			return False
+			if caster.isHuman():
+				return False
 		
 		elif caster.plot().isCity():
 			return False
@@ -11420,7 +11534,11 @@ def spell_TERRAFORM_PLAIN_NO_SACRIFICE(caster,cost):
 			pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
 	
 	if SacrificeFlag:
-		caster.changeDamage(100,caster.getOwner())
+		if caster.isHuman():
+			caster.changeDamage(100,caster.getOwner())
+		else:
+			caster.finishMoves()
+			caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	else:
 		caster.finishMoves()
 		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
@@ -11495,6 +11613,34 @@ def spell_TERRAFORM_GRASS(caster,cost):
 	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
 	
 	return True
+
+def spell_TERRAFORM_GRASS_Estimate(caster):
+
+	estimatePoint = 0
+	CAL = caster.countCardAttackLevel()
+	pPlot = caster.plot()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iBonus = pPlot.getBonusType(caster.getTeam())
+	pTeam = gc.getTeam(pPlayer.getTeam())
+	iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
+	
+	if pPlot.getTeam() == caster.getTeam():
+		if pPlot.getPlotType() != PlotTypes.PLOT_OCEAN:
+			if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_GRASS'):
+				if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_PLAINS'):
+					estimatePoint = estimatePoint + 100
+					if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_OASIS'):
+						estimatePoint = estimatePoint + 100
+					if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
+						estimatePoint = estimatePoint + 100
+					if pPlot.getBonusType(caster.getTeam()) != -1:
+						estimatePoint = estimatePoint + 100
+	
+	if estimatePoint < 90:
+		estimatePoint = 0
+	
+	return estimatePoint
+
 #######################################
 #無犠牲版
 def req_TERRAFORM_GRASS_NO_SACRIFICE(bTestVisible,caster,sCAL,eCAL,cost):

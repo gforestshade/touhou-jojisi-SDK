@@ -1418,11 +1418,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FUTOLIST_HELP</Tag>
 		<English></English>
-		<French>　&#13;　[ICON_BULLET]龍脈から追加の[ICON_FOOD]+2</French>
+		<French>　&#13;　[ICON_BULLET]龍脈から追加の[ICON_FOOD]+1</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>　&#13;　[ICON_BULLET]龍脈から追加の[ICON_FOOD]+2</Japanese>
+		<Japanese>　&#13;　[ICON_BULLET]龍脈から追加の[ICON_FOOD]+1</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MIMIMIKOLIST</Tag>
