@@ -482,6 +482,9 @@ public:
 	int getExperiencePercent() const;				// Exposed to Python
 	int getKamikazePercent() const;				// Exposed to Python
 
+	int getWorkRate() const;				// Exposed to Python
+	
+	
 	bool isLeader() const;				// Exposed to Python
 	bool isBlitz() const;				// Exposed to Python
 	bool isAmphib() const;				// Exposed to Python
@@ -554,6 +557,8 @@ protected:
 	int m_iExperiencePercent;
 	int m_iKamikazePercent;
 
+	int m_iWorkRate;
+	
 	bool m_bLeader;
 	bool m_bBlitz;									
 	bool m_bAmphib;								

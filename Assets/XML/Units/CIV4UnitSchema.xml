@@ -875,6 +875,7 @@
 		<element type="iPillageChange"/>
 		<element type="iUpgradeDiscount"/>
 		<element type="iExperiencePercent"/>
+		<element type="iWorkRate"/>
 		<element type="TerrainAttacks"/>
 		<element type="TerrainDefenses"/>
 		<element type="FeatureAttacks"/>

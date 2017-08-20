@@ -7758,15 +7758,15 @@ int CvUnit::workRate(bool bMax) const
 	}
 
 	iRate = m_pUnitInfo->getWorkRate();
-	
-	//東方叙事詩・統合MOD追記
-	//咲夜さんキャラスキルでworkrate変更
-	if ( isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SAKUYA_SKILL1")) )
-		iRate += 100;
-	//ダンゴフィーバーでworkrate変更
-	if ( isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_DANGO_FEVER")) )
-		iRate += 100;
-	//東方叙事詩・統合MOD追記ここまで
+
+	for(int i = 0; i < GC.getNumPromotionInfos(); ++i)
+	{
+		PromotionTypes ePromotion = (PromotionTypes) i;
+		if( isHasPromotion(ePromotion) )
+		{
+			iRate += GC.getPromotionInfo(ePromotion).getWorkRate();
+		}
+	}
 	
 	iRate *= std::max(0, (GET_PLAYER(getOwnerINLINE()).getWorkerSpeedModifier() + 100));
 	iRate /= 100;
