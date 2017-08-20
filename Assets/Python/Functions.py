@@ -368,7 +368,7 @@ def countSpellTolerance(pUnit):
 def getHandicap():
 	
 	Handi = 0;
-	for i in range(19):
+	for i in range(TohoCivList.iMaxPlayer):
 		pPlayer = gc.getPlayer(i)
 		if pPlayer.isHuman() == True:
 			if Handi < pPlayer.getHandicapType():

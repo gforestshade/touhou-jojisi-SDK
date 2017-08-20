@@ -476,7 +476,7 @@ class CvEventManager:
 		return ""
 
 	def setTraitUB(self):
-		iNumPlayer = 19     # 19でいいのかほんとに
+		iNumPlayer = TohoCivList.iMaxPlayer
 
 		TraitBuildingclassBuildingList = [
 			['TRAIT_BENBENLIST', 'BUILDINGCLASS_OBELISK', 'BUILDING_KISHINJOU_ETHIOPIAN_STELE'],
@@ -539,7 +539,7 @@ class CvEventManager:
 		#ゲーム開始時の処理
 		
 		#全文明の世界魔法回数を１にセット
-		iNumPlayer = 19#gc.getGame().countCivPlayersAlive() + gc.getGame().countCivPlayersEverAlive()
+		iNumPlayer = TohoCivList.iMaxPlayer#gc.getGame().countCivPlayersAlive() + gc.getGame().countCivPlayersEverAlive()
 		for i in range(iNumPlayer):
 			ppPlayer = gc.getPlayer(i)
 			ppPlayer.setNumWorldSpell(1)
@@ -1791,7 +1791,7 @@ class CvEventManager:
 		if pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_GYOUSHOU')):
 			#うどんげサーチ
 			flag = False
-			for i in range(19): #文明数のマジックナンバー
+			for i in range(TohoCivList.iMaxPlayer): #文明数のマジックナンバー
 				ppPlayer = gc.getPlayer(i)
 				if ppPlayer.isBarbarian() == False and ppPlayer.isAlive() == True:
 					ppy = PyPlayer(i)
@@ -1807,7 +1807,7 @@ class CvEventManager:
 		if pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_MYSTIACONCERT')):
 			#全都市検索
 			iChange = 0
-			for i in range(19):
+			for i in range(TohoCivList.iMaxPlayer):
 				ppPlayer = gc.getPlayer(i)
 				if ppPlayer.isBarbarian() == False and ppPlayer.isAlive() == True:
 					ppy = PyPlayer(i)

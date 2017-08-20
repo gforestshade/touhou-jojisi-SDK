@@ -3177,7 +3177,7 @@ def spellcard_IKU1(caster,cost):
 		BuildingList.append('BUILDING_OBSERVATORY')
 		BuildingList.append('BUILDING_KOREAN_SEOWON')
 	
-	for i in range(19): #思いっきりマジックナンバー
+	for i in range(TohoCivList.iMaxPlayer): 
 		pPlayer = gc.getPlayer(i)
 		if pPlayer.isBarbarian() == False and pPlayer.isAlive() == True and pTeam.isAtWar(pPlayer.getTeam()) == True:
 			py = PyPlayer(i)
@@ -3595,7 +3595,7 @@ def spellcard_KAGUYA1(caster,cost):
 		Functions.changeDamage(RangeList1,caster,CAL*3/2,CAL*3/2,0,True,False,True,True,-1,True,False,True,True,-1,False,0)
 	
 	else:
-		for i in range(19): #文明数のマジックナンバー
+		for i in range(TohoCivList.iMaxPlayer):
 			pPlayer = gc.getPlayer(i)
 			if pPlayer.isBarbarian() == False and pPlayer.isAlive() == True and caster.getTeam() != pPlayer.getTeam():
 				AnarchyNum = CAL*8
@@ -7513,7 +7513,7 @@ def spell_REIMU_PHANTASM1(caster,cost):
 	pPlayer = gc.getPlayer(iPlayer)
 	
 	iNumAlivePlayer = 0
-	for i in range(19): #思いっきりマジックナンバー
+	for i in range(TohoCivList.iMaxPlayer):
 		ppPlayer = gc.getPlayer(i)
 		#CvGameUtils.doprint("%d\n" %i)
 		if ppPlayer.isBarbarian() == False and ppPlayer.isAlive() == True and pPlayer.getTeam() != ppPlayer.getTeam():
