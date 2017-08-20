@@ -131,17 +131,6 @@ public:
 	DllExport bool hasAutoUnit() const;
 	DllExport bool hasBusyUnit() const;
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/07/09                            Emperor Fool      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-	// Free Tech Popup Fix
-	bool isChoosingFreeTech() const;
-	void setChoosingFreeTech(bool bValue);
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 
 	DllExport void chooseTech(int iDiscover = 0, CvWString szText = "", bool bFront = false);				// Exposed to Python
 
