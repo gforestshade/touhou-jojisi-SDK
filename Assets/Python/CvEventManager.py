@@ -2116,46 +2116,19 @@ class CvEventManager:
 		iNumRenzoku = 0
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_RENZOKUKOUGEKI')):
 			iNumRenzoku = iNumRenzoku+1
-		if (pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_REMILIA_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLAN_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOUMU_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TENSHI_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YUGI_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YUKA_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BYAKUREN_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOSHIKA_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_RAIKO_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YORIHIME_SKILL1')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MISSING_POWER_EASY')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MISSING_POWER_NORMAL')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MISSING_POWER_HARD')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MISSING_POWER_LUNATIC')) or
-			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHIKINOSHIKI')) ):
-			iNumRenzoku = iNumRenzoku+2
-		if iNumRenzoku >=3:
-			if pWinner.getNumCombatCombo() < (pWinner.getLevel()/3 + 3):
-				if gc.getPlayer(pWinner.getOwner()).isTurnActive(): #アクティブターンなら
-					pWinner.changeMoves(-50)
-					pWinner.setMadeAttack(False)
-					pWinner.setNumCombatCombo(pWinner.getNumCombatCombo()+1)
-					#連続戦闘が発生するとメッセージが出る
-					CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pWinner.getUnitType()).getDescription() + "&#12398;&#36899;&#32154;&#25126;&#38360;&#65281(" + str(pWinner.getNumCombatCombo()) + "/" + str(pWinner.getLevel()/3 + 3) + ")","")
-		elif iNumRenzoku >=2:
-			if pWinner.getNumCombatCombo() < (pWinner.getLevel()/3 + 1):
-				if gc.getPlayer(pWinner.getOwner()).isTurnActive(): #アクティブターンなら
-					pWinner.changeMoves(-50)
-					pWinner.setMadeAttack(False)
-					pWinner.setNumCombatCombo(pWinner.getNumCombatCombo()+1)
-					#連続戦闘が発生するとメッセージが出る
-					CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pWinner.getUnitType()).getDescription() + "&#12398;&#36899;&#32154;&#25126;&#38360;&#65281(" + str(pWinner.getNumCombatCombo()) + "/" + str(pWinner.getLevel()/3 + 1) + ")","")
-		elif iNumRenzoku >=1:
-			if pWinner.getNumCombatCombo() < (pWinner.getLevel()/4 + 1):
-				if gc.getPlayer(pWinner.getOwner()).isTurnActive(): #アクティブターンなら
-					pWinner.changeMoves(-50)
-					pWinner.setMadeAttack(False)
-					pWinner.setNumCombatCombo(pWinner.getNumCombatCombo()+1)
-					#連続戦闘が発生するとメッセージが出る
-					CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pWinner.getUnitType()).getDescription() + "&#12398;&#36899;&#32154;&#25126;&#38360;&#65281(" + str(pWinner.getNumCombatCombo()) + "/" + str(pWinner.getLevel()/4 + 1) + ")","")
+
+		for promotion in TohoUnitList.RenzokuKougekiPromotionList:
+			if pWinner.isHasPromotion( gc.getInfoTypeForString(promotion) ):
+				iNumRenzoku += 2
+				break
+
+		iMaxCombo = 0
+		if iNumRenzoku >= 3:
+			iMaxCombo = pWinner.getLevel() / 3 + 3
+		elif iNumRenzoku >= 2:
+			iMaxCombo = pWinner.getLevel() / 3 + 1
+		elif iNumRenzoku >= 1:
+			iMaxCombo = pWinner.getLevel() / 4 + 1
 
 		#昇進「始原のビート」あるいは「打ち出の小槌」系列を持っている場合、一度限りの連続戦闘を可能とする
 		if (pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PRISTINE_BEAT')) or
@@ -2164,14 +2137,16 @@ class CvEventManager:
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UCHIDENO_KODUCHI_3TURN')) or
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UCHIDENO_KODUCHI_2TURN')) or
 			pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UCHIDENO_KODUCHI_1TURN')) ):
-			if pWinner.getNumCombatCombo() < 1:
-				if gc.getPlayer(pWinner.getOwner()).isTurnActive(): #アクティブターンなら
-					pWinner.changeMoves(-50)
-					pWinner.setMadeAttack(False)
-					pWinner.setNumCombatCombo(pWinner.getNumCombatCombo()+1)
-					#連続戦闘が発生するとメッセージが出る
-					CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pWinner.getUnitType()).getDescription() + "&#12398;&#36899;&#32154;&#25126;&#38360;&#65281(" + str(pWinner.getNumCombatCombo()) + "/" + str( + 1) + ")","")
-		
+			# ボスユニットの連続攻撃と同時につくことはないと思うがいちおう
+			iMaxCombo += 1
+
+		if pWinner.getNumCombatCombo() < iMaxCombo:
+			if gc.getPlayer(pWinner.getOwner()).isTurnActive(): #アクティブターンなら
+				pWinner.changeMoves(-50)
+				pWinner.setMadeAttack(False)
+				pWinner.setNumCombatCombo(pWinner.getNumCombatCombo()+1)
+				#連続戦闘が発生するとメッセージが出る
+				CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pWinner.getUnitType()).getDescription() + "&#12398;&#36899;&#32154;&#25126;&#38360;&#65281(" + str(pWinner.getNumCombatCombo()) + "/" + str(iMaxCombo) + ")","")
 		
 		#一度戦闘をするとレーヴァテインが消滅
 		pWinner.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LAEVATEINN'),False)
