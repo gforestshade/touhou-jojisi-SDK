@@ -37,6 +37,7 @@ import CustomFunctions
 import UserPrefs
 ##### <written by F> #####
 import TohoUnitList
+import TohoCivList
 import Functions
 import SpellInfo
 
@@ -577,55 +578,15 @@ class CvEventManager:
 				#É{Å[ÉiÉXÉeÉNÉmÉçÉWÅ[Ç∆ÇµÇƒå≈óLÉeÉNÇÃÇPíiäKñ⁄Çó^Ç¶ÇÈ
 				iCiv = ppPlayer.getCivilizationType()
 				pTeam = gc.getTeam(ppPlayer.getTeam())
-				#çgñÇäŸÇÃÇ∆Ç´
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_ENGLAND'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_GOKUSAINODANMAKU'),True,i,True,True)
-				
-				#îíã òO
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_FRANCE'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_NEKOMATA'),True,i,True,True)
-				
-				#ïXê∏òAçá
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_ROME'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_KURAYAMI'),True,i,True,True)
-				
-				#âiâìí‡
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_EGYPT'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_SUZURANNODOKU'),True,i,True,True)
-				
-				#ódâˆÇÃéR
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_SPAIN'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_KAPPANOHATUMEI'),True,i,True,True)
-				
-				#îíóÌê_é–
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_JAPAN'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_MAHOU'),True,i,True,True)
-				
-				#ínóÏìa
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_PERSIA'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_HASHIHIME'),True,i,True,True)
-				
-				#êlä‘ÇÃó¢
+				for civ in TohoCivList.UniqTechList:
+					if iCiv == gc.getInfoTypeForString(civ[0]):
+						pTeam.setHasTech(gc.getInfoTypeForString(civ[1][0]), True, i, True, True)
+
+				#êlä‘ÇÃó¢ÇÃèÍçá
 				if iCiv == gc.getInfoTypeForString('CIVILIZATION_INDIA'):
 					iGold = 20 * GameSpeedList[gc.getGame().getGameSpeedType()] / 100
 					ppPlayer.changeGold(iGold)
 					
-				#êπò@ëD
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_RUSSIA'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_TINY_CLEVER_COMMANDER'),True,i,True,True)
-				
-				#ê_óÏï_
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_CHINA'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_TYOKUREI'),True,i,True,True)
-				
-				#ãPêjèÈ
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_MALI'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_JAKUSYANORAKUEN'),True,i,True,True)
-				
-				#åéÇÃìs
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_AMERICA'):
-					pTeam.setHasTech(gc.getInfoTypeForString('TECH_MOON_WAR_FIRST'),True,i,True,True)
-			
 			##### </written by F> #####
 			
 		

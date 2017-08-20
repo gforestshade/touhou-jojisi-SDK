@@ -11,6 +11,7 @@ import sys
 ##### <written by F> #####
 import SpellInfo
 import TohoUnitList
+import TohoCivList
 import Functions
 ##### </written by F> #####
 import codecs
@@ -488,86 +489,12 @@ class CvGameUtils:
 		
 		pPlayer = gc.getPlayer(ePlayer)
 		iCiv = pPlayer.getCivilizationType()
-		
-		#紅魔館のとき
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_ENGLAND'):
-			if gc.getInfoTypeForString('TECH_HAKUGYOKUROU') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-				
-		#白玉楼
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_FRANCE'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_AKAIKIRI'):
-				return True
-			if gc.getInfoTypeForString('TECH_HYOUSEIRENGOU') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-				
-		#氷精連合
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_ROME'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_BORDER_OF_LIFE'):
-				return True
-			if gc.getInfoTypeForString('TECH_EIENTEI') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-		
-		#永遠亭
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_EGYPT'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_SIZENNOKYOUI'):
-				return True
-			if gc.getInfoTypeForString('TECH_YOUKAINOYAMA') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-				
-		#妖怪の山
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_SPAIN'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_TUKIKARANOSISHA'):
-				return True
-			if gc.getInfoTypeForString('TECH_HAKUREIJINJA') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-				
-		#白麗神社
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_JAPAN'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_MORIYANOOUKOKU'):
-				return True
-			if gc.getInfoTypeForString('TECH_CHIREIDEN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-		
-		#地霊殿
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_PERSIA'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_HAKUREIDAIKEKKAI'):
-				return True
-			if gc.getInfoTypeForString('TECH_SEIRENSEN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-		
-		#星蓮船
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_RUSSIA'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_CHITEINOTAIYOSHINKO'):
-				return True
-			if gc.getInfoTypeForString('TECH_SHINREIBYOU') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-		
-		#神霊廟
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_CHINA'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_TEACHING_OF_MEIREN'):
-				return True
-			if gc.getInfoTypeForString('TECH_KISHINJOU') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-		
-		#輝針城
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_MALI'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_HOSIHURU_SHINREIBYOU'):
-				return True
-			if gc.getInfoTypeForString('TECH_TUKI_NO_MIYAKO') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-		
-		#月の都
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_AMERICA'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_MUGENNOTIKARA'):
-				return True
-			if gc.getInfoTypeForString('TECH_KEINENOIRAI') <= eTech and eTech <= gc.getInfoTypeForString('TECH_KEINENOIRAI'):
-				return True
-		
-		#人間の里
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_INDIA'):
-			if gc.getInfoTypeForString('TECH_KOUMAKAN') <= eTech and eTech <= gc.getInfoTypeForString('TECH_TUKI_NO_MIYAKO'):
-				return True
+
+		for civ in TohoCivList.UniqTechList:
+			inCiv = gc.getInfoTypeForString(civ[0])
+			for tech in civ[1]:
+				if eTech == gc.getInfoTypeForString(tech) and iCiv != inCiv:
+					return True
 		
 		##### </written by F> #####
 		
@@ -846,17 +773,6 @@ class CvGameUtils:
 							return True
 			
 		
-		#弁々はモニュメントの代わりにステラ作成可能
-# 		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
-# 			obsoleteTech = gc.getBuildingInfo(gc.getInfoTypeForString("BUILDING_KISHINJOU_ETHIOPIAN_STELE")).getObsoleteTech()
-# 			if ( pTeam.isHasTech(obsoleteTech) == false or obsoleteTech == -1 ):
-# 				if pTeam.isHasTech(gc.getInfoTypeForString('TECH_MYSTICISM')):
-# 					if not pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_OBELISK')):
-# 						if not pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_KISHINJOU_ETHIOPIAN_STELE')):
-# 							if eBuilding == gc.getInfoTypeForString('BUILDING_KISHINJOU_ETHIOPIAN_STELE'):
-# # #							if eBuildingClass == gc.getInfoTypeForString('BUILDINGCLASS_KISHINJOU_ETHIOPIAN_STELE'):
-# 								return True
-		
 		#社会制度変更決議無しオプション時は特殊国連建設可能に
 		
 		if gc.getGame().isOption(gc.getInfoTypeForString('GAMEOPTION_NO_CIVIC_CHANGE_RESOLUTION')):
@@ -940,11 +856,6 @@ class CvGameUtils:
 				return True
 			if eBuildingClass == gc.getInfoTypeForString('BUILDINGCLASS_RAIKO_MAGIC_A'):
 				return True
-		
-		#弁々はノーマルモニュ作成不可
-		# if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_BENBENLIST")):
-		# 	if eBuilding == gc.getInfoTypeForString('BUILDING_OBELISK'):
-		# 		return True
 		
 		#陰陽寮（×）が都市に存在している場合、陰陽寮（○）は作成不可
 		if pCity.isHasBuilding(gc.getInfoTypeForString('BUILDING_ONMYOURYOU2')):
