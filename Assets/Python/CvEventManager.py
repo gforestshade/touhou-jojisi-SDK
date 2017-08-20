@@ -777,13 +777,8 @@ class CvEventManager:
 										newUnit1.changeLevel(iLevel-1)
 										
 										#もともと持っていた昇進をそのまま移行させる
-										PromotionStart = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()
-										PromotionEnd = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()+gc.getNumPromotionInfos()
-										PromotionNum = PromotionEnd - PromotionStart
+										Functions.copyPromotions(pPlot.getUnit(i), newUnit1)
 										
-										for iPromotion in range(PromotionNum):
-											if pPlot.getUnit(i).isHasPromotion(iPromotion):
-												newUnit1.setHasPromotion(iPromotion,True)
 										newUnit1.finishMoves()
 										pPlot.getUnit(i).changeDamage(100,iPlayer)
 				
@@ -1518,14 +1513,8 @@ class CvEventManager:
 				newUnit1.changeLevel(iLevel-1)
 				
 				#もともと持っていた昇進をそのまま移行させる
-				PromotionStart = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()
-				PromotionEnd = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()+gc.getNumPromotionInfos()
-				PromotionNum = PromotionEnd - PromotionStart
-				
-				for iPromotion in range(PromotionNum):
-					if pUnit.isHasPromotion(iPromotion):
-						newUnit1.setHasPromotion(iPromotion,True)
-				newUnit1.setNumTurnPromo(pUnit.getNumTurnPromo())
+				Functions.copyPromotions(pUnit, newUnit1)
+
 				newUnit1.finishMoves()
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_EASY'),False)
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_NORMAL'),False)
@@ -2191,14 +2180,7 @@ class CvEventManager:
 					newUnit1.changeLevel(iLevel-1)
 					
 					#もともと持っていた昇進をそのまま移行させる
-					PromotionStart = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()
-					PromotionEnd = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()+gc.getNumPromotionInfos()
-					PromotionNum = PromotionEnd - PromotionStart
-					
-					for iPromotion in range(PromotionNum):
-						if pLoser.isHasPromotion(iPromotion):
-							newUnit1.setHasPromotion(iPromotion,True)
-					newUnit1.finishMoves()
+					Functions.copyPromotions(pLoser, newUnit1)
 		
 		
 		#ぱちぇのスキルもちは、戦闘勝利後にゴーレムを生成する。
@@ -2348,13 +2330,7 @@ class CvEventManager:
 			newUnit1.changeLevel(iLevel-1)
 			
 			#もともと持っていた昇進をそのまま移行させる
-			PromotionStart = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()
-			PromotionEnd = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()+gc.getNumPromotionInfos()
-			PromotionNum = PromotionEnd - PromotionStart
-			
-			for iPromotion in range(PromotionNum):
-				if pWinner.isHasPromotion(iPromotion):
-					newUnit1.setHasPromotion(iPromotion,True)
+			Functions.copyPromotions(pWinner, newUnit1)
 	
 			newUnit1.convert(pWinner)
 			#newUnit1.setMoves(pWinner.getMoves()+50)
@@ -2394,13 +2370,7 @@ class CvEventManager:
 				newUnit1.setMoves(pLoser.getMoves())
 				
 				#もともと持っていた昇進をそのまま移行させる
-				PromotionStart = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()
-				PromotionEnd = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()+gc.getNumPromotionInfos()
-				PromotionNum = PromotionEnd - PromotionStart
-				
-				for iPromotion in range(PromotionNum):
-					if pLoser.isHasPromotion(iPromotion):
-						newUnit1.setHasPromotion(iPromotion,True)
+				Functions.copyPromotions(pLoser, newUnit1)
 
 				newUnit1.changeDamage(pWinner.getDamage(),pLoser.getOwner())
 				if pWinner.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):

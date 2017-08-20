@@ -611,4 +611,21 @@ def isImprovementUpgrade(caster,pPlot):
 		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER'),False )
 		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False )
 
+# 昇進を別のユニットにコピーする
+# pSourceUnit の持っている昇進すべてを pDestinationUnit に持たせる
+# pSourceUnit の持っていない昇進はなにもしない pDestinationUnit から消すわけではない
+def copyPromotions(pSourceUnit, pDestinationUnit):
+
+	PromotionStart = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()
+	PromotionEnd = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()+gc.getNumPromotionInfos()
+	PromotionNum = PromotionEnd - PromotionStart
+	
+	for iPromotion in range(PromotionNum):
+		if pSourceUnit.isHasPromotion(iPromotion):
+			pDestinationUnit.setHasPromotion(iPromotion,True)
+
+	pDestinationUnit.setNumTurnPromo(pSourceUnit.getNumTurnPromo())
+
+
+
 ##### </written by F> #####
