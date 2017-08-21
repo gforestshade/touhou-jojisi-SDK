@@ -1490,40 +1490,7 @@ class CvEventManager:
 		#蛮族化
 		#厳密に言うと昇進ではないが、ここで処理が望ましい
 		if BarbarianFlag == True:
-			BarBarianUnit = pUnit.getUnitType()
-			plotX = pUnit.getX()
-			plotY = pUnit.getY()
-			iExperience = pUnit.getExperience()
-			iLevel = pUnit.getLevel()
-			
-			#周囲１マスで空いてる場所を探す、なければ消滅
-			ClearPlotList = []
-			for iX in range(plotX-1,plotX+2):
-				for iY in range(plotY-1,plotY+2):
-					if gc.getMap().plot(iX,iY).getNumUnits() == 0:
-						ClearPlotList.append([iX,iY])
-						
-			if len(ClearPlotList)!=0:
-				iNum = gc.getGame().getSorenRandNum(len(ClearPlotList), "create barbarian plot")
-				iiX = ClearPlotList[iNum][0]
-				iiY = ClearPlotList[iNum][1]
-				newUnit1 = gc.getPlayer(gc.getBARBARIAN_PLAYER()).initUnit(BarBarianUnit, iiX, iiY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				
-				newUnit1.changeExperience(iExperience,-1,false,false,false)
-				newUnit1.changeLevel(iLevel-1)
-				
-				#もともと持っていた昇進をそのまま移行させる
-				Functions.copyPromotions(pUnit, newUnit1)
-
-				newUnit1.finishMoves()
-				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_EASY'),False)
-				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_NORMAL'),False)
-				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_HARD'),False)
-				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_LUNATIC'),False)
-				
-			pUnit.changeDamage(100,pUnit.getOwner())
-				
-					
+			Functions.uncivilize(pUnit)
 		
 		
 	def BPTprocessAITurn(self, argsList):
@@ -1538,140 +1505,34 @@ class CvEventManager:
 		
 		#人間の里で世界魔法が可能なとき、条件によって世界魔法を使用する
 		iCiv = pPlayer.getCivilizationType()
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_INDIA'):
-			if pPlayer.getNumWorldSpell()>0:
-				if gc.getGame().getGameTurn() > 50:
-					pTeam = gc.getTeam(pPlayer.getTeam())
-					iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
-					for i in range(iNumTeam):
-						ppTeam = gc.getTeam(i)
-						if ppTeam.isBarbarian() == False:
-							if pTeam.isAtWar(i):
-								pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength())
-								pPlayer.setNumWorldSpell(0)
-								CyInterface().addImmediateMessage("&#20154;&#38291;&#12398;&#37324;&#12364;&#32080;&#26463;&#12434;&#39640;&#12417;&#40644;&#37329;&#26399;&#12364;&#30330;&#21205;&#12375;&#12414;&#12375;&#12383;","")
+		if iCiv == gc.getInfoTypeForString('CIVILIZATION_INDIA') and \
+		   pPlayer.getNumWorldSpell() > 0 and \
+		   gc.getGame().getGameTurn() > 50 and \
+		   Functions.isWar(pPlayer):
+
+			pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength())
+			pPlayer.setNumWorldSpell(0)
+			CyInterface().addImmediateMessage("&#20154;&#38291;&#12398;&#37324;&#12364;&#32080;&#26463;&#12434;&#39640;&#12417;&#40644;&#37329;&#26399;&#12364;&#30330;&#21205;&#12375;&#12414;&#12375;&#12383;","")
 		
 		#連合で世界魔法が可能なとき、条件によって世界魔法を使用する
 		iCiv = pPlayer.getCivilizationType()
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_ROME'):
-			if pPlayer.getNumWorldSpell()>0:
-				if gc.getGame().getGameTurn() > 50:
-					pTeam = gc.getTeam(pPlayer.getTeam())
-					iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
-					for i in range(iNumTeam):
-						ppTeam = gc.getTeam(i)
-						if ppTeam.isBarbarian() == False:
-							if pTeam.isAtWar(i):
-								#沸いてくるユニットは時代依存
-								iNumUnit = 5
-								if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
-									iUnit = gc.getInfoTypeForString('UNIT_WARRIOR')
-									iNumUnit = 2
-								if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL'):
-									iUnit = gc.getInfoTypeForString('UNIT_AXEMAN')
-									iNumUnit = 3
-								if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL'):
-									iUnit = gc.getInfoTypeForString('UNIT_MACEMAN')
-								if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE'):
-									iUnit = gc.getInfoTypeForString('UNIT_MUSKETMAN')
-								if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL'):
-									iUnit = gc.getInfoTypeForString('UNIT_RIFLEMAN')
-								if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN'):
-									iUnit = gc.getInfoTypeForString('UNIT_INFANTRY')
-								if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE'):
-									iUnit = gc.getInfoTypeForString('UNIT_MECHANIZED_INFANTRY')
-								
-								py = PyPlayer(iPlayer)
-								for pPyCity in py.getCityList():
-									pCity = pPlayer.getCity(pPyCity.getID())
-									iNum = pCity.getPopulation() / iNumUnit
-									if iNum < 1:
-										iNum = 1
-									if iNum > 3:
-										iNum = 3
-									for i in range(iNum):
-										newUnit = pPlayer.initUnit(iUnit, pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-										newUnit.changeExperience(gc.getGame().getSorenRandNum(6, "world spell rengou no kessoku"),-1,False,False,False)
-								pPlayer.setNumWorldSpell(0)
-								CyInterface().addImmediateMessage("&#22934;&#31934;&#12383;&#12385;&#12364;&#32080;&#26463;&#12434;&#39640;&#12417;&#37117;&#24066;&#12395;&#38598;&#32080;&#12375;&#12414;&#12375;&#12383;","")
+		if iCiv == gc.getInfoTypeForString('CIVILIZATION_ROME') and \
+		   pPlayer.getNumWorldSpell() > 0 and \
+		   gc.getGame().getGameTurn() > 50 and \
+		   Functions.isWar(pPlayer):
+
+			Functions.worldspell_HYOUSEIRENGOU1(pPlayer, pPlayer.getCapitalCity().plot())
 
 		#統合MOD追記部分
 		#輝針城の時世界魔法が使用可能な場合、世界魔法を使用する
 		iCiv = pPlayer.getCivilizationType()
-		if iCiv == gc.getInfoTypeForString('CIVILIZATION_MALI'):
-			if pPlayer.getNumWorldSpell()>0:
-				if gc.getGame().getGameTurn() > 50:
-					pTeam = gc.getTeam(pPlayer.getTeam())
-					iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
-					for i in range(iNumTeam):
-						ppTeam = gc.getTeam(i)
-						if ppTeam.isBarbarian() == False:
-							if pTeam.isAtWar(i):
-								TAIKOFlag = False
-								TYUUSEIFlag = False
-								KINDAIFlag = False
-								
-									#時代によって沸かせるユニットや計算式を変動させる
-								if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL')):
-									iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_TAIKO')
-									iNumCityCountKOU = 3
-									TAIKOFlag = True
-								if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE')):
-									iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_TYUUSEI')
-									iUnitOTU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_OTU_TYUUSEI')
-									iNumCityCountKOU = 5
-									iNumCityCountOTU = 8
-									TYUUSEIFlag = True
-								if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE')):
-									iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_KINDAI')
-									iUnitOTU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_OTU_KINDAI')
-									iNumCityCountKOU = 5
-									iNumCityCountOTU = 8
-									KINDAIFlag = True
-									
-								py = PyPlayer(iPlayer)
-								for pPyCity in py.getCityList():
-									pCity = pPlayer.getCity(pPyCity.getID())
-								
-									if TAIKOFlag == True:
-										iNumKOU = pCity.getPopulation() / iNumCityCountKOU
-										if iNumKOU > 2:
-											iNumKOU = 2
-										iNumOTU = 0
-		
-									elif TYUUSEIFlag == True:
-										iNumKOU = pCity.getPopulation() / iNumCityCountKOU
-										if iNumKOU < 1:
-											iNumKOU = 1
-										if iNumKOU > 3:
-											iNumKOU = 3
+		if iCiv == gc.getInfoTypeForString('CIVILIZATION_MARI') and \
+		   pPlayer.getNumWorldSpell() > 0 and \
+		   gc.getGame().getGameTurn() > 50 and \
+		   Functions.isWar(pPlayer):
 
-										iNumOTU = pCity.getPopulation() / iNumCityCountOTU
-										if iNumOTU > 1:
-											iNumOTU = 1
-		
-									else:
-										iNumKOU = pCity.getPopulation() / iNumCityCountKOU
-										if iNumKOU < 1:
-											iNumKOU = 1
-										if iNumKOU > 3:
-											iNumKOU = 3
-			
-										iNumOTU = pCity.getPopulation() / iNumCityCountOTU
-										if iNumOTU < 1:
-											iNumOTU = 1
-										if iNumOTU > 3:
-											iNumOTU = 3
-		
-									if iNumKOU >= 1:
-										for i in range(iNumKOU):
-											newUnit = pPlayer.initUnit(iUnitKOU, pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-									if iNumOTU >= 1:
-										for i in range(iNumOTU):
-											newUnit = pPlayer.initUnit(iUnitOTU, pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+			Functions.worldspell_KISHINJOU1(pPlayer, pPlayer.getCapitalCity().plot())
 
-								pPlayer.setNumWorldSpell(0)
-								CyInterface().addImmediateMessage("&#36637;&#37341;&#22478;&#12398;&#21508;&#37117;&#24066;&#12391;&#20184;&#21930;&#31070;&#12364;&#22823;&#37327;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
 	def BPTprocessCity(self, pCity, argsList):
 		iGameTurn, iPlayer = argsList

@@ -19,6 +19,16 @@ RangeList1 = [	[-1,-1],[ 0,-1],[ 1,-1],
 				[-1, 0],        [ 1, 0],
 				[-1, 1],[ 0, 1],[ 1, 1], ]
 
+# デバッグ出力
+def doprint(str):
+	#cd sys.stderr.write(str)
+	if not logInited:
+		initLog()
+	sys.stdout.write(str)
+	sys.stdout.write("\n")
+#	sys.stdout.flush()
+
+
 #指定された場所が有効なplotであるかどうかを判別
 #デフォのだとループ部分が上手くいかないので自前で実装
 def isPlot(iX,iY):
@@ -625,6 +635,160 @@ def copyPromotions(pSourceUnit, pDestinationUnit):
 			pDestinationUnit.setHasPromotion(iPromotion,True)
 
 	pDestinationUnit.setNumTurnPromo(pSourceUnit.getNumTurnPromo())
+
+#蛮族化
+def uncivilize(pUnit):
+	BarBarianUnit = pUnit.getUnitType()
+	plotX = pUnit.getX()
+	plotY = pUnit.getY()
+	iExperience = pUnit.getExperience()
+	iLevel = pUnit.getLevel()
+	
+	#周囲１マスで空いてる場所を探す、なければ消滅
+	ClearPlotList = []
+	for iX in range(plotX-1,plotX+2):
+		for iY in range(plotY-1,plotY+2):
+			if gc.getMap().plot(iX,iY).getNumUnits() == 0:
+				ClearPlotList.append([iX,iY])
+	
+	if ClearPlotList:
+		iNum = gc.getGame().getSorenRandNum(len(ClearPlotList), "create barbarian plot")
+		iiX = ClearPlotList[iNum][0]
+		iiY = ClearPlotList[iNum][1]
+		newUnit1 = gc.getPlayer(gc.getBARBARIAN_PLAYER()).initUnit(BarBarianUnit, iiX, iiY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		
+		newUnit1.changeExperience(iExperience,-1,false,false,false)
+		newUnit1.changeLevel(iLevel-1)
+		
+		#もともと持っていた昇進をそのまま移行させる
+		copyPromotions(pUnit, newUnit1)
+		
+		newUnit1.finishMoves()
+		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_EASY'),False)
+		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_NORMAL'),False)
+		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_HARD'),False)
+		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_LUNATIC'),False)
+		
+		pUnit.changeDamage(100,pUnit.getOwner())
+		
+
+# 氷精連合の世界魔法
+# pPlayer の元にユニットが集まる(必ずしも氷精連合である必要はない)
+# pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
+def hyouseirengou1(pPlayer, pPlot):
+
+	#沸いてくるユニットと数は時代依存
+	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
+		iUnit = gc.getInfoTypeForString('UNIT_WARRIOR')
+		iNumUnit = 2
+	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL'):
+		iUnit = gc.getInfoTypeForString('UNIT_AXEMAN')
+		iNumUnit = 3
+	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL'):
+		iUnit = gc.getInfoTypeForString('UNIT_MACEMAN')
+		iNumUnit = 5
+	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE'):
+		iUnit = gc.getInfoTypeForString('UNIT_MUSKETMAN')
+		iNumUnit = 5
+	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL'):
+		iUnit = gc.getInfoTypeForString('UNIT_RIFLEMAN')
+		iNumUnit = 5
+	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN'):
+		iUnit = gc.getInfoTypeForString('UNIT_INFANTRY')
+		iNumUnit = 5
+	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE'):
+		iUnit = gc.getInfoTypeForString('UNIT_MECHANIZED_INFANTRY')
+		iNumUnit = 5
+	
+	py = PyPlayer( pPlayer.getID() )
+	for pyCity in py.getCityList():
+		#pCity = pPlayer.getCity(pPyCity.getID())
+		iNum = pyCity.getPopulation() / iNumUnit
+		if iNum < 1:
+			iNum = 1
+		if iNum > 3:
+			iNum = 3
+		for i in range(iNum):
+			newUnit = py.initUnit(iUnit, pyCity.getX(), pyCity.getY())
+			exp = gc.getGame().getSorenRandNum(6, "world spell rengou no kessoku")
+			newUnit.changeExperience(exp, -1, False, False, False)
+	
+	pPlayer.setNumWorldSpell(0)
+
+	point = pPlot.getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	#妖精たちが結束を高め都市に集結しました
+	CyInterface().addImmediateMessage("&#22934;&#31934;&#12383;&#12385;&#12364;&#32080;&#26463;&#12434;&#39640;&#12417;&#37117;&#24066;&#12395;&#38598;&#32080;&#12375;&#12414;&#12375;&#12383;","")
+
+# 輝針城の世界魔法
+# pPlayer の元に付喪神が沸く(必ずしも輝針城である必要はない)
+# pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
+def worldspell_KISHINJOU1(pPlayer, plot):
+	# iPlayer = caster.getOwner()
+	pTeam = gc.getTeam(pPlayer.getTeam())
+	
+	TAIKO = 1
+	TYUUSEI = 2
+	KINDAI = 4
+	era = 0
+	
+	#時代によって沸かせるユニットや計算式を変動させる
+	if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL')):
+		iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_TAIKO')
+		iNumCityCountKOU = 3
+		era = TAIKO
+	if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE')):
+		iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_TYUUSEI')
+		iUnitOTU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_OTU_TYUUSEI')
+		iNumCityCountKOU = 5
+		iNumCityCountOTU = 8
+		era = TYUUSEI
+	if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE')):
+		iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_KINDAI')
+		iUnitOTU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_OTU_KINDAI')
+		iNumCityCountKOU = 5
+		iNumCityCountOTU = 8
+		era = KINDAI
+	
+	py = PyPlayer( pPlayer.getID() )
+	for pyCity in py.getCityList():
+		if era == TAIKO:
+			# 甲は2を超えず、乙は発生しない
+			iNumKOU = pyCity.getPopulation() / iNumCityCountKOU
+			iNumKOU = min(iNumKOU, 2)
+			iNumOTU = 0
+		
+		elif era == TYUUSEI or era == KINDAI:
+			# 甲乙とも1を下回らず、3を超えない
+			iNumKOU = pyCity.getPopulation() / iNumCityCountKOU
+			iNumKOU = max(1, iNumKOU)
+			iNumKOU = min(iNumKOU, 3)
+
+			iNumOTU = pyCity.getPopulation() / iNumCityCountOTU
+			iNumOTU = max(1, iNumOTU)
+			iNumOTU = min(iNumOTU, 3)
+
+		else:
+			# ここには来ないはずだが
+			doprint("KISHINJOU1: era error")
+			iNumKOU = 0
+			iNumOTU = 0
+			
+		if iNumKOU > 0:
+			for i in range(iNumKOU):
+				pyCity.initUnit(iUnitKOU)
+		if iNumOTU > 0:
+			for i in range(iNumOTU):
+				pyCity.initUnit(iUnitOTU)
+
+	pPlayer.setNumWorldSpell(0)
+	
+	point = pPlot.getPoint()
+	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+	#輝針城の各都市で付喪神が大量発生しました！
+	CyInterface().addImmediateMessage("&#36637;&#37341;&#22478;&#12398;&#21508;&#37117;&#24066;&#12391;&#20184;&#21930;&#31070;&#12364;&#22823;&#37327;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
 
 

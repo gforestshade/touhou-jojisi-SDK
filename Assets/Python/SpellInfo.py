@@ -12336,50 +12336,9 @@ def spell_HYOUSEIRENGOU1(caster,cost):
 	#caster.setMadeAttack(True)
 	iPlayer = caster.getOwner()
 	pPlayer = gc.getPlayer(iPlayer)
-	eTeam = gc.getTeam(pPlayer.getTeam())
-	iX = caster.getX()
-	iY = caster.getY()
-	
-	#ï¶Ç¢ÇƒÇ≠ÇÈÉÜÉjÉbÉgÇÕéûë„àÀë∂
-	iNumUnit = 5
-	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
-		iUnit = gc.getInfoTypeForString('UNIT_WARRIOR')
-		iNumUnit = 2
-	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL'):
-		iUnit = gc.getInfoTypeForString('UNIT_AXEMAN')
-		iNumUnit = 3
-	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL'):
-		iUnit = gc.getInfoTypeForString('UNIT_MACEMAN')
-	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE'):
-		iUnit = gc.getInfoTypeForString('UNIT_MUSKETMAN')
-	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL'):
-		iUnit = gc.getInfoTypeForString('UNIT_RIFLEMAN')
-	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN'):
-		iUnit = gc.getInfoTypeForString('UNIT_INFANTRY')
-	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE'):
-		iUnit = gc.getInfoTypeForString('UNIT_MECHANIZED_INFANTRY')
-	
-	py = PyPlayer(iPlayer)
-	for pPyCity in py.getCityList():
-		pCity = pPlayer.getCity(pPyCity.getID())
-		iNum = pCity.getPopulation() / iNumUnit
-		if iNum < 1:
-			iNum = 1
-		if iNum > 3:
-			iNum = 3
-		for i in range(iNum):
-			newUnit = pPlayer.initUnit(iUnit, pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-			newUnit.changeExperience(gc.getGame().getSorenRandNum(6, "world spell rengou no kessoku"),-1,False,False,False)
-	pPlayer.setNumWorldSpell(0)
-	
-	
+
+	Functions.worldspell_HYOUSEIRENGOU1(pPlayer, caster.plot())
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-	pPlot = caster.plot()
-	point = pPlot.getPoint()
-	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
-	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
-	#ódê∏ÇΩÇøÇ™åãë©ÇçÇÇﬂìsésÇ…èWåãÇµÇ‹ÇµÇΩ
-	CyInterface().addImmediateMessage("&#22934;&#31934;&#12383;&#12385;&#12364;&#32080;&#26463;&#12434;&#39640;&#12417;&#37117;&#24066;&#12395;&#38598;&#32080;&#12375;&#12414;&#12375;&#12383;","")
 
 	return True
 
@@ -12401,83 +12360,9 @@ def spell_KISHINJOU1(caster,cost):
 	#caster.setMadeAttack(True)
 	iPlayer = caster.getOwner()
 	pPlayer = gc.getPlayer(iPlayer)
-	eTeam = gc.getTeam(pPlayer.getTeam())
-	iX = caster.getX()
-	iY = caster.getY()
-	
-	TAIKOFlag = False
-	TYUUSEIFlag = False
-	KINDAIFlag = False
-	
-	#éûë„Ç…ÇÊÇ¡Çƒï¶Ç©ÇπÇÈÉÜÉjÉbÉgÇ‚åvéZéÆÇïœìÆÇ≥ÇπÇÈ
-	if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL')):
-		iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_TAIKO')
-		iNumCityCountKOU = 3
-		TAIKOFlag = True
-	if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE')):
-		iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_TYUUSEI')
-		iUnitOTU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_OTU_TYUUSEI')
-		iNumCityCountKOU = 5
-		iNumCityCountOTU = 8
-		TYUUSEIFlag = True
-	if (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN')) or (pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE')):
-		iUnitKOU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_KOU_KINDAI')
-		iUnitOTU = gc.getInfoTypeForString('UNIT_TSUKUMOGAMI_OTU_KINDAI')
-		iNumCityCountKOU = 5
-		iNumCityCountOTU = 8
-		KINDAIFlag = True
-	
-	py = PyPlayer(iPlayer)
-	for pPyCity in py.getCityList():
-		pCity = pPlayer.getCity(pPyCity.getID())
-		
-		if TAIKOFlag == True:
-			iNumKOU = pCity.getPopulation() / iNumCityCountKOU
-			if iNumKOU > 2:
-				iNumKOU = 2
-			iNumOTU = 0
-		
-		elif TYUUSEIFlag == True:
-			iNumKOU = pCity.getPopulation() / iNumCityCountKOU
-			if iNumKOU < 1:
-				iNumKOU = 1
-			if iNumKOU > 3:
-				iNumKOU = 3
 
-			iNumOTU = pCity.getPopulation() / iNumCityCountOTU
-			if iNumOTU > 1:
-				iNumOTU = 1
-		
-		else:
-			iNumKOU = pCity.getPopulation() / iNumCityCountKOU
-			if iNumKOU < 1:
-				iNumKOU = 1
-			if iNumKOU > 3:
-				iNumKOU = 3
-			
-			iNumOTU = pCity.getPopulation() / iNumCityCountOTU
-			if iNumOTU < 1:
-				iNumOTU = 1
-			if iNumOTU > 3:
-				iNumOTU = 3
-		
-		if iNumKOU >= 1:
-			for i in range(iNumKOU):
-				newUnit = pPlayer.initUnit(iUnitKOU, pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-		if iNumOTU >= 1:
-			for i in range(iNumOTU):
-				newUnit = pPlayer.initUnit(iUnitOTU, pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-
-	pPlayer.setNumWorldSpell(0)
-	
-	
+	Functions.worldspell_KISHINJOU1(pPlayer, caster.plot())
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-	pPlot = caster.plot()
-	point = pPlot.getPoint()
-	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
-	CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
-	#ãPêjèÈÇÃäeìsésÇ≈ïtërê_Ç™ëÂó î≠ê∂ÇµÇ‹ÇµÇΩÅI
-	CyInterface().addImmediateMessage("&#36637;&#37341;&#22478;&#12398;&#21508;&#37117;&#24066;&#12391;&#20184;&#21930;&#31070;&#12364;&#22823;&#37327;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
 	return True
 
