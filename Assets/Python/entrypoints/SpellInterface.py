@@ -55,8 +55,8 @@ def SpellCast(argsList):
 						#CyInterface().addImmediateMessage(gc.getUnitInfo(pUnit.getUnitType()).getDescription() + "&#12364;" + gc.getAutomateInfo(iNum).getDescription() + "&#12434;&#20351;&#29992;&#12375;&#12414;&#12375;&#12383;","")
 				
 					szBuffer = gc.getUnitInfo(pUnit.getUnitType()).getDescription() + "&#12364;" + gc.getAutomateInfo(iNum).getDescription() + "&#12434;&#20351;&#29992;&#12375;&#12414;&#12375;&#12383;"
-				for i in range(gc.getMAX_CIV_PLAYERS()):
-					CyInterface().addMessage(i,True,25,szBuffer,'AS3D_spell_use',InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, gc.getUnitInfo(pUnit.getUnitType()).getButton() ,ColorTypes(0),pUnit.getX(),pUnit.getY(),True,True)
+					for i in range(gc.getMAX_CIV_PLAYERS()):
+						CyInterface().addMessage(i,True,25,szBuffer,'AS3D_spell_use',InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, gc.getUnitInfo(pUnit.getUnitType()).getButton() ,ColorTypes(0),pUnit.getX(),pUnit.getY(),True,True)
 				
 
 ### p‚ÅŽn‚Ü‚é[p***]‚Í‚±‚Á‚¿‚É‘—‚ç‚ê‚é
