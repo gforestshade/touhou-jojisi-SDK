@@ -2347,15 +2347,9 @@ class CvEventManager:
 		
 		#戦闘勝利時Power回復
 		#以後このPower回復は基本的に一部東方ユニットのキャラクタースキルもしくは特性で
-		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATCHOULI_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHEN_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PARSEE_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MYSTIA_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MARISA_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BYAKUREN_SKILL1')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOYOHIME')) or \
-		pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SAGUME_SKILL1')):
-			pWinner.setPower(pWinner.getPower() + 0.03)
+		for prom in TohoUnitList.CombatPowerGainPromotionList:
+			if pWinner.isHasPromotion(gc.getInfoTypeForString(prom)):
+				pWinner.setPower(pWinner.getPower() + 0.03)
 		
 		
 		#統合MOD追記部分ここまで

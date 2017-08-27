@@ -1178,6 +1178,17 @@ RenzokuKougekiPromotionList = [
 	'PROMOTION_SHIKINOSHIKI',
 	]
 
+# êÌì¨éûPowerâÒïúÇó^Ç¶ÇÈè∏êi
+CombatPowerGainPromotionList = [
+	'PROMOTION_PATCHOULI_SKILL1',
+	'PROMOTION_CHEN_SKILL1',
+	'PROMOTION_PARSEE_SKILL1',
+	'PROMOTION_MYSTIA_SKILL1',
+	'PROMOTION_MARISA_SKILL1',
+	'PROMOTION_BYAKUREN_SKILL1',
+	'PROMOTION_TOYOHIME',
+	'PROMOTION_SAGUME_SKILL1',
+	]
 
 ##### </written by F> #####
 
