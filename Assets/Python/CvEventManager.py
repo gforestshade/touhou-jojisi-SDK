@@ -1483,12 +1483,13 @@ class CvEventManager:
 			#デバフ系ここまで
 			#以後はその他の昇進を処理
 				
-		#ターン系昇進を持っていないにも関わらずTurnPromoの値を持っている場合、リセットする
-		if not TurnPromoFlag:
-			pUnit.setNumTurnPromo(0)
-				
-		#蛮族化
-		#厳密に言うと昇進ではないが、ここで処理が望ましい
+		#ターン系昇進を持っていないにも関わらずTurnPromoの値を持っている場合、リセット<s>する</s>
+		# しない。やはりこれはおかしい。
+		# if not TurnPromoFlag:
+		#	pUnit.setNumTurnPromo(0)
+		
+		# 蛮族化
+		# ここまでの判定で蛮族化かスイッチが入ってしまったら最後に蛮族化
 		if BarbarianFlag == True:
 			Functions.uncivilize(pUnit)
 		
