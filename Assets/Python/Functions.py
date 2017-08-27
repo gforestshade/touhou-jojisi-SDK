@@ -814,7 +814,6 @@ def processTEWITrap(pTrapUnit):
 		
 	#スパイが居ないままユニットが踏んだようならば
 	elif len(UnitList2) > 0:
-#def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFriend,bNeutral,bEnemy,iBorder1,bToho,bGeneral,bPlayer,bAI,iBorder2,bAntiSpellBarrier,iDistanceCorrect,iSpecial=0,bTrialCalc = False,bSpell = False):
 		changeDamage(RangeList1,pTrapUnit,0,20,0,True,False,False,True,-1,True,True,True,True,-1,False,0,4)
 		pTrapUnit.changeDamage(100,pTrapUnit.getOwner())
 		
