@@ -1508,7 +1508,7 @@ class CvEventManager:
 		if iCiv == gc.getInfoTypeForString('CIVILIZATION_INDIA') and \
 		   pPlayer.getNumWorldSpell() > 0 and \
 		   gc.getGame().getGameTurn() > 50 and \
-		   Functions.isWar(pPlayer):
+		   Functions.isWar(iPlayer):
 
 			pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength())
 			pPlayer.setNumWorldSpell(0)
@@ -1519,7 +1519,7 @@ class CvEventManager:
 		if iCiv == gc.getInfoTypeForString('CIVILIZATION_ROME') and \
 		   pPlayer.getNumWorldSpell() > 0 and \
 		   gc.getGame().getGameTurn() > 50 and \
-		   Functions.isWar(pPlayer):
+		   Functions.isWar(iPlayer):
 
 			Functions.worldspell_HYOUSEIRENGOU1(pPlayer, pPlayer.getCapitalCity().plot())
 
@@ -1529,7 +1529,7 @@ class CvEventManager:
 		if iCiv == gc.getInfoTypeForString('CIVILIZATION_MARI') and \
 		   pPlayer.getNumWorldSpell() > 0 and \
 		   gc.getGame().getGameTurn() > 50 and \
-		   Functions.isWar(pPlayer):
+		   Functions.isWar(iPlayer):
 
 			Functions.worldspell_KISHINJOU1(pPlayer, pPlayer.getCapitalCity().plot())
 
