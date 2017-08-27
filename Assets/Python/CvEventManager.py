@@ -3525,53 +3525,34 @@ class CvEventManager:
 		
 		#統合MOD追記部分ここから
 
+		pPlayer = gc.getPlayer(iPlayer)
+		iCiv = pPlayer.getCivilizationType()
+		eTeam = gc.getTeam(pPlayer.getTeam())
 		#うわばみ志向のハゲ黄金期発生
-
-			pPlayer = gc.getPlayer(iPlayer)
-			iCiv = pPlayer.getCivilizationType()
-			eTeam = gc.getTeam(pPlayer.getTeam())
-			if pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_PROPHET"):
-				if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_ALCHOL")):
-					#ゲーム速度による変化
-					if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_MARATHON'):
-						pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
-					if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_EPIC'):
-						pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
-					if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_NORMAL'):
-						pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
-					if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_QUICK'):
-						pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
-					if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_TENGU'):
-						pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2)
+		if pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_PROPHET"):
+			if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_ALCHOL")):
+				#ゲーム速度による変化
+				if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_MARATHON'):
+					pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
+				if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_EPIC'):
+					pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
+				if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_NORMAL'):
+					pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
+				if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_QUICK'):
+					pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2+1)
+				if gc.getGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_TENGU'):
+					pPlayer.changeGoldenAgeTurns(pPlayer.getGoldenAgeLength()/2)
 				
-				#神霊廟文明時、偉人発生時に追加の神霊をinハゲ沸きやがった時
-				
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_CHINA'):
-					CityList = player.getCityList()
-					for pcity in CityList:
-						if pcity.isCapital():
-							city = pcity
-					#十七条憲法採用時に更に追加の神霊を
-					if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_GOVERNMENT')) == gc.getInfoTypeForString('CIVIC_ZYUUSHICHIZYO_KENPOU')) == True:
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					#最終固有テク取得で更に追加の神霊を
-					if eTeam.isHasTech(gc.getInfoTypeForString('TECH_HOSIHURU_SHINREIBYOU')) == True:
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		#神霊廟文明時、追加の神霊
+		if iCiv == gc.getInfoTypeForString('CIVILIZATION_CHINA'):
+			pyCapital = player.getCapitalCity()
+			#十七条憲法採用時に更に追加の神霊を
+			if pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_GOVERNMENT')) == gc.getInfoTypeForString('CIVIC_ZYUUSHICHIZYO_KENPOU'):
+				pyCapital.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'))
+			#最終固有テク取得で更に追加の神霊を
+			if eTeam.isHasTech(gc.getInfoTypeForString('TECH_HOSIHURU_SHINREIBYOU')):
+				pyCapital.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'))
 			
-			#神霊廟文明時、偉人発生時に追加の神霊をin通常時
-			if (pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_ARTIST")) or (pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_SCIENTIST")) or (pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_MERCHANT")) or (pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_ENGINEER")) or (pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_GREAT_SPY")):
-				if iCiv == gc.getInfoTypeForString('CIVILIZATION_CHINA'):
-					CityList = player.getCityList()
-					for pcity in CityList:
-						if pcity.isCapital():
-							city = pcity
-					#十七条憲法採用時に更に追加の神霊を
-					if (pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_GOVERNMENT')) == gc.getInfoTypeForString('CIVIC_ZYUUSHICHIZYO_KENPOU')) == True:
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					#最終固有テク取得で更に追加の神霊を
-					if eTeam.isHasTech(gc.getInfoTypeForString('TECH_HOSIHURU_SHINREIBYOU')) == True:
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-		
 
 		#統合MOD追記部分ここまで
 
