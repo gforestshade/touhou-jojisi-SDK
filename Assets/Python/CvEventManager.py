@@ -2296,47 +2296,27 @@ class CvEventManager:
 				iY = pWinner.getY()
 				if gc.getGame().getSorenRandNum(100, "Deepone Inclusion") < 20:
 					if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setSpecialNumber(3)
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
-						newUnit.finishMoves()
-					if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL'):
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setSpecialNumber(5)
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
-						newUnit.finishMoves()
-					if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL'):
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setSpecialNumber(7)
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
-						newUnit.finishMoves()
-					if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE'):
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setSpecialNumber(8)
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
-						newUnit.finishMoves()
-					if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL'):
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setSpecialNumber(13)
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
-						newUnit.finishMoves()
-					if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN'):
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setSpecialNumber(17)
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
-						newUnit.finishMoves()
-					if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE'):
-						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setSpecialNumber(23)
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
-						newUnit.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),False )
-						newUnit.finishMoves()
+						baseStr = 3
+					elif pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_CLASSICAL'):
+						baseStr = 5
+					elif pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MEDIEVAL'):
+						baseStr = 7
+					elif pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_RENAISSANCE'):
+						baseStr = 8
+					elif pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_INDUSTRIAL'):
+						baseStr = 13
+					elif pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_MODERN'):
+						baseStr = 17
+					elif pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_FUTURE'):
+						baseStr = 23
+					else:
+						Functions.doprint("Kenzokuka: era Error")
+					
+					newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_DEEPONE'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					newUnit.setSpecialNumber(baseStr)
+					newUnit.countCombatBonus()
+					newUnit.finishMoves()
+
 		
 		#どれみスキルを持っている場合、味方ユニットに夢オチ付与
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DOREMY_SKILL1')):
