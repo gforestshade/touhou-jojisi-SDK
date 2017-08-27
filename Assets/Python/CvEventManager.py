@@ -1855,12 +1855,10 @@ class CvEventManager:
 		
 		#統合MOD追記部分
 		
-		#そのプレイヤーの都市全走査
 		for pPyCity in py.getCityList():
 			pCity = pPlayer.getCity(pPyCity.getID())
-			pCapital = gc.getPlayer(pCity.getOwner()).getCapitalCity()
 			
-		#こころちゃんの志向変化で労働志向が無くなった場合の処理
+			#こころちゃんの志向変化で労働志向が無くなった場合の処理
 			if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST')):
 				if not pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_LABORLIST')):
 					pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_LABORLIST_TRIBALISM'),0)
@@ -1875,13 +1873,11 @@ class CvEventManager:
 				#集権志向の場合も同様に処理
 				if not pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_CENTRALIZATION')):
 					pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_CENTRALIZATION'),0)
-		
-		
-		#集権志向ブースト建造物リセット
+
+			# 遷都などで集権志向が首都でない都市にあるならば除去
 			if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_CENTRALIZATION')):
-				if pCapital.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_CENTRALIZATION")) == False:
-					if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_CENTRALIZATION")) == True:
-						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_CENTRALIZATION'),0)
+				if not pCity.isCapital() and pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_CENTRALIZATION")):
+					pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_CENTRALIZATION'),0)
 		
 		#統合MOD追記部分ここまで
 		
@@ -2199,98 +2195,57 @@ class CvEventManager:
 				CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pLoser.getUnitType()).getDescription() + "&#12364;&#29983;&#12392;&#27515;&#12398;&#22659;&#30028;&#12434;&#12356;&#12376;&#12426;&#12414;&#12375;&#12383;&#65281;","")
 
 		#統合MOD追記部分ここから
+
+		##########
+		# キョンシー化
+		##########
 		
-		#神霊廟キャラクターマーク系・芳香
+		# 芳香
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YOSHIKA')):
 			if gc.getGame().getSorenRandNum(100, "YOSHIKA SKILL") < 8:
 				if pLoser.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
-					RevivalUnit = pLoser.getUnitType()
-					plotX = pWinner.getX()
-					plotY = pWinner.getY()
-					newUnit1 = gc.getPlayer(pWinner.getOwner()).initUnit(RevivalUnit, plotX, plotY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					newUnit1.setHasPromotion(gc.getInfoTypeForString('PROMOTION_KYONSHII'),True)
-					newUnit1.finishMoves()
-					CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pLoser.getUnitType()).getDescription() + "&#12364;&#12461;&#12519;&#12531;&#12471;&#12540;&#12392;&#12375;&#12390;&#24489;&#27963;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+					Functions.initCombatKyonshii(pWinner, pLoser)
 		
-		#神霊廟キャラクターマーク系・青娥
+		# 青娥
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SEIGA')):
 			if gc.getGame().getSorenRandNum(100, "SEIGA SKILL") < 12:
 				if pLoser.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
-					RevivalUnit = pLoser.getUnitType()
-					plotX = pWinner.getX()
-					plotY = pWinner.getY()
-					newUnit1 = gc.getPlayer(pWinner.getOwner()).initUnit(RevivalUnit, plotX, plotY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					newUnit1.setHasPromotion(gc.getInfoTypeForString('PROMOTION_KYONSHII'),True)
-					newUnit1.finishMoves()
-					CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pLoser.getUnitType()).getDescription() + "&#12364;&#12461;&#12519;&#12531;&#12471;&#12540;&#12392;&#12375;&#12390;&#24489;&#27963;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+					Functions.initCombatKyonshii(pWinner, pLoser)
+
+		##########
+		# 神霊
+		##########
 		
-		#神霊廟キャラクターマーク系・屠自古
+		# 屠自古
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOJIKO')):
 			if gc.getGame().getSorenRandNum(100, "TOJIKO SKILL") < 5:
-				iPlayer = pWinner.getOwner()
-				pPlayer = gc.getPlayer(iPlayer)
-				iX = pWinner.getX()
-				iY = pWinner.getY()
-				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				newUnit.finishMoves()
-				CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+				Functions.initCombatShinrei(pWinner)
 		
-		#神霊廟キャラクターマーク系・布都
+		# 布都
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FUTO')):
 			if gc.getGame().getSorenRandNum(100, "FUTO SKILL") < 10:
-				iPlayer = pWinner.getOwner()
-				pPlayer = gc.getPlayer(iPlayer)
-				iX = pWinner.getX()
-				iY = pWinner.getY()
-				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				newUnit.finishMoves()
-				CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+				Functions.initCombatShinrei(pWinner)
 				
-		#神霊廟キャラクターマーク系・神子
+		# 神子
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIMIMIKO')):
-			if gc.getGame().getSorenRandNum(100, "MIMIMIKO SKILL") < 10:
-				iPlayer = pWinner.getOwner()
-				pPlayer = gc.getPlayer(iPlayer)
-				iX = pWinner.getX()
-				iY = pWinner.getY()
-				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				newUnit.finishMoves()
-				CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
-		
-			elif pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIMIMIKO_SKILL1')):
+			if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIMIMIKO_SKILL1')):
 				if gc.getGame().getSorenRandNum(100, "MIMIMIKO SKILL PLUS") < 15:
-					iPlayer = pWinner.getOwner()
-					pPlayer = gc.getPlayer(iPlayer)
-					iX = pWinner.getX()
-					iY = pWinner.getY()
-					newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					newUnit.finishMoves()
-					CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+					Functions.initCombatShinrei(pWinner)
+			elif gc.getGame().getSorenRandNum(100, "MIMIMIKO SKILL") < 10:
+				Functions.initCombatShinrei(pWinner)
 		
-		#集まる神霊1を持っていた場合
+		# 集まる神霊1
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ATUMARU_SHINREI1')):
 			if pWinner.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
 				if gc.getGame().getSorenRandNum(100, "ATUMARU SHINREI1") < 2:
-					iPlayer = pWinner.getOwner()
-					pPlayer = gc.getPlayer(iPlayer)
-					iX = pWinner.getX()
-					iY = pWinner.getY()
-					newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					newUnit.finishMoves()
-					CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+					Functions.initCombatShinrei(pWinner)
 		
-		#集まる神霊2を持っていた場合
+		# 集まる神霊2
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ATUMARU_SHINREI2')):
 			if pWinner.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
 				if gc.getGame().getSorenRandNum(100, "ATUMARU SHINREI2") < 4:
-					iPlayer = pWinner.getOwner()
-					pPlayer = gc.getPlayer(iPlayer)
-					iX = pWinner.getX()
-					iY = pWinner.getY()
-					newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					newUnit.finishMoves()
-					CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
-		
+					Functions.initCombatShinrei(pWinner)
+
 		#動物の使役による動物寝返り処理
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KASENLIST_DOUBUTU')):
 			iPlayer = pWinner.getOwner()

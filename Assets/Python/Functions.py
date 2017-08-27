@@ -822,5 +822,27 @@ def processTEWITrap(pTrapUnit):
 		CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
 		CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
 
+# 戦闘でのキョンシー化
+# pWinnerの支配下でpLoserをキョンシーとして生成する
+def initCombatKyonshii(pWinner, pLoser):
+	RevivalUnit = pLoser.getUnitType()
+	plotX = pWinner.getX()
+	plotY = pWinner.getY()
+	newUnit1 = gc.getPlayer(pWinner.getOwner()).initUnit(RevivalUnit, plotX, plotY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+	newUnit1.setHasPromotion(gc.getInfoTypeForString('PROMOTION_KYONSHII'),True)
+	newUnit1.finishMoves()
+	CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pLoser.getUnitType()).getDescription() + "&#12364;&#12461;&#12519;&#12531;&#12471;&#12540;&#12392;&#12375;&#12390;&#24489;&#27963;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+
+# 戦闘での神霊発生
+# pWinnerの支配下で神霊を発生させる
+def initCombatShinrei(pWinner):
+	iPlayer = pWinner.getOwner()
+	pPlayer = gc.getPlayer(iPlayer)
+	iX = pWinner.getX()
+	iY = pWinner.getY()
+	newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+	newUnit.finishMoves()
+	CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
+
 
 ##### </written by F> #####
