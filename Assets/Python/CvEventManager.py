@@ -1483,7 +1483,7 @@ class CvEventManager:
 			#デバフ系ここまで
 			#以後はその他の昇進を処理
 				
-		#ターン系昇進を持っていないにも関わらずTurnPromoの値を持っている場合、リセット<s>する</s>
+		# ターン系昇進を持っていないにも関わらずTurnPromoの値を持っている場合、リセット<s>する</s>
 		# しない。やはりこれはおかしい。
 		# if not TurnPromoFlag:
 		#	pUnit.setNumTurnPromo(0)
@@ -1556,34 +1556,18 @@ class CvEventManager:
 				tyousaheidan = gc.getInfoTypeForString( 'UNIT_KOBITO_TYOUSAHEIDAN' )
 				estiEnd = CyGame().getEstimateEndTurn()
 				if ( estiEnd >= 1000 ):
-					if ( iGameTurn % 12 ) == 0:
-						pNewUnit = pPlayer.initUnit( tyousaheidan, iX, iY, UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION )
+					iTurnCount = 12
 				elif ( estiEnd >= 700 ):
-					if ( iGameTurn % 8 ) == 0:
-						pNewUnit = pPlayer.initUnit( tyousaheidan, iX, iY, UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION )
+					iTurnCount = 8
 				elif ( estiEnd >= 500 ):
-					if ( iGameTurn % 6 ) == 0:
-						pNewUnit = pPlayer.initUnit( tyousaheidan, iX, iY, UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION )
-
+					iTurnCount = 6
 				elif ( estiEnd >= 300 ):
-					if ( iGameTurn % 4 ) == 0:
-						pNewUnit = pPlayer.initUnit( tyousaheidan, iX, iY, UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION )
+					iTurnCount = 4
 				else:
-					if ( iGameTurn % 4 ) == 0:
-						pNewUnit = pPlayer.initUnit( tyousaheidan, iX, iY, UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION )
+					iTurnCount = 4
 
-				basechance = 12
-				estiEnd = CyGame().getEstimateEndTurn()
-				if ( estiEnd >= 1000 ):
-					basechance = basechance
-				elif ( estiEnd >= 700 ):
-					basechance = 6
-				elif ( estiEnd >= 500 ):
-					basechance = 4
-				elif ( estiEnd >= 300 ):
-					basechance = 2
-				else:
-					basechance = 1
+				if ( iGameTurn % iTurnCount ) == 0:
+					pNewUnit = py.initUnit( tyousaheidan, iX, iY )
 			
 		#統合MOD追記部分ここまで
 		
