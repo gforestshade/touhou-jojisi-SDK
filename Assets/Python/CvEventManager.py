@@ -1815,36 +1815,7 @@ class CvEventManager:
 			
 			#てゐトラップの発動判定
 			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TRAP'):
-				pTeam = gc.getTeam(pUnit.getTeam())
-				SpyList = Functions.checkUnit(pUnit.getX(),pUnit.getY(),RangeList1,gc.getInfoTypeForString('UNIT_SPY'),gc.getInfoTypeForString('UNIT_SPY'),2)
-				UnitList = Functions.checkUnit(pUnit.getX(),pUnit.getY(),RangeList1,gc.getInfoTypeForString('UNIT_SANAE0'),gc.getInfoTypeForString('UNIT_GREAT_SPY'),2)
-				SpyList2 = []
-				UnitList2 = []
-				for pSpy in SpyList:
-					if pTeam.isAtWar(pSpy.getTeam()) and pSpy.getDamage()<100:
-						SpyList2.append(pSpy)
-				for pUnit2 in UnitList:
-					if pTeam.isAtWar(pUnit2.getTeam()):
-						UnitList2.append(pUnit2)
-			
-				#スパイが居ればスパイと引き換えにトラップ除去
-				if len(SpyList2) > 0:
-					SpyList2[0].changeDamage(100,pUnit.getOwner())
-					pUnit.changeDamage(100,pUnit.getOwner())
-					
-					point = pUnit.plot().getPoint()
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
-					CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
-					
-				else:
-					#スパイが居ないようならば
-					if len(UnitList2) > 0:
-						Functions.changeDamage(RangeList1,pUnit,0,20,0,True,False,False,True,-1,True,True,True,True,-1,False,0,4)
-						pUnit.changeDamage(100,pUnit.getOwner())
-						
-						point = pUnit.plot().getPoint()
-						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
-						CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+				Functions.processTEWITrap(pUnit)
 			
 			#スペルルートのAI東方ユニットにスペルを使用させる
 			#if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):

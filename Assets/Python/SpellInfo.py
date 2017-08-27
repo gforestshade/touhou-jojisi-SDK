@@ -6379,8 +6379,10 @@ def req_TEWI_PHANTASM1(bTestVisible,caster,sCAL,eCAL,cost):
 				for pUnit in py.getUnitList():
 					if gc.getInfoTypeForString('UNIT_TRAP') == pUnit.getUnitType():
 						TrapNum = TrapNum+1
-				if gc.getPlayer(caster.getOwner()).getNumCities() > TrapNum:
-					if caster.getNumSpellPhantasmBreakTime() <= 0:
+				if py.getNumCities() > TrapNum:
+					if py.CyGet().isHuman():
+						return True
+					elif caster.getNumSpellPhantasmBreakTime() <= 0:
 						return True
 				
 	return False

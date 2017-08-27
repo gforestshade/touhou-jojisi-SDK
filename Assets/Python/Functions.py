@@ -232,16 +232,16 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 									iDamage = (100-pUnit.getDamage()) - iLimitDamage
 
 							ow = pUnit.getOwner()
-							if iSpecial == 4: #てゐトラップ用
-								if gc.getGame().getSorenRandNum(100,"Tewi Trap") < 50:
-									#pUnit.changeDamage(iDamage,caster.getOwner())
-									damageUnitList.append( [pUnit,ow,iDamage] )
-							else:
-								iTrialCalcNum = iTrialCalcNum + iDamage
-								if bTrialCalc == False:
-									#pUnit.changeDamage(iDamage,caster.getOwner())
-									damageUnitList.append( [pUnit,ow,iDamage] )
-								
+							# if iSpecial == 4: #てゐトラップ用
+							# 	if gc.getGame().getSorenRandNum(100,"Tewi Trap") < 50:
+							# 		#pUnit.changeDamage(iDamage,caster.getOwner())
+							# 		damageUnitList.append( [pUnit,ow,iDamage] )
+							# else:
+							iTrialCalcNum = iTrialCalcNum + iDamage
+							if bTrialCalc == False:
+								#pUnit.changeDamage(iDamage,caster.getOwner())
+								damageUnitList.append( [pUnit,ow,iDamage] )
+							
 							if iSpecial == 1: #小町用
 								if pUnit.getDamage() + iDamage >= 100:
 									#caster.changeExperience(1,-1,False,False,False)
@@ -790,6 +790,37 @@ def worldspell_KISHINJOU1(pPlayer, plot):
 	#輝針城の各都市で付喪神が大量発生しました！
 	CyInterface().addImmediateMessage("&#36637;&#37341;&#22478;&#12398;&#21508;&#37117;&#24066;&#12391;&#20184;&#21930;&#31070;&#12364;&#22823;&#37327;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
+def processTEWITrap(pTrapUnit):
+	pTeam = gc.getTeam( pTrapUnit.getTeam() )
+	SpyList = checkUnit(pTrapUnit.getX(),pTrapUnit.getY(),RangeList1,gc.getInfoTypeForString('UNIT_SPY'),gc.getInfoTypeForString('UNIT_SPY'),2)
+	UnitList = checkUnit(pTrapUnit.getX(),pTrapUnit.getY(),RangeList1,gc.getInfoTypeForString('UNIT_SANAE0'),gc.getInfoTypeForString('UNIT_GREAT_SPY'),2)
+	SpyList2 = []
+	UnitList2 = []
+	for pSpy in SpyList:
+		if pTeam.isAtWar(pSpy.getTeam()) and pSpy.getDamage()<100:
+			SpyList2.append(pSpy)
+	for pUnit2 in UnitList:
+		if pTeam.isAtWar(pUnit2.getTeam()):
+			UnitList2.append(pUnit2)
+			
+	#スパイが居ればスパイと引き換えにトラップ除去
+	if len(SpyList2) > 0:
+		SpyList2[0].changeDamage(100,pTrapUnit.getOwner())
+		pTrapUnit.changeDamage(100,pTrapUnit.getOwner())
+		
+		point = pTrapUnit.plot().getPoint()
+		CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+		CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+		
+	#スパイが居ないままユニットが踏んだようならば
+	elif len(UnitList2) > 0:
+#def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFriend,bNeutral,bEnemy,iBorder1,bToho,bGeneral,bPlayer,bAI,iBorder2,bAntiSpellBarrier,iDistanceCorrect,iSpecial=0,bTrialCalc = False,bSpell = False):
+		changeDamage(RangeList1,pTrapUnit,0,20,0,True,False,False,True,-1,True,True,True,True,-1,False,0,4)
+		pTrapUnit.changeDamage(100,pTrapUnit.getOwner())
+		
+		point = pTrapUnit.plot().getPoint()
+		CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+		CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
 
 
 ##### </written by F> #####
