@@ -147,105 +147,104 @@ def req_Spell(bTestVisible,caster,sPromotion,sStartUnit,sEndUnit,cost=0):
 #スタンドバイユニットには効果が出ないように
 #iBorderは意味のない変数　引数が多すぎて呼び出す際にややこしくてしょうがなかったので、区切り文字代わりに
 #bTrialCalcがTrueのときはダメージ量or回復量の合計を計算して返す
-def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFriend,bNeutral,bEnemy,iBorder1,bToho,bGeneral,bPlayer,bAI,iBorder2,bAntiSpellBarrier,iDistanceCorrect,iSpecial=0,bTrialCalc = False,bSpell = False):
+def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFriend,bNeutral,bEnemy,iBorder1,bToho,bGeneral,bPlayer,bAI,iBorder2,bAntiSpellBarrier,iDistanceCorrect,iSpecial=0,bTrialCalc = False):
 	iTrialCalcNum = 0
 	damageUnitList = []
 	
 	for squea in squeaList:
 		iX = caster.getX() + squea[0]
 		iY = caster.getY() + squea[1]
-		if isPlot(iX,iY):
-			iNumKOTohoUnit = 0
-			pPlot = gc.getMap().plot(iX,iY)
-			for i in range(pPlot.getNumUnits()):
-				if pPlot.getUnit(i+iNumKOTohoUnit).getDamage() >= 100:
-					iNumKOTohoUnit = iNumKOTohoUnit + 1
-				pUnit = pPlot.getUnit(i+iNumKOTohoUnit)
-				pTeam = gc.getTeam(caster.getTeam())
-				bFlag = False #ダメージを与える所属であるかどうかのチェック
-				if bFriend and caster.getTeam() == pUnit.getTeam():
-					bFlag = True
-				if bNeutral and caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()) == False:
-					bFlag = True
-				if bEnemy and caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()) == True:
-					bFlag = True
-				if bFlag:
-					bFlag = False
-					if pUnit.isHuman() and bPlayer:
-						bFlag = True
-					if pUnit.isHuman() == False and bAI:
-						bFlag = True
-					
-					if iSpecial == 5: #むらさ用　船舶ユニット以外には無効
-						if pUnit.getDomainType() != gc.getInfoTypeForString('DOMAIN_SEA'):
-							bFlag = False
-					
-					if bFlag:
-						bFlag = False
-						if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_STANDBY') or pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
-							if bToho and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_STANDBY'):
-								bFlag = True
-						else:
-							if bGeneral:
-								bFlag = True
-								
-						if bFlag: #ダメージ量の計算
-							if minDamage == maxDamage:
-								iDamage = minDamage
-							else:
-								if minDamage >= 0: #ダメージのとき
-									iDamage = minDamage
-									iDamage = iDamage + gc.getGame().getSorenRandNum((maxDamage - minDamage + 1), "Damage")
-								else: #回復のとき
-									iDamage = maxDamage
-									iDamage = iDamage - gc.getGame().getSorenRandNum((maxDamage - minDamage + 1), "Damage")
-							if iSpecial == 2: #めーりん用
-								iDamage -= pUnit.countAutoHeal()
-							if iSpecial == 3: #えいき用
-								iDamage = int(pUnit.getExperience() * ( caster.countCardAttackLevel() * 0.1 + 1  ) )
-							
-							if bAntiSpellBarrier == False:
-								iDamage = iDamage * (100 - countSpellTolerance(pUnit)) / 100
-							
-							#距離による補正
-							if iDistanceCorrect == 1: #ぱちぇスペカ用
-								#使用者と対象者との距離をユークリッド距離で求める
-								iDistance = math.sqrt(  (caster.getX()-pUnit.getX())**2 + (caster.getY()-pUnit.getY())**2 )
-								iDamage = iDamage * (  ( math.sqrt( (caster.getLevel()**2) * 2) - iDistance  )  / math.sqrt( (caster.getLevel()**2) * 2)    )  
-								iDamage = int(iDamage)
-								
-							if bPercent: #割合ダメージかどうか
-								if minDamage >= 0: #ダメージのとき
-									iDamage = (100 - pUnit.getDamage()) * iDamage/100
-								else:
-									iDamage = pUnit.getDamage() * iDamage / 100
-							
-							if minDamage >= 0: #ダメージのとき
-								if (100-pUnit.getDamage()) <= iLimitDamage:
-									iDamage = 0
-								if 100 - pUnit.getDamage() - iDamage <= iLimitDamage and (100-pUnit.getDamage()) >= iLimitDamage:
-									iDamage = (100-pUnit.getDamage()) - iLimitDamage
-							else: #回復のとき
-								if (100-pUnit.getDamage()) >= iLimitDamage:
-									iDamage = 0
-								if 100 - pUnit.getDamage() - iDamage >= iLimitDamage and (100-pUnit.getDamage()) <= iLimitDamage:
-									iDamage = (100-pUnit.getDamage()) - iLimitDamage
+		if not isPlot(iX,iY):
+			continue
+		iNumKOTohoUnit = 0
+		pPlot = gc.getMap().plot(iX,iY)
+		for i in range(pPlot.getNumUnits()):
+			if pPlot.getUnit(i+iNumKOTohoUnit).getDamage() >= 100:
+				iNumKOTohoUnit = iNumKOTohoUnit + 1
+			pUnit = pPlot.getUnit(i+iNumKOTohoUnit)
+			pTeam = gc.getTeam(caster.getTeam())
 
-							ow = pUnit.getOwner()
-							# if iSpecial == 4: #てゐトラップ用
-							# 	if gc.getGame().getSorenRandNum(100,"Tewi Trap") < 50:
-							# 		#pUnit.changeDamage(iDamage,caster.getOwner())
-							# 		damageUnitList.append( [pUnit,ow,iDamage] )
-							# else:
-							iTrialCalcNum = iTrialCalcNum + iDamage
-							if bTrialCalc == False:
-								#pUnit.changeDamage(iDamage,caster.getOwner())
-								damageUnitList.append( [pUnit,ow,iDamage] )
-							
-							if iSpecial == 1: #小町用
-								if pUnit.getDamage() + iDamage >= 100:
-									#caster.changeExperience(1,-1,False,False,False)
-									gc.getPlayer(caster.getOwner()).changeGold(5)
+			bFlag = False #ダメージを与える所属であるかどうかのチェック
+			if bFriend and caster.getTeam() == pUnit.getTeam():
+				bFlag = True
+			if bNeutral and caster.getTeam() != pUnit.getTeam() and not pTeam.isAtWar(pUnit.getTeam()):
+				bFlag = True
+			if bEnemy and caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()):
+				bFlag = True
+			if not bFlag:
+				continue
+
+			bFlag = False
+			if pUnit.isHuman() and bPlayer:
+				bFlag = True
+			if not pUnit.isHuman() and bAI:
+				bFlag = True
+			if iSpecial == 5: #むらさ用　船舶ユニット以外には無効
+				if pUnit.getDomainType() != gc.getInfoTypeForString('DOMAIN_SEA'):
+					bFlag = False
+			if not bFlag:
+				continue
+			
+			bFlag = False
+			if bToho and pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
+				bFlag = True
+			elif bGeneral:
+				bFlag = True
+			if not bFlag:
+				continue
+
+			#ダメージ量の計算
+			if minDamage == maxDamage:
+				iDamage = minDamage
+			elif minDamage >= 0: #ダメージのとき
+				iDamage = minDamage + gc.getGame().getSorenRandNum((maxDamage - minDamage + 1), "Damage")
+			else: #回復のとき
+				iDamage = maxDamage - gc.getGame().getSorenRandNum((maxDamage - minDamage + 1), "Damage")
+			if iSpecial == 2: #めーりん用
+				iDamage -= pUnit.countAutoHeal()
+			if iSpecial == 3: #えいき用
+				iDamage = int(pUnit.getExperience() * ( caster.countCardAttackLevel() * 0.1 + 1  ) )
+
+			# 弾幕耐性
+			if not bAntiSpellBarrier:
+				iDamage *= (100 - countSpellTolerance(pUnit)) / 100
+			
+			#距離による補正
+			if iDistanceCorrect == 1: #ぱちぇスペカ用
+				#使用者と対象者との距離をユークリッド距離で求める
+				iDistance = math.sqrt(  (caster.getX()-pUnit.getX())**2 + (caster.getY()-pUnit.getY())**2 )
+				iDamage = iDamage * (  ( math.sqrt( (caster.getLevel()**2) * 2) - iDistance  )  / math.sqrt( (caster.getLevel()**2) * 2)    )  
+				iDamage = int(iDamage)
+
+			#割合ダメージ
+			if bPercent: 
+				if minDamage >= 0: #ダメージのとき
+					iDamage = (100 - pUnit.getDamage()) * iDamage/100
+				else:
+					iDamage = pUnit.getDamage() * iDamage / 100
+
+			# ダメージ上限
+			if minDamage >= 0: #ダメージのとき
+				if 100 - pUnit.getDamage() <= iLimitDamage:
+					iDamage = 0
+				elif 100 - pUnit.getDamage() - iDamage <= iLimitDamage:
+					iDamage = 100 - pUnit.getDamage() - iLimitDamage
+			else: #回復のとき
+				if 100 - pUnit.getDamage() >= iLimitDamage:
+					iDamage = 0
+				elif 100 - pUnit.getDamage() - iDamage >= iLimitDamage:
+					iDamage = 100 - pUnit.getDamage() - iLimitDamage
+
+			ow = pUnit.getOwner()
+			iTrialCalcNum += iDamage
+			if not bTrialCalc:
+				#pUnit.changeDamage(iDamage,caster.getOwner())
+				damageUnitList.append( [pUnit,ow,iDamage] )
+			
+				if iSpecial == 1: #小町用
+					if pUnit.getDamage() + iDamage >= 100:
+						#caster.changeExperience(1,-1,False,False,False)
+						gc.getPlayer(caster.getOwner()).changeGold(5)
 	
 	
 	
@@ -257,29 +256,12 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 	#実際のダメージ計算
 	for item in damageUnitList:
 		if iLimitDamage <= 0:
-			#キャップ0以下の場合、本当にあるか再度確認する
+			# キャップ0以下の場合、船と一緒に沈んだ可能性があるので、本当にあるか再度確認する
 			if gc.getPlayer(item[1]).getUnit(item[0].getID()).getUnitType() != -1:
 				item[0].changeDamage(item[2],caster.getOwner())
 		else:
 			item[0].changeDamage(item[2],caster.getOwner())
 	
-	##casterへのPowerゲイン ダメージ系のときのみ
-	#if minDamage >= 0 and maxDamage>=0:
-	#	#統合MOD追記部分
-	#	#小町スペルの場合、Powerは回復しないように
-	#	if bFlag:
-	#		if iSpecial == 1:
-	#			iBase = 1
-	#			caster.setPower( caster.getPower() + iBase  )
-	#	
-	#	#基準値の計算
-	#		else:
-	#			iBase = (minDamage + maxDamage)/2 * 30.0
-	#			if bSpell:
-	#				iBase = iBase * 5
-	#			if iBase == 0:
-	#				iBase = 1
-	#			caster.setPower( caster.getPower() + ( 0.5 * iTrialCalcNum / iBase  )  )
 	
 	
 #昇進付与関数
@@ -297,71 +279,79 @@ def setPromotion(squeaList,caster,sPromotion,bSet,iPercent,bFriend,bNeutral,bEne
 					iNumKOTohoUnit = iNumKOTohoUnit + 1
 				pUnit = pPlot.getUnit(i+iNumKOTohoUnit)
 				pTeam = gc.getTeam(caster.getTeam())
-				bFlag = False #昇進を与える所属であるかどうかのチェック
+
+				#昇進を与える所属であるかどうかのチェック
+				bFlag = False 
 				if bFriend and caster.getTeam() == pUnit.getTeam():
 					bFlag = True
-				if bNeutral and caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()) == False:
+				if bNeutral and caster.getTeam() != pUnit.getTeam() and not pTeam.isAtWar(pUnit.getTeam()):
 					bFlag = True
-				if bEnemy and caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()) == True:
+				if bEnemy and caster.getTeam() != pUnit.getTeam() and pTeam.isAtWar(pUnit.getTeam()):
 					bFlag = True
-				if bFlag:
-					bFlag = False
-					if pUnit.isHuman() and bPlayer:
-						bFlag = True
-					if pUnit.isHuman() == False and bAI:
-						bFlag = True
-					
-					if bFlag:
-						bFlag = False
-						if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_STANDBY') or pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
-							if bToho and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_STANDBY'):
-								bFlag = True
-						else:
-							if bGeneral:
-								bFlag = True
+				if not bFlag:
+					continue
+				
+				bFlag = False
+				if pUnit.isHuman() and bPlayer:
+					bFlag = True
+				if not pUnit.isHuman() and bAI:
+					bFlag = True
+				if not bFlag:
+					continue
+				
+				bFlag = False
+				if bToho and pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
+					bFlag = True
+				elif bGeneral:
+					bFlag = True
+				if not bFlag:
+					continue
+				
+				#確率の補正
+				iPer = iPercent
 
-						if bFlag: #確率で昇進の付与or剥奪
-							
-							iPer = iPercent
-							if bAntiSpellBarrier == False:
-								iPer = iPercent * (100 - countSpellTolerance(pUnit)) / 100
-							
-							if iSpecial == 4: #レティPhanスペル用
-								if pUnit.plot().getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW'):
-									iPer = iPer * 3
-								if pUnit.plot().getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA'):
-									iPer = iPer * 2
-							
-							if gc.getGame().getSorenRandNum(100, "spellcard cast") < iPer:
-								if iSpecial == 3: #おりんPhanスペル用
-									if ( (gc.getInfoTypeForString('UNIT_CIRNO1') <= pUnit.getUnitType() and pUnit.getUnitType() <= gc.getInfoTypeForString('UNIT_CIRNO6')  ) or
-										pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_GUN')  ):
-										pUnit.setHasPromotion(iPromotion,bSet)
-								else:
-									pUnit.setHasPromotion(iPromotion,bSet)
-									iUnitNum = iUnitNum+1
-								if onEffect == 1:
-									point = pUnit.plot().getPoint()
-									CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
-									CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
-								if iSpecial == 1: #レミリアPhanスペル用
-									if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KENZOKU')):
-										pUnit.changeDamage(-caster.countCardAttackLevel()/2,caster.getOwner())
-								if iSpecial == 2: #ゆかりんスペカ用
-									pUnit.setDanmakuKekkai(0,caster.countCardAttackLevel()/4 + 1)
-									pUnit.setImmobileTimer(1)
-								if iSpecial == 5: #えいきスペカ用
-									pUnit.finishMoves()
-								if iSpecial == 6: #とよひめPhanスペル用
-									pUnit.setImmobileTimer(1)
-								#東方叙事詩・統合MOD追記
-								#ちなみに足したり引いたりで管理する方式を採用
-								if iTurnPromo >= 0:
-									pUnit.setNumTurnPromo( pUnit.getNumTurnPromo() + iTurnPromo )
+				# 弾幕耐性
+				if bAntiSpellBarrier == False:
+					iPer *= (100 - countSpellTolerance(pUnit)) / 100
+
+				#レティPhanスペル用
+				if iSpecial == 4: 
+					if pUnit.plot().getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW'):
+						iPer = iPer * 3
+					if pUnit.plot().getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA'):
+						iPer = iPer * 2
+				
+				if gc.getGame().getSorenRandNum(100, "spellcard cast") < iPer:
+					if iSpecial == 3: #おりんPhanスペル用
+						if ( (gc.getInfoTypeForString('UNIT_CIRNO1') <= pUnit.getUnitType() and pUnit.getUnitType() <= gc.getInfoTypeForString('UNIT_CIRNO6')  ) or pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_GUN')  ):
+							pUnit.setHasPromotion(iPromotion,bSet)
+					else:
+						pUnit.setHasPromotion(iPromotion,bSet)
+						iUnitNum += 1
+					
+					if onEffect == 1:
+						point = pUnit.plot().getPoint()
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
+						CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
+					if iSpecial == 1: #レミリアPhanスペル用
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_KENZOKU')):
+							pUnit.changeDamage(-caster.countCardAttackLevel()/2,caster.getOwner())
+					if iSpecial == 2: #ゆかりんスペカ用
+						pUnit.setDanmakuKekkai(0,caster.countCardAttackLevel()/4 + 1)
+						pUnit.setImmobileTimer(1)
+					if iSpecial == 5: #えいきスペカ用
+						pUnit.finishMoves()
+					if iSpecial == 6: #とよひめPhanスペル用
+						pUnit.setImmobileTimer(1)
+
+					#東方叙事詩・統合MOD追記
+					#ちなみに足したり引いたりで管理する方式を採用
+					if iTurnPromo >= 0:
+						pUnit.setNumTurnPromo( pUnit.getNumTurnPromo() + iTurnPromo )
 	
 	#casterへのPowerゲイン
 	#この際だしいっそbGainは全てFalseにする？
-	if bGain: 
+	if bGain:
 		#基準値の計算
 		iBase = iPercent * 30.0 / 100.0
 		if bSpell:
@@ -483,8 +473,8 @@ def RevivalUnit(pRevivalUnit,pKilledUnit):
 #ある文明が蛮族以外の文明と戦争状態にあるかどうかをチェック
 def isWar(iPlayer):
 
-	pTeam = gc.getTeam(iPlayer)
-	iNumTeam = gc.getGame().countCivTeamsAlive() + gc.getGame().countCivTeamsEverAlive()
+	pTeam = gc.getTeam( gc.getPlayer(iPlayer).getTeam() )
+	iNumTeam = gc.getMAX_CIV_TEAMS()
 	for i in range(iNumTeam):
 		ppTeam = gc.getTeam(i)
 		if ppTeam.isBarbarian() == False:
@@ -675,7 +665,7 @@ def uncivilize(pUnit):
 # 氷精連合の世界魔法
 # pPlayer の元にユニットが集まる(必ずしも氷精連合である必要はない)
 # pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
-def hyouseirengou1(pPlayer, pPlot):
+def worldspell_HYOUSEIRENGOU1(pPlayer, pPlot):
 
 	#沸いてくるユニットと数は時代依存
 	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
