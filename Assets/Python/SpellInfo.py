@@ -11098,9 +11098,9 @@ def spell_SPECIAL_HALLOWEEN_FEVER(caster,cost):
 	CAL = caster.countCardAttackLevel()
 	pPlot = caster.plot()
 	
-	if caster.getTeam() == pPlot.getTeam():
-		if pPlot.getImprovementType() != -1:
-			Functions.isImprovementUpgrade(caster,pPlot)
+	if caster.getTeam() == pPlot.getTeam() and pPlot.getImprovementType() != -1:
+		if Functions.terraformImprovementUpgrade(pPlot):
+			caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER'),False )
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
@@ -11131,9 +11131,11 @@ def spell_SPECIAL_DANGO_FEVER(caster,cost):
 	CAL = caster.countCardAttackLevel()
 	pPlot = caster.plot()
 	
-	if caster.getTeam() == pPlot.getTeam():
-		if pPlot.getImprovementType() != -1:
-			Functions.isImprovementUpgrade(caster,pPlot)
+	if caster.getTeam() == pPlot.getTeam() and pPlot.getImprovementType() != -1:
+		if Functions.terraformImprovementUpgrade(pPlot):
+			caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False )
+		elif Functions.improvementUpgrade(pPlot):
+			caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False )
 		
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	
