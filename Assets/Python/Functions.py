@@ -640,6 +640,8 @@ def uncivilize(pUnit):
 		copyPromotions(pUnit, newUnit1)
 		
 		newUnit1.finishMoves()
+
+		# éπìiêSÇ©ÇÁÇÃîÿë∞âª...Ç©Ç«Ç§Ç©ÇÕÇÌÇ©ÇÁÇ»Ç¢Ç™ÅAéùÇ¡ÇƒÇΩÇÁè¡Ç∑
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_EASY'),False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_NORMAL'),False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHITTOSHIN_HARD'),False)
