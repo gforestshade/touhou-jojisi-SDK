@@ -531,10 +531,10 @@ def isWar(iPlayer):
 def changeTurnPromo(pUnit, i):
 	pUnit.setTurnPromo(pUnit.getTurnPromo() + i)
 
-def setPromotion(pUnit, sPromotion):
+def setPromotionEx(pUnit, sPromotion):
 	iPromotion = gc.getInfoTypeForString(sPromotion)
 	
-	for p,i in TohoUnitList.TempPromoList:
+	for p,i in TohoUnitList.TempPromotionList:
 		if p == sPromotion:
 			pUnit.setHasPromotion(iPromotion, True)
 			changeTurnPromo(pUnit, i)
