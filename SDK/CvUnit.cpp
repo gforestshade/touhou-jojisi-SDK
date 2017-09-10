@@ -2623,8 +2623,10 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	{
 		if (canAttack())
 		{
-			if (bAttack || !canCoexistWithEnemyUnit(NO_TEAM))
-			{
+			// 不可視ユニットなら通常移動できる
+			// できなくていいような気がするので外してみるのを試す
+			// if (bAttack || !canCoexistWithEnemyUnit(NO_TEAM))
+			// {
 				if (!isHuman() || (pPlot->isVisible(getTeam(), false)))
 				{
 					if (pPlot->isVisibleEnemyUnit(this) != bAttack)
@@ -2636,7 +2638,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 						}
 					}
 				}
-			}
+			// }
 
 			if (bAttack)
 			{
