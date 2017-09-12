@@ -1,9 +1,10 @@
-CvGameCoreDLL.dll
+Assets/*.dll
 jojisi_dev.ini
 jojisi_dev.ini.bak
 build.sh
 Sounds/
 SDK/.dir-locals.el
+SDK/Final_Release/
 Assets/Python/.dir-locals.el
 Final_Release/
 #artの一部は除外解除したい気持ち

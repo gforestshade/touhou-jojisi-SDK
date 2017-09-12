@@ -702,7 +702,13 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 	case BUTTONPOPUP_FREE_COLONY:
 		if (pPopupReturn->getButtonClicked() > 0)
 		{
-			CvMessageControl::getInstance().sendEmpireSplit(GC.getGameINLINE().getActivePlayer(), pPopupReturn->getButtonClicked());
+			// ちょっとできてきた
+			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_TEST, pPopupReturn->getButtonClicked());
+			if (pInfo)
+			{
+				gDLL->getInterfaceIFace()->addPopup(pInfo);
+			}
+			// CvMessageControl::getInstance().sendEmpireSplit(GC.getGameINLINE().getActivePlayer(), pPopupReturn->getButtonClicked());
 		}
 		else if (pPopupReturn->getButtonClicked() < 0)
 		{
@@ -721,6 +727,15 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		CvMessageControl::getInstance().sendFoundReligion(GC.getGameINLINE().getActivePlayer(), (ReligionTypes)pPopupReturn->getButtonClicked(), (ReligionTypes)info.getData1());
 		break;
 
+	case BUTTONPOPUP_TEST:
+		if (pPopupReturn->getButtonClicked() > 0)
+		{
+			CvPlayer& kActivePlayer = GET_PLAYER(GC.getGameINLINE().getActivePlayer());
+			kActivePlayer.setSplitEmpireLeader((LeaderHeadTypes)( pPopupReturn->getButtonClicked() ));
+			CvMessageControl::getInstance().sendEmpireSplit(GC.getGameINLINE().getActivePlayer(), info.getData1());
+		}
+		break;
+		
 	default:
 		FAssert(false);
 		break;
@@ -933,6 +948,9 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		break;
 	case BUTTONPOPUP_FOUND_RELIGION:
 		bLaunched = launchFoundReligionPopup(pPopup, info);
+		break;
+	case BUTTONPOPUP_TEST:
+		bLaunched = launchTestPopup(pPopup, info);
 		break;
 	default:
 		FAssert(false);
@@ -2511,6 +2529,34 @@ bool CvDLLButtonPopup::launchFreeColonyPopup(CvPopup* pPopup, CvPopupInfo &info)
 	}
 
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_NEVER_MIND"), ARTFILEMGR.getInterfaceArtInfo("INTERFACE_BUTTONS_CANCEL")->getPath(), 0, WIDGET_GENERAL);
+
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
+
+	return true;
+}
+
+bool CvDLLButtonPopup::launchTestPopup(CvPopup* pPopup, CvPopupInfo &info)
+{
+	// あたらしい関数の中だからって変数名を周りと合わせる気がぜんぜんないやつ
+	PlayerTypes ep = GC.getGameINLINE().getActivePlayer();
+	CivLeaderArray leaders;
+	CvPlayer &kp = GET_PLAYER(ep);
+	kp.setSplitEmpireLeader(NO_LEADER);
+	if( kp.getSplitEmpireLeaders(leaders) )
+	{
+		typedef CivLeaderArray::iterator it_t;
+		for(it_t i = leaders.begin(); i != leaders.end(); ++i)
+		{
+			LeaderHeadTypes eLeader = i->second;
+			CvWString szBuffer = gDLL->getText("TXT_KEY_SPLIT_EMPIRE_2", GC.getLeaderHeadInfo(eLeader).getTextKeyWide());
+
+			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer,
+			GC.getLeaderHeadInfo(eLeader).getButton(), eLeader, WIDGET_GENERAL);
+		}
+	}
+	
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_NEVER_MIND"),
+	ARTFILEMGR.getInterfaceArtInfo("INTERFACE_BUTTONS_CANCEL")->getPath(), -1, WIDGET_GENERAL);
 
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
 
