@@ -2266,10 +2266,11 @@ class CvEventManager:
 		if pLoser.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SEKIBANKILIST_FEAR')):
 			pPlot = gc.getMap().plot(pWinner.getX(),pWinner.getY())
 			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
 				if gc.getGame().getSorenRandNum(100, "ROKUROKUBI") < 10:
 					if pWinner.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BOSS'):
-						pPlot.getUnit(i).setHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR'),True)
-						pPlot.getUnit(i).setNumTurnPromo(pUnit.getNumTurnPromo() +1)
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR'),True)
+						pUnit.setNumTurnPromo(pUnit.getNumTurnPromo() +1)
 		
 		#八橋スキルとパルスィスキルの文化防御減少処理
 		if pWinner.isHasPromotion(gc.getInfoTypeForString('PROMOTION_YATUHASHI_SKILL1')) or \
