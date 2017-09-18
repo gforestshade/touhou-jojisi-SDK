@@ -10,6 +10,7 @@ import CvGameUtils
 import Popup as PyPopup
 import PyHelpers
 import TohoUnitList
+import TohoCivList
 import Functions
 import math
 
@@ -3449,8 +3450,8 @@ def spellcard_KOMACHI1(caster,cost):
 		for iY in range(iHeight):
 			RangeList.append([iX - caster.getX(),iY - caster.getY()])
 	
-	Functions.changeDamage(RangeList,caster,CAL*2,CAL*2,25,False,False,False,True,-1,False,True,True,True,-1,False,0,1,False,True)
-	Functions.changeDamage(RangeList,caster,CAL,CAL,25,False,False,False,True,-1,True,False,True,True,-1,False,0,1,False,True)
+	Functions.changeDamage(RangeList,caster,CAL*2,CAL*2,25,False,False,False,True,-1,False,True,True,True,-1,False,0,1,False)
+	Functions.changeDamage(RangeList,caster,CAL,CAL,25,False,False,False,True,-1,True,False,True,True,-1,False,0,1,False)
 	
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 	caster.setPower(caster.getPower()-cost)
@@ -3475,8 +3476,8 @@ def spellcard_KOMACHI1_Estimate(caster):
 		for iY in range(iHeight):
 			RangeList.append([iX - caster.getX(),iY - caster.getY()])
 	
-	estimatePoint = estimatePoint + Functions.changeDamage(RangeList,caster,int(CAL*(1+CAL*0.05)),int(CAL*(1+CAL*0.05)),0,False,False,False,True,-1,False,True,True,True,-1,False,0,1,True,True)
-	estimatePoint = estimatePoint + Functions.changeDamage(RangeList,caster,int(CAL*(1+CAL*0.05)/2),int(CAL*(1+CAL*0.05)/2),0,False,False,False,True,-1,True,False,True,True,-1,False,0,1,True,True)
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList,caster,int(CAL*(1+CAL*0.05)),int(CAL*(1+CAL*0.05)),0,False,False,False,True,-1,False,True,True,True,-1,False,0,1,True)
+	estimatePoint = estimatePoint + Functions.changeDamage(RangeList,caster,int(CAL*(1+CAL*0.05)/2),int(CAL*(1+CAL*0.05)/2),0,False,False,False,True,-1,True,False,True,True,-1,False,0,1,True)
 	
 	estimatePoint = estimatePoint / (50.0 * (int(CAL*(1+CAL*0.05)))) * 100
 	
