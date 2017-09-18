@@ -223,7 +223,7 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 			
 			# ’e–‹‘Ï«
 			if not bAntiSpellBarrier:
-				iDamage *= (100 - countSpellTolerance(pUnit)) / 100
+				iDamage = (iDamage * (100 - pUnit.countSpellTolerance())) / 100
 			
 			# ‹——£‚É‚æ‚é•â³
 			if iDistanceCorrect == 1:
@@ -333,13 +333,13 @@ def setPromotion(squeaList,caster,sPromotion,bSet,iPercent,bFriend,bNeutral,bEne
 				bFlag = True
 			if not bFlag:
 				continue
-			
+
 			#### Šm—¦‚Ö‚Ì•â³
 			iPer = iPercent
-
+			
 			# ’e–‹‘Ï«
 			if bAntiSpellBarrier == False:
-				iPer *= (100 - countSpellTolerance(pUnit)) / 100
+				iPer = (iPer * (100 - pUnit.countSpellTolerance())) / 100
 
 			#### ’Ç‰Á‚ÌŠm—¦•â³
 			
