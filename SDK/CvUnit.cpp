@@ -2623,12 +2623,18 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	{
 		if (canAttack())
 		{
-			// 不可視ユニットなら通常移動できる
+			// 不可視ユニットなら(ほかの条件なしで)通常移動できる
 			// できなくていいような気がするので外してみるのを試す
 			// if (bAttack || !canCoexistWithEnemyUnit(NO_TEAM))
 			// {
+				// たぶんPlot自体のVisibility判定
+				// 人間で、pPlotが未探索なら移動できる
 				if (!isHuman() || (pPlot->isVisible(getTeam(), false)))
 				{
+					// pPlotに(thisのオーナーから見て)(見えていて・敵)のユニットがいるなら
+					// 通常移動できず、攻撃移動できる
+					// pPlotに(thisのオーナーから見て)(見えていて・敵)のユニットがいないなら
+					// 通常移動できる、攻撃移動できない
 					if (pPlot->isVisibleEnemyUnit(this) != bAttack)
 					{
 						//FAssertMsg(isHuman() || (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwnerINLINE()) != bAttack)), "hopefully not an issue, but tracking how often this is the case when we dont want to really declare war");
