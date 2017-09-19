@@ -5799,11 +5799,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_OCEANIZATION_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</French>
+		<French>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源、森林、ジャングル、氾濫原、オアシス、死の灰があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</Japanese>
+		<Japanese>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源、森林、ジャングル、氾濫原、オアシス、死の灰があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_FLOOD</Tag>
