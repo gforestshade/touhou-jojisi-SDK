@@ -12242,10 +12242,18 @@ def req_TERRAFORM_FLOOD(bTestVisible,caster,sCAL,eCAL,cost):
 		#可能であれば動的に月の都UWが5人いるかどうかをここで判定したいけど…
 		#リストを利用する形だとリストのリセットが上手くいかないため結果的に判定も上手くいかない
 		#なにか上手い方法があればどなたかplz
-		else:
-			if caster.plot().getTeam() == caster.getTeam():
-				if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
-					return True
+
+		iWorker = 0
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TUKI_NO_MIYAKO_WORKER'):
+				iWorker += 1
+		if iWorker < 5:
+			return False
+		
+		if caster.plot().getTeam() == caster.getTeam():
+			if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED') ) == False:
+				return True
 	
 	return False
 	
