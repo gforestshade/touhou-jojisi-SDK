@@ -821,5 +821,30 @@ def initCombatShinrei(pWinner):
 	newUnit.finishMoves()
 	CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
+# プレイヤーとユニットクラス名からそのプレイヤーのユニットIDをひっぱる(UUを考慮する)
+# プレイヤーはCyPlayerでもPyPlayerでもよい
+def getCivilizationUnitType(player, sUnitClass):
+	civinfo = gc.getCivilizationInfo( player.getID() )
+	iUnitClass = gc.getInfoTypeForString(sUnitClass)
+	return civinfo.getCivilizationUnits(iUnitClass)
+
+# 都市とユニットクラス名を指定して、都市のオーナーの支配下でユニットを生成する
+# 都市はCyCityでもPyCityでもよい
+def initCityUnit(city, sUnitClass):
+	pyPlayer = PyHelpers.PyPlayer( city.getOwner() )
+	pPlot = city.plot()
+	iUnit = getCivilizationUnitType(pyPlayer, sUnitClass)
+	
+	pyPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY())
+
+# 都市とユニット名を指定して、都市のオーナーの支配下でユニットを生成する
+# 都市はCyCityでもPyCityでもよい
+# UnitClassでやるほうがいろいろと潰しがきくと思うので一応程度に
+def initCityUnitDirect(city, sUnit):
+	pyPlayer = PyHelpers.PyPlayer( city.getOwner() )
+	pPlot = city.plot()
+	iUnit = gc.getInfoTypeForString(sUnit)
+	
+	pyPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY())
 
 ##### </written by F> #####

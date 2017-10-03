@@ -3548,10 +3548,10 @@ class CvEventManager:
 				pyCapital = player.getCapitalCity()
 				#十七条憲法採用時に更に追加の神霊を
 				if pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_GOVERNMENT')) == gc.getInfoTypeForString('CIVIC_ZYUUSHICHIZYO_KENPOU'):
-					pyCapital.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'))
+					Functions.initCityUnit(pyCapital, 'UNITCLASS_SHINREI')
 				#最終固有テク取得で更に追加の神霊を
 				if eTeam.isHasTech(gc.getInfoTypeForString('TECH_HOSIHURU_SHINREIBYOU')):
-					pyCapital.initUnit(gc.getInfoTypeForString('UNIT_SHINREI'))
+					Functions.initCityUnit(pyCapital, 'UNITCLASS_SHINREI')
 				
 			#統合MOD追記部分ここまで
 
