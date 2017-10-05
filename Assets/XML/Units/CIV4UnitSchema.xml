@@ -140,6 +140,7 @@
 	<ElementType name="bLineOfSight" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHiddenNationality" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAlwaysHostile" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bSummon" content="textOnly" dt:type="boolean"/>
 	<ElementType name="UnitClassUpgradeType" content="textOnly"/>
 	<ElementType name="bUnitClassUpgrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="UnitClassUpgrade" content="eltOnly">
@@ -365,6 +366,8 @@
 	<ElementType name="iPillageChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iUpgradeDiscount" content="textOnly" dt:type="int"/>
 	<ElementType name="iExperiencePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iTohoExtraSummonMod" content="textOnly" dt:type="int"/>
+	<ElementType name="bBeSummon" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bTerrainNative" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TerrainNative" content="eltOnly">
 		<element type="TerrainType"/>
@@ -562,6 +565,7 @@
 		<element type="bLineOfSight" minOccurs="0"/>
 		<element type="bHiddenNationality"/>
 		<element type="bAlwaysHostile"/>
+		<element type="bSummon"/>
 		<element type="UnitClassUpgrades"/>
 		<element type="UnitClassTargets"/>
 		<element type="UnitCombatTargets"/>
@@ -847,6 +851,7 @@
 		<element type="bAlwaysHeal"/>
 		<element type="bHillsDoubleMove"/>
 		<element type="bImmuneToFirstStrikes"/>
+		<element type="bBeSummon"/>
 		<element type="iVisibilityChange"/>
 		<element type="iMovesChange"/>
 		<element type="iMoveDiscountChange"/>
@@ -876,6 +881,7 @@
 		<element type="iUpgradeDiscount"/>
 		<element type="iExperiencePercent"/>
 		<element type="iWorkRate"/>
+		<element type="iTohoExtraSummonMod"/>
 		<element type="TerrainAttacks"/>
 		<element type="TerrainDefenses"/>
 		<element type="FeatureAttacks"/>

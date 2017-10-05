@@ -74,6 +74,7 @@ CvUnit::CvUnit()
 	m_iNumPowerUpCAL=0;
 	//東方叙事詩・統合MOD用
 	m_iNumTurnPromo = 0;
+	m_iTohoExtraSummonPercent = 0;
 
 	promCom1 = (PromotionTypes)GC.getInfoTypeForString("PROMOTION_TOHO_COMBAT1");
     promCom2 = (PromotionTypes)GC.getInfoTypeForString("PROMOTION_TOHO_COMBAT2");
@@ -547,6 +548,7 @@ void CvUnit::convert(CvUnit* pUnit)
     //あふれ分は引継ぎなしで、とりあえずね
 	//東方叙事詩・統合MOD用
 	m_iNumTurnPromo = pUnit->getNumTurnPromo();
+	m_iTohoExtraSummonPercent = pUnit->getTohoExtraSummonPercent();
 
 	pUnit->kill(true);
 }
@@ -8334,6 +8336,26 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 					pCombatDetails->iAnimalCombatModifierT = iExtraModifier;
 				}
 			}
+
+			if (pAttacker->isSummon())
+			{
+				iExtraModifier = summonCombatModifier();
+				iTempModifier += iExtraModifier;
+				// if (pCombatDetails != NULL)
+				// {
+				// 	pCombatDetails->iSummonCombatModifierA += iExtraModifier;
+				// }
+			}
+
+			if (isSummon())
+			{
+				iExtraModifier = -pAttacker->summonCombatModifier();
+				iTempModifier += iExtraModifier;
+				// if (pCombatDetails != NULL)
+				// {
+				// 	pCombatDetails->iSummonCombatModifierA += iExtraModifier;
+				// }
+			}
 		}
 
 		if (!(pAttacker->isRiver()))
@@ -11759,6 +11781,8 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue)
 		changeKamikazePercent((GC.getPromotionInfo(eIndex).getKamikazePercent()) * iChange);
 		changeCargoSpace(GC.getPromotionInfo(eIndex).getCargoChange() * iChange);
 
+		changeTohoExtraSummonPercent(GC.getPromotionInfo(eIndex).getTohoExtraSummonMod() * iChange);
+		
 		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 		{
 			changeExtraTerrainAttackPercent(((TerrainTypes)iI), (GC.getPromotionInfo(eIndex).getTerrainAttackPercent(iI) * iChange));
@@ -11946,6 +11970,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	
 	//東方叙事詩・統合MOD用
 	pStream->Read(&m_iNumTurnPromo);
+	pStream->Read(&m_iTohoExtraSummonPercent);
 
     //控え用
     pStream->Read(&promCom1);
@@ -12089,6 +12114,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	
 	//東方叙事詩・統合MOD用
 	pStream->Write(m_iNumTurnPromo);
+	pStream->Write(m_iTohoExtraSummonPercent);
 
     //控え
     pStream->Write(promCom1);
@@ -14305,13 +14331,42 @@ int CvUnit::getNumPowerUp(int index){
 //東方叙事詩・統合MOD用
 
 void CvUnit::setNumTurnPromo(int iNum){
-
-    m_iNumTurnPromo = iNum;
+	m_iNumTurnPromo = iNum;
 
 }
 
 int CvUnit::getNumTurnPromo(){
 
-    return m_iNumTurnPromo;
+	return m_iNumTurnPromo;
 
 }
+
+bool CvUnit::isSummon() const{
+	if( m_pUnitInfo->isSummon() )
+		return true;
+
+	for(int i = 0; i < GC.getNumPromotionInfos(); ++i)
+	{
+		PromotionTypes ePromotion = (PromotionTypes) i;
+		if( isHasPromotion(ePromotion) )
+		{
+			if( GC.getPromotionInfo(ePromotion).isBeSummon() )
+				return true;
+		}
+	}
+	return false;
+}
+
+int CvUnit::getTohoExtraSummonPercent() const{
+    return m_iTohoExtraSummonPercent;
+}
+
+void CvUnit::changeTohoExtraSummonPercent(int iChange){
+    m_iTohoExtraSummonPercent += iChange;
+}
+
+int CvUnit::summonCombatModifier() const{
+    // return m_pUnitInfo->getSummonCombatModifier() + m_iTohoSummonPercent;
+    return 0 + getTohoExtraSummonPercent();
+}
+
