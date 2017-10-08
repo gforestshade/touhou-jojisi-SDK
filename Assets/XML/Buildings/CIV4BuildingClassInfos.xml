@@ -2182,30 +2182,6 @@
       <VictoryThresholds />
     </BuildingClassInfo>
     <BuildingClassInfo>
-      <Type>BUILDINGCLASS_KISHINJOU_ETHIOPIAN_STELE</Type>
-      <Description>TXT_KEY_BUILDING_ETHIOPIAN_STELE</Description>
-      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
-      <iMaxTeamInstances>-1</iMaxTeamInstances>
-      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
-      <iExtraPlayerInstances>0</iExtraPlayerInstances>
-      <bNoLimit>0</bNoLimit>
-      <bMonument>0</bMonument>
-      <DefaultBuilding>BUILDING_KISHINJOU_ETHIOPIAN_STELE</DefaultBuilding>
-      <VictoryThresholds />
-    </BuildingClassInfo>
-    <BuildingClassInfo>
-      <Type>BUILDINGCLASS_BENBEN_STONEHENGE</Type>
-      <Description>TXT_KEY_BUILDING_STONEHENGE</Description>
-      <iMaxGlobalInstances>1</iMaxGlobalInstances>
-      <iMaxTeamInstances>-1</iMaxTeamInstances>
-      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
-      <iExtraPlayerInstances>0</iExtraPlayerInstances>
-      <bNoLimit>0</bNoLimit>
-      <bMonument>0</bMonument>
-      <DefaultBuilding>BUILDING_BENBEN_STONEHENGE</DefaultBuilding>
-      <VictoryThresholds />
-    </BuildingClassInfo>
-    <BuildingClassInfo>
       <Type>BUILDINGCLASS_AMANOJAKU</Type>
       <Description>TXT_KEY_BUILDING_AMANOJAKU</Description>
       <iMaxGlobalInstances>-1</iMaxGlobalInstances>

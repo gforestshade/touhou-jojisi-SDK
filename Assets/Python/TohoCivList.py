@@ -15,6 +15,12 @@ UniqTechList = [
 	['CIVILIZATION_INDIA', ['TECH_KEINENOIRAI'] ],
 ]
 
+# 志向に紐づいているUBのリスト
+TraitBuildingclassBuildingList = [
+	['TRAIT_BENBENLIST', 'BUILDINGCLASS_OBELISK', 'BUILDING_KISHINJOU_ETHIOPIAN_STELE'],
+]
+
+
 # 最大文明数
 iMaxPlayer = 19
 

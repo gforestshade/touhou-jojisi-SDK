@@ -475,22 +475,19 @@ class CvEventManager:
 		"return the string to be saved - Must be a string"
 		return ""
 
-	def setTraitUB(self):
-		iNumPlayer = TohoCivList.iMaxPlayer
-
-		TraitBuildingclassBuildingList = [
-			['TRAIT_BENBENLIST', 'BUILDINGCLASS_OBELISK', 'BUILDING_KISHINJOU_ETHIOPIAN_STELE'],
-		]
-
-		# ‚à‚Ç‚·
+	def resetUB(self):
 		for it in self.oldCivBuildings:
 			iCiv, ibC, idB = it
 			pCiv = gc.getCivilizationInfo(iCiv)
 			pCiv.setCivilizationBuildings(ibC, idB)
 
-		for it in TraitBuildingclassBuildingList:
+	def setTraitUB(self):
+		iNumPlayer = TohoCivList.iMaxPlayer
+		
+		self.resetUB()
+
+		for it in TohoCivList.TraitBuildingclassBuildingList:
 			trait, bclass, build = it
-			found = False
 			for i in range(iNumPlayer):
 				pPlayer = gc.getPlayer(i)
 				pCiv = gc.getCivilizationInfo( pPlayer.getCivilizationType() )
