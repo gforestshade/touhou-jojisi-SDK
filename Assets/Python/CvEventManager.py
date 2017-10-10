@@ -2249,6 +2249,7 @@ class CvEventManager:
 			pPlayer = gc.getPlayer(iPlayer)
 			iX = pWinner.getX()
 			iY = pWinner.getY()
+			newUnit = None 
 			if pLoser.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_LION'):
 				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GETLION'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 			if pLoser.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_BEAR'):
@@ -2257,7 +2258,8 @@ class CvEventManager:
 				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GETPANTHER'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 			if pLoser.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WOLF'):
 				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GETWOLF'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-			newUnit.finishMoves()
+			if newUnit is not None:
+				newUnit.finishMoves()
 		
 		#ã∞ï|ÇÃÇÎÇ≠ÇÎéÒèàóù
 		if pLoser.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SEKIBANKILIST_FEAR')):
