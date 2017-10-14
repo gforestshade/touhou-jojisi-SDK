@@ -433,10 +433,11 @@ public:
     double getPower();
     void setNumPowerUp(int index,int iNum);
     int getNumPowerUp(int index);
-	//東方叙事詩・統合MOD用
-	void setNumTurnPromo(int iNum);
-	int getNumTurnPromo();
-
+    //東方叙事詩・統合MOD用
+    void setNumTurnPromo(int iNum);
+    int getNumTurnPromo();
+    
+       
     int countSpellTolerance();
     int countExpByTrun();
     int countAutoHeal();

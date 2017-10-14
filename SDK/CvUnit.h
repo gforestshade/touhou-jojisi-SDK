@@ -801,9 +801,14 @@ public:
     double getPower();
     void setNumPowerUp(int index,int iNum);
     int getNumPowerUp(int index);
-	//東方叙事詩・統合MOD用
-	void setNumTurnPromo(int iNum);
-	int getNumTurnPromo();
+    //東方叙事詩・統合MOD用
+    void setNumTurnPromo(int iNum);
+    int getNumTurnPromo();
+
+    bool isSummon() const;
+    int getTohoExtraSummonPercent() const;
+    void changeTohoExtraSummonPercent(int iChange);
+    int summonCombatModifier() const;
 
     int countSpellTolerance() const;
     int countExpByTrun() const;
@@ -954,9 +959,10 @@ protected:
     int m_iNumPowerUpCombat; //愛による強化分
     int m_iNumPowerUpSTG;
     int m_iNumPowerUpCAL;
-	
-	//東方叙事詩・統合MOD用
-	int m_iNumTurnPromo;//一時的バフ・デバフ昇進管理変数
+    
+    //東方叙事詩・統合MOD用
+    int m_iNumTurnPromo;//一時的バフ・デバフ昇進管理変数
+    int m_iTohoExtraSummonPercent; //対召喚ユニット補正
 
     int m_iNumSpellCardBreakTime;
     int m_iNumSpellExtraBreakTime;

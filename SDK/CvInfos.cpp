@@ -1609,6 +1609,8 @@ m_iUpgradeDiscount(0),
 m_iExperiencePercent(0),
 m_iKamikazePercent(0),
 m_iWorkRate(0),
+m_bBeSummon(false),
+m_iTohoExtraSummonMod(0),
 m_bLeader(false),
 m_bBlitz(false),
 m_bAmphib(false),
@@ -1849,6 +1851,16 @@ int CvPromotionInfo::getWorkRate() const
 	return m_iWorkRate;
 }
 
+bool CvPromotionInfo::isBeSummon() const
+{
+	return m_bBeSummon;
+}
+
+int CvPromotionInfo::getTohoExtraSummonMod() const
+{
+	return m_iTohoExtraSummonMod;
+}
+
 bool CvPromotionInfo::isLeader() const			
 {
 	return m_bLeader;
@@ -2009,6 +2021,8 @@ void CvPromotionInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iKamikazePercent);
 
 	stream->Read(&m_iWorkRate);
+	stream->Read(&m_bBeSummon);
+	stream->Read(&m_iTohoExtraSummonMod);
 	
 	stream->Read(&m_bLeader);
 	stream->Read(&m_bBlitz);
@@ -2105,6 +2119,8 @@ void CvPromotionInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iKamikazePercent);
 
 	stream->Write(m_iWorkRate);
+	stream->Write(m_bBeSummon);
+	stream->Write(m_iTohoExtraSummonMod);
 	
 	stream->Write(m_bLeader);
 	stream->Write(m_bBlitz);
@@ -2162,6 +2178,9 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bAlwaysHeal, "bAlwaysHeal");
 	pXML->GetChildXmlValByName(&m_bHillsDoubleMove, "bHillsDoubleMove");
 	pXML->GetChildXmlValByName(&m_bImmuneToFirstStrikes, "bImmuneToFirstStrikes");
+
+	pXML->GetChildXmlValByName(&m_bBeSummon, "bBeSummon");
+	
 	pXML->GetChildXmlValByName(&m_iVisibilityChange, "iVisibilityChange");
 	pXML->GetChildXmlValByName(&m_iMovesChange, "iMovesChange");
 	pXML->GetChildXmlValByName(&m_iMoveDiscountChange, "iMoveDiscountChange");
@@ -2192,6 +2211,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iKamikazePercent, "iKamikazePercent");
 
 	pXML->GetChildXmlValByName(&m_iWorkRate, "iWorkRate");
+	pXML->GetChildXmlValByName(&m_iTohoExtraSummonMod, "iTohoExtraSummonMod");
 	
 	pXML->SetVariableListTagPair(&m_piTerrainAttackPercent, "TerrainAttacks", sizeof(GC.getTerrainInfo((TerrainTypes)0)), GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_piTerrainDefensePercent, "TerrainDefenses", sizeof(GC.getTerrainInfo((TerrainTypes)0)), GC.getNumTerrainInfos());
@@ -3462,6 +3482,7 @@ m_bSuicide(false),
 m_bLineOfSight(false),
 m_bHiddenNationality(false),
 m_bAlwaysHostile(false),
+m_bSummon(false),
 m_bNoRevealMap(false),
 m_fUnitMaxSpeed(0.0f),
 m_fUnitPadTime(0.0f),
@@ -4116,6 +4137,11 @@ bool CvUnitInfo::isAlwaysHostile() const
 	return m_bAlwaysHostile;
 }
 
+bool CvUnitInfo::isSummon() const
+{
+	return m_bSummon;
+}
+
 bool CvUnitInfo::isNoRevealMap() const		
 {
 	return m_bNoRevealMap;
@@ -4656,6 +4682,7 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bLineOfSight);
 	stream->Read(&m_bHiddenNationality);
 	stream->Read(&m_bAlwaysHostile);
+	stream->Read(&m_bSummon);
 	stream->Read(&m_bNoRevealMap);
 
 	stream->Read(&m_fUnitMaxSpeed);
@@ -4952,6 +4979,7 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bLineOfSight);
 	stream->Write(m_bHiddenNationality);
 	stream->Write(m_bAlwaysHostile);
+	stream->Write(m_bSummon);
 	stream->Write(m_bNoRevealMap);
 
 	stream->Write(m_fUnitMaxSpeed);
@@ -5094,6 +5122,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bLineOfSight,"bLineOfSight",false);
 	pXML->GetChildXmlValByName(&m_bHiddenNationality,"bHiddenNationality",false);
 	pXML->GetChildXmlValByName(&m_bAlwaysHostile,"bAlwaysHostile",false);
+	pXML->GetChildXmlValByName(&m_bSummon,"bSummon",false);
 	pXML->GetChildXmlValByName(&m_bNoRevealMap,"bNoRevealMap",false);
 
 	pXML->SetVariableListTagPair(&m_pbUpgradeUnitClass, "UnitClassUpgrades", sizeof(GC.getUnitClassInfo((UnitClassTypes)0)), GC.getNumUnitClassInfos());

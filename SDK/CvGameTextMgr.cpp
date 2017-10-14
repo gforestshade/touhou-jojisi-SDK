@@ -671,7 +671,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
             wchar tempwchar[16];
             szString.append(_itow(pUnit->countDodgeBullet(),tempwchar,10));
             szString.append(L"%");
-		}  szString.append(L"%");
+		}//  szString.append(L"%");
 		
 
 		setEspionageMissionHelp(szString, pUnit);
@@ -975,6 +975,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			szString.append(gDLL->getText("TXT_KEY_UNIT_ANIMAL_COMBAT_MOD", pUnit->animalCombatModifier()));
 		}
 
+		// ‘Î¢Š«ƒ†ƒjƒbƒgC³
+		if (pUnit->summonCombatModifier() != 0)
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText("TXT_KEY_UNIT_SUMMON_COMBAT_MOD", pUnit->summonCombatModifier()));
+		}
+
 		if (pUnit->getDropRange() > 0)
 		{
 			szString.append(NEWLINE);
@@ -1081,7 +1088,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 		}
-
+		
 		for (iI = 0; iI < GC.getNumUnitCombatInfos(); ++iI)
 		{
 			if (pUnit->unitCombatModifier((UnitCombatTypes)iI) != 0)
@@ -1942,6 +1949,16 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot)
 				}
 			}
 
+			if (pDefender->isSummon())
+			{
+				iModifier = pAttacker->summonCombatModifier();
+				if (iModifier != 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNIT_SUMMON_COMBAT_MOD", iModifier));
+				}
+			}
+
 			if (!(pDefender->immuneToFirstStrikes()))
 			{
 				if (pAttacker->maxFirstStrikes() > 0)
@@ -2106,6 +2123,17 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot)
 				}
 			}
 
+			if (pAttacker->isSummon())
+			{
+				iModifier = pDefender->summonCombatModifier();
+				
+				if (iModifier != 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNIT_SUMMON_COMBAT_MOD", iModifier));
+				}
+			}
+			
 			if (!(pAttacker->immuneToFirstStrikes()))
 			{
 				if (pDefender->maxFirstStrikes() > 0)

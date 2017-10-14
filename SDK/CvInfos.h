@@ -483,6 +483,8 @@ public:
 	int getKamikazePercent() const;				// Exposed to Python
 
 	int getWorkRate() const;				// Exposed to Python
+	bool isBeSummon() const;				// Exposed to Python
+	int getTohoExtraSummonMod() const;				// Exposed to Python
 	
 	
 	bool isLeader() const;				// Exposed to Python
@@ -558,6 +560,8 @@ protected:
 	int m_iKamikazePercent;
 
 	int m_iWorkRate;
+	bool m_bBeSummon;
+	int m_iTohoExtraSummonMod;
 	
 	bool m_bLeader;
 	bool m_bBlitz;									
@@ -922,6 +926,7 @@ public:
 	bool isLineOfSight() const;			// Exposed to Python
 	bool isHiddenNationality() const;			// Exposed to Python
 	bool isAlwaysHostile() const;			// Exposed to Python
+	bool isSummon() const;			// Exposed to Python
 	bool isNoRevealMap() const;			// Exposed to Python
 
 	float getUnitMaxSpeed() const;					// Exposed to Python
@@ -1103,6 +1108,7 @@ protected:
 	bool m_bLineOfSight;
 	bool m_bHiddenNationality;
 	bool m_bAlwaysHostile;
+	bool m_bSummon;
 	bool m_bNoRevealMap;
 	int m_iLeaderPromotion;
 
