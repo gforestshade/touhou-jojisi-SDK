@@ -19450,7 +19450,7 @@
       <bAlwaysHeal>1</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
-      <bBeSummon>0</bBeSummon>
+      <bBeSummon>1</bBeSummon>
       <iVisibilityChange>0</iVisibilityChange>
       <iMovesChange>0</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
