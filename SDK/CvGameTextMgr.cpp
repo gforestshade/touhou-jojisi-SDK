@@ -676,6 +676,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 		setEspionageMissionHelp(szString, pUnit);
 
+		if (pUnit->isSummon())
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText("TXT_KEY_UNIT_SUMMON"));
+		}
+
 		if (pUnit->cargoSpace() > 0)
 		{
 			if (pUnit->getTeam() == GC.getGameINLINE().getActiveTeam())
@@ -4423,6 +4429,13 @@ void CvGameTextMgr::parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes
 		}
 	}
 
+	// ‘Î¢Š«ƒ†ƒjƒbƒgC³
+	if (GC.getPromotionInfo(ePromotion).getTohoExtraSummonMod() != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_SUMMON_COMBAT_MOD", GC.getPromotionInfo(ePromotion).getTohoExtraSummonMod()));
+	}
+	
 	if (wcslen(GC.getPromotionInfo(ePromotion).getHelp()) > 0)
 	{
 		szBuffer.append(pcNewline);
@@ -5764,6 +5777,12 @@ void CvGameTextMgr::setBasicUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit,
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_SEE_INVISIBLE", GC.getInvisibleInfo((InvisibleTypes) GC.getUnitInfo(eUnit).getSeeInvisibleType(iI)).getTextKeyWide()));
 		}
+	}
+
+	if (GC.getUnitInfo(eUnit).isSummon())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_SUMMON"));
 	}
 
 	if (GC.getUnitInfo(eUnit).isCanMoveImpassable())

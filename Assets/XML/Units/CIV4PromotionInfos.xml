@@ -15530,6 +15530,7 @@
       <bAlwaysHeal>0</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
+      <bBeSummon>0</bBeSummon>
       <iVisibilityChange>0</iVisibilityChange>
       <iMovesChange>0</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
@@ -15559,6 +15560,7 @@
       <iUpgradeDiscount>0</iUpgradeDiscount>
       <iExperiencePercent>0</iExperiencePercent>
       <iWorkRate>0</iWorkRate>
+      <iTohoExtraSummonMod>25</iTohoExtraSummonMod>
       <TerrainAttacks />
       <TerrainDefenses />
       <FeatureAttacks />
@@ -15626,6 +15628,7 @@
       <bAlwaysHeal>0</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
+      <bBeSummon>0</bBeSummon>
       <iVisibilityChange>0</iVisibilityChange>
       <iMovesChange>0</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
@@ -15655,6 +15658,7 @@
       <iUpgradeDiscount>0</iUpgradeDiscount>
       <iExperiencePercent>0</iExperiencePercent>
       <iWorkRate>0</iWorkRate>
+      <iTohoExtraSummonMod>25</iTohoExtraSummonMod>
       <TerrainAttacks />
       <TerrainDefenses />
       <FeatureAttacks />
@@ -15722,6 +15726,7 @@
       <bAlwaysHeal>0</bAlwaysHeal>
       <bHillsDoubleMove>0</bHillsDoubleMove>
       <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
+      <bBeSummon>0</bBeSummon>
       <iVisibilityChange>0</iVisibilityChange>
       <iMovesChange>0</iMovesChange>
       <iMoveDiscountChange>0</iMoveDiscountChange>
@@ -15751,6 +15756,7 @@
       <iUpgradeDiscount>0</iUpgradeDiscount>
       <iExperiencePercent>0</iExperiencePercent>
       <iWorkRate>0</iWorkRate>
+      <iTohoExtraSummonMod>50</iTohoExtraSummonMod>
       <TerrainAttacks />
       <TerrainDefenses />
       <FeatureAttacks />
