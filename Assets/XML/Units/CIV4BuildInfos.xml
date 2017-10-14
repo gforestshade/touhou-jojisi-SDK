@@ -844,7 +844,7 @@
       <Type>BUILD_TERRAFORM_PLAIN_TO_TUNDRA</Type>
       <Description>TXT_KEY_BUILD_TERRAFORM_PLAIN_TO_TUNDRA</Description>
       <Help />
-      <PrereqTech>TECH_APOLLO_CONSPIRACY</PrereqTech>
+      <PrereqTech>TECH_APOLLO</PrereqTech>
       <iTime>0</iTime>
       <iCost>0</iCost>
       <bKill>0</bKill>
@@ -882,7 +882,7 @@
       <Type>BUILD_TERRAFORM_PLAIN_TO_DESERT</Type>
       <Description>TXT_KEY_BUILD_TERRAFORM_PLAIN_TO_DESERT</Description>
       <Help />
-      <PrereqTech>TECH_LUNAR_CAPITAL_TRANSFER_PLAN</PrereqTech>
+      <PrereqTech>TECH_APOLLO_CONSPIRACY</PrereqTech>
       <iTime>0</iTime>
       <iCost>0</iCost>
       <bKill>0</bKill>
@@ -901,7 +901,7 @@
       <Type>BUILD_TERRAFORM_PLAIN_TO_ICE</Type>
       <Description>TXT_KEY_BUILD_TERRAFORM_PLAIN_TO_ICE</Description>
       <Help />
-      <PrereqTech>TECH_LUNAR_CAPITAL_TRANSFER_PLAN</PrereqTech>
+      <PrereqTech>TECH_APOLLO_CONSPIRACY</PrereqTech>
       <iTime>0</iTime>
       <iCost>0</iCost>
       <bKill>0</bKill>
@@ -996,7 +996,7 @@
       <Type>BUILD_TERRAFORM_PLAIN_TO_FLOOD</Type>
       <Description>TXT_KEY_BUILD_TERRAFORM_PLAIN_TO_FLOOD</Description>
       <Help />
-      <PrereqTech>TECH_SAKE_OF_THE_WATATSUKI</PrereqTech>
+      <PrereqTech>TECH_LUNAR_CAPITAL_TRANSFER_PLAN</PrereqTech>
       <iTime>0</iTime>
       <iCost>0</iCost>
       <bKill>0</bKill>
@@ -1010,6 +1010,25 @@
       <bCtrlDown>0</bCtrlDown>
       <iHotKeyPriority>0</iHotKeyPriority>
       <Button>Art/Interface/Buttons/baseterrain/plains.dds</Button>
+    </BuildInfo>
+    <BuildInfo>
+      <Type>BUILD_TERRAFORM_FIRST_GRASS</Type>
+      <Description>TXT_KEY_BUILD_TERRAFORM_FIRST_GRASS</Description>
+      <Help />
+      <PrereqTech>TECH_LUNAR_CAPITAL_TRANSFER_PLAN</PrereqTech>
+      <iTime>0</iTime>
+      <iCost>0</iCost>
+      <bKill>0</bKill>
+      <ImprovementType>NONE</ImprovementType>
+      <RouteType>NONE</RouteType>
+      <EntityEvent>NONE</EntityEvent>
+      <FeatureStructs />
+      <HotKey>NONE</HotKey>
+      <bAltDown>0</bAltDown>
+      <bShiftDown>1</bShiftDown>
+      <bCtrlDown>0</bCtrlDown>
+      <iHotKeyPriority>0</iHotKeyPriority>
+      <Button>Art/Interface/Buttons/baseterrain/terraform_to_first_grass.dds</Button>
     </BuildInfo>
     <BuildInfo>
       <Type>BUILD_TERRAFORM_LANDFILL</Type>

@@ -2217,6 +2217,78 @@
       <DefaultBuilding>BUILDING_THISWOMAN</DefaultBuilding>
       <VictoryThresholds />
     </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_LARVA_CULTURE</Type>
+      <Description>TXT_KEY_BUILDING_LARVA_CULTURE</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_LARVA_CULTURE</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_LARVA_RESEARCH</Type>
+      <Description>TXT_KEY_BUILDING_LARVA_RESEARCH</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_LARVA_RESEARCH</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_LARVA_WEALTH</Type>
+      <Description>TXT_KEY_BUILDING_LARVA_WEALTH</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_LARVA_WEALTH</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_NEMUNO_TRAIT</Type>
+      <Description>TXT_KEY_BUILDING_NEMUNO_TRAIT</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_NEMUNO_TRAIT</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_MAI_TRAIT</Type>
+      <Description>TXT_KEY_BUILDING_MAI_TRAIT</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_MAI_TRAIT</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <Type>BUILDINGCLASS_OKINA_TRAIT</Type>
+      <Description>TXT_KEY_BUILDING_OKINA_TRAIT</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_OKINA_TRAIT</DefaultBuilding>
+      <VictoryThresholds />
+    </BuildingClassInfo>
     <!--Original Building-->
     <BuildingClassInfo>
       <Type>BUILDINGCLASS_DANMAKUKOUZA1</Type>

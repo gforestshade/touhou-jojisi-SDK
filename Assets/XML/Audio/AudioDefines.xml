@@ -84,6 +84,13 @@
       <bInGeneric>1</bInGeneric>
     </SoundData>
     <SoundData>
+      <SoundID>DIPLO_AUNN</SoundID>
+      <Filename>Sounds/Diplomacy/aunn</Filename>
+      <LoadType>STREAMED</LoadType>
+      <bIsCompressed>1</bIsCompressed>
+      <bInGeneric>1</bInGeneric>
+    </SoundData>
+    <SoundData>
       <SoundID>DIPLO_AQN</SoundID>
       <Filename>Sounds/Diplomacy/aqn</Filename>
       <LoadType>STREAMED</LoadType>
@@ -329,6 +336,13 @@
       <bInGeneric>1</bInGeneric>
     </SoundData>
     <SoundData>
+      <SoundID>DIPLO_LARVA</SoundID>
+      <Filename>Sounds/Diplomacy/larva</Filename>
+      <LoadType>STREAMED</LoadType>
+      <bIsCompressed>1</bIsCompressed>
+      <bInGeneric>1</bInGeneric>
+    </SoundData>
+    <SoundData>
       <SoundID>DIPLO_LETTY</SoundID>
       <Filename>Sounds/Diplomacy/letty</Filename>
       <LoadType>STREAMED</LoadType>
@@ -366,6 +380,13 @@
     <SoundData>
       <SoundID>DIPLO_LYRICA</SoundID>
       <Filename>Sounds/Diplomacy/lyrica</Filename>
+      <LoadType>STREAMED</LoadType>
+      <bIsCompressed>1</bIsCompressed>
+      <bInGeneric>1</bInGeneric>
+    </SoundData>
+    <SoundData>
+      <SoundID>DIPLO_MAIANDSATONO</SoundID>
+      <Filename>Sounds/Diplomacy/MAIANDSATONO</Filename>
       <LoadType>STREAMED</LoadType>
       <bIsCompressed>1</bIsCompressed>
       <bInGeneric>1</bInGeneric>
@@ -455,8 +476,22 @@
       <bInGeneric>1</bInGeneric>
     </SoundData>
     <SoundData>
+      <SoundID>DIPLO_NARUMI</SoundID>
+      <Filename>Sounds/Diplomacy/narumi</Filename>
+      <LoadType>STREAMED</LoadType>
+      <bIsCompressed>1</bIsCompressed>
+      <bInGeneric>1</bInGeneric>
+    </SoundData>
+    <SoundData>
       <SoundID>DIPLO_NAZRIN</SoundID>
       <Filename>Sounds/Diplomacy/nazrin</Filename>
+      <LoadType>STREAMED</LoadType>
+      <bIsCompressed>1</bIsCompressed>
+      <bInGeneric>1</bInGeneric>
+    </SoundData>
+    <SoundData>
+      <SoundID>DIPLO_NEMUNO</SoundID>
+      <Filename>Sounds/Diplomacy/nemuno</Filename>
       <LoadType>STREAMED</LoadType>
       <bIsCompressed>1</bIsCompressed>
       <bInGeneric>1</bInGeneric>
@@ -478,6 +513,13 @@
     <SoundData>
       <SoundID>DIPLO_NUE</SoundID>
       <Filename>Sounds/Diplomacy/nue</Filename>
+      <LoadType>STREAMED</LoadType>
+      <bIsCompressed>1</bIsCompressed>
+      <bInGeneric>1</bInGeneric>
+    </SoundData>
+    <SoundData>
+      <SoundID>DIPLO_OKINA</SoundID>
+      <Filename>Sounds/Diplomacy/okina</Filename>
       <LoadType>STREAMED</LoadType>
       <bIsCompressed>1</bIsCompressed>
       <bInGeneric>1</bInGeneric>
@@ -596,7 +638,7 @@
     </SoundData>
     <SoundData>
       <SoundID>DIPLO_SEIRAN</SoundID>
-      <Filename>Sounds/Diplomacy/unknownx</Filename>
+      <Filename>Sounds/Diplomacy/seiran</Filename>
       <LoadType>STREAMED</LoadType>
       <bIsCompressed>1</bIsCompressed>
       <bInGeneric>1</bInGeneric>

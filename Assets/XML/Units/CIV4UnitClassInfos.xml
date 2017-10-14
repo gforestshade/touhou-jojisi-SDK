@@ -6221,5 +6221,14 @@
       <iInstanceCostModifier>0</iInstanceCostModifier>
       <DefaultUnit>UNIT_OCEANIWORKER</DefaultUnit>
     </UnitClassInfo>
+    <UnitClassInfo>
+      <Type>UNITCLASS_NEMUNOTRAIT</Type>
+      <Description>TXT_KEY_UNIT_NEMUNOTRAIT</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iInstanceCostModifier>0</iInstanceCostModifier>
+      <DefaultUnit>UNIT_NEMUNOTRAIT</DefaultUnit>
+    </UnitClassInfo>
   </UnitClassInfos>
 </Civ4UnitClassInfos>

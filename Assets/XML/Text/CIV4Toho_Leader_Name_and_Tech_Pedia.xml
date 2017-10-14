@@ -1006,6 +1006,69 @@
 		<Japanese>日焼けしたチルノ</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_LARVA</Tag>
+		<English />
+		<French>エタニティラルバ</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>エタニティラルバ</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NEMUNO</Tag>
+		<English />
+		<French>坂田ネムノ</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>坂田ネムノ</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AUNN</Tag>
+		<English />
+		<French>高麗野あうん</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>高麗野あうん</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NARUMI</Tag>
+		<English />
+		<French>矢田寺成美</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>矢田寺成美</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAI</Tag>
+		<English />
+		<French>丁礼田舞</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>丁礼田舞</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SATONO</Tag>
+		<English />
+		<French>爾子田里乃</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>爾子田里乃</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_OKINA</Tag>
+		<English />
+		<French>摩多羅隠岐奈</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>摩多羅隠岐奈</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_KEDAMA</Tag>
 		<English />
 		<French>毛玉</French>

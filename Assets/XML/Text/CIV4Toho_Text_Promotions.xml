@@ -126,6 +126,33 @@
 		<Spanish />
 		<Japanese>¸‰s</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ANTISUMMON1</Tag>
+		<English />
+		<French>‘Î¢Š«‡T</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>‘Î¢Š«‡T</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ANTISUMMON2</Tag>
+		<English />
+		<French>‘Î¢Š«‡U</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>‘Î¢Š«‡U</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ANTISUMMON3</Tag>
+		<English />
+		<French>‘Î¢Š«‡V</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>‘Î¢Š«‡V</Japanese>
+	</TEXT>
 <!-- Other Promotions End-->
 <!-- Koumakan Promotions Start-->
 	<TEXT>

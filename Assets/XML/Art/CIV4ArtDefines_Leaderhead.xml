@@ -1043,6 +1043,62 @@
       <BackgroundKFM />
     </LeaderheadArtInfo>
     <LeaderheadArtInfo>
+      <Type>ART_DEF_LEADER_LARVA</Type>
+      <Button>,Art/LeaderHeads/larva_button.dds</Button>
+      <NIF>art/LeaderHeads/larva/LH.nif</NIF>
+      <KFM>art/LeaderHeads/larva/LH.kfm</KFM>
+      <NoShaderNIF />
+      <BackgroundKFM />
+    </LeaderheadArtInfo>
+    <LeaderheadArtInfo>
+      <Type>ART_DEF_LEADER_NEMUNO</Type>
+      <Button>,Art/LeaderHeads/nemuno_button.dds</Button>
+      <NIF>art/LeaderHeads/nemuno/LH.nif</NIF>
+      <KFM>art/LeaderHeads/nemuno/LH.kfm</KFM>
+      <NoShaderNIF />
+      <BackgroundKFM />
+    </LeaderheadArtInfo>
+    <LeaderheadArtInfo>
+      <Type>ART_DEF_LEADER_AUNN</Type>
+      <Button>,Art/LeaderHeads/aunn_button.dds</Button>
+      <NIF>art/LeaderHeads/aunn/LH.nif</NIF>
+      <KFM>art/LeaderHeads/aunn/LH.kfm</KFM>
+      <NoShaderNIF />
+      <BackgroundKFM />
+    </LeaderheadArtInfo>
+    <LeaderheadArtInfo>
+      <Type>ART_DEF_LEADER_NARUMI</Type>
+      <Button>,Art/LeaderHeads/narumi_button.dds</Button>
+      <NIF>art/LeaderHeads/narumi/LH.nif</NIF>
+      <KFM>art/LeaderHeads/narumi/LH.kfm</KFM>
+      <NoShaderNIF />
+      <BackgroundKFM />
+    </LeaderheadArtInfo>
+    <LeaderheadArtInfo>
+      <Type>ART_DEF_LEADER_MAI</Type>
+      <Button>,Art/LeaderHeads/mai_button.dds</Button>
+      <NIF>art/LeaderHeads/mai/LH.nif</NIF>
+      <KFM>art/LeaderHeads/mai/LH.kfm</KFM>
+      <NoShaderNIF />
+      <BackgroundKFM />
+    </LeaderheadArtInfo>
+    <LeaderheadArtInfo>
+      <Type>ART_DEF_LEADER_SATONO</Type>
+      <Button>,Art/LeaderHeads/satono_button.dds</Button>
+      <NIF>art/LeaderHeads/satono/LH.nif</NIF>
+      <KFM>art/LeaderHeads/satono/LH.kfm</KFM>
+      <NoShaderNIF />
+      <BackgroundKFM />
+    </LeaderheadArtInfo>
+    <LeaderheadArtInfo>
+      <Type>ART_DEF_LEADER_OKINA</Type>
+      <Button>,Art/LeaderHeads/okina_button.dds</Button>
+      <NIF>art/LeaderHeads/okina/LH.nif</NIF>
+      <KFM>art/LeaderHeads/okina/LH.kfm</KFM>
+      <NoShaderNIF />
+      <BackgroundKFM />
+    </LeaderheadArtInfo>
+    <LeaderheadArtInfo>
       <Type>ART_DEF_LEADER_KEDAMA</Type>
       <Button>,Art/LeaderHeads/kedama_button.dds</Button>
       <NIF>art/LeaderHeads/kedama.dds</NIF>

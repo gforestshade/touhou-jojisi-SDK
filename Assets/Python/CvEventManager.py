@@ -2345,6 +2345,28 @@ class CvEventManager:
 				pWinner.getUnitType() == gc.getInfoTypeForString('UNIT_SAGUME6'):
 					newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_TANTIGATA_KIRAI_4'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 		
+		#ネムノ志向を持っている場合で白兵、弓兵、偵察、火器ユニットのいずれかに勝利した場合、確率で人さらい
+		if gc.getPlayer(pWinner.getOwner()).hasTrait(gc.getInfoTypeForString("TRAIT_NEMUNOLIST")):
+			iPlayer = pWinner.getOwner()
+			pPlayer = gc.getPlayer(iPlayer)
+			iX = pWinner.getX()
+			iY = pWinner.getY()
+			#自国文化圏内なら10%、それ以外なら5%でさらう
+			if pLoser.plot().getTeam() == pWinner.getTeam():
+				if gc.getGame().getSorenRandNum(100, "Nemuno Trait") < 10:
+					if pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE') or \
+					pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ARCHER') or \
+					pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON') or \
+					pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_GUN'):
+						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_NEMUNOTRAIT'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+			else:
+				if gc.getGame().getSorenRandNum(100, "Nemuno Trait") < 5:
+					if pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE') or \
+					pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ARCHER') or \
+					pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON') or \
+					pLoser.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_GUN'):
+						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_NEMUNOTRAIT'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		
 		#戦闘勝利時Power回復
 		#以後このPower回復は基本的に一部東方ユニットのキャラクタースキルもしくは特性で
 		for prom in TohoUnitList.CombatPowerGainPromotionList:
@@ -3049,11 +3071,17 @@ class CvEventManager:
 				newUnit = pPlayer.initUnit(unit.getUnitType(), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 				newUnit.changeExperience(unit.getExperience(),-1,False,False,False)
 		
-		#防衛志向で機関銃兵を作ると都市駐留1・教練1がつく
+		#防衛志向で機関銃兵を作ると都市駐留1・教練1・チョン避けがつく
 		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_PROTECTIVE")):
 			if unit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_MACHINE_GUN'):
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_GARRISON1'),True)
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1'),True)
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHOOTING_TECHNIQUE1'),True)
+		
+		#狛犬設置時は機関銃兵の経験値+3
+		if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_KOMAINU')):
+			if unit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_MACHINE_GUN'):
+				unit.changeExperience(3,-1,False,False,False)
 		
 		CvAdvisorUtils.unitBuiltFeats(city, unit)
 
@@ -4250,6 +4278,21 @@ class CvEventManager:
 			if city.isCapital():
 				city.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_THISWOMAN'),1)
 		
+		#ラルバ
+		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_LARVALIST')):
+			BuildingList = ['BUILDING_LARVA_CULTURE','BUILDING_LARVA_RESEARCH','BUILDING_LARVA_WEALTH']
+			Building = gc.getGame().getSorenRandNum(len(BuildingList),"Larva Trait")
+			city.setNumRealBuilding(gc.getInfoTypeForString(BuildingList[Building]),1)
+		
+		#舞
+		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_MAILIST')):
+			city.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_MAI_TRAIT'),1)
+		
+		#おきな
+		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_OKINALIST')):
+			if city.isCapital():
+				city.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_OKINA_TRAIT'),1)
+		
 		#うわばみ志向の国酒無償ボーナス
 		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_ALCHOL")):
 			iStateReligion = pPlayer.getStateReligion()
@@ -4258,8 +4301,13 @@ class CvEventManager:
 		
 		#拡張志向は古典時代以降で人口2スタート
 		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_EXPANSIVE")):
-			if not pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
-				city.changePopulation(1)
+			if not city.isCapital():
+				#なるみ志向がある場合は首都以外無条件で人口2スタート
+				if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_NARUMILIST")):
+					city.changePopulation(1)
+				else:
+					if not pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
+						city.changePopulation(1)
 		
 		#集権志向の処理
 		if pPlayer.hasTrait(gc.getInfoTypeForString("TRAIT_CENTRALIZATION")):

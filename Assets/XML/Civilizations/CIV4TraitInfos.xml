@@ -2797,8 +2797,177 @@
       <Type>TRAIT_SUMMERCIRNOLIST</Type>
       <Description>TXT_KEY_TRAIT_SUMMERCIRNOLIST</Description>
       <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_SUMMERCIRNOLIST_HELP</Help>
       <iHealth>0</iHealth>
       <iHappiness>1</iHappiness>
+      <iMaxAnarchy>-1</iMaxAnarchy>
+      <iUpkeepModifier>0</iUpkeepModifier>
+      <iLevelExperienceModifier>0</iLevelExperienceModifier>
+      <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+      <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+      <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+      <iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+      <iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+      <iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+      <ExtraYieldThresholds />
+      <TradeYieldModifiers />
+      <CommerceChanges />
+      <CommerceModifiers />
+      <FreePromotions />
+      <FreePromotionUnitCombats />
+      <bGraphicalOnly>1</bGraphicalOnly>
+    </TraitInfo>
+    <TraitInfo>
+      <Type>TRAIT_LARVALIST</Type>
+      <Description>TXT_KEY_TRAIT_LARVALIST</Description>
+      <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_LARVALIST_HELP</Help>
+      <iHealth>0</iHealth>
+      <iHappiness>0</iHappiness>
+      <iMaxAnarchy>-1</iMaxAnarchy>
+      <iUpkeepModifier>0</iUpkeepModifier>
+      <iLevelExperienceModifier>0</iLevelExperienceModifier>
+      <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+      <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+      <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+      <iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+      <iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+      <iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+      <ExtraYieldThresholds />
+      <TradeYieldModifiers />
+      <CommerceChanges />
+      <CommerceModifiers />
+      <FreePromotions />
+      <FreePromotionUnitCombats />
+      <bGraphicalOnly>1</bGraphicalOnly>
+    </TraitInfo>
+    <TraitInfo>
+      <Type>TRAIT_NEMUNOLIST</Type>
+      <Description>TXT_KEY_TRAIT_NEMUNOLIST</Description>
+      <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_NEMUNOLIST_HELP</Help>
+      <iHealth>0</iHealth>
+      <iHappiness>0</iHappiness>
+      <iMaxAnarchy>-1</iMaxAnarchy>
+      <iUpkeepModifier>0</iUpkeepModifier>
+      <iLevelExperienceModifier>0</iLevelExperienceModifier>
+      <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+      <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+      <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+      <iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+      <iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+      <iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+      <ExtraYieldThresholds />
+      <TradeYieldModifiers />
+      <CommerceChanges />
+      <CommerceModifiers />
+      <FreePromotions />
+      <FreePromotionUnitCombats />
+      <bGraphicalOnly>1</bGraphicalOnly>
+    </TraitInfo>
+    <TraitInfo>
+      <Type>TRAIT_AUNNLIST</Type>
+      <Description>TXT_KEY_TRAIT_AUNNLIST</Description>
+      <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_AUNNLIST_HELP</Help>
+      <iHealth>0</iHealth>
+      <iHappiness>0</iHappiness>
+      <iMaxAnarchy>-1</iMaxAnarchy>
+      <iUpkeepModifier>0</iUpkeepModifier>
+      <iLevelExperienceModifier>0</iLevelExperienceModifier>
+      <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+      <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+      <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+      <iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+      <iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+      <iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+      <ExtraYieldThresholds />
+      <TradeYieldModifiers />
+      <CommerceChanges />
+      <CommerceModifiers />
+      <FreePromotions />
+      <FreePromotionUnitCombats />
+      <bGraphicalOnly>1</bGraphicalOnly>
+    </TraitInfo>
+    <TraitInfo>
+      <Type>TRAIT_NARUMILIST</Type>
+      <Description>TXT_KEY_TRAIT_NARUMILIST</Description>
+      <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_NARUMILIST_HELP</Help>
+      <iHealth>0</iHealth>
+      <iHappiness>0</iHappiness>
+      <iMaxAnarchy>-1</iMaxAnarchy>
+      <iUpkeepModifier>0</iUpkeepModifier>
+      <iLevelExperienceModifier>0</iLevelExperienceModifier>
+      <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+      <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+      <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+      <iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+      <iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+      <iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+      <ExtraYieldThresholds />
+      <TradeYieldModifiers />
+      <CommerceChanges />
+      <CommerceModifiers />
+      <FreePromotions />
+      <FreePromotionUnitCombats />
+      <bGraphicalOnly>1</bGraphicalOnly>
+    </TraitInfo>
+    <TraitInfo>
+      <Type>TRAIT_MAILIST</Type>
+      <Description>TXT_KEY_TRAIT_MAILIST</Description>
+      <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_MAILIST_HELP</Help>
+      <iHealth>0</iHealth>
+      <iHappiness>0</iHappiness>
+      <iMaxAnarchy>-1</iMaxAnarchy>
+      <iUpkeepModifier>0</iUpkeepModifier>
+      <iLevelExperienceModifier>0</iLevelExperienceModifier>
+      <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+      <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+      <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+      <iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+      <iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+      <iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+      <ExtraYieldThresholds />
+      <TradeYieldModifiers />
+      <CommerceChanges />
+      <CommerceModifiers />
+      <FreePromotions />
+      <FreePromotionUnitCombats />
+      <bGraphicalOnly>1</bGraphicalOnly>
+    </TraitInfo>
+    <TraitInfo>
+      <Type>TRAIT_SATONOLIST</Type>
+      <Description>TXT_KEY_TRAIT_SATONOLIST</Description>
+      <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_SATONOLIST_HELP</Help>
+      <iHealth>0</iHealth>
+      <iHappiness>0</iHappiness>
+      <iMaxAnarchy>-1</iMaxAnarchy>
+      <iUpkeepModifier>0</iUpkeepModifier>
+      <iLevelExperienceModifier>0</iLevelExperienceModifier>
+      <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+      <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+      <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+      <iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+      <iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+      <iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+      <ExtraYieldThresholds />
+      <TradeYieldModifiers />
+      <CommerceChanges />
+      <CommerceModifiers />
+      <FreePromotions />
+      <FreePromotionUnitCombats />
+      <bGraphicalOnly>1</bGraphicalOnly>
+    </TraitInfo>
+    <TraitInfo>
+      <Type>TRAIT_OKINALIST</Type>
+      <Description>TXT_KEY_TRAIT_OKINALIST</Description>
+      <ShortDescription>TXT_KEY_TRAIT_KOYUUSHIKOU_SHORT</ShortDescription>
+      <Help>TXT_KEY_TRAIT_OKINALIST_HELP</Help>
+      <iHealth>0</iHealth>
+      <iHappiness>0</iHappiness>
       <iMaxAnarchy>-1</iMaxAnarchy>
       <iUpkeepModifier>0</iUpkeepModifier>
       <iLevelExperienceModifier>0</iLevelExperienceModifier>
@@ -3118,6 +3287,10 @@
         </FreePromotion>
         <FreePromotion>
           <PromotionType>PROMOTION_DRILL1</PromotionType>
+          <bFreePromotion>1</bFreePromotion>
+        </FreePromotion>
+        <FreePromotion>
+          <PromotionType>PROMOTION_SHOOTING_TECHNIQUE1</PromotionType>
           <bFreePromotion>1</bFreePromotion>
         </FreePromotion>
       </FreePromotions>

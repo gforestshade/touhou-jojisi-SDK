@@ -196,6 +196,15 @@
 		<Japanese>[ICON_BULLET]建設都市で[ICON_ESPIONAGE]諜報ポイントの生産が可能になる&#13;[ICON_BULLET]変換率は[ICON_PRODUCTION]+200%</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KOMAINU_HELP</Tag>
+		<English />
+		<French>[ICON_BULLET]新しい機関銃兵ユニットが経験値+3ポイントを取得</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[ICON_BULLET]新しい機関銃兵ユニットが経験値+3ポイントを取得</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROJECT_TECH_SHARE</Tag>
 	</TEXT>
 </Civ4GameText>

@@ -5347,11 +5347,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_DOREMY_EXTRA1_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]発動したタイルに「ドリームエクスプレス」を設置する&#13;[ICON_BULLET]ドリームエクスプレス：鉄道と同じコストで移動出来るようになる道路系タイル&#13;[ICON_BULLET]昇進EXTRAが必要</French>
+		<French>[ICON_BULLET]発動したタイルに「ドリームエクスプレス」を設置する&#13;[ICON_BULLET]ドリームエクスプレス：鉄道と同じコストで移動出来るようになる道路系タイル&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.15が必要</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]発動したタイルに「ドリームエクスプレス」を設置する&#13;[ICON_BULLET]ドリームエクスプレス：鉄道と同じコストで移動出来るようになる道路系タイル&#13;[ICON_BULLET]昇進EXTRAが必要</Japanese>
+		<Japanese>[ICON_BULLET]発動したタイルに「ドリームエクスプレス」を設置する&#13;[ICON_BULLET]ドリームエクスプレス：鉄道と同じコストで移動出来るようになる道路系タイル&#13;[ICON_BULLET]昇進EXTRAが必要&#13;[ICON_BULLET]Power0.15が必要</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_DOREMY_PHANTASM1</Tag>
@@ -5601,11 +5601,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_PLAIN_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「アポロ計画陰謀論」取得後…ツンドラタイルでの実行が可能になる&#13;[ICON_BULLET]都市タイル、文化圏外、海洋、砂漠、氷土では現時点において使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は犠牲になる（「月の都遷都計画」取得後は犠牲無し）[COLOR_REVERT]</French>
+		<French>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「アポロ計画」取得後…ツンドラタイルでの実行が可能になる&#13;[ICON_BULLET]「アポロ計画陰謀論」取得後…砂漠・氷土タイルでの実行が可能になる&#13;[ICON_BULLET]都市タイル、文化圏外、海洋、氾濫源、オアシスでは現時点において使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は犠牲になる（「月の都遷都計画」取得後は犠牲無し）[COLOR_REVERT]</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「アポロ計画陰謀論」取得後…ツンドラタイルでの実行が可能になる&#13;[ICON_BULLET]都市タイル、文化圏外、海洋、砂漠、氷土では現時点において使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は犠牲になる（「月の都遷都計画」取得後は犠牲無し）[COLOR_REVERT]</Japanese>
+		<Japanese>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「アポロ計画」取得後…ツンドラタイルでの実行が可能になる&#13;[ICON_BULLET]「アポロ計画陰謀論」取得後…砂漠・氷土タイルでの実行が可能になる&#13;[ICON_BULLET]都市タイル、文化圏外、海洋、氾濫源、オアシスでは現時点において使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は犠牲になる（「月の都遷都計画」取得後は犠牲無し）[COLOR_REVERT]</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_PLAIN_NO_SACRIFICE</Tag>
@@ -5619,11 +5619,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_PLAIN_NO_SACRIFICE_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、砂漠・氷土タイルでの実行が可能になる（[COLOR_RED]ただしオアシスタイルではユニットの犠牲が残り、氾濫源タイルはまだ不可[COLOR_REVERT]）&#13;[ICON_BULLET]「綿月の神酒」取得後…氾濫源タイルでも使用可能になる（[COLOR_RED]ただし労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</French>
+		<French>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、氾濫源・オアシスタイルでの実行が可能になる（[COLOR_RED]ただし氾濫源・オアシスタイルの場合労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、砂漠・氷土タイルでの実行が可能になる（[COLOR_RED]ただしオアシスタイルではユニットの犠牲が残り、氾濫源タイルはまだ不可[COLOR_REVERT]）&#13;[ICON_BULLET]「綿月の神酒」取得後…氾濫源タイルでも使用可能になる（[COLOR_RED]ただし労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</Japanese>
+		<Japanese>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（平原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、氾濫源・オアシスタイルでの実行が可能になる（[COLOR_RED]ただし氾濫源・オアシスタイルの場合労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_GRASS</Tag>
@@ -5655,11 +5655,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_GRASS_NO_SACRIFICE_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]現在立っている平原タイルを「テラフォーミング中（草原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、平原・オアシスタイルの草原化が可能になる（[COLOR_RED]オアシスタイルの場合は労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「綿月の神酒」取得後…平原・氾濫源タイルでも使用可能になる（[COLOR_RED]ただし労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</French>
+		<French>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（草原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、砂漠・氷土・ツンドラタイルを平原化の経由無しに草原化する事が可能になる（[COLOR_RED]オアシス、及び氾濫源タイルの場合は労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]現在立っている平原タイルを「テラフォーミング中（草原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、平原・オアシスタイルの草原化が可能になる（[COLOR_RED]オアシスタイルの場合は労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「綿月の神酒」取得後…平原・氾濫源タイルでも使用可能になる（[COLOR_RED]ただし労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</Japanese>
+		<Japanese>[ICON_BULLET]現在立っているタイルを「テラフォーミング中（草原化）」状態にする&#13;[ICON_BULLET]テラフォーミング中状態は都市の維持によりテラフォーミング完了状態に移行する&#13;[ICON_BULLET]「月の都遷都計画」取得後…労働者の犠牲が無くなる、砂漠・氷土・ツンドラタイルを平原化の経由無しに草原化する事が可能になる（[COLOR_RED]オアシス、及び氾濫源タイルの場合は労働者は犠牲になる[COLOR_REVERT]）&#13;[ICON_BULLET]「切り札はいつだって悪手」取得後…テラフォーミング中状態を経由せずに即時完了するようになる</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_HILL</Tag>
@@ -5799,11 +5799,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_OCEANIZATION_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</French>
+		<French>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源、森林、ジャングル、氾濫原、オアシス、死の灰があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</Japanese>
+		<Japanese>[ICON_BULLET]このコマンドを使用したタイルを即時海洋タイルにする&#13;[ICON_BULLET]都市タイル、文化圏外、資源、森林、ジャングル、氾濫原、オアシス、死の灰があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した海洋工作玉兎は消滅する[COLOR_REVERT]</Japanese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_FLOOD</Tag>
@@ -5817,11 +5817,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPELL_TERRAFORM_FLOOD_HELP</Tag>
 		<English />
-		<French>[ICON_BULLET]このコマンドを発動したタイルはどんなタイルでも即時氾濫源にする&#13;[ICON_BULLET]発動させるためには玉兎労働者が5人必要であり、同タイルに5人いる状態でコマンドが成功する&#13;[ICON_BULLET]都市タイル、海洋タイル、文化圏外、他の特徴があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は【5人犠牲】になる[COLOR_REVERT]</French>
+		<French>[ICON_BULLET]このコマンドを発動したタイルはどんなタイルでも即時氾濫源にする&#13;[ICON_BULLET]発動させるためには玉兎労働者が5人必要であり、同タイルに5人いる状態でコマンドが成功する&#13;[ICON_BULLET]都市タイル、海洋タイル、文化圏外、他の特徴があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は【3人犠牲】になる[COLOR_REVERT]</French>
 		<German />
 		<Italian />
 		<Spanish />
-		<Japanese>[ICON_BULLET]このコマンドを発動したタイルはどんなタイルでも即時氾濫源にする&#13;[ICON_BULLET]発動させるためには玉兎労働者が5人必要であり、同タイルに5人いる状態でコマンドが成功する&#13;[ICON_BULLET]都市タイル、海洋タイル、文化圏外、他の特徴があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は【5人犠牲】になる[COLOR_REVERT]</Japanese>
+		<Japanese>[ICON_BULLET]このコマンドを発動したタイルはどんなタイルでも即時氾濫源にする&#13;[ICON_BULLET]発動させるためには玉兎労働者が5人必要であり、同タイルに5人いる状態でコマンドが成功する&#13;[ICON_BULLET]都市タイル、海洋タイル、文化圏外、他の特徴があるタイルでは使用不可能&#13;[COLOR_RED]このコマンドを実行した労働者は【3人犠牲】になる[COLOR_REVERT]</Japanese>
 	</TEXT>
 	<!-- Tukinomiyako Terraforming End-->
 </Civ4GameText>

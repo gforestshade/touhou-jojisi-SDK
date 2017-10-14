@@ -122,6 +122,29 @@
     <iNotPlayPercent>0</iNotPlayPercent>
   </Script2DSound>
   <Script2DSound>
+    <ScriptID>AS2D_DIPLO_AUNN</ScriptID>
+    <SoundID>DIPLO_AUNN</SoundID>
+    <SoundType>GAME_MUSIC</SoundType>
+    <iMinVolume>40</iMinVolume>
+    <iMaxVolume>40</iMaxVolume>
+    <iPitchChangeDown>0</iPitchChangeDown>
+    <iPitchChangeUp>0</iPitchChangeUp>
+    <iMinLeftPan>-1</iMinLeftPan>
+    <iMaxLeftPan>-1</iMaxLeftPan>
+    <iMinRightPan>-1</iMinRightPan>
+    <iMaxRightPan>-1</iMaxRightPan>
+    <bLooping>1</bLooping>
+    <iMinTimeDelay>0</iMinTimeDelay>
+    <iMaxTimeDelay>0</iMaxTimeDelay>
+    <bTaperForSoundtracks>0</bTaperForSoundtracks>
+    <iLengthOfSound>0</iLengthOfSound>
+    <fMinDryLevel>1.0</fMinDryLevel>
+    <fMaxDryLevel>1.0</fMaxDryLevel>
+    <fMinWetLevel>0.0</fMinWetLevel>
+    <fMaxWetLevel>0.0</fMaxWetLevel>
+    <iNotPlayPercent>0</iNotPlayPercent>
+  </Script2DSound>
+  <Script2DSound>
     <ScriptID>AS2D_DIPLO_AYA</ScriptID>
     <SoundID>DIPLO_AYA</SoundID>
     <SoundType>GAME_MUSIC</SoundType>
@@ -815,8 +838,8 @@
     <ScriptID>AS2D_DIPLO_KOSUZU</ScriptID>
     <SoundID>DIPLO_KOSUZU</SoundID>
     <SoundType>GAME_MUSIC</SoundType>
-    <iMinVolume>60</iMinVolume>
-    <iMaxVolume>60</iMaxVolume>
+    <iMinVolume>40</iMinVolume>
+    <iMaxVolume>40</iMaxVolume>
     <iPitchChangeDown>0</iPitchChangeDown>
     <iPitchChangeUp>0</iPitchChangeUp>
     <iMinLeftPan>-1</iMinLeftPan>
@@ -886,6 +909,29 @@
     <SoundType>GAME_MUSIC</SoundType>
     <iMinVolume>37</iMinVolume>
     <iMaxVolume>37</iMaxVolume>
+    <iPitchChangeDown>0</iPitchChangeDown>
+    <iPitchChangeUp>0</iPitchChangeUp>
+    <iMinLeftPan>-1</iMinLeftPan>
+    <iMaxLeftPan>-1</iMaxLeftPan>
+    <iMinRightPan>-1</iMinRightPan>
+    <iMaxRightPan>-1</iMaxRightPan>
+    <bLooping>1</bLooping>
+    <iMinTimeDelay>0</iMinTimeDelay>
+    <iMaxTimeDelay>0</iMaxTimeDelay>
+    <bTaperForSoundtracks>0</bTaperForSoundtracks>
+    <iLengthOfSound>0</iLengthOfSound>
+    <fMinDryLevel>1.0</fMinDryLevel>
+    <fMaxDryLevel>1.0</fMaxDryLevel>
+    <fMinWetLevel>0.0</fMinWetLevel>
+    <fMaxWetLevel>0.0</fMaxWetLevel>
+    <iNotPlayPercent>0</iNotPlayPercent>
+  </Script2DSound>
+  <Script2DSound>
+    <ScriptID>AS2D_DIPLO_LARVA</ScriptID>
+    <SoundID>DIPLO_LARVA</SoundID>
+    <SoundType>GAME_MUSIC</SoundType>
+    <iMinVolume>24</iMinVolume>
+    <iMaxVolume>24</iMaxVolume>
     <iPitchChangeDown>0</iPitchChangeDown>
     <iPitchChangeUp>0</iPitchChangeUp>
     <iMinLeftPan>-1</iMinLeftPan>
@@ -1021,6 +1067,29 @@
   <Script2DSound>
     <ScriptID>AS2D_DIPLO_LYRICA</ScriptID>
     <SoundID>DIPLO_LYRICA</SoundID>
+    <SoundType>GAME_MUSIC</SoundType>
+    <iMinVolume>30</iMinVolume>
+    <iMaxVolume>30</iMaxVolume>
+    <iPitchChangeDown>0</iPitchChangeDown>
+    <iPitchChangeUp>0</iPitchChangeUp>
+    <iMinLeftPan>-1</iMinLeftPan>
+    <iMaxLeftPan>-1</iMaxLeftPan>
+    <iMinRightPan>-1</iMinRightPan>
+    <iMaxRightPan>-1</iMaxRightPan>
+    <bLooping>1</bLooping>
+    <iMinTimeDelay>0</iMinTimeDelay>
+    <iMaxTimeDelay>0</iMaxTimeDelay>
+    <bTaperForSoundtracks>0</bTaperForSoundtracks>
+    <iLengthOfSound>0</iLengthOfSound>
+    <fMinDryLevel>1.0</fMinDryLevel>
+    <fMaxDryLevel>1.0</fMaxDryLevel>
+    <fMinWetLevel>0.0</fMinWetLevel>
+    <fMaxWetLevel>0.0</fMaxWetLevel>
+    <iNotPlayPercent>0</iNotPlayPercent>
+  </Script2DSound>
+  <Script2DSound>
+    <ScriptID>AS2D_DIPLO_MAIANDSATONO</ScriptID>
+    <SoundID>DIPLO_MAIANDSATONO</SoundID>
     <SoundType>GAME_MUSIC</SoundType>
     <iMinVolume>30</iMinVolume>
     <iMaxVolume>30</iMaxVolume>
@@ -1318,8 +1387,54 @@
     <iNotPlayPercent>0</iNotPlayPercent>
   </Script2DSound>
   <Script2DSound>
+    <ScriptID>AS2D_DIPLO_NARUMI</ScriptID>
+    <SoundID>DIPLO_NARUMI</SoundID>
+    <SoundType>GAME_MUSIC</SoundType>
+    <iMinVolume>35</iMinVolume>
+    <iMaxVolume>35</iMaxVolume>
+    <iPitchChangeDown>0</iPitchChangeDown>
+    <iPitchChangeUp>0</iPitchChangeUp>
+    <iMinLeftPan>-1</iMinLeftPan>
+    <iMaxLeftPan>-1</iMaxLeftPan>
+    <iMinRightPan>-1</iMinRightPan>
+    <iMaxRightPan>-1</iMaxRightPan>
+    <bLooping>1</bLooping>
+    <iMinTimeDelay>0</iMinTimeDelay>
+    <iMaxTimeDelay>0</iMaxTimeDelay>
+    <bTaperForSoundtracks>0</bTaperForSoundtracks>
+    <iLengthOfSound>0</iLengthOfSound>
+    <fMinDryLevel>1.0</fMinDryLevel>
+    <fMaxDryLevel>1.0</fMaxDryLevel>
+    <fMinWetLevel>0.0</fMinWetLevel>
+    <fMaxWetLevel>0.0</fMaxWetLevel>
+    <iNotPlayPercent>0</iNotPlayPercent>
+  </Script2DSound>
+  <Script2DSound>
     <ScriptID>AS2D_DIPLO_NAZRIN</ScriptID>
     <SoundID>DIPLO_NAZRIN</SoundID>
+    <SoundType>GAME_MUSIC</SoundType>
+    <iMinVolume>28</iMinVolume>
+    <iMaxVolume>28</iMaxVolume>
+    <iPitchChangeDown>0</iPitchChangeDown>
+    <iPitchChangeUp>0</iPitchChangeUp>
+    <iMinLeftPan>-1</iMinLeftPan>
+    <iMaxLeftPan>-1</iMaxLeftPan>
+    <iMinRightPan>-1</iMinRightPan>
+    <iMaxRightPan>-1</iMaxRightPan>
+    <bLooping>1</bLooping>
+    <iMinTimeDelay>0</iMinTimeDelay>
+    <iMaxTimeDelay>0</iMaxTimeDelay>
+    <bTaperForSoundtracks>0</bTaperForSoundtracks>
+    <iLengthOfSound>0</iLengthOfSound>
+    <fMinDryLevel>1.0</fMinDryLevel>
+    <fMaxDryLevel>1.0</fMaxDryLevel>
+    <fMinWetLevel>0.0</fMinWetLevel>
+    <fMaxWetLevel>0.0</fMaxWetLevel>
+    <iNotPlayPercent>0</iNotPlayPercent>
+  </Script2DSound>
+  <Script2DSound>
+    <ScriptID>AS2D_DIPLO_NEMUNO</ScriptID>
+    <SoundID>DIPLO_NEMUNO</SoundID>
     <SoundType>GAME_MUSIC</SoundType>
     <iMinVolume>28</iMinVolume>
     <iMaxVolume>28</iMaxVolume>
@@ -1392,6 +1507,29 @@
     <SoundType>GAME_MUSIC</SoundType>
     <iMinVolume>28</iMinVolume>
     <iMaxVolume>28</iMaxVolume>
+    <iPitchChangeDown>0</iPitchChangeDown>
+    <iPitchChangeUp>0</iPitchChangeUp>
+    <iMinLeftPan>-1</iMinLeftPan>
+    <iMaxLeftPan>-1</iMaxLeftPan>
+    <iMinRightPan>-1</iMinRightPan>
+    <iMaxRightPan>-1</iMaxRightPan>
+    <bLooping>1</bLooping>
+    <iMinTimeDelay>0</iMinTimeDelay>
+    <iMaxTimeDelay>0</iMaxTimeDelay>
+    <bTaperForSoundtracks>0</bTaperForSoundtracks>
+    <iLengthOfSound>0</iLengthOfSound>
+    <fMinDryLevel>1.0</fMinDryLevel>
+    <fMaxDryLevel>1.0</fMaxDryLevel>
+    <fMinWetLevel>0.0</fMinWetLevel>
+    <fMaxWetLevel>0.0</fMaxWetLevel>
+    <iNotPlayPercent>0</iNotPlayPercent>
+  </Script2DSound>
+  <Script2DSound>
+    <ScriptID>AS2D_DIPLO_OKINA</ScriptID>
+    <SoundID>DIPLO_OKINA</SoundID>
+    <SoundType>GAME_MUSIC</SoundType>
+    <iMinVolume>25</iMinVolume>
+    <iMaxVolume>25</iMaxVolume>
     <iPitchChangeDown>0</iPitchChangeDown>
     <iPitchChangeUp>0</iPitchChangeUp>
     <iMinLeftPan>-1</iMinLeftPan>
@@ -1781,8 +1919,8 @@
     <ScriptID>AS2D_DIPLO_SEIRAN</ScriptID>
     <SoundID>DIPLO_SEIRAN</SoundID>
     <SoundType>GAME_MUSIC</SoundType>
-    <iMinVolume>25</iMinVolume>
-    <iMaxVolume>25</iMaxVolume>
+    <iMinVolume>46</iMinVolume>
+    <iMaxVolume>46</iMaxVolume>
     <iPitchChangeDown>0</iPitchChangeDown>
     <iPitchChangeUp>0</iPitchChangeUp>
     <iMinLeftPan>-1</iMinLeftPan>

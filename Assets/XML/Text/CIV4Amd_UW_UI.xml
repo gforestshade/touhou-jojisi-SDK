@@ -1222,6 +1222,15 @@
 		<Japanese>[LINK=IMPROVEMENT_TERRAFORM_PLAIN]テラフォーミング：平原化[\LINK]の氾濫源タイル上での実行</Japanese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_FIRST_GRASS</Tag>
+		<English />
+		<French>[LINK=IMPROVEMENT_TERRAFORM_GRASS]テラフォーミング：草原化[\LINK]の砂漠・氷原・ツンドラタイル上での実行</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[LINK=IMPROVEMENT_TERRAFORM_GRASS]テラフォーミング：草原化[\LINK]の砂漠・氷原・ツンドラタイル上での実行</Japanese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_LANDFILL</Tag>
 		<English />
 		<French>テラフォーミング：埋め立ての実行</French>

@@ -437,7 +437,7 @@ def init_force():
 	SpellInfo("SPELL_SEIRAN_PHANTASM1",req_SEIRAN_PHANTASM1,spell_SEIRAN_PHANTASM1,tempIsAISpellCast,None,0.30,1,255),
 	SpellInfo("SPELL_RINGO_EXTRA1",req_RINGO_EXTRA1,spell_RINGO_EXTRA1,tempIsAISpellCast,None,0.15,1,255),
 	SpellInfo("SPELL_RINGO_PHANTASM1",req_RINGO_PHANTASM1,spell_RINGO_PHANTASM1,tempIsAISpellCast,None,0.50,1,255),
-	SpellInfo("SPELL_DOREMY_EXTRA1",req_DOREMY_EXTRA1,spell_DOREMY_EXTRA1),
+	SpellInfo("SPELL_DOREMY_EXTRA1",req_DOREMY_EXTRA1,spell_DOREMY_EXTRA1,tempIsAISpellCast,None,0.15,1,255),
 	SpellInfo("SPELL_DOREMY_PHANTASM1",req_DOREMY_PHANTASM1,spell_DOREMY_PHANTASM1),
 	SpellInfo("SPELL_SAGUME_EXTRA1",req_SAGUME_EXTRA1,spell_SAGUME_EXTRA1,tempIsAISpellCast,help_SAGUME_EXTRA1,0.15,1,255),
 	SpellInfo("SPELL_SAGUME_PHANTASM1",req_SAGUME_PHANTASM1,spell_SAGUME_PHANTASM1),
@@ -11351,13 +11351,19 @@ def req_TERRAFORM_PLAIN(bTestVisible,caster,sCAL,eCAL,cost):
 		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_PLAINS'):
 			return False
 		
-		elif pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT') or \
-		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW'):
+		elif pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA') and \
+		not pTeam.isHasTech(gc.getInfoTypeForString('TECH_APOLLO')):
 			if caster.isHuman():
 				return False
 		
-		elif pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA') and \
+		elif (pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT') or \
+		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW')) and \
 		not pTeam.isHasTech(gc.getInfoTypeForString('TECH_APOLLO_CONSPIRACY')):
+			if caster.isHuman():
+				return False
+		
+		elif pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS') or \
+		pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_OASIS'):
 			if caster.isHuman():
 				return False
 		
@@ -11389,6 +11395,11 @@ def spell_TERRAFORM_PLAIN(caster,cost):
 			FeverFlag = True
 		
 		if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_TUNDRA'):
+			if pTeam.isHasTech(gc.getInfoTypeForString('TECH_APOLLO')):
+				pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_PLAIN'))
+		
+		elif pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT') or \
+		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_SNOW'):
 			if pTeam.isHasTech(gc.getInfoTypeForString('TECH_APOLLO_CONSPIRACY')):
 				pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_PLAIN'))
 		
@@ -11470,10 +11481,10 @@ def req_TERRAFORM_PLAIN_NO_SACRIFICE(bTestVisible,caster,sCAL,eCAL,cost):
 		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_PLAINS'):
 			return False
 		
-		elif pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS') and \
-		not pTeam.isHasTech(gc.getInfoTypeForString('TECH_SAKE_OF_THE_WATATSUKI')):
-			if caster.isHuman():
-				return False
+		#elif pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS') and \
+		#not pTeam.isHasTech(gc.getInfoTypeForString('TECH_SAKE_OF_THE_WATATSUKI')):
+		#	if caster.isHuman():
+		#		return False
 		
 		elif caster.plot().isCity():
 			return False
@@ -11506,14 +11517,13 @@ def spell_TERRAFORM_PLAIN_NO_SACRIFICE(caster,cost):
 				SacrificeFlag = True
 		
 		elif pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
-			if pTeam.isHasTech(gc.getInfoTypeForString('TECH_SAKE_OF_THE_WATATSUKI')):
-				pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_PLAIN'))
-				if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER') ) or \
-				caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_DANGO_FEVER') ):
-					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER'),False)
-					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False)
-				else:
-					SacrificeFlag = True
+			pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_PLAIN'))
+			if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER') ) or \
+			caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_DANGO_FEVER') ):
+				caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER'),False)
+				caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False)
+			else:
+				SacrificeFlag = True
 		
 		else:
 			pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_PLAIN'))
@@ -11569,7 +11579,7 @@ def req_TERRAFORM_GRASS(bTestVisible,caster,sCAL,eCAL,cost):
 			return False
 
 	else:
-		#平原であることが前提なので、これはこの一行でいいはず
+		#犠牲版は平原であることが前提なので、これはこの一行でいいはず
 		if not pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_PLAINS'):
 			return False
 		
@@ -11660,7 +11670,9 @@ def req_TERRAFORM_GRASS_NO_SACRIFICE(bTestVisible,caster,sCAL,eCAL,cost):
 			return False
 
 	else:
-		if not pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_PLAINS'):
+		if pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_COAST') or \
+		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN') or \
+		pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_GRASS'):
 			return False
 		
 		elif caster.plot().isCity():
@@ -11694,14 +11706,13 @@ def spell_TERRAFORM_GRASS_NO_SACRIFICE(caster,cost):
 				SacrificeFlag = True
 		
 		elif pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
-			if pTeam.isHasTech(gc.getInfoTypeForString('TECH_SAKE_OF_THE_WATATSUKI')):
-				pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_GRASS'))
-				if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER') ) or \
-				caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_DANGO_FEVER') ):
-					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER'),False)
-					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False)
-				else:
-					SacrificeFlag = True
+			pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_GRASS'))
+			if caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER') ) or \
+			caster.isHasPromotion( gc.getInfoTypeForString('PROMOTION_DANGO_FEVER') ):
+				caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HALLOWEEN_FEVER'),False)
+				caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DANGO_FEVER'),False)
+			else:
+				SacrificeFlag = True
 		
 		else:
 			pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_TERRAFORM_GRASS'))
@@ -12248,7 +12259,7 @@ def req_TERRAFORM_FLOOD(bTestVisible,caster,sCAL,eCAL,cost):
 			pUnit = pPlot.getUnit(i)
 			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TUKI_NO_MIYAKO_WORKER'):
 				iWorker += 1
-		if iWorker < 5:
+		if iWorker < 3:
 			return False
 		
 		if caster.plot().getTeam() == caster.getTeam():
@@ -12265,15 +12276,15 @@ def spell_TERRAFORM_FLOOD(caster,cost):
 	iNumUnit = pPlot.getNumUnits()
 	UnitList = []
 	
-	#妥協案で5人以上いる場合ならスペル成功、いないならスペル発動済みの昇進を与える
+	#妥協案で3人以上いる場合ならスペル成功、いないならスペル発動済みの昇進を与える
 	if caster.isHuman():
 		for i in range(iNumUnit):
 			pUnit = pPlot.getUnit(i)
 			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TUKI_NO_MIYAKO_WORKER'):
 				if pUnit.getTeam() == caster.getTeam():
 					UnitList.append(pUnit)
-		if len(UnitList)>4:
-			for i in range(5):
+		if len(UnitList)>=3:
+			for i in range(3):
 				iRandNum = gc.getGame().getSorenRandNum(len(UnitList),"Flood Plains Sacrifice")
 				pUnit = UnitList.pop(iRandNum)
 				pUnit.changeDamage(100,caster.getOwner())

@@ -1181,4 +1181,15 @@
 		<Japanese>穢身探知型機雷 改</Japanese>
 	</TEXT>
 <!-- Tukinomiyako Units End-->
+<!-- Tenkuushou Units Start-->
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEMUNOTRAIT</Tag>
+		<English />
+		<French>攫った人間</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>攫った人間</Japanese>
+	</TEXT>
+<!-- Tenkuushou Units End-->
 </Civ4GameText>

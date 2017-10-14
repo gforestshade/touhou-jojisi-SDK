@@ -576,6 +576,10 @@
           <LeaderName>LEADER_SUMIREKO</LeaderName>
           <bLeaderAvailability>1</bLeaderAvailability>
         </Leader>
+        <Leader>
+          <LeaderName>LEADER_AUNN</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
       </Leaders>
       <DerivativeCiv>NONE</DerivativeCiv>
       <CivilizationSelectionSound>AS3D_INDIA_SELECT</CivilizationSelectionSound>
@@ -713,6 +717,14 @@
         </Leader>
         <Leader>
           <LeaderName>LEADER_JUNKO</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
+        <Leader>
+          <LeaderName>LEADER_AUNN</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
+        <Leader>
+          <LeaderName>LEADER_NARUMI</LeaderName>
           <bLeaderAvailability>1</bLeaderAvailability>
         </Leader>
       </Leaders>
@@ -885,6 +897,10 @@
           <LeaderName>LEADER_SUMMERCIRNO</LeaderName>
           <bLeaderAvailability>1</bLeaderAvailability>
         </Leader>
+        <Leader>
+          <LeaderName>LEADER_LARVA</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
       </Leaders>
       <DerivativeCiv>NONE</DerivativeCiv>
       <CivilizationSelectionSound>AS3D_ROME_SELECT</CivilizationSelectionSound>
@@ -1031,6 +1047,18 @@
         </Leader>
         <Leader>
           <LeaderName>LEADER_SUIKA</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
+        <Leader>
+          <LeaderName>LEADER_NEMUNO</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
+        <Leader>
+          <LeaderName>LEADER_AUNN</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
+        <Leader>
+          <LeaderName>LEADER_OKINA</LeaderName>
           <bLeaderAvailability>1</bLeaderAvailability>
         </Leader>
       </Leaders>
@@ -1207,6 +1235,10 @@
           <LeaderName>LEADER_HECATIA</LeaderName>
           <bLeaderAvailability>1</bLeaderAvailability>
         </Leader>
+        <Leader>
+          <LeaderName>LEADER_MAI</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
       </Leaders>
       <DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
       <CivilizationSelectionSound>AS3D_PERSIA_SELECT</CivilizationSelectionSound>
@@ -1336,6 +1368,10 @@
         </Leader>
         <Leader>
           <LeaderName>LEADER_MAMIZOU</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
+        <Leader>
+          <LeaderName>LEADER_AUNN</LeaderName>
           <bLeaderAvailability>1</bLeaderAvailability>
         </Leader>
       </Leaders>
@@ -1753,6 +1789,10 @@
         </Leader>
         <Leader>
           <LeaderName>LEADER_SAGUME</LeaderName>
+          <bLeaderAvailability>1</bLeaderAvailability>
+        </Leader>
+        <Leader>
+          <LeaderName>LEADER_SATONO</LeaderName>
           <bLeaderAvailability>1</bLeaderAvailability>
         </Leader>
       </Leaders>

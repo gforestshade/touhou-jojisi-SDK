@@ -677,7 +677,7 @@
 		<Spanish />
 		<Japanese>リプレイ博物館</Japanese>
 	</TEXT>
-<!-- Add Buildings End-->
+<!-- Other Buildings End-->
 <!-- Trait Buildings Start-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPELL_OBELISK</Tag>
@@ -867,6 +867,78 @@
 		<Italian />
 		<Spanish />
 		<Japanese>This Woman</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LARVA_CULTURE</Tag>
+		<English />
+		<French>文化の鱗粉</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>文化の鱗粉</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LARVA_RESEARCH</Tag>
+		<English />
+		<French>研究の鱗粉</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>研究の鱗粉</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LARVA_WEALTH</Tag>
+		<English />
+		<French>金銭の鱗粉</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>金銭の鱗粉</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEMUNO_TRAIT</Tag>
+		<English />
+		<French>アステカ的な何か</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>アステカ的な何か</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KOMAINU</Tag>
+		<English />
+		<French>狛犬</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>狛犬</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAI_TRAIT</Tag>
+		<English />
+		<French>ハッスルダンス</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ハッスルダンス</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SATONO_TRAIT</Tag>
+		<English />
+		<French>One Mind</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>One Mind</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OKINA_TRAIT</Tag>
+		<English />
+		<French>転移の扉</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>転移の扉</Japanese>
 	</TEXT>
 <!-- Trait Buildings End-->
 <!-- Spell Buildings Start-->

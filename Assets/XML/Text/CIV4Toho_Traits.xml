@@ -1892,6 +1892,142 @@
 		<Spanish />
 		<Japanese>夏の妖精</Japanese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_SUMMERCIRNOLIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]兵舎の代わりに「イカンダ」作成可能</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]兵舎の代わりに「イカンダ」作成可能</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_LARVALIST</Tag>
+		<English></English>
+		<French>鱗粉</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>鱗粉</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_LARVALIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]新たに建設した都市はランダムで[ICON_RESEARCH]+1,[ICON_CULTURE]+1,[ICON_GOLD]+1のいずれかを発生させる</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]新たに建設した都市はランダムで[ICON_RESEARCH]+1,[ICON_CULTURE]+1,[ICON_GOLD]+1のいずれかを発生させる</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_NEMUNOLIST</Tag>
+		<English></English>
+		<French>ソウルオブモンテスマ</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ソウルオブモンテスマ</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_NEMUNOLIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]白兵、弓兵、偵察、火器ユニットとの戦闘勝利時に確率でユニット「攫った人間」を入手可能&#13;　[ICON_BULLET]入手率は自国文化圏内で10％、それ以外で5％</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]白兵、弓兵、偵察、火器ユニットとの戦闘勝利時に確率でユニット「攫った人間」を入手可能&#13;　[ICON_BULLET]入手率は自国文化圏内で10％、それ以外で5％</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_AUNNLIST</Tag>
+		<English></English>
+		<French>ソウルオブブル</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ソウルオブブル</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_AUNNLIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]モニュメントの代わりに「狛犬」作成可能&#13;　[ICON_BULLET]「狛犬」が設置された都市では新規作成された弓兵、火器、機関銃兵ユニットが経験値+3ポイントを取得する</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]モニュメントの代わりに「狛犬」作成可能&#13;　[ICON_BULLET]「狛犬」が設置された都市では新規作成された弓兵、火器、機関銃兵ユニットが経験値+3ポイントを取得する</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_NARUMILIST</Tag>
+		<English></English>
+		<French>生命操作</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>生命操作</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_NARUMILIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]首都以外の都市は時代に関わらず人口2からスタート可能</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]首都以外の都市は時代に関わらず人口2からスタート可能</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_MAILIST</Tag>
+		<English></English>
+		<French>ハッスルダンス</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ハッスルダンス</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_MAILIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]都市建設時に無償の建造物：ハッスルダンス（都市成長後に[ICON_FOOD]10%を貯蔵）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]都市建設時に無償の建造物：ハッスルダンス（都市成長後に[ICON_FOOD]10%を貯蔵）</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_SATONOLIST</Tag>
+		<English></English>
+		<French>One mind</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>One mind</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_SATONOLIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]裁判所の代わりに「One mind」作成可能&#13;　[ICON_BULLET]「One mind」は裁判所より必要ハンマー数が少なく、幸福ボーナスと厭戦感情減少ボーナスが追加される</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]裁判所の代わりに「One mind」作成可能&#13;　[ICON_BULLET]「One mind」は裁判所より必要ハンマー数が少なく、幸福ボーナスと厭戦感情減少ボーナスが追加される</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_OKINALIST</Tag>
+		<English></English>
+		<French>転移の扉</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>転移の扉</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_OKINALIST_HELP</Tag>
+		<English></English>
+		<French>　&#13;　[ICON_BULLET]首都建設時に無償の建造物：転移の扉（1ターンにつきユニット2体まで空輸可能）</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>　&#13;　[ICON_BULLET]首都建設時に無償の建造物：転移の扉（1ターンにつきユニット2体まで空輸可能）</Japanese>
+	</TEXT>
+
 	
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADELIST</Tag>

@@ -1011,4 +1011,24 @@
 		<Japanese>This Manが認知されるきっかけとなったのは、とある精神科を訪れた女性が「逢ったことのない男が夢にしばしば現れる」という事で診察を受けたことです。[NEWLINE]医師は女性の証言をもとにモンタージュを作成しました。後日、別の男性患者が病院を訪れ、症状が先ほどの女性と似ていたので再びモンタージュを作成してみると、先日の女性のものにそっくりでした。[NEWLINE]これに興味を示した医師は、仲間の精神科医にモンタージュを送りました。すると、新たに4人の患者がこの男を夢の中で見たということがわかりました。[NEWLINE]医師たちはインターネットで「This Man」の目撃情報を収集することにしました。すると、This Manを夢の中で見たことがあるという証言が世界中から送られたのです。[NEWLINE]この一連の事例から「世界中の人々の夢に現れる男」This manが見つかったといいます。[NEWLINE][NEWLINE]以上の出来事は、2016年現在作り話であるとされているが、賢明な叙事詩プレイヤーならばThis Manは幻想入りしたということにお気づきであろう。[NEWLINE]そう、ドレミー・スイートこそが……（手記はここで途切れている）</Japanese>
 	</TEXT>
 <!-- Tukinomiyako End-->
+<!-- Tenkuushou Start-->
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEMUNO_TRAIT_PEDIA</Tag>
+		<English />
+		<French>山姥である坂田ネムノが攫ってきた人間を用いて、更にみんな大好きアステカのモンテスマの力を借りて「アステカ的な何か」を執り行います[NEWLINE]アステカ的な何かを行った事により攫った人間は「消費」されてしまいますが、都市の人々は幸福になります。よかったですね[NEWLINE]何をしたかについては詳しく聞かない方がいいでしょう。世の中知らない方が良い事が沢山あるのです</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>山姥である坂田ネムノが攫ってきた人間を用いて、更にみんな大好きアステカのモンテスマの力を借りて「アステカ的な何か」を執り行います[NEWLINE]アステカ的な何かを行った事により攫った人間は「消費」されてしまいますが、都市の人々は幸福になります。よかったですね[NEWLINE]何をしたかについては詳しく聞かない方がいいでしょう。世の中知らない方が良い事が沢山あるのです</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SATONO_TRAIT_PEDIA</Tag>
+		<English />
+		<French>We are one.[NEWLINE]We are many.[NEWLINE]We fuse.[NEWLINE]We merge.[NEWLINE]We grow.[NEWLINE][NEWLINE][NEWLINE]Our mind outlives the universe.[NEWLINE]WE ARE ETERNAL.[NEWLINE][NEWLINE]――――統合意思体AE2875・ログより抜粋</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>We are one.[NEWLINE]We are many.[NEWLINE]We fuse.[NEWLINE]We merge.[NEWLINE]We grow.[NEWLINE][NEWLINE][NEWLINE]Our mind outlives the universe.[NEWLINE]WE ARE ETERNAL.[NEWLINE][NEWLINE]――――統合意思体AE2875・ログより抜粋</Japanese>
+	</TEXT>
+<!-- Tenkuushou End-->
 </Civ4GameText>
