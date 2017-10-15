@@ -526,6 +526,9 @@ public:
 	//“Œ•û––“‡MOD—p
 	int getAmenouzumeFlag();
 	void setAmenouzumeFlag(int iNum);
+	int getTohoFlag(int index);
+	void setTohoFlag(int index, int iNum);
+	void changeTohoFlag(int index, int iNum);
 
 private:
 	CvPlayer* m_pPlayer;

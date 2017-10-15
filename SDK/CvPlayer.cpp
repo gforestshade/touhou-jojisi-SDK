@@ -52,6 +52,8 @@ CvPlayer::CvPlayer()
 	m_aiGoldPerTurnByPlayer = new int[MAX_PLAYERS];
 	m_aiEspionageSpendingWeightAgainstTeam = new int[MAX_TEAMS];
 
+	m_aiTohoFlags = new int[NUM_TOHOFLAGS];
+
 	m_abFeatAccomplished = new bool[NUM_FEAT_TYPES];
 	m_abOptions = new bool[NUM_PLAYEROPTION_TYPES];
 
@@ -145,6 +147,9 @@ CvPlayer::~CvPlayer()
 	SAFE_DELETE_ARRAY(m_aiCommerceFlexibleCount);
 	SAFE_DELETE_ARRAY(m_aiGoldPerTurnByPlayer);
 	SAFE_DELETE_ARRAY(m_aiEspionageSpendingWeightAgainstTeam);
+
+	SAFE_DELETE_ARRAY(m_aiTohoFlags);
+
 	SAFE_DELETE_ARRAY(m_abFeatAccomplished);
 	SAFE_DELETE_ARRAY(m_abOptions);
 }
@@ -634,6 +639,11 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	for (iI = 0; iI < NUM_PLAYEROPTION_TYPES; iI++)
 	{
 		m_abOptions[iI] = false;
+	}
+
+	for (iI = 0; iI < NUM_TOHOFLAGS; iI++)
+	{
+		m_aiTohoFlags[iI] = 0;
 	}
 
 	m_szScriptData = "";
@@ -16027,6 +16037,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(NUM_FEAT_TYPES, m_abFeatAccomplished);
 	pStream->Read(NUM_PLAYEROPTION_TYPES, m_abOptions);
 
+	pStream->Read(NUM_TOHOFLAGS, m_aiTohoFlags);
+
 	pStream->ReadString(m_szScriptData);
 
 	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
@@ -16508,6 +16520,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 	pStream->Write(NUM_FEAT_TYPES, m_abFeatAccomplished);
 	pStream->Write(NUM_PLAYEROPTION_TYPES, m_abOptions);
+
+	pStream->Write(NUM_TOHOFLAGS, m_aiTohoFlags);
 
 	pStream->WriteString(m_szScriptData);
 
@@ -21973,4 +21987,14 @@ void CvPlayer::setAmenouzumeFlag(int iNum){
 
 	m_iAmenouzumeFlag = iNum;
 
+}
+
+int CvPlayer::getTohoFlag(int index){
+	return m_aiTohoFlags[index];
+}
+
+void CvPlayer::setTohoFlag(int index, int iNum){
+	FAssertMsg(index >= 0, "index is expected to be non-negative (invalid Index)");
+	FAssertMsg(index < NUM_TOHOFLAGS, "index is expected to be within maximum bounds (invalid Index)");
+	m_aiTohoFlags[index] = iNum;
 }

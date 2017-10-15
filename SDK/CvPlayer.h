@@ -1079,6 +1079,8 @@ public:
 	//“Œ•û––“‡MOD—p
 	int getAmenouzumeFlag();
 	void setAmenouzumeFlag(int iNum);
+	int getTohoFlag(int index);
+	void setTohoFlag(int index, int iNum);
 	void setSplitEmpireLeader(LeaderHeadTypes eLeader);
 
 protected:
@@ -1356,7 +1358,7 @@ protected:
 	//“Œ•û––“‡MOD—p
 	int m_iAmenouzumeFlag;
 	LeaderHeadTypes m_iSplitEmpireLeader;
-
+	int *m_aiTohoFlags;
 };
 
 #endif

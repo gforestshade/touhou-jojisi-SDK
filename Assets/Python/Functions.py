@@ -9,6 +9,8 @@ import CvScreenEnums
 import math
 import SpellInfo
 
+import TohoCivList
+
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
@@ -761,6 +763,8 @@ def worldspell_KISHINJOU1(pPlayer, pPlot):
 				pyCity.initUnit(iUnitOTU)
 
 	pPlayer.setNumWorldSpell(0)
+	# âºèZÇ‹Ç¢
+	pPlayer.setTohoFlag(TohoFlags.TOHOFLAGS_TURNCOUNT_X, 3)
 	
 	point = pPlot.getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)

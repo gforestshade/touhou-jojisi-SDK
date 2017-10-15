@@ -1139,12 +1139,10 @@ class CvGameUtils:
 		iBuildingClass = gc.getBuildingInfo(iBuilding).getBuildingClassType()
 		
 		if iBuildingClass == gc.getInfoTypeForString('BUILDINGCLASS_RAIKO_MAGIC_A'):
-			if pPlayer.getMysteryiumFlag() >= 1:
-				iMod += 50*(pPlayer.getMysteryiumFlag())
+			iMod += 50*(pPlayer.getTohoFlag(TohoCivList.TOHO_FLAGS_RAIKO_TATEKAE))
 		
 		if iBuildingClass == gc.getInfoTypeForString('BUILDINGCLASS_RAIKO_MAGIC_B'):
-			if pPlayer.getMysteryiumFlag() >= 1:
-				iMod += 50*(pPlayer.getMysteryiumFlag())
+			iMod += 50*(pPlayer.getTohoFlag(TohoCivList.TOHO_FLAGS_RAIKO_TATEKAE))
 		
 		#集権志向持ちは首都の一般建造物＆国家遺産コスト25%割引
 		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_CENTRALIZATION')):

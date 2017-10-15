@@ -460,6 +460,9 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		//ìåï˚èñéñéçìùçáMODóp
 		.def("setAmenouzumeFlag", &CyPlayer::setAmenouzumeFlag, "void (int iNum)")
 		.def("getAmenouzumeFlag", &CyPlayer::getAmenouzumeFlag, "int ()")
+		.def("setTohoFlag", &CyPlayer::setTohoFlag, "void (int i, int iNum)")
+		.def("changeTohoFlag", &CyPlayer::changeTohoFlag, "void (int i, int iNum)")
+		.def("getTohoFlag", &CyPlayer::getTohoFlag, "int (int i)")
 		
 		;
 }

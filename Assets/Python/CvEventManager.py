@@ -547,6 +547,8 @@ class CvEventManager:
 			
 			#ミステリウムのフラグをリセット
 			ppPlayer.setMysteryiumFlag(0)
+			for i in range(TohoFlags.NUM_TOHOFLAGS):
+				ppPlayer.setTohoFlag(i,0)
 			
 			#AIの東方ルートをセット
 			iRandNum = gc.getGame().getSorenRandNum(100,"AI PROMOTION ROUTE")
@@ -1767,7 +1769,11 @@ class CvEventManager:
 		if pPlayer.isHuman() == False and gc.getGame().isOption(gc.getInfoTypeForString('GAMEOPTION_STRONG_AI')):
 			pPlayer.setNumTohoUnitLimit( Limit + TohoUnitList.TohoNumList[Functions.getHandicap()] )
 		#CyInterface().addImmediateMessage(gc.getHandicapInfo(pPlayer.getHandicapType()).getDescription(),"")
-			
+
+		# ターンカウントXを減らす
+		if pPlayer.getTohoFlag(TohoFlags.TOHOFLAGS_TURNCOUNT_X) > 0:
+			pPlayer.changeTohoFlag(TohoFlags.TOHOFLAGS_TURNCOUNT_X, -1)
+		
 		#そのプレイヤーのユニット全捜査
 		for pUnit in py.getUnitList():
 			#東方ユニットの処理かいし
@@ -2652,18 +2658,16 @@ class CvEventManager:
 		
 		#雷鼓の呪法-戦完成時、初作成なら大将軍発生
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_RAIKO_MAGIC_A'):
-			if pPlayer.getMysteryiumFlag() == 0:
+			if pPlayer.getTohoFlag(TohoCivList.TOHO_FLAGS_RAIKO_TATEKAE) == 0:
 				iX = pCity.getX()
 				iY = pCity.getY()
 				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GREAT_GENERAL'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 		
 		#雷鼓の呪法-内完成時、元になる建造物をそれぞれのUB群へ自動変換
 		#大商人発生可否も同時に判定
-		#ちなみにここだけの話、偉人発生判定はミステリウム用変数で代用。
-		#チーム戦で永遠亭と組んだ時以外は多分問題無いはずだ
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_RAIKO_MAGIC_B'):
 			py = PyPlayer(iPlayer)
-			if pPlayer.getMysteryiumFlag() == 0:
+			if pPlayer.getTohoFlag(TohoCivList.TOHO_FLAGS_RAIKO_TATEKAE) == 0:
 				iX = pCity.getX()
 				iY = pCity.getY()
 				newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_MERCHANT'), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)

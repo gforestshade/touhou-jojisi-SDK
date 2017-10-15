@@ -2344,3 +2344,20 @@ void CyPlayer::setAmenouzumeFlag(int iNum){
     m_pPlayer->setAmenouzumeFlag(iNum);
 
 }
+
+int CyPlayer::getTohoFlag(int index){
+
+    return m_pPlayer->getTohoFlag(index);
+
+}
+
+void CyPlayer::setTohoFlag(int index, int iNum){
+
+    m_pPlayer->setTohoFlag(index, iNum);
+
+}
+
+void CyPlayer::changeTohoFlag(int index, int iNum){
+    iNum += m_pPlayer->getTohoFlag(index);
+    m_pPlayer->setTohoFlag(index, iNum);
+}

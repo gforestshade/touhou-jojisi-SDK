@@ -2795,4 +2795,14 @@ enum ExclusiveSoundTypes
 };
 /// <<< CGE-LE 1.0.3
 
+// for jojisi 17.08
+enum TohoFlags
+{
+	TOHOFLAGS_AMENOUZUME,
+	TOHOFLAGS_RAIKO_TATEKAE,
+	TOHOFLAGS_TURNCOUNT_X,
+  
+	NUM_TOHOFLAGS
+};
+
 #endif	// CVENUMS_h

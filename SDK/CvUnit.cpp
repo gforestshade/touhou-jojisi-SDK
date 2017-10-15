@@ -13868,7 +13868,11 @@ int CvUnit::countSpellTolerance() const{
         }
     }
 
-
+    if (GET_PLAYER(this->getOwner()).getTohoFlag(TOHOFLAGS_TURNCOUNT_X) > 0 &&
+        getTeam() == plot()->getTeam())
+    {
+        Tolerance += 100;
+    }
 
     if (Tolerance > 100)
         Tolerance = 100;

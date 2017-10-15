@@ -119,5 +119,4 @@
 
 //“Œ•û––—p
 #define PYSpellModule					"SpellInterface"
-
 #endif	// CVDEFINES_H

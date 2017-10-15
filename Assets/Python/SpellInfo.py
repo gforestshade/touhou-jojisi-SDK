@@ -4987,7 +4987,7 @@ def req_YORIHIME1(bTestVisible,caster,sCAL,eCAL,cost):
 	else:
 		if caster.isHasPromotion(gc.getInfoTypeForString("PROMOTION_SPELL_CASTED")) == False:
 			if caster.getPower() >= cost:
-				if gc.getPlayer(caster.getOwner()).getAmenouzumeFlag() == 1:
+				if gc.getPlayer(caster.getOwner()).getTohoFlag(TohoFlags.TOHOFLAGS_AMENOUZUME) == 1:
 					return True
 	return False
 
@@ -5000,7 +5000,7 @@ def spellcard_YORIHIME1(caster,cost):
 	RangeList = []
 	sokushiUnits = []
 	
-	if pPlayer.getAmenouzumeFlag() == 1:
+	if pPlayer.getTohoFlag(TohoFlags.TOHOFLAGS_AMENOUZUME) == 1:
 		iWidth = gc.getMap().getGridWidth()
 		iHeight = gc.getMap().getGridHeight()
 		for iX in range(iWidth):
@@ -5041,7 +5041,7 @@ def spellcard_YORIHIME1(caster,cost):
 
 		caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 		caster.setPower(caster.getPower()-cost)
-		pPlayer.setAmenouzumeFlag(0)
+		pPlayer.setTohoFlag(TohoFlags.TOHOFLAGS_AMENOUZUME, 0)
 	
 	point = caster.plot().getPoint()
 	CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
@@ -5071,7 +5071,7 @@ def spellcard_YORIHIME1_Estimate(caster):
 	
 	if estimatePoint < 50:
 		estimatePoint = 0
-	if pPlayer.getAmenouzumeFlag() == 0:
+	if pPlayer.getTohoFlag(TohoFlags.TOHOFLAGS_AMENOUZUME) == 0:
 		estimatePoint = 0
 	
 	return estimatePoint
@@ -5087,7 +5087,7 @@ def help_YORIHIME1(szText, caster, CAL):
 		if caster:
 			iPlayer = caster.getOwner()
 			pPlayer = gc.getPlayer(iPlayer)
-			if pPlayer.getAmenouzumeFlag() == 1:
+			if pPlayer.getTohoFlag(TohoFlags.TOHOFLAGS_AMENOUZUME) == 1:
 				return u""
 			else:
 				return u"降神『天宇受賣命』の使用が必要"
@@ -5801,8 +5801,6 @@ def spell_GET_MYSTERYIUM(caster,cost):
 	py = PyPlayer(iPlayer)
 	iX = caster.getX()
 	iY = caster.getY()
-	
-	print "OKKK"
 	
 	pPlot = gc.getMap().plot(iX,iY)
 	UnitNum = pPlot.getNumUnits()
@@ -10381,7 +10379,7 @@ def spell_RAIKO_PHANTASM2(caster,cost):
 			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_RAIKO_MAGIC_A'),0)
 			iPlayer = pCity.getOwner()
 			pPlayer = gc.getPlayer(iPlayer)
-			pPlayer.setMysteryiumFlag(pPlayer.getMysteryiumFlag()+1)#ミステリウム用変数を使用
+			pPlayer.changeTohoFlag(TohoFlags.TOHOFLAGS_RAIKO_TATEKAE, +1)
 			
 		if pCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_RAIKO_MAGIC_B")):
 			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_RAIKO_MAGIC_B'),0)
@@ -10389,7 +10387,7 @@ def spell_RAIKO_PHANTASM2(caster,cost):
 			iPlayer = pCity.getOwner()
 			py = PyPlayer(iPlayer)
 			pPlayer = gc.getPlayer(iPlayer)
-			pPlayer.setMysteryiumFlag(pPlayer.getMysteryiumFlag()+1)#ミステリウム用変数を使用
+			pPlayer.changeTohoFlag(TohoFlags.TOHOFLAGS_RAIKO_TATEKAE, +1)
 			for pPyCity in py.getCityList():
 				ppCity = pPlayer.getCity(pPyCity.getID())
 				if ppCity.getNumActiveBuilding(gc.getInfoTypeForString("BUILDING_KISHINJOU_PERSIAN_APOTHECARY")):
@@ -10551,8 +10549,8 @@ def spell_YORIHIME_PHANTASM1(caster,cost):
 	iPlayer = caster.getOwner()
 	pPlayer = gc.getPlayer(iPlayer)
 	
-	if pPlayer.getAmenouzumeFlag() == 0:
-		pPlayer.setAmenouzumeFlag(1)
+	if pPlayer.getTohoFlag(TohoFlags.TOHOFLAGS_AMENOUZUME) == 0:
+		pPlayer.setTohoFlag(TohoFlags.TOHOFLAGS_AMENOUZUME, 1)
 	
 	Functions.setPromotion(RangeList1,caster,'PROMOTION_CHARM',True,CAL*2,False,False,True,-1,False,True,True,True,-1,False,0,0,False,False,-1,+1)
 	
