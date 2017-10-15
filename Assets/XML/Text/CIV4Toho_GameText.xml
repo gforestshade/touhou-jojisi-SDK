@@ -682,15 +682,6 @@
 		<Japanese>1人、またはタイプの異なる2人以上の偉人を消費して大宴会を開始させます（[ICON_PRODUCTION]、[ICON_COMMERCE]、[ICON_GREATPEOPLE]が向上し、無政府状態なし）。</Japanese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUMMON_COMBAT_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Change%% vs. Summon Unit</English>
-		<French>[ICON_BULLET]syoukan unit ni taishite %D1_Change%%</French>
-		<German />
-		<Italian />
-		<Spanish />
-		<Japanese>[ICON_BULLET]召喚ユニットに対して%D1_Change%%</Japanese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DQ_TEXT_STRING</Tag>
 		<English />
 		<French>%s1_leaderは、このゲームの中で%s2_leaderのごとき評価を得ました！</French>

@@ -702,7 +702,7 @@ def worldspell_HYOUSEIRENGOU1(pPlayer, pPlot):
 # 輝針城の世界魔法
 # pPlayer の元に付喪神が沸く(必ずしも輝針城である必要はない)
 # pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
-def worldspell_KISHINJOU1(pPlayer, plot):
+def worldspell_KISHINJOU1(pPlayer, pPlot):
 	# iPlayer = caster.getOwner()
 	pTeam = gc.getTeam(pPlayer.getTeam())
 	
