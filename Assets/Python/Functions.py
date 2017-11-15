@@ -257,7 +257,7 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 			iTrialCalcNum += iDamage
 			if not bTrialCalc:
 				# 一度記憶する
-				damageUnitList.append( [pUnit,ow,iDamage] )
+				damageUnitList.append( [pUnit,iDamage] )
 			
 				# ダメージを与えるユニットへの追加の処理
 				
@@ -274,15 +274,20 @@ def changeDamage(squeaList,caster,minDamage,maxDamage,iLimitDamage,bPercent,bFri
 			iTrialCalcNum = 0 - iTrialCalcNum
 		return iTrialCalcNum
 	
-	# ダメージ
+	# ダメージ第１弾
+	damageCargoUnitList = []
 	for item in damageUnitList:
-		if iLimitDamage <= 0:
-			# キャップ0以下の場合、船と一緒に沈んだ可能性があるので、本当にあるか再度確認する
-			if gc.getPlayer(item[1]).getUnit(item[0].getID()).getUnitType() != -1:
-				item[0].changeDamage(item[2],caster.getOwner())
+		pUnit, iDamage = item
+		if iLimitDamage <= 0 and pUnit.getCargo() > 0:
+			# 上限なしで、ユニットを積載中なら後回し
+			# 船を殺すと一緒に沈んだ乗員ユニットがヌルポるため
+			damageCargoUnitList.append([pUnit,iDamage])
 		else:
-			item[0].changeDamage(item[2],caster.getOwner())
+			pUnit.changeDamage(iDamage,caster.getOwner())
 	
+	# ダメージ第２弾、運搬ユニット用
+	for item in damageCargoUnitList:
+		item[0].changeDamage(item[1],caster.getOwner())
 	
 	
 #昇進付与関数
@@ -832,19 +837,15 @@ def getCivilizationUnitType(player, sUnitClass):
 # 都市はCyCityでもPyCityでもよい
 def initCityUnit(city, sUnitClass):
 	pyPlayer = PyHelpers.PyPlayer( city.getOwner() )
-	pPlot = city.plot()
 	iUnit = getCivilizationUnitType(pyPlayer, sUnitClass)
-	
-	pyPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY())
+	return pyPlayer.initUnit(iUnit, city.getX(), city.getY())
 
 # 都市とユニット名を指定して、都市のオーナーの支配下でユニットを生成する
 # 都市はCyCityでもPyCityでもよい
 # UnitClassでやるほうがいろいろと潰しがきくと思うので一応程度に
 def initCityUnitDirect(city, sUnit):
 	pyPlayer = PyHelpers.PyPlayer( city.getOwner() )
-	pPlot = city.plot()
 	iUnit = gc.getInfoTypeForString(sUnit)
-	
-	pyPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY())
+	return pyPlayer.initUnit(iUnit, city.getX(), city.getY())
 
 ##### </written by F> #####
