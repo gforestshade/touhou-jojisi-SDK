@@ -533,6 +533,58 @@ def isWar(iPlayer):
 
 # # # 東方叙事詩・統合MOD追記
 
+def rangeListToPlotList(center, squareList):
+	plotList = []
+	for sq in squareList:
+		iX = center.getX() + sq[0]
+		iY = center.getY() + sq[1]
+		if not isPlot(iX,iY):
+			continue
+		
+		plotList.append( gc.getMap().plot(iX,iY) )
+	
+	return plotList
+
+def plotListToRangeList(center, plotList):
+	cx, cy = center.getX(), center.getY()
+	return [[pPlot.getX()-cx, pPlot.getY()-cy] for pPlot in plotList]
+
+def getPlotUnits(pPlot):
+	return ( pPlot.getUnit(i) for i in range(pPlot.getNumUnits()) )
+
+def getNumEnemies(pPlot, iFriendTeam):
+	myTeam = gc.getTeam(iFriendTeam)
+	return sum(1 for pUnit in getPlotUnits(pPlot) if myTeam.isAtWar(pUnit.getTeam()))
+
+def getRangePlotList(center, i_range, include_center):
+	"""
+	中心から周囲nタイルのCyPlotのリストを返す
+	center - 中心タイル
+	i_range - 範囲
+	include_center - Trueならリストに中心タイルを含める
+	"""
+
+	pMap = gc.getMap()
+	result = []
+	
+	for xx in range(-i_range, i_range+1):
+		for yy in range(-i_range, i_range+1):
+			x = xx + center.getX()
+			y = yy + center.getY()
+			
+			if not isValidPlot(x,y):
+				continue
+			if (xx == 0 and yy == 0) and not include_center:
+				continue
+
+			result.append( pMap.plot(x,y) )
+
+	return result
+
+def searchMaxEnemyPlot(lPlot, iFriendTeam):
+	m = max( (getNumEnemies(pPlot, iFriendTeam), pPlot) for pPlot in lPlot )
+	return m[1]
+
 def changeTurnPromo(pUnit, i):
 	pUnit.setTurnPromo(pUnit.getTurnPromo() + i)
 
