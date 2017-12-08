@@ -7870,9 +7870,10 @@ def spell_PATCHOULI_EXTRA1(caster,cost):
 
 	# Functions.changeDamage(meRange,caster,CAL,CAL,50,True,False,False,True,-1,False,True,True,True,-1,False,0,0,False)
 	# Functions.changeDamage(meRange,caster,CAL/2,CAL/2,50,True,False,False,True,-1,True,False,True,True,-1,False,0,0,False)
+	
 
-	Functions.changeDamage(RangeList1,caster,CAL,CAL,50,True,False,False,True,-1,False,True,True,True,-1,False,0,0,False,True)
-	Functions.changeDamage(RangeList1,caster,CAL/2,CAL/2,50,True,False,False,True,-1,True,False,True,True,-1,False,0,0,False,True)
+	Functions.changeDamage(RangeList1,caster,CAL,CAL,50,True,False,False,True,-1,False,True,True,True,-1,False,0,0,False)
+	Functions.changeDamage(RangeList1,caster,CAL/2,CAL/2,50,True,False,False,True,-1,True,False,True,True,-1,False,0,0,False)
 
 				
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )

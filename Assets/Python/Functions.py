@@ -600,9 +600,14 @@ def setPromotionEx(pUnit, sPromotion):
 	pUnit.setHasPromotion(iPromotion, True)
 	return
 
-# テラフォーム予備改善を即時完了する
-# できたらTrue, できなかったらFalseを返す
+
+
 def terraformImprovementUpgrade(pPlot):
+	"""
+	テラフォーム予備改善を即時完了する
+	できたらTrue, できなかったらFalseを返す
+	"""
+	
 	iX = pPlot.getX()
 	iY = pPlot.getY()
 	
@@ -641,9 +646,11 @@ def terraformImprovementUpgrade(pPlot):
 		return False
 
 
-# 地形改善を即時アップグレードする
-# できたらTrue, できなかったらFalseを返す
 def improvementUpgrade(pPlot):
+	"""
+	地形改善を即時アップグレードする
+	できたらTrue, できなかったらFalseを返す
+	"""
 	
 	imprInfo = gc.getImprovementInfo( pPlot.getImprovementType() )
 	iUpgrade = imprInfo.getImprovementUpgrade()
@@ -654,11 +661,13 @@ def improvementUpgrade(pPlot):
 
 	return False
 
-# 昇進を別のユニットにコピーする
-# pSourceUnit の持っている昇進すべてを pDestinationUnit に持たせる
-# pSourceUnit の持っていない昇進はなにもしない pDestinationUnit から消すわけではない
 def copyPromotions(pSourceUnit, pDestinationUnit):
-
+	"""
+	昇進を別のユニットにコピーする
+	pSourceUnit の持っている昇進すべてを pDestinationUnit に持たせる
+	pSourceUnit の持っていない昇進はなにもしない pDestinationUnit から消すわけではない
+	"""
+	
 	PromotionStart = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()
 	PromotionEnd = gc.getNumCommandInfos()+InterfaceModeTypes.NUM_INTERFACEMODE_TYPES+gc.getNumBuildInfos()+gc.getNumPromotionInfos()
 	PromotionNum = PromotionEnd - PromotionStart
@@ -669,8 +678,9 @@ def copyPromotions(pSourceUnit, pDestinationUnit):
 
 	pDestinationUnit.setNumTurnPromo(pSourceUnit.getNumTurnPromo())
 
-#蛮族化
 def uncivilize(pUnit):
+	"""蛮族化"""
+	
 	BarBarianUnit = pUnit.getUnitType()
 	plotX = pUnit.getX()
 	plotY = pUnit.getY()
@@ -707,11 +717,13 @@ def uncivilize(pUnit):
 		pUnit.changeDamage(100,pUnit.getOwner())
 		
 
-# 氷精連合の世界魔法
-# pPlayer の元にユニットが集まる(必ずしも氷精連合である必要はない)
-# pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
 def worldspell_HYOUSEIRENGOU1(pPlayer, pPlot):
-
+	"""
+	氷精連合の世界魔法
+	pPlayer の元にユニットが集まる(必ずしも氷精連合である必要はない)
+	pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
+	"""
+	
 	#沸いてくるユニットと数は時代依存
 	if pPlayer.getCurrentEra() == gc.getInfoTypeForString('ERA_ANCIENT'):
 		iUnit = gc.getInfoTypeForString('UNIT_WARRIOR')
@@ -756,10 +768,13 @@ def worldspell_HYOUSEIRENGOU1(pPlayer, pPlot):
 	#妖精たちが結束を高め都市に集結しました
 	CyInterface().addImmediateMessage("&#22934;&#31934;&#12383;&#12385;&#12364;&#32080;&#26463;&#12434;&#39640;&#12417;&#37117;&#24066;&#12395;&#38598;&#32080;&#12375;&#12414;&#12375;&#12383;","")
 
-# 輝針城の世界魔法
-# pPlayer の元に付喪神が沸く(必ずしも輝針城である必要はない)
-# pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
 def worldspell_KISHINJOU1(pPlayer, pPlot):
+	"""
+	輝針城の世界魔法
+	pPlayer の元に付喪神が沸く(必ずしも輝針城である必要はない)
+	pPlot で発動エフェクトが発生する(必ずしもcaster.plot()である必要はない)
+	"""
+	
 	# iPlayer = caster.getOwner()
 	pTeam = gc.getTeam(pPlayer.getTeam())
 	
@@ -826,6 +841,7 @@ def worldspell_KISHINJOU1(pPlayer, pPlot):
 	CyInterface().addImmediateMessage("&#36637;&#37341;&#22478;&#12398;&#21508;&#37117;&#24066;&#12391;&#20184;&#21930;&#31070;&#12364;&#22823;&#37327;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
 def processTEWITrap(pTrapUnit):
+	"""てゐのトラップ処理"""
 	pTeam = gc.getTeam( pTrapUnit.getTeam() )
 	SpyList = checkUnit(pTrapUnit.getX(),pTrapUnit.getY(),RangeList1,gc.getInfoTypeForString('UNIT_SPY'),gc.getInfoTypeForString('UNIT_SPY'),2)
 	UnitList = checkUnit(pTrapUnit.getX(),pTrapUnit.getY(),RangeList1,gc.getInfoTypeForString('UNIT_SANAE0'),gc.getInfoTypeForString('UNIT_GREAT_SPY'),2)
@@ -856,9 +872,12 @@ def processTEWITrap(pTrapUnit):
 		CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL'),point)
 		CyAudioGame().Play3DSound("AS3D_spell_use",point.x,point.y,point.z)
 
-# 戦闘でのキョンシー化
-# pWinnerの支配下でpLoserをキョンシーとして生成する
 def initCombatKyonshii(pWinner, pLoser):
+	"""
+	戦闘でのキョンシー化
+	pWinnerの支配下でpLoserをキョンシーとして生成する
+	"""
+	
 	RevivalUnit = pLoser.getUnitType()
 	plotX = pWinner.getX()
 	plotY = pWinner.getY()
@@ -867,9 +886,12 @@ def initCombatKyonshii(pWinner, pLoser):
 	newUnit1.finishMoves()
 	CyInterface().addImmediateMessage(PyHelpers.PyInfo.UnitInfo(pLoser.getUnitType()).getDescription() + "&#12364;&#12461;&#12519;&#12531;&#12471;&#12540;&#12392;&#12375;&#12390;&#24489;&#27963;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
-# 戦闘での神霊発生
-# pWinnerの支配下で神霊を発生させる
 def initCombatShinrei(pWinner):
+	"""
+	戦闘での神霊発生
+	pWinnerの支配下で神霊を発生させる
+	"""
+	
 	iPlayer = pWinner.getOwner()
 	pPlayer = gc.getPlayer(iPlayer)
 	iX = pWinner.getX()
@@ -878,24 +900,30 @@ def initCombatShinrei(pWinner):
 	newUnit.finishMoves()
 	CyInterface().addImmediateMessage("&#31070;&#38666;&#12364;&#30330;&#29983;&#12375;&#12414;&#12375;&#12383;&#65281;","")
 
-# プレイヤーとユニットクラス名からそのプレイヤーのユニットIDをひっぱる(UUを考慮する)
-# プレイヤーはCyPlayerでもPyPlayerでもよい
 def getCivilizationUnitType(player, sUnitClass):
+	"""
+	プレイヤーとユニットクラス名からそのプレイヤーのユニットIDをひっぱる(UUを考慮する)
+	プレイヤーはCyPlayerでもPyPlayerでもよい
+	"""
 	civinfo = gc.getCivilizationInfo( player.getID() )
 	iUnitClass = gc.getInfoTypeForString(sUnitClass)
 	return civinfo.getCivilizationUnits(iUnitClass)
 
-# 都市とユニットクラス名を指定して、都市のオーナーの支配下でユニットを生成する
-# 都市はCyCityでもPyCityでもよい
 def initCityUnit(city, sUnitClass):
+	"""
+	都市とユニットクラス名を指定して、都市のオーナーの支配下でユニットを生成する
+	都市はCyCityでもPyCityでもよい
+	"""
 	pyPlayer = PyHelpers.PyPlayer( city.getOwner() )
 	iUnit = getCivilizationUnitType(pyPlayer, sUnitClass)
 	return pyPlayer.initUnit(iUnit, city.getX(), city.getY())
 
-# 都市とユニット名を指定して、都市のオーナーの支配下でユニットを生成する
-# 都市はCyCityでもPyCityでもよい
-# UnitClassでやるほうがいろいろと潰しがきくと思うので一応程度に
 def initCityUnitDirect(city, sUnit):
+	"""
+	都市とユニット名を指定して、都市のオーナーの支配下でユニットを生成する
+	都市はCyCityでもPyCityでもよい
+	UnitClassでやるほうがいろいろと潰しがきくと思うので一応程度に
+	"""
 	pyPlayer = PyHelpers.PyPlayer( city.getOwner() )
 	iUnit = gc.getInfoTypeForString(sUnit)
 	return pyPlayer.initUnit(iUnit, city.getX(), city.getY())
