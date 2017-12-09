@@ -2551,6 +2551,10 @@ class CvEventManager:
 		CvUtil.pyPrint('Plot was picked at %d, %d'
 			%(pPlot.getX(), pPlot.getY()))
 
+		if Functions.pickplot_callback:
+			Functions.pickplot_callback(pPlot)
+			Functions.pickplot_callback = None
+
 	def onNukeExplosion(self, argsList):
 		'Nuke Explosion'
 		pPlot, pNukeUnit = argsList

@@ -585,6 +585,15 @@ def searchMaxEnemyPlot(lPlot, iFriendTeam):
 	m = max( (getNumEnemies(pPlot, iFriendTeam), pPlot) for pPlot in lPlot )
 	return m[1]
 
+
+pickplot_callback = None
+def pickPlot(callback):
+	global pickplot_callback
+	pickplot_callback = callback
+	CyInterface().setInterfaceMode(InterfaceModeTypes.INTERFACEMODE_PYTHON_PICK_PLOT)
+
+
+
 def changeTurnPromo(pUnit, i):
 	pUnit.setTurnPromo(pUnit.getTurnPromo() + i)
 

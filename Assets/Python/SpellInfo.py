@@ -7863,7 +7863,7 @@ def spell_PATCHOULI_EXTRA1(caster,cost):
 	
 	CAL = caster.countCardAttackLevel()
 
-	# 範囲内から敵対ユニットが一番多いタイルだけに絞ってみる
+	# # 範囲内から敵対ユニットが一番多いタイルだけに絞ってみる
 	# range1 = Functions.rangeListToPlotList(caster, RangeList1)
 	# mePlot = Functions.searchMaxEnemyPlot(range1, caster.getTeam())
 	# meRange = Functions.plotListToRangeList(caster, [mePlot])
@@ -7872,9 +7872,16 @@ def spell_PATCHOULI_EXTRA1(caster,cost):
 	# Functions.changeDamage(meRange,caster,CAL/2,CAL/2,50,True,False,False,True,-1,True,False,True,True,-1,False,0,0,False)
 	
 
-	Functions.changeDamage(RangeList1,caster,CAL,CAL,50,True,False,False,True,-1,False,True,True,True,-1,False,0,0,False)
-	Functions.changeDamage(RangeList1,caster,CAL/2,CAL/2,50,True,False,False,True,-1,True,False,True,True,-1,False,0,0,False)
+	# Functions.changeDamage(RangeList1,caster,CAL,CAL,50,True,False,False,True,-1,False,True,True,True,-1,False,0,0,False)
+	# Functions.changeDamage(RangeList1,caster,CAL/2,CAL/2,50,True,False,False,True,-1,True,False,True,True,-1,False,0,0,False)
 
+	# 自分でタイルを選んでみる
+	def func(pPlot):
+		# しずめー
+		pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_OCEAN'), True, True)
+	
+	Functions.pickPlot(func)
+	
 				
 	caster.setHasPromotion( gc.getInfoTypeForString('PROMOTION_SPELL_CASTED'),True )
 
