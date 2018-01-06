@@ -19,6 +19,8 @@
 #endif
 #endif
 
+#define FP_PROFILE_ENABLE 
+
 //NOTE: This struct must be identical ot the same struct in  FireEngine/FProfiler.h
 //---------------------------------------------------------------------------------------------------------------------
 struct ProfileSample

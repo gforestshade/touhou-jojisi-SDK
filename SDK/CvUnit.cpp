@@ -7228,6 +7228,8 @@ bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass, 
 
 bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 {
+	PROFILE_FUNC();
+	
 	if (eUnit == NO_UNIT)
 	{
 		return false;
