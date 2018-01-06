@@ -37,6 +37,7 @@ except ImportError:
 #/---unitstats addition 1/2-----------------------
 #import AIAutoPlay
 #import autologEventManager
+import RevolutionInit
 
 class CvCustomEventManager(CvEventManager.CvEventManager, object):
 
@@ -99,6 +100,8 @@ class CvCustomEventManager(CvEventManager.CvEventManager, object):
 #/---unitstats addition 2/2-----------------------
 		#AIAutoPlay.AIAutoPlay(self)
 		#autologEventManager.autologEventManager(self)
+		revConfigFile = "AIAutoPlay_for_jojisi.ini"
+		RevolutionInit.RevolutionInit( self, revConfigFile )
 
 	def addEventHandler(self, eventType, eventHandler):
 		"""Adds a handler for the given event type.

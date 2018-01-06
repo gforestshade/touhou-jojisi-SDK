@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - New -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag></Tag>
+		<English></English>
+		<French></French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese></Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_CANCEL</Tag>
+		<English>Cancel</English>
+		<French>ƒLƒƒƒ“ƒZƒ‹</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ƒLƒƒƒ“ƒZƒ‹</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_PICK_CIV</Tag>
+		<English>Pick a civ</English>
+		<French>•¶–¾‚ð‘I‘ð</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>•¶–¾‚ð‘I‘ð</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_CIV_DIED</Tag>
+		<English>Your civ has died.[NEWLINE]Would you like to lead another civ?[NEWLINE]</English>
+		<French>Žc”O‚È‚ª‚çA‚ ‚È‚½‚ª‘I‘ð‚µ‚Ä‚¢‚½•¶–¾‚Í–Å–S‚µ‚Ä‚µ‚Ü‚¢‚Ü‚µ‚½[NEWLINE]•Ê‚Ì•¶–¾‚ð—¦‚¢‚Ü‚·‚©H[NEWLINE]</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>Žc”O‚È‚ª‚çA‚ ‚È‚½‚ª‘I‘ð‚µ‚Ä‚¢‚½•¶–¾‚Í–Å–S‚µ‚Ä‚µ‚Ü‚¢‚Ü‚µ‚½[NEWLINE]•Ê‚Ì•¶–¾‚ð—¦‚¢‚Ü‚·‚©H[NEWLINE]</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_TAKE_CONTROL_CIV</Tag>
+		<English>Take control of this civ ...</English>
+		<French>‚±‚Ì¨—Í‚ð—¦‚¢‚é</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>‚±‚Ì¨—Í‚ð—¦‚¢‚é</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_OF_THE</Tag>
+		<English>%s of the %s</English>
+		<French>%s of the %s</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>%s of the %s</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_NOW_CONTROL</Tag>
+		<English>You now control the %s</English>
+		<French>You now control the %s</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>You now control the %s</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_NONE</Tag>
+		<English>None</English>
+		<French>–³‚µ</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>–³‚µ</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_TURN_ON</Tag>
+		<English>Turn on AI Auto Control?</English>
+		<French>AIAutoPlay</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>AIAutoPlay</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_TURNS</Tag>
+		<English>How many turns would you like the AI to control?</English>
+		<French>AI‚É‘€ì‚ð”C‚¹‚éƒ^[ƒ“”‚ðŽw’è‚µ‚Ä‰º‚³‚¢</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>AI‚É‘€ì‚ð”C‚¹‚éƒ^[ƒ“”‚ðŽw’è‚µ‚Ä‰º‚³‚¢</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_NO</Tag>
+		<English>No automation</English>
+		<French>Ž©“®‰»–³‚µ</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>Ž©“®‰»–³‚µ</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_AUTOMATION</Tag>
+		<English>Choose type of automation</English>
+		<French>Ž©“®‘€ì‚Ìƒ^ƒCƒv‚ð‘I‘ð</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>Ž©“®‘€ì‚Ìƒ^ƒCƒv‚ð‘I‘ð</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_FULLY</Tag>
+		<English>Fully Automate</English>
+		<French>Š®‘SŽ©“®‰»</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>Š®‘SŽ©“®‰»</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_UNIT</Tag>
+		<English>Automate unit moves only (not fully tested)</English>
+		<French>ƒ†ƒjƒbƒg‚Ì‘€ì‚Ì‚Ý‚ðŽ©“®‰»(not fully tested)</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ƒ†ƒjƒbƒg‚Ì‘€ì‚Ì‚Ý‚ðŽ©“®‰»(not fully tested)</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_DEBUG</Tag>
+		<English>Debug Mode (will reveal entire world!!!)</English>
+		<French>ƒfƒoƒbƒOƒ‚[ƒhi‘S¢ŠE‚ÌŽ‹ŠE‚ð“¾‚éj</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>ƒfƒoƒbƒOƒ‚[ƒhi‘S¢ŠE‚ÌŽ‹ŠE‚ð“¾‚éj</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_NEW_LEADER</Tag>
+		<English>There is a new leader!!!</English>
+		<French>V‚µ‚¢Žw“±ŽÒ‚ª’a¶‚µ‚Ü‚µ‚½</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>V‚µ‚¢Žw“±ŽÒ‚ª’a¶‚µ‚Ü‚µ‚½</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_ABDICATE</Tag>
+		<English>Old age has finally caught up with you and you decide to abdicated rule.</English>
+		<French>Ž‡u‚ ‚ç‚ ‚çAŽ„‚ÌŽ®‚ðŽØ‚è‚½‚¢‚ÌH</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>Ž‡u‚ ‚ç‚ ‚çAŽ„‚ÌŽ®‚ðŽØ‚è‚½‚¢‚ÌH</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_USURPATOR</Tag>
+		<English>Terrible news:[NEWLINE][NEWLINE]Coniving rivals have overthrown you in a coup![NEWLINE]A little to much "Let them eat cake" perhaps?</English>
+		<French>‹°‚ë‚µ‚¢ƒjƒ…[ƒX‚Å‚·I‚ ‚È‚½‚Ì­“G‚ªƒN[ƒfƒ^[‚ð‹N‚±‚µ‚Ü‚µ‚½I</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>‹°‚ë‚µ‚¢ƒjƒ…[ƒX‚Å‚·I‚ ‚È‚½‚Ì­“G‚ªƒN[ƒfƒ^[‚ð‹N‚±‚µ‚Ü‚µ‚½I</Japanese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AIAUTOPLAY_GOOD_NEWS</Tag>
+		<English>[NEWLINE][NEWLINE]However, there is good news![NEWLINE]Mystical advisors report that you will be reincarnated and return to power in %d turns.[NEWLINE][NEWLINE]In the meantime, you can only hope your successor proves worthy.</English>
+		<French>[NEWLINE][NEWLINE]‚µ‚å‚¤‚ª‚È‚¢‚í‚Ë‚¦cc%dƒ^[ƒ“•ª‚¾‚¯‘Ý‚µ‚Ä‚ ‚°‚é‚¯‚ÇA•¶‹å‚ÍŒ¾‚í‚È‚¢‚Å‚ËH‚±‚ÌŽqˆÓŠO‚Æƒ|ƒ“ƒRƒc‚È‚Ì‚æv</French>
+		<German />
+		<Italian />
+		<Spanish />
+		<Japanese>[NEWLINE][NEWLINE]‚µ‚å‚¤‚ª‚È‚¢‚í‚Ë‚¦cc%dƒ^[ƒ“•ª‚¾‚¯‘Ý‚µ‚Ä‚ ‚°‚é‚¯‚ÇA•¶‹å‚ÍŒ¾‚í‚È‚¢‚Å‚ËH‚±‚ÌŽqˆÓŠO‚Æƒ|ƒ“ƒRƒc‚È‚Ì‚æv</Japanese>
+	</TEXT>
+</Civ4GameText>

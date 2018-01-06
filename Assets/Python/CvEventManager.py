@@ -1741,12 +1741,14 @@ class CvEventManager:
 		pTeam = gc.getTeam(pPlayer.getTeam())
 		Limit = 1
 
+		print "BPT: iGameTurn=%d" % iGameTurn
 		#こころちゃんランダム志向処理
 		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST')):
 			#最初の1ターン目に確実に発動、以降はランダム
 			if iGameTurn == 0:
-				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_TRAIT_KOKOROLIST_FIRSTTURN')
-				triggerData = pPlayer.initTriggeredData(iEvent, true, -1, -1, -1, iPlayer, -1, -1, -1, -1, -1)
+				pass
+#				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_TRAIT_KOKOROLIST_FIRSTTURN')
+#				triggerData = pPlayer.initTriggeredData(iEvent, true, -1, -1, -1, iPlayer, -1, -1, -1, -1, -1)
 			elif CyGame().getSorenRandNum(1000, "Kokorolist") < 20:
 				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_TRAIT_KOKOROLIST')
 				triggerData = pPlayer.initTriggeredData(iEvent, true, -1, -1, -1, iPlayer, -1, -1, -1, -1, -1)
@@ -4245,9 +4247,10 @@ class CvEventManager:
 		
 		#こころちゃん
 		#固有志向の効力一新に伴い陳腐化
-		#if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST')):
-		#	if city.isCapital():
-		#		city.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_KOUYOU'),1)
+		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_KOKOROLIST')):
+			if city.isCapital():
+				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_TRAIT_KOKOROLIST_FIRSTTURN')
+				triggerData = pPlayer.initTriggeredData(iEvent, true, -1, -1, -1, city.getOwner(), -1, -1, -1, -1, -1)
 		
 		#八橋は都市建設ごとに即時文化圏二段階目＆文化-50%建造物
 		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_YATUHASHILIST')):
