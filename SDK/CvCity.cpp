@@ -1766,6 +1766,8 @@ bool CvCity::isBuildingsMaxed() const
 
 bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const
 {
+	PROFILE_FUNC();
+	
 	if (eUnit == NO_UNIT)
 	{
 		return false;
