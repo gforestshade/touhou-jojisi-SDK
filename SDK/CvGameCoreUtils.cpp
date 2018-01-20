@@ -282,7 +282,8 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 	}
 	*/
 
-	if ((kUnit.getCollateralDamage() == 0) || (kUnit.getCollateralDamageLimit() == 0) || (kUnit.getCollateralDamageMaxUnits() == 0))
+	// ボスユニットに限り副次的損害を0から得ることを許す
+	if ((kUnit.getUnitCombatType() != (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_BOSS")) && (kUnit.getCollateralDamage() == 0) || (kUnit.getCollateralDamageLimit() == 0) || (kUnit.getCollateralDamageMaxUnits() == 0))
 	{
 		if (kPromotion.getCollateralDamageChange() != 0)
 		{

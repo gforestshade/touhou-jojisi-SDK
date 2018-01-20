@@ -27,6 +27,11 @@
 #include "CvPopupInfo.h"
 #include "CvArtFileMgr.h"
 
+PromotionTypes getPromotionType(const char *s)
+{
+	return static_cast<PromotionTypes>( GC.getInfoTypeForString(s) );
+}
+
 // Public Functions...
 
 
@@ -6797,115 +6802,29 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 
 //東方叙事詩・統合MOD追記
 //シューティングオプション処理
-//鷹の目
-	if (ePromotion == GC.getInfoTypeForString("PROMOTION_TEMP_STG_SKILL"))
+//鷹の目,マルチプルショット,溜め撃ち,ハイスピードムーブ,基本操作5
+//これらは重複して取得できない
+	PromotionTypes option0 = getPromotionType("PROMOTION_TEMP_STG_SKILL");
+	PromotionTypes option1 = getPromotionType("PROMOTION_SHOOTING_OPTION_MULTIPLESHOT");
+	PromotionTypes option2 = getPromotionType("PROMOTION_SHOOTING_OPTION_TAMEUTI");
+	PromotionTypes option3 = getPromotionType("PROMOTION_SHOOTING_OPTION_HIGHSPEEDMOVE");
+	PromotionTypes option4 = getPromotionType("PROMOTION_TOHO_COMBAT5");
+	PromotionTypes options[] = {option0, option1, option2, option3, option4};
+	size_t n_options = sizeof(options)/sizeof(options[0]);
+	bool has_option = false;
+	
+	for(size_t i = 0; i < n_options; ++i)
 	{
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TOHO_COMBAT5")))
+		if(this->isHasPromotion(options[i]))
 		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_MULTIPLESHOT")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_TAMEUTI")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_HIGHSPEEDMOVE")))
-		{
-			return false;
+			has_option = true;
 		}
 	}
-//マルチプルショット
-	if (ePromotion == GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_MULTIPLESHOT"))
+	for(size_t i = 0; i < n_options; ++i)
 	{
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TOHO_COMBAT5")))
+		if(ePromotion == options[i])
 		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TEMP_STG_SKILL")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_TAMEUTI")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_HIGHSPEEDMOVE")))
-		{
-			return false;
-		}
-	}
-//溜め撃ち
-	if (ePromotion == GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_TAMEUTI"))
-	{
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TOHO_COMBAT5")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TEMP_STG_SKILL")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_MULTIPLESHOT")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_HIGHSPEEDMOVE")))
-		{
-			return false;
-		}
-	}
-//ハイスピードムーブ
-	if (ePromotion == GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_HIGHSPEEDMOVE"))
-	{
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TOHO_COMBAT5")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TEMP_STG_SKILL")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_MULTIPLESHOT")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_TAMEUTI")))
-		{
-			return false;
-		}
-	}
-//基本操作5
-	if (ePromotion == GC.getInfoTypeForString("PROMOTION_TOHO_COMBAT5"))
-	{
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TEMP_STG_SKILL")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_MULTIPLESHOT")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_TAMEUTI")))
-		{
-			return false;
-		}
-		if (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_SHOOTING_OPTION_HIGHSPEEDMOVE")))
-		{
-			return false;
-		}
-	}
-//副次的損害の取得条件を満たしていたら強制的に取得許可
-	if (ePromotion == GC.getInfoTypeForString("PROMOTION_HUKUZITEKI_SONGAI"))
-	{
-		if ((this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_LONGRANGE3"))) && (this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_TOHO_BARRAGE3"))))
-		{
-			if (!this->isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_HUKUZITEKI_SONGAI")))
-			{
-				return true;
-			}
+			if(has_option) return false;
 		}
 	}
 //東方叙事詩・統合MOD追記ここまで
